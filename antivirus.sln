@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "antivirus", "antivirus\antivirus.csproj", "{28DEB622-909B-4ABC-807B-6A14653F5C04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "databaseworker", "DATABASE\databaseworker\databaseworker\databaseworker.csproj", "{19AE6140-48DB-4770-9B67-B93F7CFB278B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "launcher", "updater\launcher.csproj", "{E95F0E06-2004-47E4-A119-3D72A8E39402}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28DEB622-909B-4ABC-807B-6A14653F5C04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28DEB622-909B-4ABC-807B-6A14653F5C04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28DEB622-909B-4ABC-807B-6A14653F5C04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28DEB622-909B-4ABC-807B-6A14653F5C04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19AE6140-48DB-4770-9B67-B93F7CFB278B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19AE6140-48DB-4770-9B67-B93F7CFB278B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19AE6140-48DB-4770-9B67-B93F7CFB278B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19AE6140-48DB-4770-9B67-B93F7CFB278B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E95F0E06-2004-47E4-A119-3D72A8E39402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E95F0E06-2004-47E4-A119-3D72A8E39402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E95F0E06-2004-47E4-A119-3D72A8E39402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E95F0E06-2004-47E4-A119-3D72A8E39402}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
