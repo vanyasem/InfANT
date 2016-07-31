@@ -48,6 +48,7 @@ namespace databaseworker
         {
             FolderBrowserDialog fold = new FolderBrowserDialog {Description = "Select the InfANT's installation folder"};
             fold.ShowDialog();
+            _contains = false;
 
             if (fold.SelectedPath == "") return;
             _path = fold.SelectedPath;
@@ -56,19 +57,17 @@ namespace databaseworker
                 if (file.Contains("InfANT.exe"))
                 {
                     textPathToAntivirus.Text = fold.SelectedPath;
-
                     btnSelectAntivirus.Enabled = false;
                     btnSelectFile.Enabled      = true;
                     _contains = true;
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt", _path);
                 }
             }
 
             if(_contains == false)
             {
-                MessageBox.Show("Can't find the database in that folder! Try again!");
+                MessageBox.Show("Can't find InfANT in that folder! Try again!");
             }
-            File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt",_path);
-            _contains = false;
         }
 
         List<string> _localDatabase;
@@ -141,6 +140,15 @@ namespace databaseworker
                 Application.Exit();
             }
 
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\InfANT.exe"))
+            {
+                _path = Directory.GetCurrentDirectory();
+                textPathToAntivirus.Text = _path;
+                btnSelectFile.Enabled = true;
+                _contains = true;
+                return;
+            }
+            
             if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt")) return;
             _path = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt");
 

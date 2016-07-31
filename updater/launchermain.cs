@@ -256,9 +256,9 @@ namespace launcher
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt");
                     progressBar.Value = 90;
                     progressBar.Value = 100;
-                    MessageBox.Show("We hope you had a good experience using our software!", "Uninstall finished successfully!");
+                    MessageBox.Show("We hope you had a good experience using our software! \r\n Launcher will close now.", "Uninstall finished successfully!");
                     _isBusy = false;
-                    LoadEverything();
+                    Application.Exit();
                 }
             }
             catch

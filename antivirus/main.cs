@@ -1314,7 +1314,7 @@ namespace InfANT
             MessageBox.Show("InfANT* Antivirus Scanner\r\n"+
                             "Version: " + Ver + @" " + Build + 
                             "\r\nIt was developed by a group of Russian students"+
-                            "\r\nInfANT was finished in early 2016"+
+                            "\r\nInfANT was released in early 2016"+
                             "\r\n\r\n*Inf = INFinity; ANT = A hard working (ant-like) ANTivirus", "About InfANT:");
         }
 
