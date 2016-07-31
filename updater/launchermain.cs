@@ -1,34 +1,33 @@
 ﻿using System;
-using System.Text;
-using System.Windows.Forms;
-using System.IO;
-using System.Threading;
-using System.Net;
 using System.Diagnostics;
-using antivirus;
+using System.IO;
+using System.Net;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
 using databaseworker;
-using launcher.Properties;
+using InfANT;
 
-namespace updater
+namespace launcher
 {
-    public partial class mainupdater : Form
+    public partial class Mainupdater : Form
     {
-        public mainupdater()
+        public Mainupdater()
         {
             InitializeComponent();
         }
 
         private void mainupdater_Load(object sender, EventArgs e)
         {
-            Process[] pname = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName); //gets the count of processes with the same name
-            if (pname.Length != 1) //if it's greatrer than 1 - close, we want only one instance running at a time
+            Process[] processName = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName); //gets the count of processes with the same name
+            if (processName.Length != 1) //if it's greater than 1 - close, we want only one instance running at a time
             {
                 MessageBox.Show("An another instance of this application in currently running.\r\nYou can only run 1 instance at the same time.", "Oops.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Exit();
                 return;
             }
             
-            Thread loadingThread = new Thread(loadEverything);
+            Thread loadingThread = new Thread(LoadEverything);
             loadingThread.Start();
         }
 
@@ -36,11 +35,11 @@ namespace updater
         {
             try
             { //https://stackoverflow.com/questions/122853/get-http-file-size
-                int Size  = GetSize("http://bitva-pod-moskvoy.ru/_kaspersky/InfANT.exe");
-                    Size += GetSize("http://bitva-pod-moskvoy.ru/_kaspersky/databaseeditor.exe");
-                    Size += GetSize("http://bitva-pod-moskvoy.ru/_kaspersky/prgbar.dll");
-                Size = Size / 1000;
-                    labDownloadSizeActual.Invoke(new MethodInvoker(delegate { labDownloadSizeActual.Text = Size.ToString() + " KB"; }));
+                int size  = GetSize("http://bitva-pod-moskvoy.ru/_kaspersky/InfANT.exe");
+                    size += GetSize("http://bitva-pod-moskvoy.ru/_kaspersky/databaseeditor.exe");
+                    size += GetSize("http://bitva-pod-moskvoy.ru/_kaspersky/prgbar.dll");
+                size = size / 1000;
+                    labDownloadSizeActual.Invoke(new MethodInvoker(delegate { labDownloadSizeActual.Text = size + @" KB"; }));
             }
             catch 
             {
@@ -52,27 +51,26 @@ namespace updater
 
         private int GetSize(string url)
         {
-            System.Net.WebRequest req = System.Net.HttpWebRequest.Create(url);
+            WebRequest req = WebRequest.Create(url);
             req.Method = "HEAD";
-            using (System.Net.WebResponse resp = req.GetResponse())
+            using (WebResponse resp = req.GetResponse())
             {
                 int ContentLength;
                 if (int.TryParse(resp.Headers.Get("Content-Length"), out ContentLength))
                 {
                     return ContentLength;
                 }
-                else
-                    return 0;
+                return 0;
             }
         }
 
-        string changelog;
-        string lastversion;
-        private void loadEverything()
+        private string _changelog;
+        private string _lastVersion;
+        private void LoadEverything()
         {
             if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt"))
             {
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", "firstlaunch");
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", @"firstlaunch");
             }
 
             if(File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\InfANT.exe"))
@@ -102,10 +100,10 @@ namespace updater
             {
                 using (WebClient http = new WebClient())
                 {
-                    lastversion = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/lastversion.txt"); //trys to download it
+                    _lastVersion = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/lastversion.txt"); //tries to download it
                 }
 
-                labLastActual.Invoke(new MethodInvoker(delegate { labLastActual.Text = lastversion; }));
+                labLastActual.Invoke(new MethodInvoker(delegate { labLastActual.Text = _lastVersion; }));
 
                 if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"))
                 {
@@ -131,18 +129,18 @@ namespace updater
                     { labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = "no"; })); }
                 }                    
             }
-            catch {  }
+            catch { /* movie selection in Russian NetFlix */ }
 
             try
             {
                 using (WebClient http = new WebClient())
                 {
-                    changelog = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/changelog.txt"); //trys to download it
+                    _changelog = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/changelog.txt"); //tries to download it
                 }
 
                 try
                 {
-                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\changelog.txt", changelog, Encoding.UTF8); //trys to save it
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\changelog.txt", _changelog, Encoding.UTF8); //tries to save it
                 }
                 catch
                 {
@@ -163,20 +161,20 @@ namespace updater
         {
             try
             {
-                loadingscreen loadings = new loadingscreen(true);
+                LoadingScreen loadings = new LoadingScreen(true);
                 loadings.Show();
-                this.Controls.Clear();
-                this.Hide();
+                Controls.Clear();
+                Hide();
             }
             catch
             {
                 MessageBox.Show("Can't launch InfANT! The file is busy or corrupt.","Fatal Error!",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                isbusy = false;
+                _isBusy = false;
                 Application.Exit();
             }
         }
 
-        bool isbusy = false;
+        private bool _isBusy;
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             progressBar.Value = 0;
@@ -184,29 +182,29 @@ namespace updater
             {
                 using (WebClient http = new WebClient())
                 {
-                    isbusy = true;
-                    btnLaunch.Enabled    = false;
-                    btnDatabaseEditor.Enabled      = false;
-                    btnFix.Enabled       = false;
-                    btnUninstall.Enabled = false;
+                    _isBusy = true;
+                    btnLaunch.Enabled         = false;
+                    btnDatabaseEditor.Enabled = false;
+                    btnFix.Enabled            = false;
+                    btnUninstall.Enabled      = false;
                     btnDatabaseEditor.Enabled = false;
                     progressBar.Value    = 20;
-                    lastversion = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/lastversion.txt"); //trys to download it
-                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt", lastversion, Encoding.UTF8);
+                    _lastVersion = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/lastversion.txt"); //tries to download it
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt", _lastVersion, Encoding.UTF8);
                     progressBar.Value    = 40;
-                    http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/prgbar.dll", "prgbar.dll"); //trys to download it
+                    http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/prgbar.dll", "prgbar.dll"); //tries to download it
                     progressBar.Value    = 60;
-                    http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/InfANT.exe", "InfANT.exe"); //trys to download it
+                    http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/InfANT.exe", "InfANT.exe"); //tries to download it
                     progressBar.Value    = 80;
-                    http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/databaseeditor.exe", "databaseeditor.exe"); //trys to download it
-                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", "firstlaunch");
+                    http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/databaseeditor.exe", "databaseeditor.exe"); //tries to download it
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", @"firstlaunch");
                     progressBar.Value    = 100;
                 }
             }
             catch
             {
                 MessageBox.Show("Looks like you have no internet connection, can't install/update the app!", "Can't connect to the Internet!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isbusy = false;
+                _isBusy = false;
                 return;
             }
             MessageBox.Show("Installing/updating finished!", "Yay!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -216,10 +214,10 @@ namespace updater
             btnUninstall.Enabled = true;
             btnUpdate.Enabled = false;
             btnDatabaseEditor.Enabled = true;
-            labInstalledActual.Text = lastversion;
+            labInstalledActual.Text = _lastVersion;
             labIsOutdatedTextActual.Text = "no";
-            labDownloadSizeActual.Text = "0 KB";
-            isbusy = false;    
+            labDownloadSizeActual.Text = @"0 KB";
+            _isBusy = false;    
         }
 
         private void btnUninstall_Click(object sender, EventArgs e)
@@ -228,7 +226,7 @@ namespace updater
             {
                 if (MessageBox.Show("This action will uninstall this app from your computer. Launcher will not be deleted.", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    isbusy = true;
+                    _isBusy = true;
                     btnLaunch.Enabled = false;
                     btnFix.Enabled = false;
                     btnUninstall.Enabled = false;
@@ -259,22 +257,22 @@ namespace updater
                     progressBar.Value = 90;
                     progressBar.Value = 100;
                     MessageBox.Show("We hope you had a good experience using our software!", "Uninstall finished successfully!");
-                    isbusy = false;
-                    loadEverything();
+                    _isBusy = false;
+                    LoadEverything();
                 }
             }
             catch
             {
                 MessageBox.Show("There was an error uninstalling this software! ", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isbusy = false;
+                _isBusy = false;
             }
             
         }
 
         private void btnChangelog_Click(object sender, EventArgs e)
         {
-            string[] stringSeparators = new string[] { "\r\n" };
-            string[] lines = changelog.Split(stringSeparators, StringSplitOptions.None);
+            string[] stringSeparators = { "\r\n" };
+            string[] lines = _changelog.Split(stringSeparators, StringSplitOptions.None);
 
             for (int i = 0; i < lines.Length; i++)
             {
@@ -283,13 +281,13 @@ namespace updater
                     lines[i] = lines[i].Remove(0, 1);
                 }
             }
-            MessageBox.Show(String.Format("{4}\r\n{3}\r\n{2}\r\n{1}\r\n{0}", lines[lines.Length - 1], lines[lines.Length - 2], lines[lines.Length - 3], lines[lines.Length - 4], lines[lines.Length - 5]));
+            MessageBox.Show(string.Format("{4}\r\n{3}\r\n{2}\r\n{1}\r\n{0}", lines[lines.Length - 1], lines[lines.Length - 2], lines[lines.Length - 3], lines[lines.Length - 4], lines[lines.Length - 5]));
             //this one makes my eyes bleed ^
         }
 
         private void mainupdater_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(isbusy)
+            if(_isBusy)
                 e.Cancel = true;
             else
                 e.Cancel = false;
@@ -301,14 +299,14 @@ namespace updater
             {
                 if (MessageBox.Show("This action will RESET all of your settings and will CLEAN your logs. Also, it will renew some files.", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    isbusy = true;
+                    _isBusy = true;
                     btnLaunch.Enabled = false;
                     btnFix.Enabled = false;
                     btnUninstall.Enabled = false;
                     using (WebClient http = new WebClient())
                     {
-                        http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/prgbar.dll", "prgbar.dll"); //trys to download it
-                        http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/databaseeditor.exe", "databaseeditor.exe"); //trys to download it
+                        http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/prgbar.dll", "prgbar.dll"); //tries to download it
+                        http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/databaseeditor.exe", "databaseeditor.exe"); //tries to download it
                         File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt");
                         File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsSuspicious.txt");
                         File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt");
@@ -318,7 +316,7 @@ namespace updater
                     btnLaunch.Enabled = true;
                     btnFix.Enabled = true;
                     btnUninstall.Enabled = true;
-                    isbusy = false;
+                    _isBusy = false;
                 }
                 MessageBox.Show("InfANT was fixed successfully!","Done!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
@@ -332,8 +330,8 @@ namespace updater
         {
             databaseeditor database = new databaseeditor(true);
             database.Show();
-            this.Controls.Clear();
-            this.Hide();
+            Controls.Clear();
+            Hide();
         }
     }
 }

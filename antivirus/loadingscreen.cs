@@ -1,136 +1,130 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Threading;
 using System.IO;
+using System.Linq;
 using System.Net;
-using System.Timers;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
 using InfANT.Properties;
 
-namespace antivirus
+namespace InfANT
 {
-    public partial class loadingscreen : Form
+    public partial class LoadingScreen : Form
     {
-        private main mainform; //we use that to access main form :3
+        private Main _mainForm; //we use that to access Main form :3
 
-        bool usedlauncher;
-        public loadingscreen(bool usedlauncherbool)
+        private readonly bool _usedLauncher;
+        public LoadingScreen(bool usedLauncherBool)
         {
             InitializeComponent();
-            usedlauncher = usedlauncherbool;
-        } 
-
-        System.Windows.Forms.Timer myTimer;
-        private void loadingscreen_Shown(object sender, EventArgs e) //happens right after it's showm BUT NOT FULLY DREWN!!! Load happend BEFORE, so it makes a blank gap.
-        {
-            myTimer  = new System.Windows.Forms.Timer();
-            myTimer.Interval = 200;
-            myTimer.Tick += kostil;
-            myTimer.Start(); //as it's not fully drewn but we WANT it to we set a small timer. The timer works in an another thread so the UI thread will be able to finish drawing.
+            _usedLauncher = usedLauncherBool;
         }
-        private void kostil(object sender, EventArgs e)
-        {
-            myTimer.Stop(); //we don't want to fire it more than I time, so immediatly stop it.
 
-            Thread th = new Thread(kostil2); //we need an another thread so the main thread will remain responsible.
-            th.IsBackground = true; //we want our thread to close with the program and not run apart, this will do it
+        private System.Windows.Forms.Timer _myTimer;
+        private void loadingscreen_Shown(object sender, EventArgs e) //happens right after it's shown BUT NOT FULLY DRAWN! Load happened BEFORE, so it makes a blank gap.
+        {
+            _myTimer = new System.Windows.Forms.Timer {Interval = 200};
+            _myTimer.Tick += Kostil;
+            _myTimer.Start(); //as it's not fully drawn but we WANT it to we set a small timer. The timer works in an another thread so the UI thread will be able to finish drawing.
+        }
+        private void Kostil(object sender, EventArgs e)
+        {
+            _myTimer.Stop(); //we don't want to fire it more than I time, so immediatly stop it.
+
+            Thread th = new Thread(Kostil2) {IsBackground = true};
+            /* we need an another thread so the main thread will remain responsible.
+            we want our thread to close with the program and not run apart, IsBackground will do it */
             th.Start();
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 20; }));
         }
-        private void kostil2()
+        private void Kostil2()
         {
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 40; }));
-            mainform = new main(this); //launch main form to access vars, but don't show it
-            mainform.labelYoVersionLab.Text = mainform.ver + " "+ mainform.build;
+            _mainForm = new Main(this) {labelYoVersionLab = {Text = Main.Ver + @" " + Main.Build}}; //launch Main form to access vars, but don't show it
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 60; }));
 
-            loadLogs();
+            LoadLogs();
             CheckForCorruptions();
-            readLogs(0);
+            ReadLogs(0);
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 80; }));
-            enabletimer();
-            updatedatabase();
-            loadlocaldatabase();
+            EnableTimer();
+            UpdateDatabase();
+            LoadLocalDatabase();
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 100; }));
-            loadchangelog();
+            LoadChangelog();
 
-            this.Invoke(new MethodInvoker(delegate { createIconMenuStructure(); mainform.TopMost = true; mainform.Show(); this.Hide(); this.Controls.Clear(); mainform.TopMost = false; this.Text = "InfANT Helper"; })); //show the main form, hides this form and sets the name of it to "Helper"
+            this.Invoke(new MethodInvoker(delegate { CreateIconMenuStructure(); _mainForm.TopMost = true; _mainForm.Show(); this.Hide(); this.Controls.Clear(); _mainForm.TopMost = false; this.Text = "InfANT Helper"; })); //show the main form, hides this form and sets the name of it to "Helper"
         }
 
         private void CheckForCorruptions()
         {
-            if (getSquareBrackets(OKlogs[OKlogs.Count - 1],5).StartsWith("(S")) //If there's a start entry, but no end entry, do this:
+            if (GetSquareBrackets(OkLogs[OkLogs.Count - 1],5).StartsWith("(S")) //If there's a start entry, but no end entry, do this:
             {   
-                createLogEntry(4, "(EScan was rudely interrupted, was not finished correctly)|unknown|");
+                CreateLogEntry(4, "(EScan was rudely interrupted, was not finished correctly)|unknown|");
             }
         }
         //---------------------------------
 
 
 
-        //TASKBARICO
+        //TASKBAR ICO
         //--------------------------------
-        public  NotifyIcon notifyIcon1 = new NotifyIcon();
-        private ContextMenu contextMenu1 = new ContextMenu();
-        private void createIconMenuStructure()
+        public readonly NotifyIcon NotifyIcon1 = new NotifyIcon();
+        private readonly ContextMenu _contextMenu1 = new ContextMenu();
+        private void CreateIconMenuStructure()
         {
-            //we create a contextMenu fisrst
-            contextMenu1.MenuItems.Add("Open").Click += new EventHandler(mainform.MenuOpen); //Triggers on menu-click
-            contextMenu1.MenuItems.Add("Fast-Scan").Click += new EventHandler(mainform.MenuFast);
-            contextMenu1.MenuItems.Add("Exit").Click += new EventHandler(mainform.MenuExit);
+            //we create a contextMenu first
+            _contextMenu1.MenuItems.Add("Open").Click += _mainForm.MenuOpen; //Triggers on menu-click
+            _contextMenu1.MenuItems.Add("Fast-Scan").Click += _mainForm.MenuFast;
+            _contextMenu1.MenuItems.Add("Exit").Click += _mainForm.MenuExit;
 
-            notifyIcon1.Visible = true;
-            changeIco(); //We enable the ico and set the right appearance
+            NotifyIcon1.Visible = true;
+            ChangeIco(); //We enable the ico and set the right appearance
 
-            notifyIcon1.Text = "Your computer is safe";
-            notifyIcon1.ContextMenu = contextMenu1; //And then assign it to a notifyIcon
-            notifyIcon1.Click += new EventHandler(mainform.MenuOpen); //This triggers on click of a taskbar ico
+            NotifyIcon1.Text = "Your computer is safe";
+            NotifyIcon1.ContextMenu = _contextMenu1; //And then assign it to a notifyIcon
+            NotifyIcon1.Click += _mainForm.MenuOpen; //This triggers on click of a taskbar ico
         }
-        public void changeIco()
+        public void ChangeIco()
         {
-            if (mainform.infected == false) //if infected - set "bad" ico, if not - "good" ico
-            {
-                notifyIcon1.Icon = Resources.favicoOK;
-            }
+            if (_mainForm.Infected == false) //if infected - set "bad" ico, if not - "good" ico
+                NotifyIcon1.Icon = Resources.favicoOK;
             else
-            {
-                notifyIcon1.Icon = Resources.favicoinfected;
-            }
+                NotifyIcon1.Icon = Resources.favicoinfected;
         }
         //--------------------------------
-        //ENDTASKBARICO
+        //END TASKBAR ICO
 
 
 
         //LOGS
         //----------------------------------
-        private void loadLogs()
+        private void LoadLogs()
         {
             try
             {
-                OKlogs         = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", Encoding.UTF8).ToList<string>();
+                OkLogs         = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", Encoding.UTF8).ToList();
 
-                if (OKlogs[0] == "firstlaunch")
+                if (OkLogs[0] == "firstlaunch")
                 {
                     File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt", "");
                     File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsSuspicious.txt", "");
                     File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt", "");
-                    OKlogs.Clear();
-                    OKlogs.Add("[I][G][NORE]");
+                    OkLogs.Clear();
+                    OkLogs.Add("[I][G][NORE]");
                 }
 
-                Viruseslogs    = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt", Encoding.UTF8).ToList<string>();
-                Suspiciouslogs = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsSuspicious.txt", Encoding.UTF8).ToList<string>();
-                Errorslogs     = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt", Encoding.UTF8).ToList<string>();     
+                Viruseslogs    = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt", Encoding.UTF8).ToList();
+                Suspiciouslogs = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsSuspicious.txt", Encoding.UTF8).ToList();
+                _errorslogs     = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt", Encoding.UTF8).ToList();     
                 //loads logs into RAM     
             }
             catch
             {
                 MessageBox.Show("Logs weren't found! \r\nPlease, don't delete them by yourself, do it using the 'Settings' tab.\r\nRelaunch the application!", "Fatal Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", "firstlaunch");
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", @"firstlaunch");
                         
                 Application.Exit(); 
             }
@@ -141,22 +135,22 @@ namespace antivirus
         //2 - Suspicious
         //3 - Errors //we don't need to read errors to the user, so no case for this
         //4 - Actions (Eg. Scans, Changes)
-        int nodescountviruses = 0;
-        int nodescountactions = 0;
-        public Dictionary<int, string> actionscontainer = new Dictionary<int, string>();
-        public Dictionary<int, string> virusescontainer = new Dictionary<int, string>();
-        public void readLogs(int whattoread)
+        int _nodesCountViruses;
+        int _nodesCountActions;
+        public readonly Dictionary<int, string> ActionsContainer = new Dictionary<int, string>();
+        public readonly Dictionary<int, string> VirusesContainer = new Dictionary<int, string>();
+        public void ReadLogs(int whatToRead)
         {
-            switch (whattoread)
+            switch (whatToRead)
             {
                 case 0:
-                    mainform.treeHistoryScans.Nodes.Clear();
-                    mainform.treeHistoryViruses.Nodes.Clear();
-                    actionscontainer.Clear();
-                    virusescontainer.Clear();
-                    readLogs(1);
-                    readLogs(2);
-                    readLogs(4);
+                    _mainForm.treeHistoryScans.Nodes.Clear();
+                    _mainForm.treeHistoryViruses.Nodes.Clear();
+                    ActionsContainer.Clear();
+                    VirusesContainer.Clear();
+                    ReadLogs(1);
+                    ReadLogs(2);
+                    ReadLogs(4);
                     break;
 
                 case 1: 
@@ -164,27 +158,27 @@ namespace antivirus
                     {
                         foreach (string str in Viruseslogs)
                         {
-                            string date = getSquareBrackets(str, 1);
-                            string time = getSquareBrackets(str, 3);
-                            string path = getSquareBrackets(str, 5);
+                            string date = GetSquareBrackets(str, 1);
+                            string time = GetSquareBrackets(str, 3);
+                            string path = GetSquareBrackets(str, 5);
 
-                            TreeNode[] treeNodes = mainform.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
+                            TreeNode[] treeNodes = _mainForm.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
                             if (treeNodes.Length > 0)
                             {
-                                TreeNode node = mainform.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
+                                TreeNode node = _mainForm.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
                                 TreeNode tmp = node.Nodes.Add(time);
-                                tmp.Name = nodescountviruses.ToString();
-                                virusescontainer.Add(nodescountviruses, String.Format("[{0}][V]", path));
-                                nodescountviruses++;
+                                tmp.Name = _nodesCountViruses.ToString();
+                                VirusesContainer.Add(_nodesCountViruses, $"[{path}][V]");
+                                _nodesCountViruses++;
                             }
                             else
                             {
-                                TreeNode node = mainform.treeHistoryViruses.Nodes.Add(date);
+                                TreeNode node = _mainForm.treeHistoryViruses.Nodes.Add(date);
                                 node.Name = "date";
                                 TreeNode tmp = node.Nodes.Add(time);
-                                tmp.Name = nodescountviruses.ToString();
-                                virusescontainer.Add(nodescountviruses, String.Format("[{0}][V]", path));
-                                nodescountviruses++;
+                                tmp.Name = _nodesCountViruses.ToString();
+                                VirusesContainer.Add(_nodesCountViruses, $"[{path}][V]");
+                                _nodesCountViruses++;
                             }
                         }
                     }
@@ -195,97 +189,95 @@ namespace antivirus
                     {
                         foreach (string str in Suspiciouslogs)
                         {
-                            string date = getSquareBrackets(str, 1);
-                            string time = getSquareBrackets(str, 3);
-                            string path = getSquareBrackets(str, 5);
+                            string date = GetSquareBrackets(str, 1);
+                            string time = GetSquareBrackets(str, 3);
+                            string path = GetSquareBrackets(str, 5);
 
-                            TreeNode[] treeNodes = mainform.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
+                            TreeNode[] treeNodes = _mainForm.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
                             if (treeNodes.Length > 0)
                             {
-                                TreeNode node = mainform.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
+                                TreeNode node = _mainForm.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
 
                                 TreeNode tmp = node.Nodes.Add(time);
-                                tmp.Name = nodescountviruses.ToString();
-                                virusescontainer.Add(nodescountviruses, String.Format("[{0}][S]", path));
-                                nodescountviruses++;
+                                tmp.Name = _nodesCountViruses.ToString();
+                                VirusesContainer.Add(_nodesCountViruses, $"[{path}][S]");
+                                _nodesCountViruses++;
                             }
                             else
                             {
-                                TreeNode node = mainform.treeHistoryViruses.Nodes.Add(date);
+                                TreeNode node = _mainForm.treeHistoryViruses.Nodes.Add(date);
                                 node.Name = "date";
                                 TreeNode tmp = node.Nodes.Add(time);
-                                tmp.Name = nodescountviruses.ToString();
-                                virusescontainer.Add(nodescountviruses, String.Format("[{0}][S]", path));
-                                nodescountviruses++;
+                                tmp.Name = _nodesCountViruses.ToString();
+                                VirusesContainer.Add(_nodesCountViruses, $"[{path}][S]");
+                                _nodesCountViruses++;
                             }
                         }          
                     }
                     break;
 
                 case 4:
-                    if(OKlogs.Count > 1)
+                    if(OkLogs.Count > 1)
                     {
-                        foreach (string str in OKlogs)
+                        foreach (string str in OkLogs)
                         { 
-                            string date = getSquareBrackets(str, 1);
-                            string time = getSquareBrackets(str, 3);
-                            string path = getSquareBrackets(str, 5);
-                            string action = "";
-                            string body = "";
+                            string date = GetSquareBrackets(str, 1);
+                            string time = GetSquareBrackets(str, 3);
+                            string path = GetSquareBrackets(str, 5);
                             if (path != "NORE")
                             {
-                                action = getBrackets(path,1);
-                                body = getSticks(path); //path
+                                string action = GetBrackets(path,1);
+                                string body = GetSticks(path);
 
                                 if (action.StartsWith("S"))
                                 {
-                                    TreeNode[] treeNodes = mainform.treeHistoryScans.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
+                                    TreeNode[] treeNodes = _mainForm.treeHistoryScans.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
                                     if (treeNodes.Length > 0)
                                     {
-                                        TreeNode node = mainform.treeHistoryScans.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
+                                        TreeNode node = _mainForm.treeHistoryScans.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
                                         TreeNode tmp = node.Nodes.Add(time);
 
-                                        actionscontainer.Add(nodescountactions, String.Format("[{0}][{1}]", action, body));
-                                        tmp.Name = nodescountactions.ToString(); 
+                                        ActionsContainer.Add(_nodesCountActions, $"[{action}][{body}]");
+                                        tmp.Name = _nodesCountActions.ToString(); 
                                     }
                                     else
                                     {
-                                        TreeNode node = mainform.treeHistoryScans.Nodes.Add(date);
+                                        TreeNode node = _mainForm.treeHistoryScans.Nodes.Add(date);
                                         node.Name = "date";
                                         TreeNode tmp = node.Nodes.Add(time);
 
-                                        actionscontainer.Add(nodescountactions, String.Format("[{0}][{1}]", action, body));
-                                        tmp.Name = nodescountactions.ToString();
+                                        ActionsContainer.Add(_nodesCountActions, $"[{action}][{body}]");
+                                        tmp.Name = _nodesCountActions.ToString();
                                     }
                                 }
                                 else if (action.StartsWith("F"))
                                 {
-                                    string filestatus = getBrackets(path, 3);
-                                    TreeNode[] treeNodes = mainform.treeHistoryScans.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
+                                    string filestatus = GetBrackets(path, 3);
+                                    TreeNode[] treeNodes = _mainForm.treeHistoryScans.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
                                     if (treeNodes.Length > 0)
                                     {                                       
-                                        TreeNode node = mainform.treeHistoryScans.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
+                                        TreeNode node = _mainForm.treeHistoryScans.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
                                         TreeNode tmp = node.Nodes.Add(time);
 
-                                        actionscontainer.Add(nodescountactions, String.Format("[{0}][{1}][{2}]", action, body, filestatus));
-                                        tmp.Name = nodescountactions.ToString();
-                                        nodescountactions++;   
+                                        ActionsContainer.Add(_nodesCountActions, $"[{action}][{body}][{filestatus}]");
+                                        tmp.Name = _nodesCountActions.ToString();
+                                        _nodesCountActions++;   
                                     }
                                     else
                                     {
-                                        TreeNode node = mainform.treeHistoryScans.Nodes.Add(date);
+                                        TreeNode node = _mainForm.treeHistoryScans.Nodes.Add(date);
                                         node.Name = "date";
                                         TreeNode tmp = node.Nodes.Add(time);
 
-                                        actionscontainer.Add(nodescountactions, String.Format("[{0}][{1}][{2}]", action, body, filestatus));
-                                        tmp.Name = nodescountactions.ToString();
-                                        nodescountactions++;
+                                        ActionsContainer.Add(_nodesCountActions, $"[{action}][{body}][{filestatus}]");
+                                        tmp.Name = _nodesCountActions.ToString();
+                                        _nodesCountActions++;
                                     }
                                 }
                                 else
                                 {
-                                    actionscontainer[nodescountactions] += String.Format("[{0}][{1}]", action.Remove(0,1), body);
-                                    nodescountactions++;
+                                    ActionsContainer[_nodesCountActions] += $"[{action.Remove(0, 1)}][{body}]";
+                                    _nodesCountActions++;
                                 }
                             }
                         }
@@ -293,48 +285,50 @@ namespace antivirus
                     break;
             }
         }
-        public string getSquareBrackets(string logentry, int which)
+        public string GetSquareBrackets(string logentry, int which)
         {
             return logentry.Split('[', ']')[which];
         }
-        public string getBrackets(string logentry, int which)
+
+        private static string GetBrackets(string logentry, int which)
         {
             return logentry.Split('(', ')')[which];
         }
-        public string getSticks(string logentry)
+
+        private static string GetSticks(string logentry)
         {
             return logentry.Split('|', '|')[1];
         }
 
         public List<string> Viruseslogs = new List<string>(); //we make a list BEFORE appling a new one just in case we may have nothing inside (i.e. no errors)
         public List<string> Suspiciouslogs = new List<string>(); //so it's needed to get rid of all the  exceptions
-        public List<string> Errorslogs = new List<string>();
-        public List<string> OKlogs = new List<string>();
-        public void createLogEntry(int wheretowrite, string events)
+        private List<string> _errorslogs = new List<string>();
+        public List<string> OkLogs = new List<string>();
+        public void CreateLogEntry(int wheretowrite, string events)
         {
             DateTime localDate = DateTime.Now;
-            string date = String.Format("{0}/{1}/{2}", localDate.Day.ToString(), localDate.Month.ToString(), localDate.Year.ToString());
-            string time = String.Format("{0}:{1}:{2}", localDate.Hour.ToString(), localDate.Minute.ToString(), localDate.Second.ToString()); //generate a timestamp for an entry
+            string date = $"{localDate.Day}/{localDate.Month}/{localDate.Year}";
+            string time = $"{localDate.Hour}:{localDate.Minute}:{localDate.Second}"; //generate a timestamp for an entry
             
             switch (wheretowrite) //write it to a needed log
             {
                 case 1: //VIRUSES
-                    string tempfist = String.Format("[{0}][{1}][{2}]", date, time, events);
+                    string tempfist = $"[{date}][{time}][{events}]";
                     string result1 = Viruseslogs.FirstOrDefault(stringToCheck => stringToCheck.Contains(events));
                     if (result1 == null)
                         Viruseslogs.Add(tempfist);
                     break;
                 case 2: //SUSP
-                    string tempscnd = String.Format("[{0}][{1}][{2}]", date, time, events);
+                    string tempSecond = $"[{date}][{time}][{events}]";
                     string result2 = Suspiciouslogs.FirstOrDefault(stringToCheck => stringToCheck.Contains(events));
                     if (result2 == null)
-                        Suspiciouslogs.Add(tempscnd);
+                        Suspiciouslogs.Add(tempSecond);
                     break;
                 case 3: //ERRS
-                    Errorslogs.Add(String.Format("[{0}][{1}][{2}]", date, time, events));
+                    _errorslogs.Add($"[{date}][{time}][{events}]");
                     break;
                 case 4: //ACTIONS / OK
-                    OKlogs.Add(String.Format("[{0}][{1}][{2}]", date, time, events));
+                    OkLogs.Add($"[{date}][{time}][{events}]");
                     break;
             }
         }
@@ -343,17 +337,17 @@ namespace antivirus
         {
             try
             {
-                File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", OKlogs);
+                File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", OkLogs);
                 File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt", Viruseslogs);
                 File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsSuspicious.txt", Suspiciouslogs);
-                File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt", Errorslogs);
+                File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt", _errorslogs);
             }
             catch
             {
-                timerLogSaver.Enabled = false;
+                _timerLogSaver.Enabled = false;
                 MessageBox.Show("Can't save logs to disk!\r\nThey are probably in use or InfANT has no premissions to save there.", "Oops!",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                timerLogSaver.Enabled = true;
-                timerLogSaver.Start();
+                _timerLogSaver.Enabled = true;
+                _timerLogSaver.Start();
             }
         }
         //----------------------------------
@@ -363,13 +357,12 @@ namespace antivirus
 
         //INI
         //--------------------------------------
-        System.Timers.Timer timerLogSaver;
-        private void enabletimer()
+        private System.Timers.Timer _timerLogSaver;
+        private void EnableTimer()
         {
-            timerLogSaver = new System.Timers.Timer(1000);
-            timerLogSaver.Enabled = true;
-            timerLogSaver.Elapsed += new ElapsedEventHandler(timerSaveLogs_Tick);
-            timerLogSaver.Start();
+            _timerLogSaver = new System.Timers.Timer(1000) {Enabled = true};
+            _timerLogSaver.Elapsed += timerSaveLogs_Tick;
+            _timerLogSaver.Start();
         }
         //--------------------------------------
         //END INI
@@ -377,9 +370,9 @@ namespace antivirus
 
         //DATABASE
         //---------------------------------------
-        public void updatedatabase() //updates the database from the web
+        public void UpdateDatabase() //updates the database from the web
         {
-            string[] stringSeparators = new string[] { "\r\n" }; //that's an our seperator //IDK why do I need an array to store ONE seperator, lol
+            string[] stringSeparators = { "\r\n" }; //that's an our separator //IDK why do I need an array to store ONE separator
             try
             {
                 using (WebClient http = new WebClient())
@@ -387,7 +380,7 @@ namespace antivirus
                     string database = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/database.txt"); 
 
                     string[] lines            = database.Split(stringSeparators, StringSplitOptions.None); //as we download big STRING we have to split it into LINES
-                    mainform.hashes           = lines.ToList<string>(); //loads that to RAM BEFORE saving
+                    _mainForm.Hashes           = lines.ToList(); //loads that to RAM BEFORE saving
 
                     try
                     {
@@ -395,25 +388,25 @@ namespace antivirus
                     }
                     catch
                     {
-                        createLogEntry(3, "Can't save database");
+                        CreateLogEntry(3, "Can't save database");
                         MessageBox.Show("Couldn't write the database to disk! \r\nIt looks like you have no access to the folder or the file is in use.", "Oops.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    mainform.isinternetconnected = true; // if everything's cool - sets the internet connectivity to true
+                    _mainForm.IsInternetConnected = true; // if everything's cool - sets the internet connectivity to true
                 }
             }
             catch //if not:
             {
-                if (mainform.isinternetconnected != false)
+                if (_mainForm.IsInternetConnected)
                 {
-                    createLogEntry(3, "Can't establish an internet connection");
-                    mainform.isinternetconnected = false; //sets the internet connectivity to false
+                    CreateLogEntry(3, "Can't establish an internet connection");
+                    _mainForm.IsInternetConnected = false; //sets the internet connectivity to false
                     if (MessageBox.Show("Looks like you have no internet, databases and changelog weren't updated", "Can't connect to the Internet!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
                     {
-                        mainform.RetryInt(); //if user selects retry
+                        _mainForm.RetryInt(); //if user selects retry
                         return;
                     }
                 }   
-                loaddatabase(); //if not it just skips and loads a local database
+                LoadDatabase(); //if not it just skips and loads a local database
             }
 
             try
@@ -423,7 +416,7 @@ namespace antivirus
                     string databasesusp = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/databasesusp.txt");
 
                     string[] lines      = databasesusp.Split(stringSeparators, StringSplitOptions.None); //as we download big STRING we have to split it into LINES
-                    mainform.susphashes = lines.ToList<string>(); //loads that to RAM BEFORE saving
+                    _mainForm.SuspHashes = lines.ToList(); //loads that to RAM BEFORE saving
 
                     try
                     {
@@ -431,58 +424,58 @@ namespace antivirus
                     }
                     catch
                     {
-                        createLogEntry(3, "Can't save database");
+                        CreateLogEntry(3, "Can't save database");
                         MessageBox.Show("Couldn't write the database to disk! \r\nIt looks like you have no access to the folder or the file is in use.", "Oops.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    mainform.isinternetconnected = true; // if everything's cool - sets the internet connectivity to true
+                    _mainForm.IsInternetConnected = true; // if everything's cool - sets the internet connectivity to true
                 }
             }
             catch //if not:
             {
-                if (mainform.isinternetconnected != false)
+                if (_mainForm.IsInternetConnected)
                 {
-                    createLogEntry(3, "Can't establish an internet connection");
-                    mainform.isinternetconnected = false; //sets the internet connectivity to false
+                    CreateLogEntry(3, "Can't establish an internet connection");
+                    _mainForm.IsInternetConnected = false; //sets the internet connectivity to false
                     if (MessageBox.Show("Looks like you have no internet, databases and changelog weren't updated", "Can't connect to the Internet!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
                     {
-                        mainform.RetryInt(); //if user selects retry
+                        _mainForm.RetryInt(); //if user selects retry
                         return;
                     }
                 }
-                loaddatabasesusp(); //if not it just skips and loads a local database
+                LoadDatabaseSusp(); //if not it just skips and loads a local database
             }
         }
-        private void loaddatabase()
+        private void LoadDatabase()
         {
             try
             {
                 string[] lines  = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"/database.txt");
-                mainform.hashes = lines.ToList<string>(); //trys to load databases from the disk
+                _mainForm.Hashes = lines.ToList(); //tries to load databases from the disk
             }
             catch
             { // if no luck - closes. Why do I need an antivirus without databases?
-                createLogEntry(3, "Can't load MAIN databases");
+                CreateLogEntry(3, "Can't load MAIN databases");
                 MessageBox.Show("Looks like you have no internet connection and no cached databases on your PC.\r\nWithout them antivirus is completely useless!", "No databases found!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-        private void loaddatabasesusp()
+        private void LoadDatabaseSusp()
         {
             try
             {
                 string[] lines = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"/databasesusp.txt");
-                mainform.susphashes = lines.ToList<string>(); //trys to load databases from the disk
+                _mainForm.SuspHashes = lines.ToList(); //tries to load databases from the disk
             }
             catch
             { // if a user has main databases, but has no susp databases I don't need to force-close the app, as it still works
-                createLogEntry(3, "Can't load suspicious databases");
+                CreateLogEntry(3, "Can't load suspicious databases");
             }
         }
-        private void loadlocaldatabase() //this loads your own database (added through database editor)
+        private void LoadLocalDatabase() //this loads your own database (added through database editor)
         {
             try
             {
                 string[] lines = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"/localdatabase.txt"); //load it
-                mainform.hashes.AddRange(lines.ToList<string>());
+                _mainForm.Hashes.AddRange(lines.ToList());
             }
             catch
             { /*createLogEntry(3, "Can't load local database");*/ return; } //we don't need to show an error to an user, coz it doesn't really matter for us
@@ -490,10 +483,10 @@ namespace antivirus
             try
             {
                 string[] lines = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"/localdatabasesusp.txt"); //load it
-                mainform.susphashes.AddRange(lines.ToList<string>());
+                _mainForm.SuspHashes.AddRange(lines.ToList());
             }
             catch
-            { /*CreateLogEntry(3, "Can't load local database");*/ return; } //we don't need to show an error to an user, coz it doesn't really matter for us
+            { /* not empty at all */ } //we don't need to show an error to an user, coz it doesn't really matter for us
         }
         //----------------------------------------
         //END DATABASE
@@ -502,46 +495,46 @@ namespace antivirus
 
         //-------------------------------------------
         //CHANGELOG 
-        private string changelog; //our temp changelog
-        private void loadchangelog()
+        private string _changelog; //our temp changelog
+        private void LoadChangelog()
         {
             try
             {// same as with databases
-                changelog = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/changelog.txt");
-                formatchangelog();
+                _changelog = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/changelog.txt");
+                FormatChangelog();
             }
             catch
             {
-                changelog = "iNo internet connection and no local cached copy of the changelog were found.";
-                createLogEntry(3, "Can't establish an internet connection");
-                formatchangelog();
+                _changelog = "iNo internet connection and no local cached copy of the changelog were found.";
+                CreateLogEntry(3, "Can't establish an internet connection");
+                FormatChangelog();
             }
         }
-        public void formatchangelog()
+        public void FormatChangelog()
         {
-            mainform.textChangelog.Text = changelog;
-            List<string> newchangelog = new List<string>(); //we create a new (temp) log from our old temp log!
-                                                            //this resolves string seperators and makes a list of changes
+            _mainForm.textChangelog.Text = _changelog;
+            List<string> newChangelog = new List<string>(); //we create a new (temp) log from our old temp log!
+                                                            //this resolves string separators and makes a list of changes
 
-            foreach (string str in mainform.textChangelog.Lines)
+            foreach (string str in _mainForm.textChangelog.Lines)
             {
-                if (mainform.logonlyimportant == false)
+                if (_mainForm.LogOnlyImportant == false)
                 {
                     if (str.StartsWith("i")) //as we log not only important we add everything.
                     {                        //as we don't need there "i"s we remove them.
-                        newchangelog.Add(str.Remove(0, 1));
+                        newChangelog.Add(str.Remove(0, 1));
                     }
                     else
-                        newchangelog.Add(str);
+                        newChangelog.Add(str);
                 }
                 else
                 {
                     if (str.StartsWith("i"))
                     {
-                        newchangelog.Add(str.Remove(0, 1)); //if we log only inportant - we add only important (still no "i"s)
+                        newChangelog.Add(str.Remove(0, 1)); //if we log only important - we add only important (still no "i"s)
                     }
                 }
-            mainform.textChangelog.Lines = newchangelog.ToArray(); //finally, we append the changelog
+            _mainForm.textChangelog.Lines = newChangelog.ToArray(); //finally, we append the changelog
             }
         }
         //END CHANGELOG 
@@ -549,16 +542,13 @@ namespace antivirus
         private void loadingscreen_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-            return; //this is needed to stop all running functions
         }
 
         private void loadingscreen_Load(object sender, EventArgs e)
         {
-            if (!usedlauncher)
-            {
-                MessageBox.Show("Open \"_Launcher.exe\" instead!");
-                Application.Exit();
-            }    
+            if (_usedLauncher) return;
+            MessageBox.Show("Open \"_Launcher.exe\" instead!");
+            Application.Exit();
         }
 
     }

@@ -1,6 +1,6 @@
-﻿namespace updater
+﻿namespace launcher
 {
-    partial class mainupdater
+    partial class Mainupdater
     {
         /// <summary>
         /// Required designer variable.
@@ -212,7 +212,7 @@
             this.Controls.Add(this.labLastActual);
             this.Controls.Add(this.labLastText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "mainupdater";
+            this.Name = "Mainupdater";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

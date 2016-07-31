@@ -1,6 +1,6 @@
-﻿namespace antivirus
+﻿namespace InfANT
 {
-    partial class main
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnScanFolder = new System.Windows.Forms.Button();
             this.textFolderPath = new System.Windows.Forms.TextBox();
             this.textLog = new System.Windows.Forms.TextBox();
@@ -1161,7 +1161,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "main";
+            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InfANT Antivirus";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_FormClosing);

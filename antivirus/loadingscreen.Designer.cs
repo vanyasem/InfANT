@@ -1,6 +1,6 @@
-﻿namespace antivirus
+﻿namespace InfANT
 {
-    partial class loadingscreen
+    partial class LoadingScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loadingscreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadingScreen));
             this.lab_Wait = new System.Windows.Forms.Label();
             this.ProgressLoading = new prgbar.BlueProgressBar();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             this.Controls.Add(this.ProgressLoading);
             this.Controls.Add(this.lab_Wait);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "loadingscreen";
+            this.Name = "LoadingScreen";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.loadingscreen_FormClosing);

@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace updater
+namespace launcher
 {
     static class Program
     {
@@ -16,7 +13,7 @@ namespace updater
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainupdater());
+            Application.Run(new Mainupdater());
         }
     }
 }

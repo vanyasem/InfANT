@@ -10,95 +10,89 @@ namespace databaseworker
 {
     public partial class databaseeditor : Form
     {
-        bool usedlauncher;
-        public databaseeditor(bool usedlauncherpool)
+        private readonly bool _usedLauncher;
+        public databaseeditor(bool usedLauncherPool)
         {
             InitializeComponent();
-            usedlauncher = usedlauncherpool;
+            _usedLauncher = usedLauncherPool;
         }
 
         private void btnSelectFile_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Title = "Select the file you want to add";
+            OpenFileDialog open = new OpenFileDialog {Title = "Select the file you want to add"};
             open.ShowDialog();
 
-            if(open.FileName != "")
-            {
-                text_VirusPath.Text = open.FileName;
-                textSHA1.Text = GetSHA1(text_VirusPath.Text);
-                btnAddIt.Enabled = true;
-            }
+            if (open.FileName == "") return;
+            text_VirusPath.Text = open.FileName;
+            textSHA1.Text = GetSHA1(text_VirusPath.Text);
+            btnAddIt.Enabled = true;
         }
 
-        string SHA;
+        private string _SHA;
         private string GetSHA1(string filename)
         {
             using (var sha1 = SHA1.Create())
             {
                 using (var stream = File.OpenRead(filename))
                 {
-                    SHA = BitConverter.ToString(sha1.ComputeHash(stream)).Replace("-", string.Empty);
-                    return SHA;
+                    _SHA = BitConverter.ToString(sha1.ComputeHash(stream)).Replace("-", string.Empty);
+                    return _SHA;
                 }
             }
         }
 
 
-        string path;
-        bool contains = false;
+        private string _path;
+        private bool _contains;
         private void button1_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog fold = new FolderBrowserDialog();
-            fold.Description = "Select the InfANT's installation folder";
+            FolderBrowserDialog fold = new FolderBrowserDialog {Description = "Select the InfANT's installation folder"};
             fold.ShowDialog();
 
-            if (fold.SelectedPath != "")
+            if (fold.SelectedPath == "") return;
+            _path = fold.SelectedPath;
+            foreach (string file in Directory.GetFiles(_path))
             {
-                path = fold.SelectedPath;
-                foreach (string file in Directory.GetFiles(path))
+                if (file.Contains("InfANT.exe"))
                 {
-                    if (file.Contains("InfANT.exe"))
-                    {
-                        textPathToAntivirus.Text = fold.SelectedPath;
+                    textPathToAntivirus.Text = fold.SelectedPath;
 
-                        btnSelectAntivirus.Enabled = false;
-                        btnSelectFile.Enabled      = true;
-                        contains = true;
-                    }
+                    btnSelectAntivirus.Enabled = false;
+                    btnSelectFile.Enabled      = true;
+                    _contains = true;
                 }
-
-                if(contains == false)
-                {
-                    MessageBox.Show("Can't find the database in that folder! Try again!");
-                }
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt",path);
-                contains = false;
             }
+
+            if(_contains == false)
+            {
+                MessageBox.Show("Can't find the database in that folder! Try again!");
+            }
+            File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt",_path);
+            _contains = false;
         }
 
-        List<string> localdatabase;
-        List<string> localdatabasesusp;
+        List<string> _localDatabase;
+        List<string> _localDatabaseSusp;
         private void btnAddIt_Click(object sender, EventArgs e)
         {
-            if (File.Exists(path + @"\localdatabase.txt"))
-                    localdatabase = File.ReadAllLines(path + @"\localdatabase.txt", Encoding.UTF8).ToList<string>();
+            if (File.Exists(_path + @"\localdatabase.txt"))
+                    _localDatabase = File.ReadAllLines(_path + @"\localdatabase.txt", Encoding.UTF8).ToList<string>();
                 else
-                    localdatabase = new List<string>();
+                    _localDatabase = new List<string>();
 
-                if (File.Exists(path + @"\localdatabasesusp.txt"))
-                    localdatabasesusp = File.ReadAllLines(path + @"\localdatabasesusp.txt", Encoding.UTF8).ToList<string>();
+                if (File.Exists(_path + @"\localdatabasesusp.txt"))
+                    _localDatabaseSusp = File.ReadAllLines(_path + @"\localdatabasesusp.txt", Encoding.UTF8).ToList<string>();
                 else
-                    localdatabasesusp = new List<string>();
+                    _localDatabaseSusp = new List<string>();
 
             if(radioSusp.Checked == false)
             {
                 try
                 {
-                    if (!localdatabase.Contains(SHA) & !localdatabasesusp.Contains(SHA))
+                    if (!_localDatabase.Contains(_SHA) & !_localDatabaseSusp.Contains(_SHA))
                     {
-                        localdatabase.Add(SHA);
-                        File.WriteAllLines(path + @"\localdatabase.txt", localdatabase);
+                        _localDatabase.Add(_SHA);
+                        File.WriteAllLines(_path + @"\localdatabase.txt", _localDatabase);
                     }
                     else
                     {
@@ -116,10 +110,10 @@ namespace databaseworker
             {
                 try
                 {
-                    if (!localdatabase.Contains(SHA) & !localdatabasesusp.Contains(SHA))
+                    if (!_localDatabase.Contains(_SHA) & !_localDatabaseSusp.Contains(_SHA))
                     {
-                        localdatabase.Add(SHA);
-                        File.WriteAllLines(path + @"\localdatabasesusp.txt", localdatabase);
+                        _localDatabase.Add(_SHA);
+                        File.WriteAllLines(_path + @"\localdatabasesusp.txt", _localDatabase);
                     }
                     else
                     {
@@ -135,49 +129,45 @@ namespace databaseworker
             }
             MessageBox.Show("Done!");
             text_VirusPath.Text = "Select the file                                     ---------------------->"; //this looks bad
-            textSHA1.Text = String.Empty;
+            textSHA1.Text = string.Empty;
             btnAddIt.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (!usedlauncher)
+            if (!_usedLauncher)
             {
                 MessageBox.Show("Open \"_Launcher.exe\" instead!");
                 Application.Exit();
-            }    
-
-            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt"))
-            {
-                path = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt");
-
-                try
-                {
-                    foreach (string file in Directory.GetFiles(path))
-                    {
-                        if (file.Contains("InfANT.exe"))
-                        {
-                            textPathToAntivirus.Text = path;
-                            btnSelectFile.Enabled = true;
-                            contains = true;
-                        }
-                    }
-                }
-                catch
-                {
-                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt");
-                    Application.Restart();
-                    return;
-                }
-
-                if(contains == false)
-                {
-                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt");
-                    Application.Restart();
-                    return;
-                }
-                contains = false;
             }
+
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt")) return;
+            _path = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt");
+
+            try
+            {
+                foreach (string file in Directory.GetFiles(_path))
+                {
+                    if (!file.Contains("InfANT.exe")) continue;
+                    textPathToAntivirus.Text = _path;
+                    btnSelectFile.Enabled = true;
+                    _contains = true;
+                }
+            }
+            catch
+            {
+                File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt");
+                Application.Restart();
+                return;
+            }
+
+            if(_contains == false)
+            {
+                File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt");
+                Application.Restart();
+                return;
+            }
+            _contains = false;
         }
 
         private void databaseeditor_FormClosing(object sender, FormClosingEventArgs e)

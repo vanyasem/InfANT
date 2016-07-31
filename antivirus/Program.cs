@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InfANT;
 
 namespace antivirus
 {
@@ -16,7 +17,7 @@ namespace antivirus
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loadingscreen(false));
+            Application.Run(new LoadingScreen(false));
         }
     }
 }
