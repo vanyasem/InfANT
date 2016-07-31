@@ -117,139 +117,93 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labLastText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 34</value>
+  <data name="corrupted_sign" xml:space="preserve">
+    <value>corrupted!</value>
   </data>
-  <data name="labLastText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 13</value>
+  <data name="no_internet_sign" xml:space="preserve">
+    <value>no internet</value>
   </data>
-  <data name="labLastText.Text" xml:space="preserve">
-    <value>Последняя версия:</value>
+  <data name="install" xml:space="preserve">
+    <value>Install</value>
   </data>
-  <data name="labLastActual.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 34</value>
+  <data name="oops" xml:space="preserve">
+    <value>Oops.</value>
   </data>
-  <data name="labLastActual.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
+  <data name="done" xml:space="preserve">
+    <value>Done!</value>
   </data>
-  <data name="labLastActual.Text" xml:space="preserve">
-    <value>ждите</value>
+  <data name="something_wrong_but_nothing_bad" xml:space="preserve">
+    <value>Something went wrong, but nothing bad happened. Just try again.</value>
   </data>
-  <data name="btnLaunch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 67</value>
+  <data name="was_fixed_successfully" xml:space="preserve">
+    <value>InfANT was fixed successfully!</value>
   </data>
-  <data name="btnLaunch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 26</value>
+  <data name="are_u_sure" xml:space="preserve">
+    <value>Are you sure?</value>
   </data>
-  <data name="btnLaunch.Text" xml:space="preserve">
-    <value>Запустить</value>
+  <data name="error" xml:space="preserve">
+    <value>Error!</value>
   </data>
-  <data name="btnDatabaseEditor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>345, 97</value>
+  <data name="uninstall_finished_successfully" xml:space="preserve">
+    <value>Uninstall finished successfully!</value>
   </data>
-  <data name="btnDatabaseEditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 26</value>
+  <data name="hope_u_had_good_experience_will_close_now" xml:space="preserve">
+    <value>We hope you had a good experience using our software! 
+ Launcher will close now.</value>
   </data>
-  <data name="btnDatabaseEditor.Text" xml:space="preserve">
-    <value>Редактор Датабазы</value>
+  <data name="action_will_uninstall_launcher_wont_be_deleted" xml:space="preserve">
+    <value>This action will uninstall this app from your computer. Launcher will not be deleted.</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnFix.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="no" xml:space="preserve">
+    <value>no</value>
   </data>
-  <data name="btnFix.Location" type="System.Drawing.Point, System.Drawing">
-    <value>345, 67</value>
+  <data name="yay" xml:space="preserve">
+    <value>Yay!</value>
   </data>
-  <data name="btnFix.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 26</value>
+  <data name="cant_connect_to_internet" xml:space="preserve">
+    <value>Can't connect to the Internet!</value>
   </data>
-  <data name="btnFix.Text" xml:space="preserve">
-    <value>Восстановить приложение</value>
+  <data name="installing_updating_finished" xml:space="preserve">
+    <value>Installing/updating finished!</value>
   </data>
-  <data name="btnUninstall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>345, 36</value>
+  <data name="fatal_error" xml:space="preserve">
+    <value>Fatal Error!</value>
   </data>
-  <data name="btnUninstall.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 26</value>
+  <data name="update" xml:space="preserve">
+    <value>Update</value>
   </data>
-  <data name="btnUninstall.Text" xml:space="preserve">
-    <value>Деинсталлировать InfANT</value>
+  <data name="yes_exc" xml:space="preserve">
+    <value>yes!</value>
   </data>
-  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 26</value>
+  <data name="not_installed" xml:space="preserve">
+    <value>not installed!</value>
   </data>
-  <data name="btnUpdate.Text" xml:space="preserve">
-    <value>Обновить</value>
+  <data name="an_another_is_running_only_one_allowed" xml:space="preserve">
+    <value>An another instance of this application in currently running.
+You can only run 1 instance at the same time.</value>
   </data>
-  <data name="btnChangelog.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8pt</value>
+  <data name="no_internet_cant_check_updates" xml:space="preserve">
+    <value>Looks like you have no internet connection, can't check for updates!</value>
   </data>
-  <data name="btnChangelog.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="cant_write_logs_no_access" xml:space="preserve">
+    <value>Couldn't write the logs to disk! 
+It looks like you have no access to the folder or the file is in use.
+
+Reboot your PC and relaucnh InfANT with Administrator privileges.</value>
   </data>
-  <data name="btnChangelog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>345, 6</value>
+  <data name="no_internet_changelog_wasnt_updated" xml:space="preserve">
+    <value>Looks like you have no internet connection, changelog wasn't updated</value>
   </data>
-  <data name="btnChangelog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 26</value>
+  <data name="cant_laucnch_busy_corrupt" xml:space="preserve">
+    <value>Can't launch InfANT! The file is busy or corrupt.</value>
   </data>
-  <data name="btnChangelog.Text" xml:space="preserve">
-    <value>История изменений
-</value>
+  <data name="no_internet_cant_update_install" xml:space="preserve">
+    <value>Looks like you have no internet connection, can't install/update the app!</value>
   </data>
-  <data name="labInstalledText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 17</value>
+  <data name="error_uninstalling" xml:space="preserve">
+    <value>There was an error uninstalling this software! </value>
   </data>
-  <data name="labInstalledText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 13</value>
-  </data>
-  <data name="labInstalledText.Text" xml:space="preserve">
-    <value>Установленная версия:</value>
-  </data>
-  <data name="labInstalledActual.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 17</value>
-  </data>
-  <data name="labInstalledActual.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
-  </data>
-  <data name="labInstalledActual.Text" xml:space="preserve">
-    <value>ждите</value>
-  </data>
-  <data name="labDownloadSizeText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 16</value>
-  </data>
-  <data name="labDownloadSizeText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 13</value>
-  </data>
-  <data name="labDownloadSizeText.Text" xml:space="preserve">
-    <value>Размер загрузки:</value>
-  </data>
-  <data name="labIsOutdatedText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 34</value>
-  </data>
-  <data name="labIsOutdatedText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
-  </data>
-  <data name="labIsOutdatedText.Text" xml:space="preserve">
-    <value>Устарела?:</value>
-  </data>
-  <data name="labIsOutdatedTextActual.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 34</value>
-  </data>
-  <data name="labIsOutdatedTextActual.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
-  </data>
-  <data name="labIsOutdatedTextActual.Text" xml:space="preserve">
-    <value>ждите</value>
-  </data>
-  <data name="labDownloadSizeActual.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 17</value>
-  </data>
-  <data name="progressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 24</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>506, 130</value>
+  <data name="this_will_reset_settings_delete_logs_renew_files" xml:space="preserve">
+    <value>This action will RESET all of your settings and will CLEAN your logs. Also, it will renew some files.</value>
   </data>
 </root>

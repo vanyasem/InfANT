@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -14,6 +15,36 @@ namespace launcher
     {
         public Mainupdater()
         {
+            if (!File.Exists("lang.ini"))
+            {
+                if (MessageBox.Show("Press 'Yes' for English.\r\nНажмите 'Нет' ('No') для выбора русского языка.\r\nWarning! One time question! Вопрос будет задан только один раз!", "?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo("ru");
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"ru");
+                }
+                else
+                {
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"en");
+                }
+            }
+            else
+            {
+                try
+                {
+                    string lang = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+                }
+                catch (Exception E)
+                {
+                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
+                    MessageBox.Show("Error loading language settings. Relaunch InfANT, please.\r\nПроизошла ошибка при загрузке настроек локализации. Перезапустите InfANT, пожалуйста.");
+                    Application.Restart();
+                }
+            }
             InitializeComponent();
         }
 
@@ -22,7 +53,7 @@ namespace launcher
             Process[] processName = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName); //gets the count of processes with the same name
             if (processName.Length != 1) //if it's greater than 1 - close, we want only one instance running at a time
             {
-                MessageBox.Show("An another instance of this application in currently running.\r\nYou can only run 1 instance at the same time.", "Oops.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(LanguageResources.an_another_is_running_only_one_allowed, LanguageResources.oops, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Exit();
                 return;
             }
@@ -43,9 +74,9 @@ namespace launcher
             }
             catch 
             {
-                labDownloadSizeActual.Invoke(new MethodInvoker(delegate { labDownloadSizeActual.Text = "no internet"; }));
+                labDownloadSizeActual.Invoke(new MethodInvoker(delegate { labDownloadSizeActual.Text = LanguageResources.no_internet_sign; }));
                 btnFix.Invoke(new MethodInvoker(delegate { btnFix.Enabled = false; }));
-                MessageBox.Show("Looks like you have no internet connection, can't check for updates!", "Can't connect to the Internet!", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                MessageBox.Show(LanguageResources.no_internet_cant_check_updates, LanguageResources.cant_connect_to_internet, MessageBoxButtons.OK, MessageBoxIcon.Error); 
             }
         }
 
@@ -55,10 +86,10 @@ namespace launcher
             req.Method = "HEAD";
             using (WebResponse resp = req.GetResponse())
             {
-                int ContentLength;
-                if (int.TryParse(resp.Headers.Get("Content-Length"), out ContentLength))
+                int contentLength;
+                if (int.TryParse(resp.Headers.Get("Content-Length"), out contentLength))
                 {
-                    return ContentLength;
+                    return contentLength;
                 }
                 return 0;
             }
@@ -83,7 +114,7 @@ namespace launcher
             {
                 GetSizeAll();
                 File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt");
-                btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Text = "Install"; }));
+                btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Text = LanguageResources.install; }));
                 btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; }));
             }
 
@@ -108,12 +139,12 @@ namespace launcher
                 if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"))
                 {
                     if(File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\InfANT.exe"))
-                        labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = "corrupted!"; }));    
+                        labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = LanguageResources.corrupted_sign; }));    
                     else
-                        labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = "not installed!"; }));    
-                    labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = "yes!"; }));
-                    btnUpdate.Enabled = true;
-                    btnUpdate.Text = "Install";
+                        labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = LanguageResources.not_installed; }));    
+                    labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = LanguageResources.yes_exc; }));
+                    btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Text = LanguageResources.install; }));
+                    btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; }));
                     GetSizeAll();
                 }
                 else
@@ -121,12 +152,12 @@ namespace launcher
                     labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"); }));
                     if (labInstalledActual.Text != labLastActual.Text)
                     {
-                        labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = "yes!"; }));
-                        btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; btnUpdate.Text = "Update"; }));
+                        labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = LanguageResources.yes_exc; }));
+                        btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; btnUpdate.Text = LanguageResources.update; }));
                         GetSizeAll();
                     }
                     else
-                    { labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = "no"; })); }
+                    { labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = LanguageResources.no; })); }
                 }                    
             }
             catch { /* movie selection in Russian NetFlix */ }
@@ -144,14 +175,13 @@ namespace launcher
                 }
                 catch
                 {
-                    MessageBox.Show("Couldn't write the logs to disk! \r\nIt looks like you have no access to the folder or the file is in use.", "Oops.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(LanguageResources.cant_write_logs_no_access, LanguageResources.oops, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 btnChangelog.Invoke(new MethodInvoker(delegate { btnChangelog.Enabled = true; }));
             }
             catch
             {
-                MessageBox.Show("Looks like you have no internet connection, changelog wasn't updated", "Can't connect to the Internet!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show(LanguageResources.no_internet_changelog_wasnt_updated, LanguageResources.cant_connect_to_internet, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -168,7 +198,7 @@ namespace launcher
             }
             catch
             {
-                MessageBox.Show("Can't launch InfANT! The file is busy or corrupt.","Fatal Error!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(LanguageResources.cant_laucnch_busy_corrupt,LanguageResources.fatal_error,MessageBoxButtons.OK,MessageBoxIcon.Error);
                 _isBusy = false;
                 Application.Exit();
             }
@@ -203,11 +233,11 @@ namespace launcher
             }
             catch
             {
-                MessageBox.Show("Looks like you have no internet connection, can't install/update the app!", "Can't connect to the Internet!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(LanguageResources.no_internet_cant_update_install, LanguageResources.cant_connect_to_internet, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _isBusy = false;
                 return;
             }
-            MessageBox.Show("Installing/updating finished!", "Yay!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(LanguageResources.installing_updating_finished, LanguageResources.yay, MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnLaunch.Enabled = true;
             btnDatabaseEditor.Enabled = true;
             btnFix.Enabled = true;
@@ -215,7 +245,7 @@ namespace launcher
             btnUpdate.Enabled = false;
             btnDatabaseEditor.Enabled = true;
             labInstalledActual.Text = _lastVersion;
-            labIsOutdatedTextActual.Text = "no";
+            labIsOutdatedTextActual.Text = LanguageResources.no;
             labDownloadSizeActual.Text = @"0 KB";
             _isBusy = false;    
         }
@@ -224,7 +254,7 @@ namespace launcher
         {
             try
             {
-                if (MessageBox.Show("This action will uninstall this app from your computer. Launcher will not be deleted.", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show(LanguageResources.action_will_uninstall_launcher_wont_be_deleted, LanguageResources.are_u_sure, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     _isBusy = true;
                     btnLaunch.Enabled = false;
@@ -256,14 +286,14 @@ namespace launcher
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt");
                     progressBar.Value = 90;
                     progressBar.Value = 100;
-                    MessageBox.Show("We hope you had a good experience using our software! \r\n Launcher will close now.", "Uninstall finished successfully!");
+                    MessageBox.Show(LanguageResources.hope_u_had_good_experience_will_close_now, LanguageResources.uninstall_finished_successfully);
                     _isBusy = false;
                     Application.Exit();
                 }
             }
             catch
             {
-                MessageBox.Show("There was an error uninstalling this software! ", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(LanguageResources.error_uninstalling, LanguageResources.error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _isBusy = false;
             }
             
@@ -297,7 +327,7 @@ namespace launcher
         {
             try
             {
-                if (MessageBox.Show("This action will RESET all of your settings and will CLEAN your logs. Also, it will renew some files.", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show(LanguageResources.this_will_reset_settings_delete_logs_renew_files, LanguageResources.are_u_sure, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     _isBusy = true;
                     btnLaunch.Enabled = false;
@@ -311,18 +341,18 @@ namespace launcher
                         File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsSuspicious.txt");
                         File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt");
                         File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt");
-                        File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", "firstlaunch");
+                        File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", @"firstlaunch");
                     }
                     btnLaunch.Enabled = true;
                     btnFix.Enabled = true;
                     btnUninstall.Enabled = true;
                     _isBusy = false;
+                    MessageBox.Show(LanguageResources.was_fixed_successfully, LanguageResources.done, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                MessageBox.Show("InfANT was fixed successfully!","Done!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Something went wrong, but nothing bad happened. Just try again.","Oops.");
+                MessageBox.Show(LanguageResources.something_wrong_but_nothing_bad, LanguageResources.oops);
             }
         }
 

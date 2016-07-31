@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainupdater));
             this.labLastText = new System.Windows.Forms.Label();
             this.labLastActual = new System.Windows.Forms.Label();
             this.btnLaunch = new System.Windows.Forms.Button();
@@ -47,155 +48,96 @@
             // 
             // labLastText
             // 
-            this.labLastText.AutoSize = true;
-            this.labLastText.Location = new System.Drawing.Point(16, 19);
+            resources.ApplyResources(this.labLastText, "labLastText");
             this.labLastText.Name = "labLastText";
-            this.labLastText.Size = new System.Drawing.Size(67, 13);
-            this.labLastText.TabIndex = 0;
-            this.labLastText.Text = "Last version:";
             // 
             // labLastActual
             // 
-            this.labLastActual.AutoSize = true;
-            this.labLastActual.Location = new System.Drawing.Point(80, 19);
+            resources.ApplyResources(this.labLastActual, "labLastActual");
             this.labLastActual.Name = "labLastActual";
-            this.labLastActual.Size = new System.Drawing.Size(51, 13);
-            this.labLastActual.TabIndex = 1;
-            this.labLastActual.Text = "unknown";
             // 
             // btnLaunch
             // 
-            this.btnLaunch.Enabled = false;
-            this.btnLaunch.Location = new System.Drawing.Point(77, 67);
+            resources.ApplyResources(this.btnLaunch, "btnLaunch");
             this.btnLaunch.Name = "btnLaunch";
-            this.btnLaunch.Size = new System.Drawing.Size(197, 26);
-            this.btnLaunch.TabIndex = 8;
-            this.btnLaunch.Text = "Launch";
             this.btnLaunch.UseVisualStyleBackColor = true;
             this.btnLaunch.Click += new System.EventHandler(this.btnLaunch_Click);
             // 
             // btnDatabaseEditor
             // 
-            this.btnDatabaseEditor.Enabled = false;
-            this.btnDatabaseEditor.Location = new System.Drawing.Point(280, 97);
+            resources.ApplyResources(this.btnDatabaseEditor, "btnDatabaseEditor");
             this.btnDatabaseEditor.Name = "btnDatabaseEditor";
-            this.btnDatabaseEditor.Size = new System.Drawing.Size(120, 26);
-            this.btnDatabaseEditor.TabIndex = 13;
-            this.btnDatabaseEditor.Text = "Database Editor";
             this.btnDatabaseEditor.UseVisualStyleBackColor = true;
             this.btnDatabaseEditor.Click += new System.EventHandler(this.btnDatabaseEditor_Click);
             // 
             // btnFix
             // 
-            this.btnFix.Enabled = false;
-            this.btnFix.Location = new System.Drawing.Point(280, 67);
+            resources.ApplyResources(this.btnFix, "btnFix");
             this.btnFix.Name = "btnFix";
-            this.btnFix.Size = new System.Drawing.Size(120, 26);
-            this.btnFix.TabIndex = 12;
-            this.btnFix.Text = "Fix Application";
             this.btnFix.UseVisualStyleBackColor = true;
             this.btnFix.Click += new System.EventHandler(this.btnFix_Click);
             // 
             // btnUninstall
             // 
-            this.btnUninstall.Enabled = false;
-            this.btnUninstall.Location = new System.Drawing.Point(280, 37);
+            resources.ApplyResources(this.btnUninstall, "btnUninstall");
             this.btnUninstall.Name = "btnUninstall";
-            this.btnUninstall.Size = new System.Drawing.Size(120, 26);
-            this.btnUninstall.TabIndex = 11;
-            this.btnUninstall.Text = "Uninstall Application";
             this.btnUninstall.UseVisualStyleBackColor = true;
             this.btnUninstall.Click += new System.EventHandler(this.btnUninstall_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(7, 67);
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(64, 26);
-            this.btnUpdate.TabIndex = 9;
-            this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnChangelog
             // 
-            this.btnChangelog.Enabled = false;
-            this.btnChangelog.Location = new System.Drawing.Point(280, 7);
+            resources.ApplyResources(this.btnChangelog, "btnChangelog");
             this.btnChangelog.Name = "btnChangelog";
-            this.btnChangelog.Size = new System.Drawing.Size(120, 26);
-            this.btnChangelog.TabIndex = 10;
-            this.btnChangelog.Text = "Changelog";
             this.btnChangelog.UseVisualStyleBackColor = true;
             this.btnChangelog.Click += new System.EventHandler(this.btnChangelog_Click);
             // 
             // labInstalledText
             // 
-            this.labInstalledText.AutoSize = true;
-            this.labInstalledText.Location = new System.Drawing.Point(129, 19);
+            resources.ApplyResources(this.labInstalledText, "labInstalledText");
             this.labInstalledText.Name = "labInstalledText";
-            this.labInstalledText.Size = new System.Drawing.Size(86, 13);
-            this.labInstalledText.TabIndex = 2;
-            this.labInstalledText.Text = "Installed version:";
             // 
             // labInstalledActual
             // 
-            this.labInstalledActual.AutoSize = true;
-            this.labInstalledActual.Location = new System.Drawing.Point(212, 19);
+            resources.ApplyResources(this.labInstalledActual, "labInstalledActual");
             this.labInstalledActual.Name = "labInstalledActual";
-            this.labInstalledActual.Size = new System.Drawing.Size(51, 13);
-            this.labInstalledActual.TabIndex = 3;
-            this.labInstalledActual.Text = "unknown";
             // 
             // labDownloadSizeText
             // 
-            this.labDownloadSizeText.AutoSize = true;
-            this.labDownloadSizeText.Location = new System.Drawing.Point(4, 36);
+            resources.ApplyResources(this.labDownloadSizeText, "labDownloadSizeText");
             this.labDownloadSizeText.Name = "labDownloadSizeText";
-            this.labDownloadSizeText.Size = new System.Drawing.Size(79, 13);
-            this.labDownloadSizeText.TabIndex = 4;
-            this.labDownloadSizeText.Text = "Download size:";
             // 
             // labIsOutdatedText
             // 
-            this.labIsOutdatedText.AutoSize = true;
-            this.labIsOutdatedText.Location = new System.Drawing.Point(146, 36);
+            resources.ApplyResources(this.labIsOutdatedText, "labIsOutdatedText");
             this.labIsOutdatedText.Name = "labIsOutdatedText";
-            this.labIsOutdatedText.Size = new System.Drawing.Size(69, 13);
-            this.labIsOutdatedText.TabIndex = 6;
-            this.labIsOutdatedText.Text = "Is outdated?:";
             // 
             // labIsOutdatedTextActual
             // 
-            this.labIsOutdatedTextActual.AutoSize = true;
-            this.labIsOutdatedTextActual.Location = new System.Drawing.Point(212, 36);
+            resources.ApplyResources(this.labIsOutdatedTextActual, "labIsOutdatedTextActual");
             this.labIsOutdatedTextActual.Name = "labIsOutdatedTextActual";
-            this.labIsOutdatedTextActual.Size = new System.Drawing.Size(51, 13);
-            this.labIsOutdatedTextActual.TabIndex = 7;
-            this.labIsOutdatedTextActual.Text = "unknown";
             // 
             // labDownloadSizeActual
             // 
-            this.labDownloadSizeActual.AutoSize = true;
-            this.labDownloadSizeActual.Location = new System.Drawing.Point(80, 36);
+            resources.ApplyResources(this.labDownloadSizeActual, "labDownloadSizeActual");
             this.labDownloadSizeActual.Name = "labDownloadSizeActual";
-            this.labDownloadSizeActual.Size = new System.Drawing.Size(30, 13);
-            this.labDownloadSizeActual.TabIndex = 5;
-            this.labDownloadSizeActual.Text = "0 KB";
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(8, 98);
+            resources.ApplyResources(this.progressBar, "progressBar");
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(265, 24);
-            this.progressBar.TabIndex = 14;
             // 
-            // mainupdater
+            // Mainupdater
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(407, 130);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.labDownloadSizeActual);
             this.Controls.Add(this.labIsOutdatedTextActual);
@@ -215,8 +157,6 @@
             this.Name = "Mainupdater";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InfANT Launcher";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainupdater_FormClosing);
             this.Load += new System.EventHandler(this.mainupdater_Load);
