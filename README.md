@@ -10,21 +10,23 @@ It was created by 2 Russian students in a few months.
 
 It has **no** databases included, and at this point in can be used only as a basis for more complicated projects.
 
-It was **not** tested on Linux and it probably will never be.
+It was **not** tested on systems other than Windows and it probably will never be. (Until I get really bored)
+It was tested and works perfectly on Windows 7, Windows 8, Windows 8.1 and Windows 10.
 
 ###Futurelog
- * Make an installer with autostart (it's currently portable only)
- * Add an ability to scan compressed files
+ * Make an installer (it's currently portable only)
+ * Add an ability to scan every file in archives w/o password
  * Integrate it into right-click menu
  * Optimize scanning on high-end machines
- * Add real-time protection (detect new drives, detect opened binaries)
- * Seperate GUI and libs in 2 different packages
- * ?Add translations to other languages
+ * Add real-time protection (detect new drives, detect opened binaries, etc.)
+ * Separate GUI and libs in 2 different packages (so it will be easy to merge it into something else)
+ * Make a Russian localization (and a way for you to easily push your own translations)
  * ?Switch to MD5 and add some databases
+ * ?Add autostart with Windows
  
 ###Detailed info
-Later?
+Will make it if somebody requests.
 
 ---
-*Inf stands for "Infinity" and ANT stands for "ANTivirus" (ants work really hard btw).
+*Inf stands for "Infinity" and ANT stands for "ANTivirus" (ants work really hard).
 
