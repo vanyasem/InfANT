@@ -136,6 +136,12 @@ namespace launcher
             {
                 btnUninstall.Invoke(new MethodInvoker(delegate { btnUninstall.Enabled = true; }));
                 btnFix.Invoke(new MethodInvoker(delegate { btnFix.Enabled = true; }));
+
+                if (labInstalledActual.Text != labLastActual.Text)
+                {
+                    btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; btnUpdate.Text = LanguageResources.update; }));
+                    GetSizeAll();
+                }
             }
             else
             {
@@ -146,12 +152,6 @@ namespace launcher
 
             if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\databaseeditor.exe"))
                 btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; }));
-
-            if (labInstalledActual.Text != labLastActual.Text)
-            {
-                btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; btnUpdate.Text = LanguageResources.update; }));
-                GetSizeAll();
-            }
             btnLang.Invoke(new MethodInvoker(delegate { btnLang.Enabled = true; }));
 
             try
