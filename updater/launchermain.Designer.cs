@@ -44,6 +44,7 @@
             this.labIsOutdatedTextActual = new System.Windows.Forms.Label();
             this.labDownloadSizeActual = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.btnLang = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labLastText
@@ -133,11 +134,19 @@
             resources.ApplyResources(this.progressBar, "progressBar");
             this.progressBar.Name = "progressBar";
             // 
+            // btnLang
+            // 
+            resources.ApplyResources(this.btnLang, "btnLang");
+            this.btnLang.Name = "btnLang";
+            this.btnLang.UseVisualStyleBackColor = true;
+            this.btnLang.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Mainupdater
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.btnLang);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.labDownloadSizeActual);
             this.Controls.Add(this.labIsOutdatedTextActual);
@@ -182,6 +191,7 @@
         private System.Windows.Forms.Label labIsOutdatedTextActual;
         private System.Windows.Forms.Label labDownloadSizeActual;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Button btnLang;
     }
 }
 

@@ -15,35 +15,11 @@ namespace launcher
     {
         public Mainupdater()
         {
-            if (!File.Exists("lang.ini"))
+            if (File.Exists("lang.ini"))
             {
-                if (MessageBox.Show("Press 'Yes' for English.\r\nНажмите 'Нет' ('No') для выбора русского языка.\r\nWarning! One time question! Вопрос будет задан только один раз!", "?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-                {
-                    Thread.CurrentThread.CurrentCulture = new CultureInfo("ru");
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
-                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"ru");
-                }
-                else
-                {
-                    Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"en");
-                }
-            }
-            else
-            {
-                try
-                {
-                    string lang = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
-                    Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
-                }
-                catch (Exception E)
-                {
-                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
-                    MessageBox.Show("Error loading language settings. Relaunch InfANT, please.\r\nПроизошла ошибка при загрузке настроек локализации. Перезапустите InfANT, пожалуйста.");
-                    Application.Restart();
-                }
+                string temp = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
+                Thread.CurrentThread.CurrentCulture = new CultureInfo(temp);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(temp);
             }
             InitializeComponent();
         }
@@ -59,6 +35,7 @@ namespace launcher
             }
             
             Thread loadingThread = new Thread(LoadEverything);
+            loadingThread.IsBackground = true;
             loadingThread.Start();
         }
 
@@ -362,6 +339,40 @@ namespace launcher
             database.Show();
             Controls.Clear();
             Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!File.Exists("lang.ini"))
+            {
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"ru");
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("ru");
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+            }
+            else
+            {
+                try
+                {
+                    string lang = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
+                    if (lang == "en")
+                    {
+                        Thread.CurrentThread.CurrentCulture = new CultureInfo("ru");
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+                        File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"ru");
+                    }
+                    else
+                    {
+                        Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                        File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"en");
+                    }
+                }
+                catch (Exception E)
+                {
+                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
+                }
+            }
+            Application.Restart();
         }
     }
 }

@@ -192,7 +192,7 @@
     <value>345, 6</value>
   </data>
   <data name="btnChangelog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 26</value>
+    <value>121, 26</value>
   </data>
   <data name="btnChangelog.Text" xml:space="preserve">
     <value>История изменений
@@ -248,6 +248,9 @@
   </data>
   <data name="progressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>330, 24</value>
+  </data>
+  <data name="btnLang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>465, 6</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>506, 130</value>
