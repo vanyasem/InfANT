@@ -41,7 +41,7 @@ namespace InfANT
         private void Kostil2()
         {
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 40; }));
-            _mainForm = new Main(this) {labelYoVersionLab = {Text = Main.Ver + @" " + Main.Build}}; //launch Main form to access vars, but don't show it
+            _mainForm = new Main(this); //launch Main form to access vars, but don't show it
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 60; }));
 
             LoadLogs();
@@ -54,7 +54,10 @@ namespace InfANT
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 100; }));
             LoadChangelog();
 
-            this.Invoke(new MethodInvoker(delegate { CreateIconMenuStructure(); _mainForm.TopMost = true; _mainForm.Show(); this.Hide(); this.Controls.Clear(); _mainForm.TopMost = false; this.Text = "InfANT Helper"; })); //show the main form, hides this form and sets the name of it to "Helper"
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
+            Invoke(new MethodInvoker(delegate { CreateIconMenuStructure(); _mainForm.Ver = fvi.FileVersion; _mainForm.labelYoVersionLab.Text = _mainForm.Ver + @" " + Main.Build;
+                _mainForm.TopMost = true; _mainForm.Show(); Hide(); Controls.Clear(); _mainForm.TopMost = false; Text = @"InfANT Helper"; })); //show the main form, hides this form and sets the name of it to "Helper"
         }
 
         private void CheckForCorruptions()

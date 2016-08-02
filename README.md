@@ -2,7 +2,7 @@
 ###Changelog
 Full changelog can be found [HERE](http://bitva-pod-moskvoy.ru/_kaspersky/changelog.txt).
 
-It's **not a final version**, but the current functions are 100% finished (that's why it's called *Release*)
+It's **not a final version**, this project is in active development. It has both STABLE (master) and UNSTABLE branches.
 
 ###Summary
 **InfANT*** is an open-source antivirus project written in C#.

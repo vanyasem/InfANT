@@ -81,8 +81,8 @@ namespace InfANT
         public List<string> Hashes  = new List<string>(); //a list of SHA1 hashes for scanning
         public List<string> SuspHashes = new List<string>(); //a list of suspicious hashes
 
-        public const string Ver = "2.1.0.0"; //this string indicates the current version of the app
-        public const string Build = "RELEASE"; // TODO: update it
+        public string Ver; //this string indicates the current version of the app
+        public const string Build = "STABLE"; // TODO: update it
 
         private Thread _foldScanning; //This thread is used for scanning files in a folder
         private Thread _fileCounting; //This thread is used for counting files in a folder

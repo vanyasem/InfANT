@@ -48,7 +48,7 @@
             this.ProgressLoading.ProgressBarColor = System.Drawing.Color.DodgerBlue;
             this.ProgressLoading.Value = 0;
             // 
-            // loadingscreen
+            // LoadingScreen
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

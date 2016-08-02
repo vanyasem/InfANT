@@ -183,7 +183,7 @@
 You can only run 1 instance at the same time.</value>
   </data>
   <data name="no_internet_cant_check_updates" xml:space="preserve">
-    <value>Looks like you have no internet connection, can't check for updates!</value>
+    <value>Looks like you have no internet connection (or our server is down), can't check for updates!</value>
   </data>
   <data name="cant_write_logs_no_access" xml:space="preserve">
     <value>Couldn't write the logs to disk! 
@@ -192,13 +192,13 @@ It looks like you have no access to the folder or the file is in use.
 Reboot your PC and relaucnh InfANT with Administrator privileges.</value>
   </data>
   <data name="no_internet_changelog_wasnt_updated" xml:space="preserve">
-    <value>Looks like you have no internet connection, changelog wasn't updated</value>
+    <value>Looks like you have no internet connection (or our server is down), changelog wasn't updated</value>
   </data>
   <data name="cant_laucnch_busy_corrupt" xml:space="preserve">
     <value>Can't launch InfANT! The file is busy or corrupt.</value>
   </data>
   <data name="no_internet_cant_update_install" xml:space="preserve">
-    <value>Looks like you have no internet connection, can't install/update the app!</value>
+    <value>Looks like you have no internet connection (or our server is down), can't install/update the app!</value>
   </data>
   <data name="error_uninstalling" xml:space="preserve">
     <value>There was an error uninstalling this software! </value>

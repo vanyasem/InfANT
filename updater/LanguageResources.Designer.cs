@@ -201,7 +201,7 @@ namespace launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Looks like you have no internet connection, can&apos;t check for updates!.
+        ///   Looks up a localized string similar to Looks like you have no internet connection (or our server is down), can&apos;t check for updates!.
         /// </summary>
         internal static string no_internet_cant_check_updates {
             get {
@@ -210,7 +210,7 @@ namespace launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Looks like you have no internet connection, can&apos;t install/update the app!.
+        ///   Looks up a localized string similar to Looks like you have no internet connection (or our server is down), can&apos;t install/update the app!.
         /// </summary>
         internal static string no_internet_cant_update_install {
             get {
@@ -219,7 +219,7 @@ namespace launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Looks like you have no internet connection, changelog wasn&apos;t updated.
+        ///   Looks up a localized string similar to Looks like you have no internet connection (or our server is down), changelog wasn&apos;t updated.
         /// </summary>
         internal static string no_internet_changelog_wasnt_updated {
             get {

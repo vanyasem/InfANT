@@ -13,6 +13,7 @@ namespace launcher
 {
     public partial class Mainupdater : Form
     {
+        private bool _isInternetConnected;
         public Mainupdater()
         {
             if (File.Exists("lang.ini"))
@@ -33,9 +34,8 @@ namespace launcher
                 Application.Exit();
                 return;
             }
-            
-            Thread loadingThread = new Thread(LoadEverything);
-            loadingThread.IsBackground = true;
+
+            Thread loadingThread = new Thread(LoadEverything) {IsBackground = true};
             loadingThread.Start();
         }
 
@@ -77,67 +77,28 @@ namespace launcher
         private void LoadEverything()
         {
             if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt"))
-            {
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", @"firstlaunch");
-            }
-
-            if(File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\InfANT.exe"))
-            {
-                btnLaunch.Invoke(new MethodInvoker(delegate { btnLaunch.Enabled = true; }));
-                btnUninstall.Invoke(new MethodInvoker(delegate { btnUninstall.Enabled = true; }));
-                btnFix.Invoke(new MethodInvoker(delegate { btnFix.Enabled = true; }));
-            }
-            else
-            {
-                GetSizeAll();
-                File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt");
-                btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Text = LanguageResources.install; }));
-                btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; }));
-            }
-
+           
             if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\databaseeditor.exe"))
-            {
                 btnDatabaseEditor.Invoke(new MethodInvoker(delegate { btnDatabaseEditor.Enabled = true; }));
+
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\InfANT.exe"))
+                btnLaunch.Invoke(new MethodInvoker(delegate { btnLaunch.Enabled = true; }));
+
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\ru\_Launcher.resources.dll"))
+                btnLang.Invoke(new MethodInvoker(delegate { btnLang.Enabled = true; }));
+
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"))
+            {
+                if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\InfANT.exe"))
+                    labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = LanguageResources.corrupted_sign; }));
+                else
+                    labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = LanguageResources.not_installed; }));
+                labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = LanguageResources.yes_exc; }));
+                btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Text = LanguageResources.install; }));
             }
             else
-            {
-                btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; }));
-            }
-
-            try
-            {
-                using (WebClient http = new WebClient())
-                {
-                    _lastVersion = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/lastversion.txt"); //tries to download it
-                }
-
-                labLastActual.Invoke(new MethodInvoker(delegate { labLastActual.Text = _lastVersion; }));
-
-                if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"))
-                {
-                    if(File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\InfANT.exe"))
-                        labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = LanguageResources.corrupted_sign; }));    
-                    else
-                        labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = LanguageResources.not_installed; }));    
-                    labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = LanguageResources.yes_exc; }));
-                    btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Text = LanguageResources.install; }));
-                    btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; }));
-                    GetSizeAll();
-                }
-                else
-                {
-                    labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"); }));
-                    if (labInstalledActual.Text != labLastActual.Text)
-                    {
-                        labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = LanguageResources.yes_exc; }));
-                        btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; btnUpdate.Text = LanguageResources.update; }));
-                        GetSizeAll();
-                    }
-                    else
-                    { labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = LanguageResources.no; })); }
-                }                    
-            }
-            catch { /* movie selection in Russian NetFlix */ }
+                labInstalledActual.Invoke(new MethodInvoker(delegate { labInstalledActual.Text = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"); }));
 
             try
             {
@@ -154,14 +115,65 @@ namespace launcher
                 {
                     MessageBox.Show(LanguageResources.cant_write_logs_no_access, LanguageResources.oops, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                using (WebClient http = new WebClient())
+                {
+                    _lastVersion = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/lastversion.txt"); //tries to download it
+                    labLastActual.Invoke(new MethodInvoker(delegate { labLastActual.Text = _lastVersion; }));
+                }
+
                 btnChangelog.Invoke(new MethodInvoker(delegate { btnChangelog.Enabled = true; }));
+                _isInternetConnected = true;
             }
             catch
             {
                 MessageBox.Show(LanguageResources.no_internet_changelog_wasnt_updated, LanguageResources.cant_connect_to_internet, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _isInternetConnected = false;
             }
 
+            if (!_isInternetConnected) return;
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\InfANT.exe"))
+            {
+                btnUninstall.Invoke(new MethodInvoker(delegate { btnUninstall.Enabled = true; }));
+                btnFix.Invoke(new MethodInvoker(delegate { btnFix.Enabled = true; }));
+            }
+            else
+            {
+                GetSizeAll();
+                File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt");
+                btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; }));
+            }
 
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\databaseeditor.exe"))
+                btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; }));
+
+            if (labInstalledActual.Text != labLastActual.Text)
+            {
+                btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; btnUpdate.Text = LanguageResources.update; }));
+                GetSizeAll();
+            }
+            btnLang.Invoke(new MethodInvoker(delegate { btnLang.Enabled = true; }));
+
+            try
+            {
+                if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"))
+                {           
+                    btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; }));
+                    GetSizeAll();
+                }
+                else
+                {     
+                    if (labInstalledActual.Text != labLastActual.Text)
+                    {
+                        labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = LanguageResources.yes_exc; }));
+                        btnUpdate.Invoke(new MethodInvoker(delegate { btnUpdate.Enabled = true; btnUpdate.Text = LanguageResources.update; }));
+                        GetSizeAll();
+                    }
+                    else
+                    { labIsOutdatedTextActual.Invoke(new MethodInvoker(delegate { labIsOutdatedTextActual.Text = LanguageResources.no; })); }
+                }
+            }
+            catch { /* movie selection in Russian NetFlix */ }
         }
 
         private void btnLaunch_Click(object sender, EventArgs e)
@@ -319,10 +331,16 @@ namespace launcher
                         File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt");
                         File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt");
                         File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", @"firstlaunch");
+                        _lastVersion = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/lastversion.txt"); //tries to download it
+                        File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt", _lastVersion, Encoding.UTF8);
                     }
                     btnLaunch.Enabled = true;
                     btnFix.Enabled = true;
                     btnUninstall.Enabled = true;
+                    labInstalledActual.Text = _lastVersion;
+                    labIsOutdatedTextActual.Text = LanguageResources.no;
+                    labDownloadSizeActual.Text = @"0 KB";
+                    btnUpdate.Enabled = false;
                     _isBusy = false;
                     MessageBox.Show(LanguageResources.was_fixed_successfully, LanguageResources.done, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -343,8 +361,16 @@ namespace launcher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!File.Exists("lang.ini"))
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"ru\_Launcher.resources.dll"))
             {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"\ru");
+                using (WebClient http = new WebClient())
+                    http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/_Launcher.resources.dll", @"ru\_Launcher.resources.dll"); //tries to download it
+            }
+
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini"))
+            {
+                
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"ru");
                 Thread.CurrentThread.CurrentCulture = new CultureInfo("ru");
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
@@ -367,7 +393,7 @@ namespace launcher
                         File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"en");
                     }
                 }
-                catch (Exception E)
+                catch (Exception)
                 {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
                 }

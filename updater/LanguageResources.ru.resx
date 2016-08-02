@@ -168,13 +168,13 @@
     <value>отсутствует!</value>
   </data>
   <data name="no_internet_cant_check_updates" xml:space="preserve">
-    <value>Из-за проблем с доступом к интернету не удалось проверить обновления!</value>
+    <value>Проблемы с доступом к интернету (или с нашим сервером), не удалось проверить обновления!</value>
   </data>
   <data name="no_internet_cant_update_install" xml:space="preserve">
-    <value>Из-за проблем с доступом к интернету не удалось установить InfANT / обновления!</value>
+    <value>Проблемы с доступом к интернету (или с нашим сервером), не удалось установить InfANT / обновления!</value>
   </data>
   <data name="no_internet_changelog_wasnt_updated" xml:space="preserve">
-    <value>Из-за проблем с доступом к интернету не удалось обновить "Историю изменений"!</value>
+    <value>Проблемы с доступом к интернету (или с нашим сервером), не удалось обновить "Историю изменений"!</value>
   </data>
   <data name="no_internet_sign" xml:space="preserve">
     <value>нет сети</value>
