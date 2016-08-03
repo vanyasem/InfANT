@@ -90,9 +90,12 @@ namespace launcher
 
             if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini"))
             {
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"en");
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                CultureInfo currentCulture = Thread.CurrentThread.CurrentUICulture;
+                if (currentCulture.ToString().StartsWith("ru"))
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"ru");
+                else
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"en");
+                
             }
 
             if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"))

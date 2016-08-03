@@ -77,6 +77,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LanguageResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LanguageResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="loadingscreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +96,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LanguageResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LanguageResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageResources.ru.resx" />
     <EmbeddedResource Include="loadingscreen.resx">
       <DependentUpon>loadingscreen.cs</DependentUpon>
     </EmbeddedResource>

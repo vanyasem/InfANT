@@ -22,25 +22,25 @@ namespace InfANT
             {
                 case true:
                     labelSafeUnsafeWelcome.Invoke(new MethodInvoker(
-                        delegate { labelSafeUnsafeWelcome.Text = Resources.Computer_is_INFECTED; 
+                        delegate { labelSafeUnsafeWelcome.Text = LanguageResources.Computer_is_INFECTED; 
                                      labelSafeUnsafeWelcome.ForeColor = Color.Red; }));
-                    _loadings.NotifyIcon1.Text = Resources.Computer_is_INFECTED;
+                    _loadings.NotifyIcon1.Text = LanguageResources.Computer_is_INFECTED;
                     break;
                 case null:
                     labelSafeUnsafeWelcome.Invoke(new MethodInvoker(
                         delegate
                         {
-                            labelSafeUnsafeWelcome.Text = Resources.Computer_is_partially_safe;
+                            labelSafeUnsafeWelcome.Text = LanguageResources.Computer_is_partially_safe;
                             labelSafeUnsafeWelcome.ForeColor = Color.DarkOrange;
                         }));
-                    _loadings.NotifyIcon1.Text = Resources.Computer_is_partially_safe;
+                    _loadings.NotifyIcon1.Text = LanguageResources.Computer_is_partially_safe;
                     break;
                 default:
 
                     labelSafeUnsafeWelcome.Invoke(new MethodInvoker(
-                        delegate { labelSafeUnsafeWelcome.Text = Resources.Computer_is_safe;
+                        delegate { labelSafeUnsafeWelcome.Text = LanguageResources.Computer_is_safe;
                                      labelSafeUnsafeWelcome.ForeColor = Color.FromArgb(82, 180, 60); }));
-                    _loadings.NotifyIcon1.Text = Resources.Computer_is_safe;
+                    _loadings.NotifyIcon1.Text = LanguageResources.Computer_is_safe;
                     break;
             }
                 } 
@@ -48,7 +48,7 @@ namespace InfANT
 
         private int Scanned     { get { return _scanned; } //determines how many files were scanned, function, triggers on change
                           set { _scanned = value; 
-                                labScannedNum.Invoke((new MethodInvoker(delegate { labScannedNum.Text = value.ToString() + "/" + _overall; }))); 
+                                labScannedNum.Invoke((new MethodInvoker(delegate { labScannedNum.Text = value + @"/" + _overall; }))); 
                               } 
                         }
 
@@ -56,15 +56,16 @@ namespace InfANT
 
         private int ScannedFast { get { return _scannedFast; } //determines how many files were scanned by the fast scanner, function, triggers on change
                           set { _scannedFast = value;
-                               labScannedFastNum.Invoke((new MethodInvoker(delegate { labScannedFastNum.Text = value.ToString() + "/" + _overallfast; }))); 
+                               labScannedFastNum.Invoke((new MethodInvoker(delegate { labScannedFastNum.Text = value + @"/" + _overallfast; }))); 
                               } 
                         }
-        int _scannedFast; //determines how many files were scanned by the fast scanner, var
+
+        private int _scannedFast; //determines how many files were scanned by the fast scanner, var
 
         private int ScannedFull {
                          get { return _scannedFull; } //determines how many files were scanned by the fast scanner, function, triggers on change
                          set { _scannedFull = value;
-                             labScannedFullNum.Invoke((new MethodInvoker(delegate { labScannedFullNum.Text = value.ToString() + "/" + _overallfull; })));
+                             labScannedFullNum.Invoke((new MethodInvoker(delegate { labScannedFullNum.Text = value + @"/" + _overallfull; })));
                              }
                         }
 
@@ -129,23 +130,23 @@ namespace InfANT
                 if (treeHistoryViruses.Nodes.Count == 0)
                 {
                     btnClearVirusesLog.Enabled = false;
-                    richTextVirusesHistory.Text = "No viruses found! Hooray!";
+                    richTextVirusesHistory.Text = LanguageResources.no_viruses_found;
                 }
                 else
                 {
                     btnClearVirusesLog.Enabled = true;
-                    richTextVirusesHistory.Text = "Select the virus in the tree to see the detailed information about it";
+                    richTextVirusesHistory.Text = LanguageResources.select_virus_to_see_detailed_info;
                 }
 
                 if (treeHistoryScans.Nodes.Count == 0)
                 {
                     btnClearScansLog.Enabled = false;
-                    richTextScansHistory.Text = "No scans were performed!";
+                    richTextScansHistory.Text = LanguageResources.no_scans_performed;
                 }
                 else
                 {
                     btnClearScansLog.Enabled = true;
-                    richTextScansHistory.Text = "Select the scan in the tree to see the detailed information about it";
+                    richTextScansHistory.Text = LanguageResources.select_scan_to_see_detailed_info;
                 }
             }
                 
@@ -246,13 +247,15 @@ namespace InfANT
             }
 
             // Use our own font.
-            Font _tabFont = new Font("Arial", (float)10.0, FontStyle.Bold, GraphicsUnit.Pixel);
+            Font tabFont = new Font("Arial", (float)10.0, FontStyle.Bold, GraphicsUnit.Pixel);
 
             // Draw string. Center the text.
-            StringFormat stringFlags = new StringFormat();
-            stringFlags.Alignment = StringAlignment.Center;
-            stringFlags.LineAlignment = StringAlignment.Center;
-            g.DrawString(tabPage.Text, _tabFont, textBrush, tabBounds, new StringFormat(stringFlags));
+            StringFormat stringFlags = new StringFormat
+            {
+                Alignment = StringAlignment.Center,
+                LineAlignment = StringAlignment.Center
+            };
+            g.DrawString(tabPage.Text, tabFont, textBrush, tabBounds, new StringFormat(stringFlags));
         }
         //------------------------------------
         //END TABS
@@ -303,42 +306,42 @@ namespace InfANT
                 {
                     string tmp3 = _loadings.GetSquareBrackets(_loadings.ActionsContainer[Convert.ToInt16(e.Node.Name)], 5); //how ended
                     string tmp4 = _loadings.GetSquareBrackets(_loadings.ActionsContainer[Convert.ToInt16(e.Node.Name)], 7); //how many files were scanned     
-                    richTextScansHistory.Text = tmp.Remove(0, 1) + "\r\n" + "\r\n" + "Selected path: " + tmp2 + "\r\n" + tmp3 + "\r\n" + "\r\n" + "Amount of files scanned (n of N): " + tmp4;
+                    richTextScansHistory.Text = tmp.Remove(0, 1) + "\r\n" + "\r\n" + LanguageResources.selected_path + tmp2 + "\r\n" + tmp3 + "\r\n" + "\r\n" + LanguageResources.amount_of_files_scanned + tmp4;
                 }
 
                 if (tmp.StartsWith("F"))
                 {
                     string tmp3 = _loadings.GetSquareBrackets(_loadings.ActionsContainer[Convert.ToInt16(e.Node.Name)], 5); //file status
-                    richTextScansHistory.Text = tmp.Remove(0, 1) + "\r\n" + "\r\n" + "Selected path: " + tmp2 + "\r\n" + "\r\n" + "This file is: " + tmp3;
+                    richTextScansHistory.Text = tmp.Remove(0, 1) + "\r\n" + "\r\n" + LanguageResources.selected_path + tmp2 + "\r\n" + "\r\n" + LanguageResources.this_file_is + tmp3;
                 }
             }
             else
-                richTextScansHistory.Text = "Select the scan in the tree to see the detailed information about it";
+                richTextScansHistory.Text = LanguageResources.select_scan_to_see_detailed_info;
         }
 
-        int selectedNode;
+        private int _selectedNode;
         private void treeHistoryViruses_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (e.Node.Name != "date")
             {
                 btnDeleteThisVirus.Visible = true;
-                selectedNode = Convert.ToInt32(e.Node.Name);
-                string tmp = _loadings.GetSquareBrackets(_loadings.VirusesContainer[selectedNode], 1);
-                string tmp2 = _loadings.GetSquareBrackets(_loadings.VirusesContainer[selectedNode], 3);
+                _selectedNode = Convert.ToInt32(e.Node.Name);
+                string tmp = _loadings.GetSquareBrackets(_loadings.VirusesContainer[_selectedNode], 1);
+                string tmp2 = _loadings.GetSquareBrackets(_loadings.VirusesContainer[_selectedNode], 3);
 
                 if (tmp2.StartsWith("S"))
                 {
-                    richTextVirusesHistory.Text = "This file looks suspicious" + "\r\n" + "\r\n" + "Path: " + tmp;
+                    richTextVirusesHistory.Text = LanguageResources.this_file_looks_susp + "\r\n" + "\r\n" + LanguageResources.path + tmp;
                 }
 
                 if (tmp2.StartsWith("V"))
                 {
-                    richTextVirusesHistory.Text = "This file is INFECTED" + "\r\n" + "\r\n" + "Path: " + tmp;
+                    richTextVirusesHistory.Text = LanguageResources.this_file_is_infected + "\r\n" + "\r\n" + LanguageResources.path + tmp;
                 }
             }
             else
             {
-                richTextVirusesHistory.Text = "Select the virus in the tree to see the detailed information about it";
+                richTextVirusesHistory.Text = LanguageResources.select_virus_to_see_detailed_info;
                 btnDeleteThisVirus.Visible = false;
             }
                 
@@ -358,22 +361,22 @@ namespace InfANT
 
         private void btnClearVirusesLog_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("This will delete your VIRUSES log PERMANENTLY. This cannot be undone. Are you sure you want to proceed?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show(LanguageResources.will_delete_your_VIRUSES_log_cannot_be_undone_Are_you_sure, LanguageResources.r_u_sure, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 _loadings.Viruseslogs.Clear();
                 _loadings.Suspiciouslogs.Clear();
-                richTextVirusesHistory.Text = "No viruses found! Hooray!";
+                richTextVirusesHistory.Text = LanguageResources.no_viruses_found;
                 tabScans_SelectedIndexChanged(sender, e);
             }
         }
 
         private void btnClearScansLog_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("This will delete your SCANS log PERMANENTLY. This cannot be undone. Are you sure you want to proceed?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show(LanguageResources.will_delete_your_SCANS_log_cannot_be_undone_Are_you_sure, LanguageResources.r_u_sure, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 _loadings.OkLogs.Clear();
                 _loadings.OkLogs.Add("[I][G][NORE]");
-                richTextScansHistory.Text = "No scans were performed!";
+                richTextScansHistory.Text = LanguageResources.no_scans_performed;
                 tabScans_SelectedIndexChanged(sender, e);
                 
             }
@@ -381,9 +384,9 @@ namespace InfANT
 
         private void btnDeleteThisVirus_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("This action will delete the file PERMANENTLY. This cannot be undone. Are you sure you want to proceed?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show(LanguageResources.will_delete_the_file_PERMANENTLY_This_cannot_be_undone_Are_you_sure, LanguageResources.r_u_sure, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                string tmp = _loadings.GetSquareBrackets(_loadings.VirusesContainer[selectedNode], 1);
+                string tmp = _loadings.GetSquareBrackets(_loadings.VirusesContainer[_selectedNode], 1);
                 File.Delete(tmp);
                 tabScans.SelectedIndex = 4;
                 tabScans.SelectedIndex = 3;
@@ -420,9 +423,9 @@ namespace InfANT
             catch
             { /*return;*/ } //we want to do nothing here, so nothing here. Do I need to log this? Don't think so
         }
-        private Thread StartTheScanFull(string param1, int WhereToLongPass) //Starts the ADVANCED FOLDER scan
+        private Thread StartTheScanFull(string param1, int whereToLongPass) //Starts the ADVANCED FOLDER scan
         {
-            var t = new Thread(() => TreeScanFull(param1, WhereToLongPass)); //this one is needed to start thread with params
+            var t = new Thread(() => TreeScanFull(param1, whereToLongPass)); //this one is needed to start thread with params
             t.Start();
             t.IsBackground = true; //we want the thread to close when the app is closed, so this does it
             return t; //http://stackoverflow.com/questions/1195896/threadstart-with-parameters
@@ -437,7 +440,7 @@ namespace InfANT
                     string temphash = GetSHA1(file);
                     if (Hashes.Contains(temphash)) //checks if this hash exists, should be probably replaced, too slow
                     {
-                        LogIt(1, file, "INFECTED", wheretopass);
+                        LogIt(1, file, LanguageResources.infected, wheretopass);
                         Infected = true;
                         ScannedFull++; //increases the OVERALL advanced folder scanned count
                         progressFull.Invoke(new MethodInvoker(delegate { progressFull.PerformStep(); }));
@@ -446,7 +449,7 @@ namespace InfANT
                     {
                         if (SuspHashes.Contains(temphash)) //checks if this hash exists, should be probably replaced, too slow
                         {
-                            LogIt(2, file, "suspicious", wheretopass);
+                            LogIt(2, file, LanguageResources.susp, wheretopass);
                             if (Infected != true)
                                 Infected = null;
                             ScannedFull++; //increases the OVERALL advanced folder scanned count
@@ -479,12 +482,11 @@ namespace InfANT
             }
             catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
             {
-                return;
+                //
             }
             catch (Exception E)
             {
                 LogIt(3, E.Message, wheretopass);
-                //return;
             }
         }
 
@@ -506,7 +508,7 @@ namespace InfANT
                 _timerScanFullChecker.Enabled = false;
                 _timerScanFullChecker.Stop();
                 EnableEverything();
-                btnFullScan.Invoke(new MethodInvoker(delegate { btnFullScan.Text = "Scan"; }));
+                btnFullScan.Invoke(new MethodInvoker(delegate { btnFullScan.Text = LanguageResources.IFBTN_SCAN; }));
                 _loadings.CreateLogEntry(4, $"(EThe drive scan finished!)|{ScannedFull}-{_overallfull}|");
                 LogIt(0, "The scan finished!", 1);
                 _isScanning = false;
@@ -516,10 +518,10 @@ namespace InfANT
         private string _fullDrive;
         private void btnFullScan_Click(object sender, EventArgs e)
         {
-            if (btnFullScan.Text == "Scan")
+            if (btnFullScan.Text == LanguageResources.IFBTN_SCAN)
             {
                 textFullLog.Clear();
-                btnFullScan.Text = "Cancel";
+                btnFullScan.Text = LanguageResources.cancel;
                 _fullDrive = comboDriveSelect.Text;
                 _loadings.CreateLogEntry(4, $"(SDrive scan was performed)|{_fullDrive}|"); 
                 _isScanning = true;
@@ -550,7 +552,7 @@ namespace InfANT
                 _loadings.CreateLogEntry(4, $"(EThe drive scan was ABORTED)|{ScannedFull}-{_overallfull}|");
                 LogIt(0, "The drive scan was ABORTED", 1);
                 _isScanning = false;
-                btnFullScan.Text = "Scan";
+                btnFullScan.Text = LanguageResources.IFBTN_SCAN;
                 _fullScanThread.Abort();
                 _filesCountingFull.Abort();
                 EnableEverything();
@@ -642,7 +644,7 @@ namespace InfANT
                     string temphash = GetSHA1(file);
                     if (Hashes.Contains(temphash)) //checks if this hash exists, should be probably replaced, too slow
                     {
-                        LogIt(1, file, "INFECTED", wheretopass);
+                        LogIt(1, file, LanguageResources.infected, wheretopass);
                         Infected = true;
                         ScannedFast++; //increases the OVERALL advanced folder scanned count
                         progressScanFolder.Invoke(new MethodInvoker(delegate { progressFast.PerformStep(); }));
@@ -651,7 +653,7 @@ namespace InfANT
                     {
                         if (SuspHashes.Contains(temphash)) //checks if this hash exists, should be probably replaced, too slow
                         {
-                            LogIt(2, file, "suspicious", wheretopass);
+                            LogIt(2, file, LanguageResources.susp, wheretopass);
                             if (Infected != true)
                                 Infected = null;
                             ScannedFast++; //increases the OVERALL advanced folder scanned count
@@ -684,12 +686,11 @@ namespace InfANT
             }
             catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
             {
-                return;
+                //
             }
             catch (Exception E)
             {
                 LogIt(3, E.Message, wheretopass);
-                //return;
             }
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -705,10 +706,10 @@ namespace InfANT
         private int _scanFastTurn; //determines which folder 1,2,3 or 4 (0,1,2,3) is needed to scan.
         private void btnFastScan_Click(object sender, EventArgs e)
         {
-            if(btnFastScan.Text == "Scan") //TODO you are supposed to scan autorun.
+            if(btnFastScan.Text == LanguageResources.IFBTN_SCAN) //TODO you are supposed to scan autorun.
             {
                 textFastLog.Clear(); //clears the log
-                btnFastScan.Text = "Cancel";
+                btnFastScan.Text = LanguageResources.cancel;
                 _loadings.CreateLogEntry(4, "(SFast scan was performed)|Desktop, Appdata, Documents, Internet Cache|");
                 _isScanning = true;
 
@@ -737,7 +738,7 @@ namespace InfANT
                 _isScanning = false;
                 _timerScanFastChecker.Enabled = false;
                 _timerScanFastChecker.Stop();
-                btnFastScan.Text = "Scan";
+                btnFastScan.Text = LanguageResources.IFBTN_SCAN;
                 _fastScanThread.Abort();
                 _filesCountingFast.Abort();
 
@@ -788,7 +789,7 @@ namespace InfANT
             _timerScanFastChecker.Enabled = false;
             _timerScanFastChecker.Stop();
             EnableEverything();
-            btnFastScan.Invoke(new MethodInvoker(delegate { btnFastScan.Text = "Scan"; }));
+            btnFastScan.Invoke(new MethodInvoker(delegate { btnFastScan.Text = LanguageResources.IFBTN_SCAN; }));
             _loadings.CreateLogEntry(4, $"(EThe fast scan was finished!)|{ScannedFast}-{_overallfast}|");
             LogIt(0, "The scan finished!", 0);
             _loadings.NotifyIcon1.ShowBalloonTip(500, "The scan finished",$"The fast scan was finished. Scanned {ScannedFast} of {_overallfast} files.", ToolTipIcon.Info);
@@ -859,7 +860,7 @@ namespace InfANT
             {
                 progressScanFile.Value = 0;
                 textFilePath.Text = open.FileName;
-                labThisFileStatus.Text      = "unscanned";
+                labThisFileStatus.Text      = LanguageResources.unscanned;
                 labThisFileStatus.ForeColor = SystemColors.ControlText;
                 btnScanFile.Enabled = true;
             }
@@ -868,7 +869,7 @@ namespace InfANT
                 if(textFilePath.Text == @"C:\some.file") //sets everything to default if none were selected
                 {
                     btnScanFile.Enabled = false;
-                    labThisFileStatus.Text = "unselected";
+                    labThisFileStatus.Text = LanguageResources.unselected;
                 } 
             }   
         }  
@@ -885,9 +886,9 @@ namespace InfANT
             }
             catch //it the file is inaccessible
             {
-                labThisFileStatus.Text      = "error";
+                labThisFileStatus.Text      = LanguageResources.error;
                 labThisFileStatus.ForeColor = Color.Orange; //changes the color of a label
-                MessageBox.Show("Can't scan the file. It may be corrupded, missing or protected.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error); //shows a msgbox
+                MessageBox.Show(LanguageResources.cant_scan_no_access, LanguageResources.oops, MessageBoxButtons.OK, MessageBoxIcon.Error); //shows a msgbox
                 return;
             }
 
@@ -895,7 +896,7 @@ namespace InfANT
             {
                 _loadings.CreateLogEntry(1, file);
                 Infected = true;
-                labThisFileStatus.Text      = "INFECTED";
+                labThisFileStatus.Text      = LanguageResources.infected;
                 labThisFileStatus.ForeColor = Color.Red; //changes the color of a label
                 progressScanFile.PerformStep();
             }
@@ -904,16 +905,16 @@ namespace InfANT
                 if (SuspHashes.Contains(temphash))
                 {
                     _loadings.CreateLogEntry(2, file);
-                    labThisFileStatus.Text = "suspicious";
+                    labThisFileStatus.Text = LanguageResources.susp;
                     if (Infected != true)
                         Infected = null;
-                    labThisFileStatus.ForeColor = Color.DarkOrange; //changes the color of a lablel
+                    labThisFileStatus.ForeColor = Color.DarkOrange; //changes the color of a label
                     progressScanFile.PerformStep();
                 }
                 else
                 {
-                    labThisFileStatus.Text = "clear";
-                    labThisFileStatus.ForeColor = Color.Green; //changes the color of a lablel
+                    labThisFileStatus.Text = LanguageResources.clear;
+                    labThisFileStatus.ForeColor = Color.Green; //changes the color of a label
                     progressScanFile.PerformStep();
                 }
             }
@@ -933,7 +934,7 @@ namespace InfANT
         private bool _isScanning;
         private void btn_Scan_Click(object sender, EventArgs e)
         {
-            if (btnScanFolder.Text == "Scan") //if it's not scanning do this
+            if (btnScanFolder.Text == LanguageResources.IFBTN_SCAN) //if it's not scanning do this
             {
                 _isScanning = true;
                 textLog.Clear();
@@ -947,7 +948,7 @@ namespace InfANT
 
                 _loadings.CreateLogEntry(4, $"(SAdvanced folder scan was performed)|{textFolderPath.Text}|");
                 LogIt(0, "The scan started!", 2);
-                btnScanFolder.Text = "Cancel"; //sets the label of the button to "cancel"
+                btnScanFolder.Text = LanguageResources.cancel; //sets the label of the button to "cancel"
             }
             else
             {
@@ -961,7 +962,7 @@ namespace InfANT
                 Scanned = 0; //we want to reset everything
                 progressScanFolder.Value = 0;
                 progressScanFolder.Invalidate();
-                btnScanFolder.Text = "Scan";  //sets the label of the button to "scan"
+                btnScanFolder.Text = LanguageResources.IFBTN_SCAN;  //sets the label of the button to "scan"
                 _loadings.ReadLogs(0);
                 _timerScanChecker.Enabled = false; //disables the timer
                 _timerScanChecker.Stop();
@@ -976,7 +977,7 @@ namespace InfANT
                 _timerScanChecker.Stop();
                 _isScanning = false;
                 EnableEverything();
-                btnScanFolder.Invoke(new MethodInvoker(delegate { btnScanFolder.Text = "Scan"; })); //sets the label of the button to "scan"
+                btnScanFolder.Invoke(new MethodInvoker(delegate { btnScanFolder.Text = LanguageResources.IFBTN_SCAN; })); //sets the label of the button to "scan"
                 btnScanFolder.Invoke(new MethodInvoker(delegate { btnScanFolder.Enabled = false; }));
                 _loadings.CreateLogEntry(4, string.Format("(EThe advanced folder scan was finished)|{1}-{2}|", textFolderPath.Text, Scanned, _overall));
                 
@@ -1174,9 +1175,9 @@ namespace InfANT
                 _logErrors = false;
         }
 
-        private Thread StartTheScanFolder(string param1,int wheretolongpass) //Starts the ADVANCED FOLDER scan
+        private Thread StartTheScanFolder(string param1,int whereToLongPass) //Starts the ADVANCED FOLDER scan
         {
-            var t = new Thread(() => TreeScan(param1, wheretolongpass)); //this one is needed to start thread with params
+            var t = new Thread(() => TreeScan(param1, whereToLongPass)); //this one is needed to start thread with params
             t.Start();
             t.IsBackground = true; //we want the thread to close when the app is closed, so this does it
             return t; //http://stackoverflow.com/questions/1195896/threadstart-with-parameters
@@ -1198,7 +1199,7 @@ namespace InfANT
                     string temphash = GetSHA1(file);
                     if (Hashes.Contains(temphash)) //checks if this hash exists, should be probably replaced, too slow
                     {
-                        LogIt(1, file, "INFECTED", wheretopass);
+                        LogIt(1, file, LanguageResources.infected, wheretopass);
                         Infected = true;
                         Scanned++; //increases the OVERALL advanced folder scanned count
                         progressScanFolder.Invoke(new MethodInvoker(delegate { progressScanFolder.PerformStep(); }));
@@ -1207,7 +1208,7 @@ namespace InfANT
                     {
                         if (SuspHashes.Contains(temphash)) //checks if this hash exists, should be probably replaced, too slow
                         {
-                            LogIt(2, file, "suspicious", wheretopass);
+                            LogIt(2, file, LanguageResources.susp, wheretopass);
                             if(Infected != true)
                                 Infected = null;
                             Scanned++; //increases the OVERALL advanced folder scanned count
@@ -1315,11 +1316,11 @@ namespace InfANT
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("InfANT* Antivirus Scanner\r\n"+
-                            "Version: " + Ver + @" " + Build + 
-                            "\r\nIt was developed by a group of Russian students"+
-                            "\r\nInfANT was released in early 2016"+
-                            "\r\n\r\n*Inf = INFinity; ANT = A hard working (ant-like) ANTivirus", "About InfANT:");
+            MessageBox.Show(LanguageResources.infant_antivirus_scanner+
+                            LanguageResources.version + Ver + @" " + Build +
+                            "\r\n" + LanguageResources.it_was_developed_by_students+
+                            "\r\n" + LanguageResources.infant_was_released+
+                            "\r\n\r\n" + LanguageResources.intfant_explanation, LanguageResources.about_infant);
         }
 
         private void checkLogOnlyImportant_CheckedChanged(object sender, EventArgs e) //Does the actions if the "Important" checkbox near the changelog is triggered

@@ -117,29 +117,105 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="favicoinfected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\favicoinfected.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="about_infant" xml:space="preserve">
+    <value>About InfANT:</value>
   </data>
-  <data name="cls" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cls.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="amount_of_files_scanned" xml:space="preserve">
+    <value>Amount of files scanned (n of N): </value>
   </data>
-  <data name="min" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel</value>
   </data>
-  <data name="favicoOK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\favicook.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cant_scan_no_access" xml:space="preserve">
+    <value>Can't scan the file. It may be corrupded, missing or protected.</value>
   </data>
-  <data name="qst" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\qst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clear" xml:space="preserve">
+    <value>clear</value>
   </data>
-  <data name="wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Computer_is_INFECTED" xml:space="preserve">
+    <value>Your computer is INFECTED</value>
   </data>
-  <data name="protect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\protect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="Computer_is_partially_safe" xml:space="preserve">
+    <value>Your computer is partially safe</value>
   </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Computer_is_safe" xml:space="preserve">
+    <value>Your computer is safe</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>error</value>
+  </data>
+  <data name="IFBTN_SCAN" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="infant_antivirus_scanner" xml:space="preserve">
+    <value>InfANT* Antivirus Scanner
+</value>
+  </data>
+  <data name="infant_was_released" xml:space="preserve">
+    <value>
+InfANT was released in early 2016</value>
+  </data>
+  <data name="infected" xml:space="preserve">
+    <value>INFECTED</value>
+  </data>
+  <data name="intfant_explanation" xml:space="preserve">
+    <value>*Inf = INFinity; ANT = A hard working (ant-like) ANTivirus</value>
+  </data>
+  <data name="it_was_developed_by_students" xml:space="preserve">
+    <value>It was developed by a group of Russian students</value>
+  </data>
+  <data name="no_scans_performed" xml:space="preserve">
+    <value>No scans were performed!</value>
+  </data>
+  <data name="no_viruses_found" xml:space="preserve">
+    <value>No viruses found! Hooray!</value>
+  </data>
+  <data name="oops" xml:space="preserve">
+    <value>Oops!</value>
+  </data>
+  <data name="path" xml:space="preserve">
+    <value>Path: </value>
+  </data>
+  <data name="r_u_sure" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="selected_path" xml:space="preserve">
+    <value>Selected path: </value>
+  </data>
+  <data name="select_scan_to_see_detailed_info" xml:space="preserve">
+    <value>Select the scan in the tree to see the detailed information about it</value>
+  </data>
+  <data name="select_virus_to_see_detailed_info" xml:space="preserve">
+    <value>Select the virus in the tree to see the detailed information about it</value>
+  </data>
+  <data name="susp" xml:space="preserve">
+    <value>suspicious</value>
+  </data>
+  <data name="this_file_is" xml:space="preserve">
+    <value>This file is: </value>
+  </data>
+  <data name="this_file_is_infected" xml:space="preserve">
+    <value>This file is INFECTED</value>
+  </data>
+  <data name="this_file_looks_susp" xml:space="preserve">
+    <value>This file looks suspicious</value>
+  </data>
+  <data name="unscanned" xml:space="preserve">
+    <value>unscanned</value>
+  </data>
+  <data name="unselected" xml:space="preserve">
+    <value>unselected</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Version: </value>
+  </data>
+  <data name="will_delete_the_file_PERMANENTLY_This_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>This action will delete the file PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
+  </data>
+  <data name="will_delete_your_SCANS_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>This will delete your SCANS log PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
+  </data>
+  <data name="will_delete_your_VIRUSES_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>This will delete your VIRUSES log PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
   </data>
 </root>

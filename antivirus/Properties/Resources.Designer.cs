@@ -71,33 +71,6 @@ namespace InfANT.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your computer is INFECTED.
-        /// </summary>
-        internal static string Computer_is_INFECTED {
-            get {
-                return ResourceManager.GetString("Computer_is_INFECTED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Your computer is partially safe.
-        /// </summary>
-        internal static string Computer_is_partially_safe {
-            get {
-                return ResourceManager.GetString("Computer_is_partially_safe", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Your computer is safe.
-        /// </summary>
-        internal static string Computer_is_safe {
-            get {
-                return ResourceManager.GetString("Computer_is_safe", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon favicoinfected {

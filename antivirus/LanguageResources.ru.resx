@@ -117,29 +117,104 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="favicoinfected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\favicoinfected.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="about_infant" xml:space="preserve">
+    <value>О InfANT:</value>
   </data>
-  <data name="cls" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cls.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="amount_of_files_scanned" xml:space="preserve">
+    <value>Кол-во проверенных файлов (n из N): </value>
   </data>
-  <data name="min" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel" xml:space="preserve">
+    <value>Отменить</value>
   </data>
-  <data name="favicoOK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\favicook.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cant_scan_no_access" xml:space="preserve">
+    <value>Can't scan the file. It may be corrupded, missing or protected.</value>
   </data>
-  <data name="qst" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\qst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clear" xml:space="preserve">
+    <value>безопасен</value>
   </data>
-  <data name="wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Computer_is_INFECTED" xml:space="preserve">
+    <value>Компьютер ЗАРАЖЁН!</value>
   </data>
-  <data name="protect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\protect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="Computer_is_partially_safe" xml:space="preserve">
+    <value>Компьютер может быть под угрозой</value>
   </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Computer_is_safe" xml:space="preserve">
+    <value>Компьютер в безопасности</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>ошибка</value>
+  </data>
+  <data name="IFBTN_SCAN" xml:space="preserve">
+    <value>Начать сканирование</value>
+  </data>
+  <data name="infant_antivirus_scanner" xml:space="preserve">
+    <value>Антивирусный сканер InfANT*</value>
+  </data>
+  <data name="infant_was_released" xml:space="preserve">
+    <value>
+InfANT был выпущен в начале 2016го</value>
+  </data>
+  <data name="infected" xml:space="preserve">
+    <value>ЗАРАЖЁН!</value>
+  </data>
+  <data name="intfant_explanation" xml:space="preserve">
+    <value>*Inf = INFinity (бесконечность); ANT (муравей) = трудолюбивый (как муравей) ANTivirus</value>
+  </data>
+  <data name="it_was_developed_by_students" xml:space="preserve">
+    <value>Он был разработан группой русских школьников.</value>
+  </data>
+  <data name="no_scans_performed" xml:space="preserve">
+    <value>Сканирований не выполнялось.</value>
+  </data>
+  <data name="no_viruses_found" xml:space="preserve">
+    <value>Вирусов не обнаружено! Ура!</value>
+  </data>
+  <data name="oops" xml:space="preserve">
+    <value>Упс!</value>
+  </data>
+  <data name="path" xml:space="preserve">
+    <value>Путь: </value>
+  </data>
+  <data name="r_u_sure" xml:space="preserve">
+    <value>Вы уверены?</value>
+  </data>
+  <data name="selected_path" xml:space="preserve">
+    <value>Выбранный путь: </value>
+  </data>
+  <data name="select_scan_to_see_detailed_info" xml:space="preserve">
+    <value>Select the scan in the tree to see the detailed information about it</value>
+  </data>
+  <data name="select_virus_to_see_detailed_info" xml:space="preserve">
+    <value>Select the virus in the tree to see the detailed information about it</value>
+  </data>
+  <data name="susp" xml:space="preserve">
+    <value>подозрительный</value>
+  </data>
+  <data name="this_file_is" xml:space="preserve">
+    <value>Этот файл: </value>
+  </data>
+  <data name="this_file_is_infected" xml:space="preserve">
+    <value>Этот файл ЗАРАЖЁН!</value>
+  </data>
+  <data name="this_file_looks_susp" xml:space="preserve">
+    <value>Этот файл может быть использован для нанесения вреда компьютеру.</value>
+  </data>
+  <data name="unscanned" xml:space="preserve">
+    <value>не проверен</value>
+  </data>
+  <data name="unselected" xml:space="preserve">
+    <value>не выбран</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Версия: </value>
+  </data>
+  <data name="will_delete_the_file_PERMANENTLY_This_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>This action will delete the file PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
+  </data>
+  <data name="will_delete_your_SCANS_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>Это действие удалит историю сканирований. Эту операцию невозможно отменить. Вы уверены?</value>
+  </data>
+  <data name="will_delete_your_VIRUSES_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>This will delete your VIRUSES log PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
   </data>
 </root>
