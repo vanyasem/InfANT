@@ -88,6 +88,13 @@ namespace launcher
             if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\ru\_Launcher.resources.dll"))
                 btnLang.Invoke(new MethodInvoker(delegate { btnLang.Enabled = true; }));
 
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini"))
+            {
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"en");
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            }
+
             if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"))
             {
                 if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\InfANT.exe"))
@@ -368,14 +375,6 @@ namespace launcher
                     http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/_Launcher.resources.dll", @"ru\_Launcher.resources.dll"); //tries to download it
             }
 
-            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini"))
-            {
-                
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"ru");
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("ru");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
-            }
-            else
             {
                 try
                 {

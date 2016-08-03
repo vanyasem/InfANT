@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
@@ -82,7 +83,7 @@ namespace InfANT
         public List<string> SuspHashes = new List<string>(); //a list of suspicious hashes
 
         public string Ver; //this string indicates the current version of the app
-        public const string Build = "STABLE"; // TODO: update it
+        public const string Build = "UNSTABLE";
 
         private Thread _foldScanning; //This thread is used for scanning files in a folder
         private Thread _fileCounting; //This thread is used for counting files in a folder
@@ -96,6 +97,9 @@ namespace InfANT
         private readonly LoadingScreen _loadings; //used to access loadingscreen
         public Main(LoadingScreen loadingscr) //resieves an instance of a loading screen
         {
+            string temp = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(temp);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(temp);
             InitializeComponent();
             _loadings = loadingscr; //makes it avaliable to use within the whole form
         }
@@ -701,7 +705,7 @@ namespace InfANT
         private int _scanFastTurn; //determines which folder 1,2,3 or 4 (0,1,2,3) is needed to scan.
         private void btnFastScan_Click(object sender, EventArgs e)
         {
-            if(btnFastScan.Text == "Scan")
+            if(btnFastScan.Text == "Scan") //TODO you are supposed to scan autorun.
             {
                 textFastLog.Clear(); //clears the log
                 btnFastScan.Text = "Cancel";
@@ -1347,13 +1351,6 @@ namespace InfANT
             WindowState = FormWindowState.Normal;
             tabMainMenu.SelectTab(1);
             tabScans.SelectTab(0);
-        }
-
-        public void MenuSets(object sender, EventArgs e)
-        {
-            Show();
-            WindowState = FormWindowState.Normal;
-            tabMainMenu.SelectTab(3);
         }
         //END MenuHandlers
         //--------------------------------------------

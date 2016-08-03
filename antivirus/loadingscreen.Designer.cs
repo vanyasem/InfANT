@@ -40,8 +40,8 @@
             // 
             // ProgressLoading
             // 
-            this.ProgressLoading.BackColor = System.Drawing.SystemColors.ControlLight;
             resources.ApplyResources(this.ProgressLoading, "ProgressLoading");
+            this.ProgressLoading.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ProgressLoading.Maximum = 100;
             this.ProgressLoading.Minimum = 0;
             this.ProgressLoading.Name = "ProgressLoading";

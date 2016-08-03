@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -17,6 +18,9 @@ namespace InfANT
         private readonly bool _usedLauncher;
         public LoadingScreen(bool usedLauncherBool)
         {
+            string temp = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(temp);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(temp);
             InitializeComponent();
             _usedLauncher = usedLauncherBool;
         }
