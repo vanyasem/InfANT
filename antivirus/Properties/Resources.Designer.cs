@@ -111,20 +111,6 @@ namespace InfANT.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1. Don&apos;t download unofficial and/or pirated software.
-        ///2. Don&apos;t open binaries or Microsoft Office macros from emails. 
-        ///3. Backup important files on dedicated / cloud storages.
-        ///4. Disable autorun from external drives.
-        ///5. Don&apos;t use public networks without VPN connection, don&apos;t set them as trusted.
-        ///6. Disable Remote Desktop Connection and deny other PCs from writing to your shared folders..
-        /// </summary>
-        internal static string protect {
-            get {
-                return ResourceManager.GetString("protect", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap qst {

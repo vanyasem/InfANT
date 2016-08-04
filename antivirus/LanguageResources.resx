@@ -221,4 +221,18 @@ InfANT was released in early 2016</value>
   <data name="IFBTN_scansmall" xml:space="preserve">
     <value>Scan</value>
   </data>
+  <data name="is_" xml:space="preserve">
+    <value> is </value>
+  </data>
+  <data name="looks" xml:space="preserve">
+    <value> looks </value>
+  </data>
+  <data name="protect" xml:space="preserve">
+    <value>1. Don't download unofficial and/or pirated software.
+2. Don't open binaries or Microsoft Office macros from emails. 
+3. Backup important files on dedicated / cloud storages.
+4. Disable autorun from external drives.
+5. Don't use public networks without VPN connection, don't set them as trusted.
+6. Disable Remote Desktop Connection and deny other PCs from writing to your shared folders.</value>
+  </data>
 </root>

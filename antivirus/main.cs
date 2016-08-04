@@ -97,7 +97,7 @@ namespace InfANT
         //MESS
         //------------------------------------
         private readonly LoadingScreen _loadings; //used to access loadingscreen
-        private CultureInfo _currentCulture;
+        private readonly CultureInfo _currentCulture;
         public Main(LoadingScreen loadingscr) //resieves an instance of a loading screen
         {
             string temp = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
@@ -298,6 +298,7 @@ namespace InfANT
 
         //SCANNING
         //---------------------------------
+        [SuppressMessage("ReSharper", "LocalizableElement")]
         private void treeHistoryScans_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (e.Node.Name != "date")
@@ -323,6 +324,7 @@ namespace InfANT
         }
 
         private int _selectedNode;
+        [SuppressMessage("ReSharper", "LocalizableElement")]
         private void treeHistoryViruses_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (e.Node.Name != "date")
@@ -472,12 +474,10 @@ namespace InfANT
                 }
             }
             catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
+            { return; }
+            catch (Exception e)
             {
-                return;
-            }
-            catch (Exception E)
-            {
-                LogIt(3, E.Message, wheretopass);
+                LogIt(3, e.Message, wheretopass);
             }
 
             try
@@ -487,13 +487,10 @@ namespace InfANT
                     TreeScanFull(dir, wheretopass);
                 }
             }
-            catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
+            catch (ThreadAbortException) { /* we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that */ }
+            catch (Exception e)
             {
-                //
-            }
-            catch (Exception E)
-            {
-                LogIt(3, E.Message, wheretopass);
+                LogIt(3, e.Message, wheretopass);
             }
         }
 
@@ -684,9 +681,7 @@ namespace InfANT
                 }
             }
             catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
-            {
-                return;
-            }
+            { return; }
             catch (Exception E)
             {
                 LogIt(3, E.Message, wheretopass);
@@ -699,13 +694,10 @@ namespace InfANT
                     TreeScanFast(dir, wheretopass);
                 }
             }
-            catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
+            catch (ThreadAbortException) { /* we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that */ }
+            catch (Exception e)
             {
-                //
-            }
-            catch (Exception E)
-            {
-                LogIt(3, E.Message, wheretopass);
+                LogIt(3, e.Message, wheretopass);
             }
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -998,7 +990,7 @@ namespace InfANT
                 EnableEverything();
                 btnScanFolder.Invoke(new MethodInvoker(delegate { btnScanFolder.Text = LanguageResources.IFBTN_SCAN; })); //sets the label of the button to "scan"
                 btnScanFolder.Invoke(new MethodInvoker(delegate { btnScanFolder.Enabled = false; }));
-                _loadings.CreateLogEntry(4, string.Format("(EThe advanced folder scan was finished)|{1}-{2}|", textFolderPath.Text, Scanned, _overall));
+                _loadings.CreateLogEntry(4, $"(EThe advanced folder scan was finished)|{Scanned}-{_overall}|");
                 
                 LogIt(0, "The scan finished!", 2);
                 _loadings.NotifyIcon1.ShowBalloonTip(500, "The scan finished", $"The advanced folder scan was finished. Scanned {Scanned} of {_overall} files.", ToolTipIcon.Info);    
@@ -1026,7 +1018,7 @@ namespace InfANT
             if (open.SelectedPath != string.Empty)
             {
                 _overall    = 0; //we want to reset everything
-                filescount = 0;
+                _filescount = 0;
                 Scanned = 0;
                 progressScanFolder.Value = 0;
                 textLog.Clear();
@@ -1059,6 +1051,7 @@ namespace InfANT
         {
             LogIt(whichlog,string.Empty,text,whichscan);
         }
+        [SuppressMessage("ReSharper", "LocalizableElement")]
         private void LogIt(int whichlog, string file, string text, int whichscan) // SCANS: 0 - fast, 1 - full, 2 - advfolder
         {
             switch(whichlog)
@@ -1085,17 +1078,17 @@ namespace InfANT
                     switch (whichscan)
                     {
                         case 0:
-                            textFastLog.Invoke((new MethodInvoker(delegate { textFastLog.Text += file + " is " + text + "\r\n"; })));
+                            textFastLog.Invoke((new MethodInvoker(delegate { textFastLog.Text += file + LanguageResources.is_ + text + "\r\n"; })));
                             _loadings.CreateLogEntry(1, file);
                             break;
 
                         case 1:
-                            textFullLog.Invoke((new MethodInvoker(delegate { textFullLog.Text += file + " is " + text + "\r\n"; })));
+                            textFullLog.Invoke((new MethodInvoker(delegate { textFullLog.Text += file + LanguageResources.is_ + text + "\r\n"; })));
                             _loadings.CreateLogEntry(1, file);
                             break;
 
                         case 2:
-                            textLog.Invoke((new MethodInvoker(delegate {     textLog.Text     += file + " is " + text + "\r\n"; })));
+                            textLog.Invoke((new MethodInvoker(delegate {     textLog.Text     += file + LanguageResources.is_ + text + "\r\n"; })));
                             _loadings.CreateLogEntry(1, file);
                             break;
                     }
@@ -1107,19 +1100,19 @@ namespace InfANT
                     {
                         case 0:
                             if (_logSuspiciousFast)
-                                textFastLog.Invoke((new MethodInvoker(delegate { textFastLog.Text += file + " looks " + text + "\r\n"; })));
+                                textFastLog.Invoke((new MethodInvoker(delegate { textFastLog.Text += file + LanguageResources.looks + text + "\r\n"; })));
                             _loadings.CreateLogEntry(2, file);
                             break;
 
                         case 1:
                             if (_logSuspiciousFull)
-                                textFullLog.Invoke((new MethodInvoker(delegate { textFullLog.Text += file + " looks " + text + "\r\n"; })));
+                                textFullLog.Invoke((new MethodInvoker(delegate { textFullLog.Text += file + LanguageResources.looks + text + "\r\n"; })));
                             _loadings.CreateLogEntry(2, file);
                             break;
 
                         case 2:
                             if (_logSuspicious)
-                                textLog.Invoke((new MethodInvoker(delegate {     textLog.Text     += file + " looks " + text + "\r\n"; })));
+                                textLog.Invoke((new MethodInvoker(delegate {     textLog.Text     += file + LanguageResources.looks + text + "\r\n"; })));
                             _loadings.CreateLogEntry(2, file);
                             break;
                     }
@@ -1251,9 +1244,7 @@ namespace InfANT
                 }
             }
             catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
-            {
-                return; 
-            }
+            { return; }
             catch (Exception E)
             {
                 LogIt(3, E.Message, wheretopass);
@@ -1266,25 +1257,22 @@ namespace InfANT
                     TreeScan(dir, wheretopass);
                 }
             }
-            catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
-            {
-                return;
-            }
+            catch (ThreadAbortException) { /* we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that */ } 
             catch (Exception E)
             {
                 LogIt(3, E.Message, wheretopass);
             }
         }
 
-        int filescount; //temp filescount, used only in CountFiles. "overall" is used in other places
+        private int _filescount; //temp filescount, used only in CountFiles. "overall" is used in other places
         private void CountFiles(string dir2)
         {
             try
             {
                 foreach (string file in Directory.GetFiles(dir2)) //gets all files from the folder
                 {
-                    filescount++; //increase the temp filescount with every file
-                    _overall = filescount; //as we just changed the temp overall files count, we have to set it to the global files count
+                    _filescount++; //increase the temp filescount with every file
+                    _overall = _filescount; //as we just changed the temp overall files count, we have to set it to the global files count
                     labScannedNum.Invoke     (new MethodInvoker(delegate { labScannedNum.Text         = Scanned + "/" + _overall; })); //change the count label
                     progressScanFolder.Invoke(new MethodInvoker(delegate { progressScanFolder.Maximum = _overall; })); //set the maximum progressbar value to max files
                     progressScanFolder.Invoke(new MethodInvoker(delegate { progressScanFolder.Value   = Scanned; })); //if the scan is running at the same this will prevent blinking of a prbar
@@ -1341,6 +1329,7 @@ namespace InfANT
         //END APP'S MENU
 
 
+        [SuppressMessage("ReSharper", "LocalizableElement")]
         private void panel1_Click(object sender, EventArgs e)
         {
             MessageBox.Show(LanguageResources.infant_antivirus_scanner+
@@ -1407,7 +1396,7 @@ namespace InfANT
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Resources.protect);
+            MessageBox.Show(LanguageResources.protect);
         }
 
         

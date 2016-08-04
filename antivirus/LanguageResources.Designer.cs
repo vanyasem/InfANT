@@ -198,11 +198,29 @@ namespace InfANT {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  is .
+        /// </summary>
+        internal static string is_ {
+            get {
+                return ResourceManager.GetString("is_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to It was developed by a group of Russian students.
         /// </summary>
         internal static string it_was_developed_by_students {
             get {
                 return ResourceManager.GetString("it_was_developed_by_students", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  looks .
+        /// </summary>
+        internal static string looks {
+            get {
+                return ResourceManager.GetString("looks", resourceCulture);
             }
         }
         
@@ -239,6 +257,20 @@ namespace InfANT {
         internal static string path {
             get {
                 return ResourceManager.GetString("path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1. Don&apos;t download unofficial and/or pirated software.
+        ///2. Don&apos;t open binaries or Microsoft Office macros from emails. 
+        ///3. Backup important files on dedicated / cloud storages.
+        ///4. Disable autorun from external drives.
+        ///5. Don&apos;t use public networks without VPN connection, don&apos;t set them as trusted.
+        ///6. Disable Remote Desktop Connection and deny other PCs from writing to your shared folders..
+        /// </summary>
+        internal static string protect {
+            get {
+                return ResourceManager.GetString("protect", resourceCulture);
             }
         }
         

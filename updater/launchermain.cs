@@ -378,6 +378,13 @@ namespace launcher
                     http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/_Launcher.resources.dll", @"ru\_Launcher.resources.dll"); //tries to download it
             }
 
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"ru\InfANT.resources.dll"))
+            {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"\ru");
+                using (WebClient http = new WebClient())
+                    http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/_Launcher.resources.dll", @"ru\InfANT.resources.dll"); //tries to download it
+            }
+
             {
                 try
                 {

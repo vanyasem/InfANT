@@ -162,9 +162,6 @@
     <Resource Include="Resources\wave.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\protect.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
