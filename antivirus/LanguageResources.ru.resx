@@ -127,7 +127,7 @@
     <value>Отменить</value>
   </data>
   <data name="cant_scan_no_access" xml:space="preserve">
-    <value>Can't scan the file. It may be corrupded, missing or protected.</value>
+    <value>Проблема при сканировании этого файла. Он может быть поврежден, перемещен или защищен.</value>
   </data>
   <data name="clear" xml:space="preserve">
     <value>безопасен</value>
@@ -182,10 +182,10 @@ InfANT был выпущен в начале 2016го</value>
     <value>Выбранный путь: </value>
   </data>
   <data name="select_scan_to_see_detailed_info" xml:space="preserve">
-    <value>Select the scan in the tree to see the detailed information about it</value>
+    <value>Выберите сканирование в дереве, чтобы просмотреть подробную информацию о нём.</value>
   </data>
   <data name="select_virus_to_see_detailed_info" xml:space="preserve">
-    <value>Select the virus in the tree to see the detailed information about it</value>
+    <value>Выберите вирус в дереве, чтобы просмотреть подробную информацию о нём.</value>
   </data>
   <data name="susp" xml:space="preserve">
     <value>подозрительный</value>
@@ -209,12 +209,15 @@ InfANT был выпущен в начале 2016го</value>
     <value>Версия: </value>
   </data>
   <data name="will_delete_the_file_PERMANENTLY_This_cannot_be_undone_Are_you_sure" xml:space="preserve">
-    <value>This action will delete the file PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
+    <value>Это действие удалит ЗАРАЖЁННЫЙ ФАЙЛ. Эту операцию невозможно отменить. Вы уверены?</value>
   </data>
   <data name="will_delete_your_SCANS_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
     <value>Это действие удалит историю сканирований. Эту операцию невозможно отменить. Вы уверены?</value>
   </data>
   <data name="will_delete_your_VIRUSES_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
-    <value>This will delete your VIRUSES log PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
+    <value>Это действие удалит историю найденных вирусов. Эту операцию невозможно отменить. Вы уверены?</value>
+  </data>
+  <data name="IFBTN_scansmall" xml:space="preserve">
+    <value>Сканировать</value>
   </data>
 </root>

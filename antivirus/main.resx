@@ -140,6 +140,9 @@
   <data name="tabDrivescan.Size" type="System.Drawing.Size, System.Drawing">
     <value>568, 487</value>
   </data>
+  <data name="PanelLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 0</value>
+  </data>
   <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
     <value>groupBox3</value>
   </data>
@@ -276,20 +279,20 @@
   <data name="&gt;&gt;btnSelectFolder.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PanelLogo.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="checkShowSuspiciousFull.Text" xml:space="preserve">
+    <value>Show Suspicious Files</value>
   </data>
   <data name="checkShowViruses.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;progressScanFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnSelectFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 22</value>
   </data>
-  <data name="checkShowWarningsFull.Text" xml:space="preserve">
-    <value>Show Warnings</value>
-  </data>
-  <data name="&gt;&gt;btnQuickFast.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;labNotConnected.Name" xml:space="preserve">
+    <value>labNotConnected</value>
   </data>
   <data name="groupFolder.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -438,6 +441,9 @@
   <data name="&gt;&gt;checkShowOKFast.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;treeHistoryScans.Name" xml:space="preserve">
+    <value>treeHistoryScans</value>
+  </data>
   <data name="&gt;&gt;progressFull.Name" xml:space="preserve">
     <value>progressFull</value>
   </data>
@@ -456,8 +462,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>
   </data>
-  <data name="progressFast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 84</value>
+  <data name="labScanned.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 68</value>
   </data>
   <data name="checkShowOKFast.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -540,6 +546,9 @@
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
     <value>panel2</value>
   </data>
+  <data name="&gt;&gt;btnSelectFile.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
   <data name="&gt;&gt;checkShowOK.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
@@ -576,11 +585,8 @@
   <data name="groupLogFolderSettings.Text" xml:space="preserve">
     <value>Log Settings</value>
   </data>
-  <data name="labScanned.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 68</value>
-  </data>
-  <data name="&gt;&gt;labelSafeUnsafeWelcome.Parent" xml:space="preserve">
-    <value>tabHello</value>
+  <data name="&gt;&gt;checkShowWarningsFull.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="checkLogOnlyImportant.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 7</value>
@@ -633,8 +639,8 @@
   <data name="&gt;&gt;labelYoVersion.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="tabScans.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="btnDeleteThisVirus.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="textFolderPath.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -684,6 +690,9 @@
   <data name="btnScanFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 22</value>
   </data>
+  <data name="btnQuickFull.Text" xml:space="preserve">
+    <value>Drive Scan</value>
+  </data>
   <data name="tabHello.Text" xml:space="preserve">
     <value>Hello!</value>
   </data>
@@ -717,8 +726,8 @@
   <data name="groupFolder.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>
   </data>
-  <data name="textChangelog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 28</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -744,8 +753,8 @@
   <data name="&gt;&gt;textLog.Parent" xml:space="preserve">
     <value>groupFolder</value>
   </data>
-  <data name="btnScanFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="tabScans.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -885,9 +894,6 @@
   <data name="&gt;&gt;labScannedFastNum.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;textFolderPath.Name" xml:space="preserve">
-    <value>textFolderPath</value>
-  </data>
   <data name="&gt;&gt;progressFast.Parent" xml:space="preserve">
     <value>tabSimple</value>
   </data>
@@ -900,8 +906,8 @@
   <data name="&gt;&gt;checkShowWarningsFull.Parent" xml:space="preserve">
     <value>groupLogFullSettings</value>
   </data>
-  <data name="btnSelectFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 16</value>
+  <data name="progressFast.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="tabLogs.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -917,9 +923,6 @@
   </data>
   <data name="checkShowWarnings.Text" xml:space="preserve">
     <value>Show Warnings</value>
-  </data>
-  <data name="btnDeleteThisVirus.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
   </data>
   <data name="comboDriveSelect.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 21</value>
@@ -944,9 +947,6 @@
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>762, 31</value>
-  </data>
-  <data name="checkShowSuspiciousFull.Text" xml:space="preserve">
-    <value>Show Suspicious Files</value>
   </data>
   <data name="groupLogFastSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 105</value>
@@ -1047,6 +1047,9 @@
   <data name="groupFile.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="checkShowVirusesFast.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="tabScans.Location" type="System.Drawing.Point, System.Drawing">
     <value>-1, 0</value>
   </data>
@@ -1058,6 +1061,9 @@
   </data>
   <data name="&gt;&gt;checkShowVirusesFast.Name" xml:space="preserve">
     <value>checkShowVirusesFast</value>
+  </data>
+  <data name="&gt;&gt;btnQuickFast.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;btnQst.Name" xml:space="preserve">
     <value>btnQst</value>
@@ -1131,9 +1137,6 @@
   <data name="richTextVirusesHistory.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 5</value>
   </data>
-  <data name="&gt;&gt;textChangelog.Name" xml:space="preserve">
-    <value>textChangelog</value>
-  </data>
   <data name="&gt;&gt;checkShowSuspiciousFast.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -1155,14 +1158,8 @@
   <data name="&gt;&gt;tabSimple.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;progressScanFolder.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
   <data name="&gt;&gt;checkShowSuspiciousFull.Parent" xml:space="preserve">
     <value>groupLogFullSettings</value>
-  </data>
-  <data name="checkShowWarningsFull.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 82</value>
   </data>
   <data name="&gt;&gt;groupLogFullSettings.Name" xml:space="preserve">
     <value>groupLogFullSettings</value>
@@ -1178,9 +1175,6 @@
   </data>
   <data name="treeHistoryScans.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 5</value>
-  </data>
-  <data name="progressFast.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;checkShowOKFull.Name" xml:space="preserve">
     <value>checkShowOKFull</value>
@@ -1255,9 +1249,6 @@ It will scan main folders on your PC for viruses.</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
     <value>pictureBox1</value>
-  </data>
-  <data name="tabMainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>762, 541</value>
   </data>
   <data name="btnClearScansLog.Text" xml:space="preserve">
     <value>Clear the log</value>
@@ -1340,6 +1331,9 @@ It will scan main folders on your PC for viruses.</value>
   <data name="labelFastScan.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 32</value>
   </data>
+  <data name="&gt;&gt;PanelLogo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;btnFullScan.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1378,9 +1372,6 @@ It will scan main folders on your PC for viruses.</value>
   </data>
   <data name="checkShowWarningsFast.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 17</value>
-  </data>
-  <data name="labThisFileStatus.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;checkShowOK.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1445,14 +1436,17 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;btnRetryInternet.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
+  <data name="&gt;&gt;checkShowSuspiciousFast.Name" xml:space="preserve">
+    <value>checkShowSuspiciousFast</value>
+  </data>
   <data name="labNotConnected.Text" xml:space="preserve">
     <value>You are not connected to the Internet</value>
   </data>
   <data name="labScannedNum.Location" type="System.Drawing.Point, System.Drawing">
     <value>84, 68</value>
   </data>
-  <data name="&gt;&gt;labSelectTheDrive.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;textFolderPath.Name" xml:space="preserve">
+    <value>textFolderPath</value>
   </data>
   <data name="&gt;&gt;tabMainMenu.Name" xml:space="preserve">
     <value>tabMainMenu</value>
@@ -1477,6 +1471,9 @@ It will scan main folders on your PC for viruses.</value>
   </data>
   <data name="treeHistoryViruses.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="progressFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 84</value>
   </data>
   <data name="&gt;&gt;textFastLog.Name" xml:space="preserve">
     <value>textFastLog</value>
@@ -1505,6 +1502,9 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;tabViruses.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;labSelectTheDrive.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="tabScans.Size" type="System.Drawing.Size, System.Drawing">
     <value>756, 495</value>
   </data>
@@ -1523,6 +1523,9 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;treeHistoryScans.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;btnSelectFolder.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
   <data name="&gt;&gt;labScannedFull.Name" xml:space="preserve">
     <value>labScannedFull</value>
   </data>
@@ -1540,6 +1543,9 @@ It will scan main folders on your PC for viruses.</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 35</value>
+  </data>
+  <data name="labelFullScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 31</value>
   </data>
   <data name="&gt;&gt;labThisFileStatus.Name" xml:space="preserve">
     <value>labThisFileStatus</value>
@@ -1619,17 +1625,14 @@ It will scan main folders on your PC for viruses.</value>
   <data name="richTextVirusesHistory.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="labScannedNum.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
   <data name="&gt;&gt;labNotConnected.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="&gt;&gt;treeHistoryScans.Name" xml:space="preserve">
-    <value>treeHistoryScans</value>
+  <data name="btnSelectFile.Text" xml:space="preserve">
+    <value>Select</value>
   </data>
   <data name="tabHello.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1703,9 +1706,6 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;tabSimple.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labNotConnected.Name" xml:space="preserve">
-    <value>labNotConnected</value>
-  </data>
   <data name="labThisFileStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
@@ -1748,8 +1748,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;progressFast.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnQuickFull.Text" xml:space="preserve">
-    <value>Drive Scan</value>
+  <data name="btnSelectFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>477, 16</value>
   </data>
   <data name="labScannedFast.Text" xml:space="preserve">
     <value>Files Scanned:</value>
@@ -2019,6 +2019,12 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;richTextScansHistory.Parent" xml:space="preserve">
     <value>tabLogs</value>
   </data>
+  <data name="btnScanFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tabAdvanced.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="btnQuickFast.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 32</value>
   </data>
@@ -2037,8 +2043,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
   </data>
-  <data name="&gt;&gt;tabAdvanced.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="textChangelog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 28</value>
   </data>
   <data name="&gt;&gt;checkShowOKFull.Parent" xml:space="preserve">
     <value>groupLogFullSettings</value>
@@ -2121,9 +2127,6 @@ It will scan main folders on your PC for viruses.</value>
   <data name="labScannedFull.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;labScanned.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
   <data name="&gt;&gt;btnScanFile.Parent" xml:space="preserve">
     <value>groupFile</value>
   </data>
@@ -2132,6 +2135,9 @@ It will scan main folders on your PC for viruses.</value>
   </data>
   <data name="&gt;&gt;tabHello.Name" xml:space="preserve">
     <value>tabHello</value>
+  </data>
+  <data name="&gt;&gt;textFolderPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnScanFolder.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2211,9 +2217,6 @@ It will scan main folders on your PC for viruses.</value>
   <data name="richTextVirusesHistory.Text" xml:space="preserve">
     <value>Select the virus in the tree to see the detailed information about it</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
@@ -2247,6 +2250,9 @@ It will scan main folders on your PC for viruses.</value>
   <data name="tabScan.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
+  <data name="&gt;&gt;richTextScansHistory.Name" xml:space="preserve">
+    <value>richTextScansHistory</value>
+  </data>
   <data name="labScannedNum.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 13</value>
   </data>
@@ -2271,8 +2277,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;labScannedFastNum.Parent" xml:space="preserve">
     <value>tabSimple</value>
   </data>
-  <data name="&gt;&gt;tabDrivescan.Name" xml:space="preserve">
-    <value>tabDrivescan</value>
+  <data name="checkShowWarnings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 82</value>
   </data>
   <data name="&gt;&gt;checkShowOKFast.Name" xml:space="preserve">
     <value>checkShowOKFast</value>
@@ -2289,11 +2295,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;checkShowWarningsFast.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnSelectFile.Text" xml:space="preserve">
-    <value>Select</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarningsFull.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;progressScanFolder.Parent" xml:space="preserve">
+    <value>groupFolder</value>
   </data>
   <data name="btnScanFile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2318,9 +2321,6 @@ It will scan main folders on your PC for viruses.</value>
   </data>
   <data name="&gt;&gt;richTextVirusesHistory.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;checkShowVirusesFull.Name" xml:space="preserve">
-    <value>checkShowVirusesFull</value>
   </data>
   <data name="textFastLog.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2383,14 +2383,14 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;tabScan.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnSelectFolder.Parent" xml:space="preserve">
-    <value>groupFolder</value>
+  <data name="labThisFileStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;labScanned.Name" xml:space="preserve">
     <value>labScanned</value>
   </data>
-  <data name="checkShowVirusesFast.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="checkShowWarningsFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 82</value>
   </data>
   <data name="&gt;&gt;label5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2398,14 +2398,14 @@ It will scan main folders on your PC for viruses.</value>
   <data name="labelSafeUnsafeWelcome.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;btnSelectFile.Parent" xml:space="preserve">
-    <value>groupFile</value>
+  <data name="tabMainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>762, 541</value>
   </data>
   <data name="&gt;&gt;groupLogFastSettings.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkShowWarnings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 82</value>
+  <data name="labScannedNum.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 65</value>
@@ -2425,8 +2425,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="$this.Text" xml:space="preserve">
     <value>InfANT Antivirus</value>
   </data>
-  <data name="PanelLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 0</value>
+  <data name="checkShowWarningsFull.Text" xml:space="preserve">
+    <value>Show Warnings</value>
   </data>
   <data name="checkShowVirusesFull.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2437,8 +2437,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="checkShowOKFull.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 60</value>
   </data>
-  <data name="&gt;&gt;textFolderPath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;labScanned.Parent" xml:space="preserve">
+    <value>groupFolder</value>
   </data>
   <data name="&gt;&gt;groupLogFastSettings.Parent" xml:space="preserve">
     <value>tabSimple</value>
@@ -2473,11 +2473,11 @@ It will scan main folders on your PC for viruses.</value>
   <data name="labelYoVersionLab.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;richTextScansHistory.Name" xml:space="preserve">
-    <value>richTextScansHistory</value>
+  <data name="&gt;&gt;labelSafeUnsafeWelcome.Parent" xml:space="preserve">
+    <value>tabHello</value>
   </data>
-  <data name="&gt;&gt;checkShowSuspiciousFast.Name" xml:space="preserve">
-    <value>checkShowSuspiciousFast</value>
+  <data name="&gt;&gt;checkShowVirusesFull.Name" xml:space="preserve">
+    <value>checkShowVirusesFull</value>
   </data>
   <data name="btnScanFile.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2485,8 +2485,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;PanelLogo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="labelFullScan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 31</value>
+  <data name="&gt;&gt;textChangelog.Name" xml:space="preserve">
+    <value>textChangelog</value>
   </data>
   <data name="&gt;&gt;labScannedNum.Name" xml:space="preserve">
     <value>labScannedNum</value>
@@ -2500,8 +2500,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;progressScanFile.Type" xml:space="preserve">
     <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;progressScanFile.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;tabDrivescan.Name" xml:space="preserve">
+    <value>tabDrivescan</value>
   </data>
   <data name="&gt;&gt;btnClearVirusesLog.Parent" xml:space="preserve">
     <value>tabViruses</value>

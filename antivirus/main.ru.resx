@@ -204,10 +204,10 @@
     <value>Полное сканирование</value>
   </data>
   <data name="progressScanFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 20</value>
+    <value>291, 20</value>
   </data>
   <data name="labThisFileStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 46</value>
+    <value>366, 45</value>
   </data>
   <data name="labThisFileStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -216,7 +216,7 @@
     <value>не выбран</value>
   </data>
   <data name="labThisFileIs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 46</value>
+    <value>307, 45</value>
   </data>
   <data name="labThisFileIs.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>

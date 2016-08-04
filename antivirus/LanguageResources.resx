@@ -218,4 +218,7 @@ InfANT was released in early 2016</value>
   <data name="will_delete_your_VIRUSES_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
     <value>This will delete your VIRUSES log PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
   </data>
+  <data name="IFBTN_scansmall" xml:space="preserve">
+    <value>Scan</value>
+  </data>
 </root>

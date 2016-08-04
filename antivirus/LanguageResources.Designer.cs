@@ -151,6 +151,15 @@ namespace InfANT {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Scan.
+        /// </summary>
+        internal static string IFBTN_scansmall {
+            get {
+                return ResourceManager.GetString("IFBTN_scansmall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to InfANT* Antivirus Scanner
         ///.
         /// </summary>

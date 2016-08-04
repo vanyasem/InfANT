@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -96,11 +97,13 @@ namespace InfANT
         //MESS
         //------------------------------------
         private readonly LoadingScreen _loadings; //used to access loadingscreen
+        private CultureInfo _currentCulture;
         public Main(LoadingScreen loadingscr) //resieves an instance of a loading screen
         {
             string temp = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(temp);
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(temp);
+            _currentCulture = new CultureInfo(temp);
+            Thread.CurrentThread.CurrentCulture = _currentCulture;
+            Thread.CurrentThread.CurrentUICulture = _currentCulture;
             InitializeComponent();
             _loadings = loadingscr; //makes it avaliable to use within the whole form
         }
@@ -425,7 +428,11 @@ namespace InfANT
         }
         private Thread StartTheScanFull(string param1, int whereToLongPass) //Starts the ADVANCED FOLDER scan
         {
-            var t = new Thread(() => TreeScanFull(param1, whereToLongPass)); //this one is needed to start thread with params
+            var t = new Thread(() => TreeScanFull(param1, whereToLongPass)) //this one is needed to start thread with params
+            {
+                CurrentCulture = _currentCulture,
+                CurrentUICulture = _currentCulture
+            };
             t.Start();
             t.IsBackground = true; //we want the thread to close when the app is closed, so this does it
             return t; //http://stackoverflow.com/questions/1195896/threadstart-with-parameters
@@ -492,7 +499,11 @@ namespace InfANT
 
         private Thread StartTheFilesCountFull(string param1)
         {
-            var thr = new Thread(() => CountFilesFull(param1)); //this one is needed to start thread with params
+            var thr = new Thread(() => CountFilesFull(param1)) //this one is needed to start thread with params
+            {
+                CurrentCulture = _currentCulture,
+                CurrentUICulture = _currentCulture
+            };
             thr.Start();
             thr.IsBackground = true; //we want the thread to close when the app is closed, so this does it
             return thr; //http://stackoverflow.com/questions/1195896/threadstart-with-parameters
@@ -629,7 +640,11 @@ namespace InfANT
         //SCAN FAST
         private Thread StartTheScanFast(string param1, int whereToLongPass) //Starts the ADVANCED FOLDER scan
         {
-            var t = new Thread(() => TreeScanFast(param1, whereToLongPass)); //this one is needed to start thread with params
+            var t = new Thread(() => TreeScanFast(param1, whereToLongPass)) //this one is needed to start thread with params
+            {
+                CurrentCulture = _currentCulture,
+                CurrentUICulture = _currentCulture
+            };
             t.Start();
             t.IsBackground = true; //we want the thread to close when the app is closed, so this does it
             return t; //http://stackoverflow.com/questions/1195896/threadstart-with-parameters
@@ -747,7 +762,11 @@ namespace InfANT
         }
         private Thread StartTheFilesCountFast(string param1)
         {
-            var thr = new Thread(() => CountFilesFast(param1)); //this one is needed to start thread with params
+            var thr = new Thread(() => CountFilesFast(param1)) //this one is needed to start thread with params
+            {
+                CurrentCulture = _currentCulture,
+                CurrentUICulture = _currentCulture
+            };
             thr.Start();
             thr.IsBackground = true; //we want the thread to close when the app is closed, so this does it
             return thr; //http://stackoverflow.com/questions/1195896/threadstart-with-parameters
@@ -934,7 +953,7 @@ namespace InfANT
         private bool _isScanning;
         private void btn_Scan_Click(object sender, EventArgs e)
         {
-            if (btnScanFolder.Text == LanguageResources.IFBTN_SCAN) //if it's not scanning do this
+            if (btnScanFolder.Text == LanguageResources.IFBTN_scansmall) //if it's not scanning do this
             {
                 _isScanning = true;
                 textLog.Clear();
@@ -1177,14 +1196,22 @@ namespace InfANT
 
         private Thread StartTheScanFolder(string param1,int whereToLongPass) //Starts the ADVANCED FOLDER scan
         {
-            var t = new Thread(() => TreeScan(param1, whereToLongPass)); //this one is needed to start thread with params
+            var t = new Thread(() => TreeScan(param1, whereToLongPass))
+            {
+                CurrentCulture = _currentCulture,
+                CurrentUICulture = _currentCulture
+            }; //this one is needed to start thread with params
             t.Start();
             t.IsBackground = true; //we want the thread to close when the app is closed, so this does it
             return t; //http://stackoverflow.com/questions/1195896/threadstart-with-parameters
         }
         private Thread StartTheFilesCount(string param1)
         {
-            var thr = new Thread(() => CountFiles(param1)); //this one is needed to start thread with params
+            var thr = new Thread(() => CountFiles(param1)) //this one is needed to start thread with params
+            {
+                CurrentCulture = _currentCulture,
+                CurrentUICulture = _currentCulture
+            };
             thr.Start();
             thr.IsBackground = true; //we want the thread to close when the app is closed, so this does it
             return thr; //http://stackoverflow.com/questions/1195896/threadstart-with-parameters
@@ -1317,7 +1344,7 @@ namespace InfANT
         private void panel1_Click(object sender, EventArgs e)
         {
             MessageBox.Show(LanguageResources.infant_antivirus_scanner+
-                            LanguageResources.version + Ver + @" " + Build +
+                            "\r\n" + LanguageResources.version + Ver + @" " + Build +
                             "\r\n" + LanguageResources.it_was_developed_by_students+
                             "\r\n" + LanguageResources.infant_was_released+
                             "\r\n\r\n" + LanguageResources.intfant_explanation, LanguageResources.about_infant);
