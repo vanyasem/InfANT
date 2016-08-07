@@ -317,6 +317,7 @@
             this.groupLogFastSettings.Controls.Add(this.checkShowOKFast);
             this.groupLogFastSettings.Name = "groupLogFastSettings";
             this.groupLogFastSettings.TabStop = false;
+            this.groupLogFastSettings.Enter += new System.EventHandler(this.groupLogFastSettings_Enter);
             // 
             // checkShowWarningsFast
             // 

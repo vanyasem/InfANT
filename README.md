@@ -11,7 +11,7 @@ Unstable builds are not published and are not included in the changelog. Version
 
 ###Summary
 **InfANT*** is an open-source antivirus project written in C#.
-It was created by 2 Russian students in a few months.
+It was created by 2 Russian students in a few months and is distributed under the MIT license.
 
 Currently, it has 2 languages: English (main) and Russian. If you want to - you can translate LanguageResources.resx and pull it to my fork. 
 

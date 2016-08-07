@@ -165,12 +165,60 @@
   <data name="labScannedFast.Text" xml:space="preserve">
     <value>Файлов отсканировано:</value>
   </data>
+  <data name="labelFastScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 10</value>
+  </data>
   <data name="labelFastScan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 57</value>
+    <value>201, 57</value>
   </data>
   <data name="labelFastScan.Text" xml:space="preserve">
     <value>Этот режим полезен при ограниченном времени.
 Он просканирует только главные директории на компьютере.</value>
+  </data>
+  <data name="checkShowWarningsFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 82</value>
+  </data>
+  <data name="checkShowWarningsFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="checkShowWarningsFast.Text" xml:space="preserve">
+    <value>Показывать ошибки</value>
+  </data>
+  <data name="checkShowVirusesFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="checkShowVirusesFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 17</value>
+  </data>
+  <data name="checkShowVirusesFast.Text" xml:space="preserve">
+    <value>Показывать вирусы</value>
+  </data>
+  <data name="checkShowSuspiciousFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 38</value>
+  </data>
+  <data name="checkShowSuspiciousFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="checkShowSuspiciousFast.Text" xml:space="preserve">
+    <value>Показывать подозрительн.</value>
+  </data>
+  <data name="checkShowOKFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 60</value>
+  </data>
+  <data name="checkShowOKFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 17</value>
+  </data>
+  <data name="checkShowOKFast.Text" xml:space="preserve">
+    <value>Показывать безопасные</value>
+  </data>
+  <data name="groupLogFastSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 2</value>
+  </data>
+  <data name="groupLogFastSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 105</value>
+  </data>
+  <data name="groupLogFastSettings.Text" xml:space="preserve">
+    <value>Настройки лога</value>
   </data>
   <data name="btnFastScan.Text" xml:space="preserve">
     <value>Начать сканирование</value>
@@ -193,9 +241,57 @@
   <data name="labScannedFull.Text" xml:space="preserve">
     <value>Файлов отсканировано:</value>
   </data>
+  <data name="labelFullScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 39</value>
+  </data>
   <data name="labelFullScan.Text" xml:space="preserve">
     <value>Этот режим проверяет все файлы на одном томе и занимает большое количество времени.
 </value>
+  </data>
+  <data name="checkShowWarningsFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 82</value>
+  </data>
+  <data name="checkShowWarningsFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="checkShowWarningsFull.Text" xml:space="preserve">
+    <value>Показывать ошибки</value>
+  </data>
+  <data name="checkShowVirusesFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="checkShowVirusesFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 17</value>
+  </data>
+  <data name="checkShowVirusesFull.Text" xml:space="preserve">
+    <value>Показывать вирусы</value>
+  </data>
+  <data name="checkShowSuspiciousFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 38</value>
+  </data>
+  <data name="checkShowSuspiciousFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="checkShowSuspiciousFull.Text" xml:space="preserve">
+    <value>Показывать подозрительн.</value>
+  </data>
+  <data name="checkShowOKFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 60</value>
+  </data>
+  <data name="checkShowOKFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 17</value>
+  </data>
+  <data name="checkShowOKFull.Text" xml:space="preserve">
+    <value>Показывать безопасные</value>
+  </data>
+  <data name="groupLogFullSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 2</value>
+  </data>
+  <data name="groupLogFullSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 105</value>
+  </data>
+  <data name="groupLogFullSettings.Text" xml:space="preserve">
+    <value>Настройки лога</value>
   </data>
   <data name="btnFullScan.Text" xml:space="preserve">
     <value>Начать сканирование</value>
@@ -277,19 +373,19 @@
     <value>8, 39</value>
   </data>
   <data name="checkShowSuspicious.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 17</value>
+    <value>166, 17</value>
   </data>
   <data name="checkShowSuspicious.Text" xml:space="preserve">
-    <value>Показывать подозрительные файлы</value>
+    <value>Показывать подозрительн.</value>
   </data>
   <data name="checkShowOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 59</value>
   </data>
   <data name="checkShowOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 17</value>
+    <value>154, 17</value>
   </data>
   <data name="checkShowOK.Text" xml:space="preserve">
-    <value>Показывать безопасные файлы</value>
+    <value>Показывать безопасные</value>
   </data>
   <data name="groupLogFolderSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>377, 8</value>

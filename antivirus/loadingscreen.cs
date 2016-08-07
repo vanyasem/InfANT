@@ -89,7 +89,7 @@ namespace InfANT
             NotifyIcon1.Visible = true;
             ChangeIco(); //We enable the ico and set the right appearance
 
-            NotifyIcon1.Text = "Your computer is safe";
+            NotifyIcon1.Text = LanguageResources.Computer_is_safe;
             NotifyIcon1.ContextMenu = _contextMenu1; //And then assign it to a notifyIcon
             NotifyIcon1.Click += _mainForm.MenuOpen; //This triggers on click of a taskbar ico
         }
@@ -129,7 +129,7 @@ namespace InfANT
             }
             catch
             {
-                MessageBox.Show("Logs weren't found! \r\nPlease, don't delete them by yourself, do it using the 'Settings' tab.\r\nRelaunch the application!", "Fatal Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(LanguageResources.Logs_werent_found_do_in_launcher_restart, LanguageResources.fatal_error, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", @"firstlaunch");
                         
@@ -352,7 +352,7 @@ namespace InfANT
             catch
             {
                 _timerLogSaver.Enabled = false;
-                MessageBox.Show("Can't save logs to disk!\r\nThey are probably in use or InfANT has no premissions to save there.", "Oops!",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(LanguageResources.cant_save_logs_no_permissions, LanguageResources.oops,MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _timerLogSaver.Enabled = true;
                 _timerLogSaver.Start();
             }
@@ -396,7 +396,7 @@ namespace InfANT
                     catch
                     {
                         CreateLogEntry(3, "Can't save database");
-                        MessageBox.Show("Couldn't write the database to disk! \r\nIt looks like you have no access to the folder or the file is in use.", "Oops.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(LanguageResources.cant_save_database_no_permission, LanguageResources.oops, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     _mainForm.IsInternetConnected = true; // if everything's cool - sets the internet connectivity to true
                 }
@@ -407,7 +407,7 @@ namespace InfANT
                 {
                     CreateLogEntry(3, "Can't establish an internet connection");
                     _mainForm.IsInternetConnected = false; //sets the internet connectivity to false
-                    if (MessageBox.Show("Looks like you have no internet, databases and changelog weren't updated", "Can't connect to the Internet!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
+                    if (MessageBox.Show(LanguageResources.no_internet_cant_update_database_changelog, LanguageResources.cant_connect_to_internet, MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
                     {
                         _mainForm.RetryInt(); //if user selects retry
                         return;
@@ -432,7 +432,7 @@ namespace InfANT
                     catch
                     {
                         CreateLogEntry(3, "Can't save database");
-                        MessageBox.Show("Couldn't write the database to disk! \r\nIt looks like you have no access to the folder or the file is in use.", "Oops.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(LanguageResources.cant_save_database_no_permission, LanguageResources.oops, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     _mainForm.IsInternetConnected = true; // if everything's cool - sets the internet connectivity to true
                 }
@@ -443,7 +443,7 @@ namespace InfANT
                 {
                     CreateLogEntry(3, "Can't establish an internet connection");
                     _mainForm.IsInternetConnected = false; //sets the internet connectivity to false
-                    if (MessageBox.Show("Looks like you have no internet, databases and changelog weren't updated", "Can't connect to the Internet!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
+                    if (MessageBox.Show(LanguageResources.no_internet_cant_update_database_changelog, LanguageResources.cant_connect_to_internet, MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
                     {
                         _mainForm.RetryInt(); //if user selects retry
                         return;
@@ -462,7 +462,7 @@ namespace InfANT
             catch
             { // if no luck - closes. Why do I need an antivirus without databases?
                 CreateLogEntry(3, "Can't load MAIN databases");
-                MessageBox.Show("Looks like you have no internet connection and no cached databases on your PC.\r\nWithout them antivirus is completely useless!", "No databases found!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(LanguageResources.no_internet_no_cahced_database_useless, LanguageResources.no_Databases_found, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
         private void LoadDatabaseSusp()
@@ -554,7 +554,7 @@ namespace InfANT
         private void loadingscreen_Load(object sender, EventArgs e)
         {
             if (_usedLauncher) return;
-            MessageBox.Show("Open \"_Launcher.exe\" instead!");
+            MessageBox.Show(LanguageResources.open_launcher_instead);
             Application.Exit();
         }
 

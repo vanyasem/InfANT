@@ -1,6 +1,6 @@
 ﻿namespace databaseworker
 {
-    partial class databaseeditor
+    partial class Databaseeditor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Databaseeditor));
             this.label1 = new System.Windows.Forms.Label();
             this.btnSelectFile = new System.Windows.Forms.Button();
             this.text_VirusPath = new System.Windows.Forms.TextBox();
@@ -44,117 +45,81 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "This app gives you an ability to add some entries to your local database.";
             // 
             // btnSelectFile
             // 
-            this.btnSelectFile.Enabled = false;
-            this.btnSelectFile.Location = new System.Drawing.Point(283, 62);
+            resources.ApplyResources(this.btnSelectFile, "btnSelectFile");
             this.btnSelectFile.Name = "btnSelectFile";
-            this.btnSelectFile.Size = new System.Drawing.Size(86, 24);
-            this.btnSelectFile.TabIndex = 5;
-            this.btnSelectFile.Text = "Select";
             this.btnSelectFile.UseVisualStyleBackColor = true;
             this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
             // 
             // text_VirusPath
             // 
-            this.text_VirusPath.Location = new System.Drawing.Point(16, 64);
+            resources.ApplyResources(this.text_VirusPath, "text_VirusPath");
             this.text_VirusPath.Name = "text_VirusPath";
             this.text_VirusPath.ReadOnly = true;
-            this.text_VirusPath.Size = new System.Drawing.Size(261, 20);
-            this.text_VirusPath.TabIndex = 4;
-            this.text_VirusPath.Text = "Select the file                                     ---------------------->";
             // 
             // btnAddIt
             // 
-            this.btnAddIt.Enabled = false;
-            this.btnAddIt.Location = new System.Drawing.Point(15, 116);
+            resources.ApplyResources(this.btnAddIt, "btnAddIt");
             this.btnAddIt.Name = "btnAddIt";
-            this.btnAddIt.Size = new System.Drawing.Size(149, 22);
-            this.btnAddIt.TabIndex = 8;
-            this.btnAddIt.Text = "Add it!";
             this.btnAddIt.UseVisualStyleBackColor = true;
             this.btnAddIt.Click += new System.EventHandler(this.btnAddIt_Click);
             // 
             // radioSusp
             // 
-            this.radioSusp.AutoSize = true;
-            this.radioSusp.Location = new System.Drawing.Point(3, 25);
+            resources.ApplyResources(this.radioSusp, "radioSusp");
             this.radioSusp.Name = "radioSusp";
-            this.radioSusp.Size = new System.Drawing.Size(76, 17);
-            this.radioSusp.TabIndex = 0;
-            this.radioSusp.Text = "Suspicious";
             this.radioSusp.UseVisualStyleBackColor = true;
             // 
             // textSHA1
             // 
-            this.textSHA1.Location = new System.Drawing.Point(16, 90);
+            resources.ApplyResources(this.textSHA1, "textSHA1");
             this.textSHA1.Name = "textSHA1";
             this.textSHA1.ReadOnly = true;
-            this.textSHA1.Size = new System.Drawing.Size(261, 20);
-            this.textSHA1.TabIndex = 6;
             // 
             // radioVirus
             // 
-            this.radioVirus.AutoSize = true;
+            resources.ApplyResources(this.radioVirus, "radioVirus");
             this.radioVirus.Checked = true;
-            this.radioVirus.Location = new System.Drawing.Point(3, 3);
             this.radioVirus.Name = "radioVirus";
-            this.radioVirus.Size = new System.Drawing.Size(48, 17);
-            this.radioVirus.TabIndex = 1;
             this.radioVirus.TabStop = true;
-            this.radioVirus.Text = "Virus";
             this.radioVirus.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.radioVirus);
             this.panel1.Controls.Add(this.radioSusp);
-            this.panel1.Location = new System.Drawing.Point(284, 90);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(84, 48);
-            this.panel1.TabIndex = 7;
             // 
             // btnSelectAntivirus
             // 
-            this.btnSelectAntivirus.Location = new System.Drawing.Point(283, 27);
+            resources.ApplyResources(this.btnSelectAntivirus, "btnSelectAntivirus");
             this.btnSelectAntivirus.Name = "btnSelectAntivirus";
-            this.btnSelectAntivirus.Size = new System.Drawing.Size(85, 24);
-            this.btnSelectAntivirus.TabIndex = 2;
-            this.btnSelectAntivirus.Text = "Select";
             this.btnSelectAntivirus.UseVisualStyleBackColor = true;
             this.btnSelectAntivirus.Click += new System.EventHandler(this.button1_Click);
             // 
             // textPathToAntivirus
             // 
-            this.textPathToAntivirus.Location = new System.Drawing.Point(16, 29);
+            resources.ApplyResources(this.textPathToAntivirus, "textPathToAntivirus");
             this.textPathToAntivirus.Name = "textPathToAntivirus";
             this.textPathToAntivirus.ReadOnly = true;
-            this.textPathToAntivirus.Size = new System.Drawing.Size(261, 20);
-            this.textPathToAntivirus.TabIndex = 1;
-            this.textPathToAntivirus.Text = "Select a path to an antivirus               --------------------->";
             // 
             // Seperator
             // 
+            resources.ApplyResources(this.Seperator, "Seperator");
             this.Seperator.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Seperator.ForeColor = System.Drawing.Color.Gray;
-            this.Seperator.Location = new System.Drawing.Point(-12, 56);
             this.Seperator.Name = "Seperator";
-            this.Seperator.Size = new System.Drawing.Size(394, 1);
-            this.Seperator.TabIndex = 3;
             // 
-            // databaseeditor
+            // Databaseeditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 145);
             this.Controls.Add(this.Seperator);
             this.Controls.Add(this.textPathToAntivirus);
             this.Controls.Add(this.btnSelectAntivirus);
@@ -165,9 +130,7 @@
             this.Controls.Add(this.btnSelectFile);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "databaseeditor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InfANT local database editor";
+            this.Name = "Databaseeditor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.databaseeditor_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

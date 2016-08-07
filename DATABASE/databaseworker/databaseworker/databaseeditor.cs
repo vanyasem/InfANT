@@ -1,25 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace databaseworker
 {
-    public partial class databaseeditor : Form
+    public partial class Databaseeditor : Form
     {
         private readonly bool _usedLauncher;
-        public databaseeditor(bool usedLauncherPool)
+        public Databaseeditor(bool usedLauncherPool)
         {
+            string temp = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
+            var currentCulture = new CultureInfo(temp);
+            Thread.CurrentThread.CurrentCulture = currentCulture;
+            Thread.CurrentThread.CurrentUICulture = currentCulture;
             InitializeComponent();
             _usedLauncher = usedLauncherPool;
         }
 
         private void btnSelectFile_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog {Title = "Select the file you want to add"};
+            OpenFileDialog open = new OpenFileDialog {Title = LanguageResources.select_file};
             open.ShowDialog();
 
             if (open.FileName == "") return;
@@ -46,7 +52,7 @@ namespace databaseworker
         private bool _contains;
         private void button1_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog fold = new FolderBrowserDialog {Description = "Select the InfANT's installation folder"};
+            FolderBrowserDialog fold = new FolderBrowserDialog {Description = LanguageResources.select_installation_folder};
             fold.ShowDialog();
             _contains = false;
 
@@ -66,23 +72,23 @@ namespace databaseworker
 
             if(_contains == false)
             {
-                MessageBox.Show("Can't find InfANT in that folder! Try again!");
+                MessageBox.Show(LanguageResources.cant_find_infant_in_folder);
             }
         }
 
-        List<string> _localDatabase;
-        List<string> _localDatabaseSusp;
+        private List<string> _localDatabase;
+        private List<string> _localDatabaseSusp;
         private void btnAddIt_Click(object sender, EventArgs e)
         {
             if (File.Exists(_path + @"\localdatabase.txt"))
-                    _localDatabase = File.ReadAllLines(_path + @"\localdatabase.txt", Encoding.UTF8).ToList<string>();
-                else
-                    _localDatabase = new List<string>();
+                _localDatabase = File.ReadAllLines(_path + @"\localdatabase.txt", Encoding.UTF8).ToList<string>();
+            else
+                _localDatabase = new List<string>();
 
-                if (File.Exists(_path + @"\localdatabasesusp.txt"))
-                    _localDatabaseSusp = File.ReadAllLines(_path + @"\localdatabasesusp.txt", Encoding.UTF8).ToList<string>();
-                else
-                    _localDatabaseSusp = new List<string>();
+            if (File.Exists(_path + @"\localdatabasesusp.txt"))
+                _localDatabaseSusp = File.ReadAllLines(_path + @"\localdatabasesusp.txt", Encoding.UTF8).ToList<string>();
+            else
+                _localDatabaseSusp = new List<string>();
 
             if(radioSusp.Checked == false)
             {
@@ -95,13 +101,13 @@ namespace databaseworker
                     }
                     else
                     {
-                        MessageBox.Show("This entry already exists in one of the databases, no need to add it again.");
+                        MessageBox.Show(LanguageResources.this_hash_already_exists);
                         return;
                     }
                 }
                 catch
                 {
-                    MessageBox.Show("Access Denied! Try again!");
+                    MessageBox.Show(LanguageResources.access_denied);
                     return;
                 }
             }
@@ -116,18 +122,18 @@ namespace databaseworker
                     }
                     else
                     {
-                        MessageBox.Show("This entry already exists in one of the databases, no need to add it again.");
+                        MessageBox.Show(LanguageResources.this_hash_already_exists);
                         return;
                     }
                 }
                 catch
                 {
-                    MessageBox.Show("Access Denied! Try again!");
+                    MessageBox.Show(LanguageResources.access_denied);
                     return;
                 }
             }
-            MessageBox.Show("Done!");
-            text_VirusPath.Text = "Select the file                                     ---------------------->"; //this looks bad
+            MessageBox.Show(LanguageResources.done);
+            text_VirusPath.Text = LanguageResources.select_file_text;
             textSHA1.Text = string.Empty;
             btnAddIt.Enabled = false;
         }
@@ -136,7 +142,7 @@ namespace databaseworker
         {
             if (!_usedLauncher)
             {
-                MessageBox.Show("Open \"_Launcher.exe\" instead!");
+                MessageBox.Show(LanguageResources.open_launcher_instead);
                 Application.Exit();
             }
 

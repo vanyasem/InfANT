@@ -88,6 +88,35 @@ namespace InfANT {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t connect to the Internet!.
+        /// </summary>
+        internal static string cant_connect_to_internet {
+            get {
+                return ResourceManager.GetString("cant_connect_to_internet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Couldn&apos;t write the database to disk! 
+        ///It looks like you have no access to the folder or the file is in use..
+        /// </summary>
+        internal static string cant_save_database_no_permission {
+            get {
+                return ResourceManager.GetString("cant_save_database_no_permission", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t save logs to disk!
+        ///They are probably in use or InfANT has no premissions to save there..
+        /// </summary>
+        internal static string cant_save_logs_no_permissions {
+            get {
+                return ResourceManager.GetString("cant_save_logs_no_permissions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Can&apos;t scan the file. It may be corrupded, missing or protected..
         /// </summary>
         internal static string cant_scan_no_access {
@@ -138,6 +167,15 @@ namespace InfANT {
         internal static string error {
             get {
                 return ResourceManager.GetString("error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fatal Error!.
+        /// </summary>
+        internal static string fatal_error {
+            get {
+                return ResourceManager.GetString("fatal_error", resourceCulture);
             }
         }
         
@@ -216,11 +254,50 @@ namespace InfANT {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Logs weren&apos;t found! 
+        ///Please, don&apos;t delete them by yourself, to do it press &quot;Fix&quot; in launcher.
+        ///Relaunch the application!.
+        /// </summary>
+        internal static string Logs_werent_found_do_in_launcher_restart {
+            get {
+                return ResourceManager.GetString("Logs_werent_found_do_in_launcher_restart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  looks .
         /// </summary>
         internal static string looks {
             get {
                 return ResourceManager.GetString("looks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No databases found!.
+        /// </summary>
+        internal static string no_Databases_found {
+            get {
+                return ResourceManager.GetString("no_Databases_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Looks like you have no internet, databases and changelog weren&apos;t updated.
+        /// </summary>
+        internal static string no_internet_cant_update_database_changelog {
+            get {
+                return ResourceManager.GetString("no_internet_cant_update_database_changelog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Looks like you have no internet connection and no cached databases on your PC.
+        ///Without them antivirus is completely useless!.
+        /// </summary>
+        internal static string no_internet_no_cahced_database_useless {
+            get {
+                return ResourceManager.GetString("no_internet_no_cahced_database_useless", resourceCulture);
             }
         }
         
@@ -248,6 +325,15 @@ namespace InfANT {
         internal static string oops {
             get {
                 return ResourceManager.GetString("oops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open &quot;_Launcher.exe&quot; instead!.
+        /// </summary>
+        internal static string open_launcher_instead {
+            get {
+                return ResourceManager.GetString("open_launcher_instead", resourceCulture);
             }
         }
         

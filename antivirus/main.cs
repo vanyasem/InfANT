@@ -8,7 +8,6 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Threading;
 using System.Windows.Forms;
-using InfANT.Properties;
 
 namespace InfANT
 {
@@ -682,9 +681,9 @@ namespace InfANT
             }
             catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
             { return; }
-            catch (Exception E)
+            catch (Exception e)
             {
-                LogIt(3, E.Message, wheretopass);
+                LogIt(3, e.Message, wheretopass);
             }
 
             try
@@ -720,6 +719,7 @@ namespace InfANT
                 _loadings.CreateLogEntry(4, "(SFast scan was performed)|Desktop, Appdata, Documents, Internet Cache|");
                 _isScanning = true;
 
+                _scanFastTurn = 0;
                 ScannedFast = 0;  //sets the amount of scanned files by the fast scanner to zero
                 _filesCountFast = 0;
                 _overallfast = 0;
@@ -793,7 +793,7 @@ namespace InfANT
                     return;
                 case 3:
                     LogIt(0, "InternetCache folder scanned!", 0);
-                    _scanFastTurn = 0;
+                    _scanFastTurn = 4;
                     return;
             }
             _isScanning = false;
@@ -1245,9 +1245,9 @@ namespace InfANT
             }
             catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
             { return; }
-            catch (Exception E)
+            catch (Exception e)
             {
-                LogIt(3, E.Message, wheretopass);
+                LogIt(3, e.Message, wheretopass);
             }
 
             try
@@ -1258,9 +1258,9 @@ namespace InfANT
                 }
             }
             catch (ThreadAbortException) { /* we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that */ } 
-            catch (Exception E)
+            catch (Exception e)
             {
-                LogIt(3, E.Message, wheretopass);
+                LogIt(3, e.Message, wheretopass);
             }
         }
 
@@ -1399,7 +1399,12 @@ namespace InfANT
             MessageBox.Show(LanguageResources.protect);
         }
 
-        
+        private void groupLogFastSettings_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
         //---------------------------------------------
         //END WELCOME MENU
     }

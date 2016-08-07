@@ -234,4 +234,33 @@ InfANT был выпущен в начале 2016го</value>
 5. Не используйте публичные сети без VPN и не помечайте их как "Домашние".
 6. Отключите "Удалённый Доступ к Компьютеру" и отключите локальным машинам доступ к файлам на компьютере.</value>
   </data>
+  <data name="cant_connect_to_internet" xml:space="preserve">
+    <value>Не получается подключиться к интернету!</value>
+  </data>
+  <data name="cant_save_database_no_permission" xml:space="preserve">
+    <value>Ошибка при сохранении датабазы на диск!
+Возможно, она используются или у InfANT нет доступа к папке.</value>
+  </data>
+  <data name="cant_save_logs_no_permissions" xml:space="preserve">
+    <value>Ошибка при сохранении истории на диск!
+Возможно, они используются или у InfANT нет доступа к папке.</value>
+  </data>
+  <data name="Logs_werent_found_do_in_launcher_restart" xml:space="preserve">
+    <value>История не была найдена! 
+Пожалуйтса, не удаляйте её вручную, делайте это с помощью кнопки "починить" в лаунчере.
+Перезапустите InfANT!</value>
+  </data>
+  <data name="no_Databases_found" xml:space="preserve">
+    <value>Датабазы не были найдены!</value>
+  </data>
+  <data name="no_internet_cant_update_database_changelog" xml:space="preserve">
+    <value>Из-за проблем с подключением к интернету не удалось обновить датабазы и список изменений.</value>
+  </data>
+  <data name="no_internet_no_cahced_database_useless" xml:space="preserve">
+    <value>Не удаётся подключиться к серверу, а локальная копия датабаз отсутствует.
+Без датабаз антивирус полностью бесполезен!</value>
+  </data>
+  <data name="open_launcher_instead" xml:space="preserve">
+    <value>Запускайте "_Launcher.exe"!</value>
+  </data>
 </root>

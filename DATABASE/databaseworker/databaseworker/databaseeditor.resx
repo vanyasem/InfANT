@@ -117,4 +117,301 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>This app gives you an ability to add some entries to your local database.</value>
+  </data>
+  <data name="&gt;&gt;textPathToAntivirus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textPathToAntivirus.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSelectFile.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;radioSusp.Name" xml:space="preserve">
+    <value>radioSusp</value>
+  </data>
+  <data name="&gt;&gt;btnAddIt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnAddIt.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="textPathToAntivirus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 29</value>
+  </data>
+  <data name="&gt;&gt;textPathToAntivirus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnSelectAntivirus.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="&gt;&gt;text_VirusPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radioSusp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;radioSusp.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textPathToAntivirus.Text" xml:space="preserve">
+    <value>Select a path to an antivirus               ---------------------&gt;</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 48</value>
+  </data>
+  <data name="&gt;&gt;btnAddIt.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="radioVirus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;Seperator.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="textSHA1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 90</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnAddIt.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;text_VirusPath.Name" xml:space="preserve">
+    <value>text_VirusPath</value>
+  </data>
+  <data name="&gt;&gt;radioSusp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAntivirus.Name" xml:space="preserve">
+    <value>btnSelectAntivirus</value>
+  </data>
+  <data name="Seperator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-12, 56</value>
+  </data>
+  <data name="&gt;&gt;radioVirus.Name" xml:space="preserve">
+    <value>radioVirus</value>
+  </data>
+  <data name="&gt;&gt;textSHA1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnAddIt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioVirus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Seperator.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioSusp.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textSHA1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;textSHA1.Name" xml:space="preserve">
+    <value>textSHA1</value>
+  </data>
+  <data name="btnAddIt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 116</value>
+  </data>
+  <data name="btnSelectAntivirus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 24</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSelectFile.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="&gt;&gt;btnAddIt.Name" xml:space="preserve">
+    <value>btnAddIt</value>
+  </data>
+  <data name="&gt;&gt;text_VirusPath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;text_VirusPath.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Seperator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textPathToAntivirus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 20</value>
+  </data>
+  <data name="&gt;&gt;radioVirus.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnSelectFile.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnAddIt.Text" xml:space="preserve">
+    <value>Add it!</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Name" xml:space="preserve">
+    <value>btnSelectFile</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnAddIt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="radioVirus.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioVirus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="text_VirusPath.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;radioVirus.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnSelectAntivirus.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textPathToAntivirus.Name" xml:space="preserve">
+    <value>textPathToAntivirus</value>
+  </data>
+  <data name="Seperator.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="text_VirusPath.Text" xml:space="preserve">
+    <value>Select the file                                     ----------------------&gt;</value>
+  </data>
+  <data name="radioSusp.Text" xml:space="preserve">
+    <value>Suspicious</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 13</value>
+  </data>
+  <data name="btnSelectAntivirus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 27</value>
+  </data>
+  <data name="textSHA1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 20</value>
+  </data>
+  <data name="radioVirus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>InfANT local database editor</value>
+  </data>
+  <data name="Seperator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>394, 1</value>
+  </data>
+  <data name="text_VirusPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 64</value>
+  </data>
+  <data name="&gt;&gt;textSHA1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;radioSusp.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="radioSusp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="&gt;&gt;Seperator.Name" xml:space="preserve">
+    <value>Seperator</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAntivirus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radioVirus.Text" xml:space="preserve">
+    <value>Virus</value>
+  </data>
+  <data name="radioSusp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 17</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 90</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnSelectFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 62</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAntivirus.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textPathToAntivirus.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnSelectFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>380, 145</value>
+  </data>
+  <data name="text_VirusPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 20</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Databaseeditor</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAntivirus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="textSHA1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ru</value>
+  </metadata>
 </root>
