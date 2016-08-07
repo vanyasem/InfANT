@@ -267,4 +267,17 @@ It looks like you have no access to the folder or the file is in use.</value>
     <value>Looks like you have no internet connection and no cached databases on your PC.
 Without them antivirus is completely useless!</value>
   </data>
+  <data name="menu_exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="menu_fast" xml:space="preserve">
+    <value>Fast-Scan</value>
+  </data>
+  <data name="menu_open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="cant_delete_no_rights_or_deleted_want_remove_log_entry" xml:space="preserve">
+    <value>Can't delete the file. InfANT has no rights to access it or it's already deleted. 
+ Do you want to remove it from the log?</value>
+  </data>
 </root>

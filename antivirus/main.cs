@@ -4,6 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Threading;
@@ -129,7 +130,7 @@ namespace InfANT
             if (tabScans.SelectedIndex == 3 || tabScans.SelectedIndex == 4)
             {
                 _loadings.ReadLogs(0);
-                if (treeHistoryViruses.Nodes.Count == 0)
+                if (treeHistoryViruses.Nodes.Count == 0 & treeHistorySusp.Nodes.Count == 0)
                 {
                     btnClearVirusesLog.Enabled = false;
                     richTextVirusesHistory.Text = LanguageResources.no_viruses_found;
@@ -297,6 +298,7 @@ namespace InfANT
 
         //SCANNING
         //---------------------------------
+        private bool? _isVirusList;
         [SuppressMessage("ReSharper", "LocalizableElement")]
         private void treeHistoryScans_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -319,15 +321,47 @@ namespace InfANT
                 }
             }
             else
+            {
                 richTextScansHistory.Text = LanguageResources.select_scan_to_see_detailed_info;
+            }
         }
+
 
         private int _selectedNode;
         [SuppressMessage("ReSharper", "LocalizableElement")]
-        private void treeHistoryViruses_AfterSelect(object sender, TreeViewEventArgs e)
+        private void treeHistorySusp_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             if (e.Node.Name != "date")
             {
+                btnDeleteThisVirus.Visible = true;
+                _isVirusList = false;
+                _selectedNode = Convert.ToInt32(e.Node.Name);
+                string tmp = _loadings.GetSquareBrackets(_loadings.SuspContainer[_selectedNode], 1);
+                string tmp2 = _loadings.GetSquareBrackets(_loadings.SuspContainer[_selectedNode], 3);
+
+                if (tmp2.StartsWith("S"))
+                {
+                    richTextVirusesHistory.Text = LanguageResources.this_file_looks_susp + "\r\n" + "\r\n" + LanguageResources.path + tmp;
+                }
+
+                if (tmp2.StartsWith("V"))
+                {
+                    richTextVirusesHistory.Text = LanguageResources.this_file_is_infected + "\r\n" + "\r\n" + LanguageResources.path + tmp;
+                }
+            }
+            else
+            {
+                _isVirusList = null;
+                richTextVirusesHistory.Text = LanguageResources.select_virus_to_see_detailed_info;
+                btnDeleteThisVirus.Visible = false;
+            }
+        }
+        [SuppressMessage("ReSharper", "LocalizableElement")]
+        private void treeHistoryViruses_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Node.Name != "date")
+            {
+                _isVirusList = true;
                 btnDeleteThisVirus.Visible = true;
                 _selectedNode = Convert.ToInt32(e.Node.Name);
                 string tmp = _loadings.GetSquareBrackets(_loadings.VirusesContainer[_selectedNode], 1);
@@ -345,10 +379,10 @@ namespace InfANT
             }
             else
             {
+                _isVirusList = null;
                 richTextVirusesHistory.Text = LanguageResources.select_virus_to_see_detailed_info;
                 btnDeleteThisVirus.Visible = false;
             }
-                
         }
 
         private string GetSHA1(string filename) //gets SHA1 hash from a file.
@@ -390,10 +424,32 @@ namespace InfANT
         {
             if (MessageBox.Show(LanguageResources.will_delete_the_file_PERMANENTLY_This_cannot_be_undone_Are_you_sure, LanguageResources.r_u_sure, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                string tmp = _loadings.GetSquareBrackets(_loadings.VirusesContainer[_selectedNode], 1);
-                File.Delete(tmp);
-                tabScans.SelectedIndex = 4;
-                tabScans.SelectedIndex = 3;
+                try
+                {
+                    string tmp = _loadings.GetSquareBrackets(_loadings.VirusesContainer[_selectedNode], 1);
+                    File.Delete(tmp);
+
+                    if(_isVirusList == true)
+                        _loadings.Viruseslogs.RemoveAt(_selectedNode);
+                    if(_isVirusList == false)
+                        _loadings.Suspiciouslogs.RemoveAt(_selectedNode);
+                    
+                    tabScans.SelectedIndex = 4;
+                    tabScans.SelectedIndex = 3;
+                }
+                catch
+                {
+                    if (MessageBox.Show(LanguageResources.cant_delete_no_rights_or_deleted_want_remove_log_entry, LanguageResources.oops, MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                    {
+                        if (_isVirusList == true)
+                            _loadings.Viruseslogs.RemoveAt(_selectedNode);
+                        if (_isVirusList == false)
+                            _loadings.Suspiciouslogs.RemoveAt(_selectedNode);
+                        tabScans.SelectedIndex = 4;
+                        tabScans.SelectedIndex = 3;
+                    }
+                }
+               
             }
         }
 
@@ -1398,13 +1454,6 @@ namespace InfANT
         {
             MessageBox.Show(LanguageResources.protect);
         }
-
-        private void groupLogFastSettings_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-
         //---------------------------------------------
         //END WELCOME MENU
     }

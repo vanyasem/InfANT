@@ -155,9 +155,6 @@
   <data name="btnRetryInternet.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
-  <data name="groupLogFolderSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 8</value>
-  </data>
   <data name="labScannedFastNum.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
@@ -222,8 +219,8 @@
   <data name="PanelLogo.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;btnQuickFast.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;treeHistorySusp.Parent" xml:space="preserve">
+    <value>tabViruses</value>
   </data>
   <data name="&gt;&gt;textChangelog.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -330,6 +327,9 @@
   <data name="groupLogFolderSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 104</value>
   </data>
+  <data name="treeHistorySusp.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
   <data name="&gt;&gt;checkShowWarningsFast.Parent" xml:space="preserve">
     <value>groupLogFastSettings</value>
   </data>
@@ -406,7 +406,7 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnDeleteThisVirus.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnScanFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 22</value>
@@ -469,7 +469,7 @@
     <value>2</value>
   </data>
   <data name="&gt;&gt;btnClearVirusesLog.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="checkShowSuspiciousFast.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 17</value>
@@ -612,8 +612,8 @@
   <data name="&gt;&gt;btnCls.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkLogOnlyImportant.Parent" xml:space="preserve">
-    <value>tabChangelog</value>
+  <data name="&gt;&gt;btnMin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;checkShowVirusesFast.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -795,6 +795,9 @@
   <data name="btnFullScan.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;treeHistorySusp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;groupLogFullSettings.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -848,9 +851,6 @@
   </data>
   <data name="tabSimple.Text" xml:space="preserve">
     <value>Fast Scan</value>
-  </data>
-  <data name="textFilePath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 20</value>
   </data>
   <data name="btnScanFile.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -969,6 +969,9 @@
   <data name="&gt;&gt;btnFullScan.Name" xml:space="preserve">
     <value>btnFullScan</value>
   </data>
+  <data name="checkShowViruses.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;progressFull.Type" xml:space="preserve">
     <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
@@ -1000,7 +1003,7 @@
     <value>True</value>
   </data>
   <data name="&gt;&gt;treeHistoryViruses.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tabMainMenu.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1295,8 +1298,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="btnClearScansLog.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;btnMin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;treeHistorySusp.Name" xml:space="preserve">
+    <value>treeHistorySusp</value>
   </data>
   <data name="&gt;&gt;labelSafeUnsafeWelcome.Name" xml:space="preserve">
     <value>labelSafeUnsafeWelcome</value>
@@ -1345,6 +1348,9 @@ It will scan main folders on your PC for viruses.</value>
   </data>
   <data name="groupFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 73</value>
+  </data>
+  <data name="&gt;&gt;btnQuickFast.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="labThisFileStatus.Text" xml:space="preserve">
     <value>unselected</value>
@@ -1604,6 +1610,9 @@ It will scan main folders on your PC for viruses.</value>
   <data name="tabDrivescan.Location" type="System.Drawing.Point, System.Drawing">
     <value>184, 4</value>
   </data>
+  <data name="treeHistorySusp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 232</value>
+  </data>
   <data name="tabChangelog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
@@ -1703,6 +1712,9 @@ It will scan main folders on your PC for viruses.</value>
   <data name="labSelectTheDrive.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;treeHistorySusp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;tabSimple.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1750,6 +1762,9 @@ It will scan main folders on your PC for viruses.</value>
   </data>
   <data name="btnSelectFile.Location" type="System.Drawing.Point, System.Drawing">
     <value>477, 16</value>
+  </data>
+  <data name="textFullLog.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="labScannedFast.Text" xml:space="preserve">
     <value>Files Scanned:</value>
@@ -2320,7 +2335,7 @@ It will scan main folders on your PC for viruses.</value>
     <value>tabMainMenu</value>
   </data>
   <data name="&gt;&gt;richTextVirusesHistory.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="textFastLog.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2343,8 +2358,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="btnFastScan.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 7</value>
   </data>
-  <data name="checkShowViruses.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="textFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 20</value>
   </data>
   <data name="&gt;&gt;treeHistoryScans.Parent" xml:space="preserve">
     <value>tabLogs</value>
@@ -2355,8 +2370,8 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;textLog.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="textFullLog.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="groupLogFolderSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 8</value>
   </data>
   <data name="&gt;&gt;labThisFileIs.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -2448,6 +2463,9 @@ It will scan main folders on your PC for viruses.</value>
   </data>
   <data name="&gt;&gt;btnMin.Name" xml:space="preserve">
     <value>btnMin</value>
+  </data>
+  <data name="&gt;&gt;checkLogOnlyImportant.Parent" xml:space="preserve">
+    <value>tabChangelog</value>
   </data>
   <data name="&gt;&gt;tabAdvanced.Name" xml:space="preserve">
     <value>tabAdvanced</value>

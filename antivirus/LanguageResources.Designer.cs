@@ -97,6 +97,16 @@ namespace InfANT {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t delete the file. InfANT has no rights to access it or it&apos;s already deleted. 
+        /// Do you want to remove it from the log?.
+        /// </summary>
+        internal static string cant_delete_no_rights_or_deleted_want_remove_log_entry {
+            get {
+                return ResourceManager.GetString("cant_delete_no_rights_or_deleted_want_remove_log_entry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Couldn&apos;t write the database to disk! 
         ///It looks like you have no access to the folder or the file is in use..
         /// </summary>
@@ -270,6 +280,33 @@ namespace InfANT {
         internal static string looks {
             get {
                 return ResourceManager.GetString("looks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string menu_exit {
+            get {
+                return ResourceManager.GetString("menu_exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fast-Scan.
+        /// </summary>
+        internal static string menu_fast {
+            get {
+                return ResourceManager.GetString("menu_fast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        internal static string menu_open {
+            get {
+                return ResourceManager.GetString("menu_open", resourceCulture);
             }
         }
         

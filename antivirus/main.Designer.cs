@@ -87,6 +87,7 @@
             this.labScanned = new System.Windows.Forms.Label();
             this.btnSelectFolder = new System.Windows.Forms.Button();
             this.tabViruses = new System.Windows.Forms.TabPage();
+            this.treeHistorySusp = new System.Windows.Forms.TreeView();
             this.btnDeleteThisVirus = new System.Windows.Forms.Button();
             this.btnClearVirusesLog = new System.Windows.Forms.Button();
             this.richTextVirusesHistory = new System.Windows.Forms.RichTextBox();
@@ -317,7 +318,6 @@
             this.groupLogFastSettings.Controls.Add(this.checkShowOKFast);
             this.groupLogFastSettings.Name = "groupLogFastSettings";
             this.groupLogFastSettings.TabStop = false;
-            this.groupLogFastSettings.Enter += new System.EventHandler(this.groupLogFastSettings_Enter);
             // 
             // checkShowWarningsFast
             // 
@@ -651,12 +651,19 @@
             // tabViruses
             // 
             resources.ApplyResources(this.tabViruses, "tabViruses");
+            this.tabViruses.Controls.Add(this.treeHistorySusp);
             this.tabViruses.Controls.Add(this.btnDeleteThisVirus);
             this.tabViruses.Controls.Add(this.btnClearVirusesLog);
             this.tabViruses.Controls.Add(this.richTextVirusesHistory);
             this.tabViruses.Controls.Add(this.treeHistoryViruses);
             this.tabViruses.Name = "tabViruses";
             this.tabViruses.UseVisualStyleBackColor = true;
+            // 
+            // treeHistorySusp
+            // 
+            resources.ApplyResources(this.treeHistorySusp, "treeHistorySusp");
+            this.treeHistorySusp.Name = "treeHistorySusp";
+            this.treeHistorySusp.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeHistorySusp_NodeMouseClick);
             // 
             // btnDeleteThisVirus
             // 
@@ -672,7 +679,7 @@
             // btnClearVirusesLog
             // 
             resources.ApplyResources(this.btnClearVirusesLog, "btnClearVirusesLog");
-            this.btnClearVirusesLog.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnClearVirusesLog.BackColor = System.Drawing.Color.White;
             this.btnClearVirusesLog.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.btnClearVirusesLog.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnClearVirusesLog.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
@@ -690,7 +697,7 @@
             // 
             resources.ApplyResources(this.treeHistoryViruses, "treeHistoryViruses");
             this.treeHistoryViruses.Name = "treeHistoryViruses";
-            this.treeHistoryViruses.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeHistoryViruses_AfterSelect);
+            this.treeHistoryViruses.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeHistoryViruses_NodeMouseClick);
             // 
             // tabLogs
             // 
@@ -704,7 +711,7 @@
             // btnClearScansLog
             // 
             resources.ApplyResources(this.btnClearScansLog, "btnClearScansLog");
-            this.btnClearScansLog.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnClearScansLog.BackColor = System.Drawing.Color.White;
             this.btnClearScansLog.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.btnClearScansLog.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnClearScansLog.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
@@ -973,5 +980,6 @@
         private System.Windows.Forms.Button btnMin;
         private System.Windows.Forms.Button btnQst;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TreeView treeHistorySusp;
     }
 }

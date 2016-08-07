@@ -31,6 +31,7 @@ namespace InfANT
             _myTimer = new System.Windows.Forms.Timer {Interval = 200};
             _myTimer.Tick += Kostil;
             _myTimer.Start(); //as it's not fully drawn but we WANT it to we set a small timer. The timer works in an another thread so the UI thread will be able to finish drawing.
+            ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 20; }));
         }
         private void Kostil(object sender, EventArgs e)
         {
@@ -40,14 +41,13 @@ namespace InfANT
             /* we need an another thread so the main thread will remain responsible.
             we want our thread to close with the program and not run apart, IsBackground will do it */
             th.Start();
-            ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 20; }));
+            
         }
         private void Kostil2()
         {
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 40; }));
-            _mainForm = new Main(this); //launch Main form to access vars, but don't show it
+            _mainForm = new Main(this); //launch Main form to access vars, but don't show it 
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 60; }));
-
             LoadLogs();
             CheckForCorruptions();
             ReadLogs(0);
@@ -82,9 +82,9 @@ namespace InfANT
         private void CreateIconMenuStructure()
         {
             //we create a contextMenu first
-            _contextMenu1.MenuItems.Add("Open").Click += _mainForm.MenuOpen; //Triggers on menu-click
-            _contextMenu1.MenuItems.Add("Fast-Scan").Click += _mainForm.MenuFast;
-            _contextMenu1.MenuItems.Add("Exit").Click += _mainForm.MenuExit;
+            _contextMenu1.MenuItems.Add(LanguageResources.menu_open).Click += _mainForm.MenuOpen; //Triggers on menu-click
+            _contextMenu1.MenuItems.Add(LanguageResources.menu_fast).Click += _mainForm.MenuFast;
+            _contextMenu1.MenuItems.Add(LanguageResources.menu_exit).Click += _mainForm.MenuExit;
 
             NotifyIcon1.Visible = true;
             ChangeIco(); //We enable the ico and set the right appearance
@@ -142,10 +142,12 @@ namespace InfANT
         //2 - Suspicious
         //3 - Errors //we don't need to read errors to the user, so no case for this
         //4 - Actions (Eg. Scans, Changes)
-        int _nodesCountViruses;
-        int _nodesCountActions;
+        private int _nodesCountViruses;
+        private int _nodesCountSusp;
+        private int _nodesCountActions;
         public readonly Dictionary<int, string> ActionsContainer = new Dictionary<int, string>();
         public readonly Dictionary<int, string> VirusesContainer = new Dictionary<int, string>();
+        public readonly Dictionary<int, string> SuspContainer = new Dictionary<int, string>();
         public void ReadLogs(int whatToRead)
         {
             switch (whatToRead)
@@ -153,15 +155,19 @@ namespace InfANT
                 case 0:
                     _mainForm.treeHistoryScans.Nodes.Clear();
                     _mainForm.treeHistoryViruses.Nodes.Clear();
+                    _mainForm.treeHistorySusp.Nodes.Clear();
                     ActionsContainer.Clear();
                     VirusesContainer.Clear();
+                    SuspContainer.Clear();
+                    _nodesCountViruses = 0;
+                    _nodesCountSusp = 0;
                     ReadLogs(1);
                     ReadLogs(2);
                     ReadLogs(4);
                     break;
 
-                case 1: 
-                    if(Viruseslogs.Count > 0)
+                case 1:
+                    if (Viruseslogs.Count > 0)
                     {
                         foreach (string str in Viruseslogs)
                         {
@@ -191,8 +197,8 @@ namespace InfANT
                     }
                     break;
 
-                case 2:
-                    if(Suspiciouslogs.Count > 0)
+                case 2:  
+                    if (Suspiciouslogs.Count > 0)
                     {
                         foreach (string str in Suspiciouslogs)
                         {
@@ -200,24 +206,24 @@ namespace InfANT
                             string time = GetSquareBrackets(str, 3);
                             string path = GetSquareBrackets(str, 5);
 
-                            TreeNode[] treeNodes = _mainForm.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
+                            TreeNode[] treeNodes = _mainForm.treeHistorySusp.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
                             if (treeNodes.Length > 0)
                             {
-                                TreeNode node = _mainForm.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
+                                TreeNode node = _mainForm.treeHistorySusp.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
 
                                 TreeNode tmp = node.Nodes.Add(time);
-                                tmp.Name = _nodesCountViruses.ToString();
-                                VirusesContainer.Add(_nodesCountViruses, $"[{path}][S]");
-                                _nodesCountViruses++;
+                                tmp.Name = _nodesCountSusp.ToString();
+                                SuspContainer.Add(_nodesCountSusp, $"[{path}][S]");
+                                _nodesCountSusp++;
                             }
                             else
                             {
-                                TreeNode node = _mainForm.treeHistoryViruses.Nodes.Add(date);
+                                TreeNode node = _mainForm.treeHistorySusp.Nodes.Add(date);
                                 node.Name = "date";
                                 TreeNode tmp = node.Nodes.Add(time);
-                                tmp.Name = _nodesCountViruses.ToString();
-                                VirusesContainer.Add(_nodesCountViruses, $"[{path}][S]");
-                                _nodesCountViruses++;
+                                tmp.Name = _nodesCountSusp.ToString();
+                                SuspContainer.Add(_nodesCountSusp, $"[{path}][S]");
+                                _nodesCountSusp++;
                             }
                         }          
                     }
@@ -308,7 +314,7 @@ namespace InfANT
         }
 
         public List<string> Viruseslogs = new List<string>(); //we make a list BEFORE appling a new one just in case we may have nothing inside (i.e. no errors)
-        public List<string> Suspiciouslogs = new List<string>(); //so it's needed to get rid of all the  exceptions
+        public List<string> Suspiciouslogs = new List<string>(); //so it's needed to get rid of all the exceptions
         private List<string> _errorslogs = new List<string>();
         public List<string> OkLogs = new List<string>();
         public void CreateLogEntry(int wheretowrite, string events)
