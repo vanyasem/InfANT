@@ -117,26 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="favicoinfected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\favicoinfected.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="access_denied" xml:space="preserve">
+    <value>Нет доступа! Попробуйте ещё раз!</value>
   </data>
-  <data name="cls" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cls.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cant_find_infant_in_folder" xml:space="preserve">
+    <value>В данной папке нет антивируса InfANT. Выберите другую директорию.</value>
   </data>
-  <data name="min" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="done" xml:space="preserve">
+    <value>Готово!</value>
   </data>
-  <data name="favicoOK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\favicook.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="open_launcher_instead" xml:space="preserve">
+    <value>Запускайте "_Launcher.exe"!</value>
   </data>
-  <data name="qst" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\qst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="select_file" xml:space="preserve">
+    <value>Выберите файл, который хотите добавить.</value>
   </data>
-  <data name="wave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="select_file_text" xml:space="preserve">
+    <value>Выберите файл                                ----------------------&gt;</value>
   </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="select_installation_folder" xml:space="preserve">
+    <value>Выберите путь установки InfANT.</value>
+  </data>
+  <data name="this_hash_already_exists" xml:space="preserve">
+    <value>Данный элемент уже есть в датабазе, его не нужно добавлять.</value>
   </data>
 </root>

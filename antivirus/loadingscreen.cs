@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -17,16 +18,22 @@ namespace InfANT
         private readonly bool _usedLauncher;
         public LoadingScreen(bool usedLauncherBool)
         {
+            string temp = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(temp);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(temp);
             InitializeComponent();
             _usedLauncher = usedLauncherBool;
         }
 
+        private SynchronizationContext _synchronizationContext;
         private System.Windows.Forms.Timer _myTimer;
         private void loadingscreen_Shown(object sender, EventArgs e) //happens right after it's shown BUT NOT FULLY DRAWN! Load happened BEFORE, so it makes a blank gap.
         {
+            _synchronizationContext = SynchronizationContext.Current;
             _myTimer = new System.Windows.Forms.Timer {Interval = 200};
             _myTimer.Tick += Kostil;
             _myTimer.Start(); //as it's not fully drawn but we WANT it to we set a small timer. The timer works in an another thread so the UI thread will be able to finish drawing.
+            ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 20; }));
         }
         private void Kostil(object sender, EventArgs e)
         {
@@ -36,14 +43,13 @@ namespace InfANT
             /* we need an another thread so the main thread will remain responsible.
             we want our thread to close with the program and not run apart, IsBackground will do it */
             th.Start();
-            ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 20; }));
+            
         }
         private void Kostil2()
         {
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 40; }));
-            _mainForm = new Main(this); //launch Main form to access vars, but don't show it
+            _mainForm = new Main(this); //launch Main form to access vars, but don't show it 
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 60; }));
-
             LoadLogs();
             CheckForCorruptions();
             ReadLogs(0);
@@ -53,7 +59,6 @@ namespace InfANT
             LoadLocalDatabase();
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 100; }));
             LoadChangelog();
-
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
             Invoke(new MethodInvoker(delegate { CreateIconMenuStructure(); _mainForm.Ver = fvi.FileVersion; _mainForm.labelYoVersionLab.Text = _mainForm.Ver + @" " + Main.Build;
@@ -64,7 +69,7 @@ namespace InfANT
         {
             if (GetSquareBrackets(OkLogs[OkLogs.Count - 1],5).StartsWith("(S")) //If there's a start entry, but no end entry, do this:
             {   
-                CreateLogEntry(4, "(EScan was rudely interrupted, was not finished correctly)|unknown|");
+                CreateLogEntry(4, $"(E{LanguageResources.LOGS_scan_was_interrupted}");
             }
         }
         //---------------------------------
@@ -78,14 +83,14 @@ namespace InfANT
         private void CreateIconMenuStructure()
         {
             //we create a contextMenu first
-            _contextMenu1.MenuItems.Add("Open").Click += _mainForm.MenuOpen; //Triggers on menu-click
-            _contextMenu1.MenuItems.Add("Fast-Scan").Click += _mainForm.MenuFast;
-            _contextMenu1.MenuItems.Add("Exit").Click += _mainForm.MenuExit;
+            _contextMenu1.MenuItems.Add(LanguageResources.menu_open).Click += _mainForm.MenuOpen; //Triggers on menu-click
+            _contextMenu1.MenuItems.Add(LanguageResources.menu_fast).Click += _mainForm.MenuFast;
+            _contextMenu1.MenuItems.Add(LanguageResources.menu_exit).Click += _mainForm.MenuExit;
 
             NotifyIcon1.Visible = true;
             ChangeIco(); //We enable the ico and set the right appearance
 
-            NotifyIcon1.Text = "Your computer is safe";
+            NotifyIcon1.Text = LanguageResources.Computer_is_safe;
             NotifyIcon1.ContextMenu = _contextMenu1; //And then assign it to a notifyIcon
             NotifyIcon1.Click += _mainForm.MenuOpen; //This triggers on click of a taskbar ico
         }
@@ -107,7 +112,7 @@ namespace InfANT
         {
             try
             {
-                OkLogs         = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", Encoding.UTF8).ToList();
+                OkLogs = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", Encoding.UTF8).ToList();
 
                 if (OkLogs[0] == "firstlaunch")
                 {
@@ -125,7 +130,7 @@ namespace InfANT
             }
             catch
             {
-                MessageBox.Show("Logs weren't found! \r\nPlease, don't delete them by yourself, do it using the 'Settings' tab.\r\nRelaunch the application!", "Fatal Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(LanguageResources.Logs_werent_found_do_in_launcher_restart, LanguageResources.fatal_error, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", @"firstlaunch");
                         
@@ -138,10 +143,12 @@ namespace InfANT
         //2 - Suspicious
         //3 - Errors //we don't need to read errors to the user, so no case for this
         //4 - Actions (Eg. Scans, Changes)
-        int _nodesCountViruses;
-        int _nodesCountActions;
+        private int _nodesCountViruses;
+        private int _nodesCountSusp;
+        private int _nodesCountActions;
         public readonly Dictionary<int, string> ActionsContainer = new Dictionary<int, string>();
         public readonly Dictionary<int, string> VirusesContainer = new Dictionary<int, string>();
+        public readonly Dictionary<int, string> SuspContainer = new Dictionary<int, string>();
         public void ReadLogs(int whatToRead)
         {
             switch (whatToRead)
@@ -149,15 +156,19 @@ namespace InfANT
                 case 0:
                     _mainForm.treeHistoryScans.Nodes.Clear();
                     _mainForm.treeHistoryViruses.Nodes.Clear();
+                    _mainForm.treeHistorySusp.Nodes.Clear();
                     ActionsContainer.Clear();
                     VirusesContainer.Clear();
+                    SuspContainer.Clear();
+                    _nodesCountViruses = 0;
+                    _nodesCountSusp = 0;
                     ReadLogs(1);
                     ReadLogs(2);
                     ReadLogs(4);
                     break;
 
-                case 1: 
-                    if(Viruseslogs.Count > 0)
+                case 1:
+                    if (Viruseslogs.Count > 0)
                     {
                         foreach (string str in Viruseslogs)
                         {
@@ -187,8 +198,8 @@ namespace InfANT
                     }
                     break;
 
-                case 2:
-                    if(Suspiciouslogs.Count > 0)
+                case 2:  
+                    if (Suspiciouslogs.Count > 0)
                     {
                         foreach (string str in Suspiciouslogs)
                         {
@@ -196,24 +207,24 @@ namespace InfANT
                             string time = GetSquareBrackets(str, 3);
                             string path = GetSquareBrackets(str, 5);
 
-                            TreeNode[] treeNodes = _mainForm.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
+                            TreeNode[] treeNodes = _mainForm.treeHistorySusp.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray(); //https://stackoverflow.com/questions/12388249/is-there-a-method-for-searching-for-treenode-text-field-in-treeview-nodes-collec
                             if (treeNodes.Length > 0)
                             {
-                                TreeNode node = _mainForm.treeHistoryViruses.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
+                                TreeNode node = _mainForm.treeHistorySusp.Nodes.Cast<TreeNode>().Where(r => r.Text == date).ToArray()[0];
 
                                 TreeNode tmp = node.Nodes.Add(time);
-                                tmp.Name = _nodesCountViruses.ToString();
-                                VirusesContainer.Add(_nodesCountViruses, $"[{path}][S]");
-                                _nodesCountViruses++;
+                                tmp.Name = _nodesCountSusp.ToString();
+                                SuspContainer.Add(_nodesCountSusp, $"[{path}][S]");
+                                _nodesCountSusp++;
                             }
                             else
                             {
-                                TreeNode node = _mainForm.treeHistoryViruses.Nodes.Add(date);
+                                TreeNode node = _mainForm.treeHistorySusp.Nodes.Add(date);
                                 node.Name = "date";
                                 TreeNode tmp = node.Nodes.Add(time);
-                                tmp.Name = _nodesCountViruses.ToString();
-                                VirusesContainer.Add(_nodesCountViruses, $"[{path}][S]");
-                                _nodesCountViruses++;
+                                tmp.Name = _nodesCountSusp.ToString();
+                                SuspContainer.Add(_nodesCountSusp, $"[{path}][S]");
+                                _nodesCountSusp++;
                             }
                         }          
                     }
@@ -304,7 +315,7 @@ namespace InfANT
         }
 
         public List<string> Viruseslogs = new List<string>(); //we make a list BEFORE appling a new one just in case we may have nothing inside (i.e. no errors)
-        public List<string> Suspiciouslogs = new List<string>(); //so it's needed to get rid of all the  exceptions
+        public List<string> Suspiciouslogs = new List<string>(); //so it's needed to get rid of all the exceptions
         private List<string> _errorslogs = new List<string>();
         public List<string> OkLogs = new List<string>();
         public void CreateLogEntry(int wheretowrite, string events)
@@ -336,7 +347,7 @@ namespace InfANT
             }
         }
 
-        private void timerSaveLogs_Tick(object sender, EventArgs e) //continuously  saves logs to files. 
+        public void timerSaveLogs_Tick(object sender, EventArgs e) //continuously  saves logs to files. 
         {
             try
             {
@@ -345,10 +356,14 @@ namespace InfANT
                 File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsSuspicious.txt", Suspiciouslogs);
                 File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt", _errorslogs);
             }
-            catch
+            catch(Exception ex)
             {
+                _timerLogSaver.Stop();
                 _timerLogSaver.Enabled = false;
-                MessageBox.Show("Can't save logs to disk!\r\nThey are probably in use or InfANT has no premissions to save there.", "Oops!",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _synchronizationContext.Send(s => {
+                    MessageBox.Show(LanguageResources.cant_save_logs_no_permissions, LanguageResources.oops,MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }, null);
+                CreateLogEntry(3, ex.ToString());
                 _timerLogSaver.Enabled = true;
                 _timerLogSaver.Start();
             }
@@ -363,7 +378,7 @@ namespace InfANT
         private System.Timers.Timer _timerLogSaver;
         private void EnableTimer()
         {
-            _timerLogSaver = new System.Timers.Timer(1000) {Enabled = true};
+            _timerLogSaver = new System.Timers.Timer(600000) {Enabled = true};
             _timerLogSaver.Elapsed += timerSaveLogs_Tick;
             _timerLogSaver.Start();
         }
@@ -391,8 +406,8 @@ namespace InfANT
                     }
                     catch
                     {
-                        CreateLogEntry(3, "Can't save database");
-                        MessageBox.Show("Couldn't write the database to disk! \r\nIt looks like you have no access to the folder or the file is in use.", "Oops.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        CreateLogEntry(3, LanguageResources.LOGS_cant_save_database);
+                        MessageBox.Show(LanguageResources.cant_save_database_no_permission, LanguageResources.oops, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     _mainForm.IsInternetConnected = true; // if everything's cool - sets the internet connectivity to true
                 }
@@ -401,9 +416,9 @@ namespace InfANT
             {
                 if (_mainForm.IsInternetConnected)
                 {
-                    CreateLogEntry(3, "Can't establish an internet connection");
+                    CreateLogEntry(3, LanguageResources.LOGS_cant_connect_internet);
                     _mainForm.IsInternetConnected = false; //sets the internet connectivity to false
-                    if (MessageBox.Show("Looks like you have no internet, databases and changelog weren't updated", "Can't connect to the Internet!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
+                    if (MessageBox.Show(LanguageResources.no_internet_cant_update_database_changelog, LanguageResources.cant_connect_to_internet, MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
                     {
                         _mainForm.RetryInt(); //if user selects retry
                         return;
@@ -427,8 +442,8 @@ namespace InfANT
                     }
                     catch
                     {
-                        CreateLogEntry(3, "Can't save database");
-                        MessageBox.Show("Couldn't write the database to disk! \r\nIt looks like you have no access to the folder or the file is in use.", "Oops.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        CreateLogEntry(3, LanguageResources.LOGS_cant_save_database);
+                        MessageBox.Show(LanguageResources.cant_save_database_no_permission, LanguageResources.oops, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     _mainForm.IsInternetConnected = true; // if everything's cool - sets the internet connectivity to true
                 }
@@ -437,9 +452,9 @@ namespace InfANT
             {
                 if (_mainForm.IsInternetConnected)
                 {
-                    CreateLogEntry(3, "Can't establish an internet connection");
+                    CreateLogEntry(3, LanguageResources.LOGS_cant_connect_internet);
                     _mainForm.IsInternetConnected = false; //sets the internet connectivity to false
-                    if (MessageBox.Show("Looks like you have no internet, databases and changelog weren't updated", "Can't connect to the Internet!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
+                    if (MessageBox.Show(LanguageResources.no_internet_cant_update_database_changelog, LanguageResources.cant_connect_to_internet, MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
                     {
                         _mainForm.RetryInt(); //if user selects retry
                         return;
@@ -457,8 +472,8 @@ namespace InfANT
             }
             catch
             { // if no luck - closes. Why do I need an antivirus without databases?
-                CreateLogEntry(3, "Can't load MAIN databases");
-                MessageBox.Show("Looks like you have no internet connection and no cached databases on your PC.\r\nWithout them antivirus is completely useless!", "No databases found!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CreateLogEntry(3, LanguageResources.LOGS_cant_load_main_datas);
+                MessageBox.Show(LanguageResources.no_internet_no_cahced_database_useless, LanguageResources.no_Databases_found, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
         private void LoadDatabaseSusp()
@@ -470,7 +485,7 @@ namespace InfANT
             }
             catch
             { // if a user has main databases, but has no susp databases I don't need to force-close the app, as it still works
-                CreateLogEntry(3, "Can't load suspicious databases");
+                CreateLogEntry(3, LanguageResources.LOGS_cant_load_susp_datas);
             }
         }
         private void LoadLocalDatabase() //this loads your own database (added through database editor)
@@ -509,7 +524,7 @@ namespace InfANT
             catch
             {
                 _changelog = "iNo internet connection and no local cached copy of the changelog were found.";
-                CreateLogEntry(3, "Can't establish an internet connection");
+                CreateLogEntry(3, LanguageResources.LOGS_cant_connect_internet);
                 FormatChangelog();
             }
         }
@@ -550,9 +565,8 @@ namespace InfANT
         private void loadingscreen_Load(object sender, EventArgs e)
         {
             if (_usedLauncher) return;
-            MessageBox.Show("Open \"_Launcher.exe\" instead!");
+            MessageBox.Show(LanguageResources.open_launcher_instead);
             Application.Exit();
         }
-
     }
 }

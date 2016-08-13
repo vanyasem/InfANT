@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InfANT.Properties {
+namespace databaseworker {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace InfANT.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class LanguageResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal LanguageResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace InfANT.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("InfANT.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("databaseworker.LanguageResources", typeof(LanguageResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,72 +61,74 @@ namespace InfANT.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Access Denied! Try again!.
         /// </summary>
-        internal static System.Drawing.Bitmap cls {
+        internal static string access_denied {
             get {
-                object obj = ResourceManager.GetObject("cls", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("access_denied", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized string similar to Can&apos;t find InfANT in that folder! Try again!.
         /// </summary>
-        internal static System.Drawing.Icon favicoinfected {
+        internal static string cant_find_infant_in_folder {
             get {
-                object obj = ResourceManager.GetObject("favicoinfected", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ResourceManager.GetString("cant_find_infant_in_folder", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized string similar to Done!.
         /// </summary>
-        internal static System.Drawing.Icon favicoOK {
+        internal static string done {
             get {
-                object obj = ResourceManager.GetObject("favicoOK", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ResourceManager.GetString("done", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Open &quot;_Launcher.exe&quot; instead!.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static string open_launcher_instead {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("open_launcher_instead", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Select the file you want to add.
         /// </summary>
-        internal static System.Drawing.Bitmap min {
+        internal static string select_file {
             get {
-                object obj = ResourceManager.GetObject("min", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("select_file", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Select the file                                     ----------------------&gt;.
         /// </summary>
-        internal static System.Drawing.Bitmap qst {
+        internal static string select_file_text {
             get {
-                object obj = ResourceManager.GetObject("qst", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("select_file_text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Select the InfANT&apos;s installation folder.
         /// </summary>
-        internal static System.Drawing.Bitmap wave {
+        internal static string select_installation_folder {
             get {
-                object obj = ResourceManager.GetObject("wave", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("select_installation_folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This entry already exists in one of the databases, no need to add it again..
+        /// </summary>
+        internal static string this_hash_already_exists {
+            get {
+                return ResourceManager.GetString("this_hash_already_exists", resourceCulture);
             }
         }
     }

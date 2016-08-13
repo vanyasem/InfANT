@@ -40,8 +40,8 @@
             // 
             // ProgressLoading
             // 
-            this.ProgressLoading.BackColor = System.Drawing.SystemColors.ControlLight;
             resources.ApplyResources(this.ProgressLoading, "ProgressLoading");
+            this.ProgressLoading.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ProgressLoading.Maximum = 100;
             this.ProgressLoading.Minimum = 0;
             this.ProgressLoading.Name = "ProgressLoading";
@@ -52,6 +52,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.ProgressLoading);
             this.Controls.Add(this.lab_Wait);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

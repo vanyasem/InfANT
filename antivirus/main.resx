@@ -117,10 +117,2250 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>46</value>
-  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnScanFolder.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnScanFolder.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnScanFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 43</value>
+  </data>
+  <data name="btnScanFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 22</value>
+  </data>
+  <data name="btnScanFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnScanFolder.Text" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="&gt;&gt;btnScanFolder.Name" xml:space="preserve">
+    <value>btnScanFolder</value>
+  </data>
+  <data name="&gt;&gt;btnScanFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnScanFolder.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;btnScanFolder.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="textFolderPath.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textFolderPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 19</value>
+  </data>
+  <data name="textFolderPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 20</value>
+  </data>
+  <data name="textFolderPath.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="textFolderPath.Text" xml:space="preserve">
+    <value>Select a path first   ---&gt;</value>
+  </data>
+  <data name="&gt;&gt;textFolderPath.Name" xml:space="preserve">
+    <value>textFolderPath</value>
+  </data>
+  <data name="&gt;&gt;textFolderPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textFolderPath.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;textFolderPath.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 119</value>
+  </data>
+  <data name="textLog.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>541, 269</value>
+  </data>
+  <data name="textLog.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;textLog.Name" xml:space="preserve">
+    <value>textLog</value>
+  </data>
+  <data name="&gt;&gt;textLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textLog.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;textLog.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tabHello.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnQuickLast.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnQuickLast.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 13pt, style=Bold</value>
+  </data>
+  <data name="btnQuickLast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>392, 32</value>
+  </data>
+  <data name="btnQuickLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 80</value>
+  </data>
+  <data name="btnQuickLast.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnQuickLast.Text" xml:space="preserve">
+    <value>Review your last scan</value>
+  </data>
+  <data name="&gt;&gt;btnQuickLast.Name" xml:space="preserve">
+    <value>btnQuickLast</value>
+  </data>
+  <data name="&gt;&gt;btnQuickLast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnQuickLast.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;btnQuickLast.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 13pt, style=Bold</value>
+  </data>
+  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>392, 144</value>
+  </data>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 80</value>
+  </data>
+  <data name="button4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>PC protection tips
+</value>
+  </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnQuickFull.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnQuickFull.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 13pt, style=Bold</value>
+  </data>
+  <data name="btnQuickFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 144</value>
+  </data>
+  <data name="btnQuickFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 80</value>
+  </data>
+  <data name="btnQuickFull.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnQuickFull.Text" xml:space="preserve">
+    <value>Drive Scan</value>
+  </data>
+  <data name="&gt;&gt;btnQuickFull.Name" xml:space="preserve">
+    <value>btnQuickFull</value>
+  </data>
+  <data name="&gt;&gt;btnQuickFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnQuickFull.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;btnQuickFull.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnQuickFast.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnQuickFast.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 13pt, style=Bold</value>
+  </data>
+  <data name="btnQuickFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 32</value>
+  </data>
+  <data name="btnQuickFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 80</value>
+  </data>
+  <data name="btnQuickFast.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnQuickFast.Text" xml:space="preserve">
+    <value>Fast Scan</value>
+  </data>
+  <data name="&gt;&gt;btnQuickFast.Name" xml:space="preserve">
+    <value>btnQuickFast</value>
+  </data>
+  <data name="&gt;&gt;btnQuickFast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnQuickFast.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;btnQuickFast.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 35</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>727, 252</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Here are some quick suggestions:</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>tabHello</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelSafeUnsafeWelcome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="labelSafeUnsafeWelcome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-2, 8</value>
+  </data>
+  <data name="labelSafeUnsafeWelcome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>756, 24</value>
+  </data>
+  <data name="labelSafeUnsafeWelcome.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelSafeUnsafeWelcome.Text" xml:space="preserve">
+    <value>Your computer is safe!</value>
+  </data>
+  <data name="labelSafeUnsafeWelcome.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;labelSafeUnsafeWelcome.Name" xml:space="preserve">
+    <value>labelSafeUnsafeWelcome</value>
+  </data>
+  <data name="&gt;&gt;labelSafeUnsafeWelcome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSafeUnsafeWelcome.Parent" xml:space="preserve">
+    <value>tabHello</value>
+  </data>
+  <data name="&gt;&gt;labelSafeUnsafeWelcome.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabHello.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="tabHello.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabHello.Size" type="System.Drawing.Size, System.Drawing">
+    <value>754, 493</value>
+  </data>
+  <data name="tabHello.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabHello.Text" xml:space="preserve">
+    <value>Hello!</value>
+  </data>
+  <data name="&gt;&gt;tabHello.Name" xml:space="preserve">
+    <value>tabHello</value>
+  </data>
+  <data name="&gt;&gt;tabHello.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabHello.Parent" xml:space="preserve">
+    <value>tabMainMenu</value>
+  </data>
+  <data name="&gt;&gt;tabHello.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelWhiteTabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 155</value>
+  </data>
+  <data name="panelWhiteTabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 336</value>
+  </data>
+  <data name="panelWhiteTabs.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelWhiteTabs.Name" xml:space="preserve">
+    <value>panelWhiteTabs</value>
+  </data>
+  <data name="&gt;&gt;panelWhiteTabs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelWhiteTabs.Parent" xml:space="preserve">
+    <value>tabScan</value>
+  </data>
+  <data name="&gt;&gt;panelWhiteTabs.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabScans.Alignment" type="System.Windows.Forms.TabAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="progressFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 84</value>
+  </data>
+  <data name="progressFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 23</value>
+  </data>
+  <data name="progressFast.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;progressFast.Name" xml:space="preserve">
+    <value>progressFast</value>
+  </data>
+  <data name="&gt;&gt;progressFast.Type" xml:space="preserve">
+    <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;progressFast.Parent" xml:space="preserve">
+    <value>tabSimple</value>
+  </data>
+  <data name="&gt;&gt;progressFast.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labScannedFastNum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labScannedFastNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 89</value>
+  </data>
+  <data name="labScannedFastNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 13</value>
+  </data>
+  <data name="labScannedFastNum.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labScannedFastNum.Text" xml:space="preserve">
+    <value>0/0</value>
+  </data>
+  <data name="&gt;&gt;labScannedFastNum.Name" xml:space="preserve">
+    <value>labScannedFastNum</value>
+  </data>
+  <data name="&gt;&gt;labScannedFastNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labScannedFastNum.Parent" xml:space="preserve">
+    <value>tabSimple</value>
+  </data>
+  <data name="&gt;&gt;labScannedFastNum.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labScannedFast.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labScannedFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 89</value>
+  </data>
+  <data name="labScannedFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="labScannedFast.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labScannedFast.Text" xml:space="preserve">
+    <value>Files Scanned:</value>
+  </data>
+  <data name="&gt;&gt;labScannedFast.Name" xml:space="preserve">
+    <value>labScannedFast</value>
+  </data>
+  <data name="&gt;&gt;labScannedFast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labScannedFast.Parent" xml:space="preserve">
+    <value>tabSimple</value>
+  </data>
+  <data name="&gt;&gt;labScannedFast.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelFastScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 10</value>
+  </data>
+  <data name="labelFastScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 32</value>
+  </data>
+  <data name="labelFastScan.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelFastScan.Text" xml:space="preserve">
+    <value>This scan is useful if you are limited in time.
+It will scan main folders on your PC for viruses.</value>
+  </data>
+  <data name="&gt;&gt;labelFastScan.Name" xml:space="preserve">
+    <value>labelFastScan</value>
+  </data>
+  <data name="&gt;&gt;labelFastScan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFastScan.Parent" xml:space="preserve">
+    <value>tabSimple</value>
+  </data>
+  <data name="&gt;&gt;labelFastScan.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkShowWarningsFast.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowWarningsFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 82</value>
+  </data>
+  <data name="checkShowWarningsFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="checkShowWarningsFast.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="checkShowWarningsFast.Text" xml:space="preserve">
+    <value>Show Warnings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFast.Name" xml:space="preserve">
+    <value>checkShowWarningsFast</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFast.Parent" xml:space="preserve">
+    <value>groupLogFastSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFast.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkShowVirusesFast.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowVirusesFast.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="checkShowVirusesFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 16</value>
+  </data>
+  <data name="checkShowVirusesFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 17</value>
+  </data>
+  <data name="checkShowVirusesFast.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkShowVirusesFast.Text" xml:space="preserve">
+    <value>Show Viruses</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFast.Name" xml:space="preserve">
+    <value>checkShowVirusesFast</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFast.Parent" xml:space="preserve">
+    <value>groupLogFastSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFast.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkShowSuspiciousFast.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowSuspiciousFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 38</value>
+  </data>
+  <data name="checkShowSuspiciousFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 17</value>
+  </data>
+  <data name="checkShowSuspiciousFast.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="checkShowSuspiciousFast.Text" xml:space="preserve">
+    <value>Show Suspicious Files</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFast.Name" xml:space="preserve">
+    <value>checkShowSuspiciousFast</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFast.Parent" xml:space="preserve">
+    <value>groupLogFastSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFast.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkShowOKFast.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowOKFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 60</value>
+  </data>
+  <data name="checkShowOKFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 17</value>
+  </data>
+  <data name="checkShowOKFast.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="checkShowOKFast.Text" xml:space="preserve">
+    <value>Show OK Files</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFast.Name" xml:space="preserve">
+    <value>checkShowOKFast</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFast.Parent" xml:space="preserve">
+    <value>groupLogFastSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFast.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupLogFastSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 2</value>
+  </data>
+  <data name="groupLogFastSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 105</value>
+  </data>
+  <data name="groupLogFastSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupLogFastSettings.Text" xml:space="preserve">
+    <value>Log Settings</value>
+  </data>
+  <data name="&gt;&gt;groupLogFastSettings.Name" xml:space="preserve">
+    <value>groupLogFastSettings</value>
+  </data>
+  <data name="&gt;&gt;groupLogFastSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupLogFastSettings.Parent" xml:space="preserve">
+    <value>tabSimple</value>
+  </data>
+  <data name="&gt;&gt;groupLogFastSettings.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textFastLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 112</value>
+  </data>
+  <data name="textFastLog.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textFastLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 370</value>
+  </data>
+  <data name="textFastLog.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;textFastLog.Name" xml:space="preserve">
+    <value>textFastLog</value>
+  </data>
+  <data name="&gt;&gt;textFastLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textFastLog.Parent" xml:space="preserve">
+    <value>tabSimple</value>
+  </data>
+  <data name="&gt;&gt;textFastLog.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnFastScan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnFastScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 7</value>
+  </data>
+  <data name="btnFastScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 78</value>
+  </data>
+  <data name="btnFastScan.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnFastScan.Text" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="&gt;&gt;btnFastScan.Name" xml:space="preserve">
+    <value>btnFastScan</value>
+  </data>
+  <data name="&gt;&gt;btnFastScan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFastScan.Parent" xml:space="preserve">
+    <value>tabSimple</value>
+  </data>
+  <data name="&gt;&gt;btnFastScan.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tabSimple.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 4</value>
+  </data>
+  <data name="tabSimple.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabSimple.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 487</value>
+  </data>
+  <data name="tabSimple.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabSimple.Text" xml:space="preserve">
+    <value>Fast Scan</value>
+  </data>
+  <data name="&gt;&gt;tabSimple.Name" xml:space="preserve">
+    <value>tabSimple</value>
+  </data>
+  <data name="&gt;&gt;tabSimple.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabSimple.Parent" xml:space="preserve">
+    <value>tabScans</value>
+  </data>
+  <data name="&gt;&gt;tabSimple.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labSelectTheDrive.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labSelectTheDrive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 11</value>
+  </data>
+  <data name="labSelectTheDrive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 13</value>
+  </data>
+  <data name="labSelectTheDrive.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labSelectTheDrive.Text" xml:space="preserve">
+    <value>&lt;--- Select a drive first</value>
+  </data>
+  <data name="&gt;&gt;labSelectTheDrive.Name" xml:space="preserve">
+    <value>labSelectTheDrive</value>
+  </data>
+  <data name="&gt;&gt;labSelectTheDrive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labSelectTheDrive.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;labSelectTheDrive.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="comboDriveSelect.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="comboDriveSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 6</value>
+  </data>
+  <data name="comboDriveSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 21</value>
+  </data>
+  <data name="comboDriveSelect.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;comboDriveSelect.Name" xml:space="preserve">
+    <value>comboDriveSelect</value>
+  </data>
+  <data name="&gt;&gt;comboDriveSelect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboDriveSelect.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;comboDriveSelect.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="progressFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 84</value>
+  </data>
+  <data name="progressFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 23</value>
+  </data>
+  <data name="progressFull.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;progressFull.Name" xml:space="preserve">
+    <value>progressFull</value>
+  </data>
+  <data name="&gt;&gt;progressFull.Type" xml:space="preserve">
+    <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;progressFull.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;progressFull.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labScannedFullNum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labScannedFullNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 89</value>
+  </data>
+  <data name="labScannedFullNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 13</value>
+  </data>
+  <data name="labScannedFullNum.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labScannedFullNum.Text" xml:space="preserve">
+    <value>0/0</value>
+  </data>
+  <data name="&gt;&gt;labScannedFullNum.Name" xml:space="preserve">
+    <value>labScannedFullNum</value>
+  </data>
+  <data name="&gt;&gt;labScannedFullNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labScannedFullNum.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;labScannedFullNum.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labScannedFull.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labScannedFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 89</value>
+  </data>
+  <data name="labScannedFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="labScannedFull.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labScannedFull.Text" xml:space="preserve">
+    <value>Files Scanned:</value>
+  </data>
+  <data name="&gt;&gt;labScannedFull.Name" xml:space="preserve">
+    <value>labScannedFull</value>
+  </data>
+  <data name="&gt;&gt;labScannedFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labScannedFull.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;labScannedFull.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelFullScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 31</value>
+  </data>
+  <data name="labelFullScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 39</value>
+  </data>
+  <data name="labelFullScan.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelFullScan.Text" xml:space="preserve">
+    <value>This scan scans everything on a specific drive and usally takes a lot of time.
+</value>
+  </data>
+  <data name="&gt;&gt;labelFullScan.Name" xml:space="preserve">
+    <value>labelFullScan</value>
+  </data>
+  <data name="&gt;&gt;labelFullScan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFullScan.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;labelFullScan.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="checkShowWarningsFull.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowWarningsFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 82</value>
+  </data>
+  <data name="checkShowWarningsFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="checkShowWarningsFull.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="checkShowWarningsFull.Text" xml:space="preserve">
+    <value>Show Warnings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFull.Name" xml:space="preserve">
+    <value>checkShowWarningsFull</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFull.Parent" xml:space="preserve">
+    <value>groupLogFullSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFull.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkShowVirusesFull.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowVirusesFull.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="checkShowVirusesFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 16</value>
+  </data>
+  <data name="checkShowVirusesFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 17</value>
+  </data>
+  <data name="checkShowVirusesFull.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkShowVirusesFull.Text" xml:space="preserve">
+    <value>Show Viruses</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFull.Name" xml:space="preserve">
+    <value>checkShowVirusesFull</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFull.Parent" xml:space="preserve">
+    <value>groupLogFullSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFull.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkShowSuspiciousFull.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowSuspiciousFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 38</value>
+  </data>
+  <data name="checkShowSuspiciousFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 17</value>
+  </data>
+  <data name="checkShowSuspiciousFull.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="checkShowSuspiciousFull.Text" xml:space="preserve">
+    <value>Show Suspicious Files</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFull.Name" xml:space="preserve">
+    <value>checkShowSuspiciousFull</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFull.Parent" xml:space="preserve">
+    <value>groupLogFullSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFull.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkShowOKFull.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowOKFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 60</value>
+  </data>
+  <data name="checkShowOKFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 17</value>
+  </data>
+  <data name="checkShowOKFull.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="checkShowOKFull.Text" xml:space="preserve">
+    <value>Show OK Files</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFull.Name" xml:space="preserve">
+    <value>checkShowOKFull</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFull.Parent" xml:space="preserve">
+    <value>groupLogFullSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFull.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupLogFullSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 2</value>
+  </data>
+  <data name="groupLogFullSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 105</value>
+  </data>
+  <data name="groupLogFullSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupLogFullSettings.Text" xml:space="preserve">
+    <value>Log Settings</value>
+  </data>
+  <data name="&gt;&gt;groupLogFullSettings.Name" xml:space="preserve">
+    <value>groupLogFullSettings</value>
+  </data>
+  <data name="&gt;&gt;groupLogFullSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupLogFullSettings.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;groupLogFullSettings.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="textFullLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 112</value>
+  </data>
+  <data name="textFullLog.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textFullLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 370</value>
+  </data>
+  <data name="textFullLog.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;textFullLog.Name" xml:space="preserve">
+    <value>textFullLog</value>
+  </data>
+  <data name="&gt;&gt;textFullLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textFullLog.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;textFullLog.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnFullScan.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnFullScan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnFullScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 27</value>
+  </data>
+  <data name="btnFullScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 58</value>
+  </data>
+  <data name="btnFullScan.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnFullScan.Text" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="&gt;&gt;btnFullScan.Name" xml:space="preserve">
+    <value>btnFullScan</value>
+  </data>
+  <data name="&gt;&gt;btnFullScan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFullScan.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;btnFullScan.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tabDrivescan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 4</value>
+  </data>
+  <data name="tabDrivescan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 487</value>
+  </data>
+  <data name="tabDrivescan.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabDrivescan.Text" xml:space="preserve">
+    <value>Drive Scan</value>
+  </data>
+  <data name="&gt;&gt;tabDrivescan.Name" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;tabDrivescan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabDrivescan.Parent" xml:space="preserve">
+    <value>tabScans</value>
+  </data>
+  <data name="&gt;&gt;tabDrivescan.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="progressScanFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 42</value>
+  </data>
+  <data name="progressScanFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 20</value>
+  </data>
+  <data name="progressScanFile.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;progressScanFile.Name" xml:space="preserve">
+    <value>progressScanFile</value>
+  </data>
+  <data name="&gt;&gt;progressScanFile.Type" xml:space="preserve">
+    <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;progressScanFile.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;progressScanFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labThisFileStatus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labThisFileStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 46</value>
+  </data>
+  <data name="labThisFileStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="labThisFileStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labThisFileStatus.Text" xml:space="preserve">
+    <value>unselected</value>
+  </data>
+  <data name="&gt;&gt;labThisFileStatus.Name" xml:space="preserve">
+    <value>labThisFileStatus</value>
+  </data>
+  <data name="&gt;&gt;labThisFileStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labThisFileStatus.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;labThisFileStatus.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labThisFileIs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labThisFileIs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 46</value>
+  </data>
+  <data name="labThisFileIs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="labThisFileIs.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labThisFileIs.Text" xml:space="preserve">
+    <value>This file is:</value>
+  </data>
+  <data name="&gt;&gt;labThisFileIs.Name" xml:space="preserve">
+    <value>labThisFileIs</value>
+  </data>
+  <data name="&gt;&gt;labThisFileIs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labThisFileIs.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;labThisFileIs.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textFilePath.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 17</value>
+  </data>
+  <data name="textFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 20</value>
+  </data>
+  <data name="textFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="textFilePath.Text" xml:space="preserve">
+    <value>Select a file first   ---&gt;</value>
+  </data>
+  <data name="&gt;&gt;textFilePath.Name" xml:space="preserve">
+    <value>textFilePath</value>
+  </data>
+  <data name="&gt;&gt;textFilePath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textFilePath.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;textFilePath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnScanFile.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnScanFile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnScanFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>477, 42</value>
+  </data>
+  <data name="btnScanFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 22</value>
+  </data>
+  <data name="btnScanFile.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnScanFile.Text" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="&gt;&gt;btnScanFile.Name" xml:space="preserve">
+    <value>btnScanFile</value>
+  </data>
+  <data name="&gt;&gt;btnScanFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnScanFile.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;btnScanFile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnSelectFile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSelectFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>477, 16</value>
+  </data>
+  <data name="btnSelectFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 22</value>
+  </data>
+  <data name="btnSelectFile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnSelectFile.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Name" xml:space="preserve">
+    <value>btnSelectFile</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 408</value>
+  </data>
+  <data name="groupFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>557, 73</value>
+  </data>
+  <data name="groupFile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupFile.Text" xml:space="preserve">
+    <value>Scan a File</value>
+  </data>
+  <data name="&gt;&gt;groupFile.Name" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;groupFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupFile.Parent" xml:space="preserve">
+    <value>tabAdvanced</value>
+  </data>
+  <data name="&gt;&gt;groupFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="progressScanFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 44</value>
+  </data>
+  <data name="progressScanFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 20</value>
+  </data>
+  <data name="progressScanFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;progressScanFolder.Name" xml:space="preserve">
+    <value>progressScanFolder</value>
+  </data>
+  <data name="&gt;&gt;progressScanFolder.Type" xml:space="preserve">
+    <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;progressScanFolder.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;progressScanFolder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkShowWarnings.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowWarnings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 82</value>
+  </data>
+  <data name="checkShowWarnings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="checkShowWarnings.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="checkShowWarnings.Text" xml:space="preserve">
+    <value>Show Warnings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarnings.Name" xml:space="preserve">
+    <value>checkShowWarnings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarnings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarnings.Parent" xml:space="preserve">
+    <value>groupLogFolderSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarnings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkShowViruses.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowViruses.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="checkShowViruses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 16</value>
+  </data>
+  <data name="checkShowViruses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 17</value>
+  </data>
+  <data name="checkShowViruses.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkShowViruses.Text" xml:space="preserve">
+    <value>Show Viruses</value>
+  </data>
+  <data name="&gt;&gt;checkShowViruses.Name" xml:space="preserve">
+    <value>checkShowViruses</value>
+  </data>
+  <data name="&gt;&gt;checkShowViruses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowViruses.Parent" xml:space="preserve">
+    <value>groupLogFolderSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowViruses.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkShowSuspicious.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowSuspicious.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 38</value>
+  </data>
+  <data name="checkShowSuspicious.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 17</value>
+  </data>
+  <data name="checkShowSuspicious.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="checkShowSuspicious.Text" xml:space="preserve">
+    <value>Show Suspicious Files</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspicious.Name" xml:space="preserve">
+    <value>checkShowSuspicious</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspicious.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspicious.Parent" xml:space="preserve">
+    <value>groupLogFolderSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspicious.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkShowOK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 60</value>
+  </data>
+  <data name="checkShowOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 17</value>
+  </data>
+  <data name="checkShowOK.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="checkShowOK.Text" xml:space="preserve">
+    <value>Show OK Files</value>
+  </data>
+  <data name="&gt;&gt;checkShowOK.Name" xml:space="preserve">
+    <value>checkShowOK</value>
+  </data>
+  <data name="&gt;&gt;checkShowOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowOK.Parent" xml:space="preserve">
+    <value>groupLogFolderSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowOK.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupLogFolderSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 8</value>
+  </data>
+  <data name="groupLogFolderSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 104</value>
+  </data>
+  <data name="groupLogFolderSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupLogFolderSettings.Text" xml:space="preserve">
+    <value>Log Settings</value>
+  </data>
+  <data name="&gt;&gt;groupLogFolderSettings.Name" xml:space="preserve">
+    <value>groupLogFolderSettings</value>
+  </data>
+  <data name="&gt;&gt;groupLogFolderSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupLogFolderSettings.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;groupLogFolderSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labScannedNum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labScannedNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 68</value>
+  </data>
+  <data name="labScannedNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 13</value>
+  </data>
+  <data name="labScannedNum.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labScannedNum.Text" xml:space="preserve">
+    <value>0/0</value>
+  </data>
+  <data name="&gt;&gt;labScannedNum.Name" xml:space="preserve">
+    <value>labScannedNum</value>
+  </data>
+  <data name="&gt;&gt;labScannedNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labScannedNum.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;labScannedNum.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labScanned.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labScanned.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 68</value>
+  </data>
+  <data name="labScanned.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="labScanned.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labScanned.Text" xml:space="preserve">
+    <value>Files Scanned:</value>
+  </data>
+  <data name="&gt;&gt;labScanned.Name" xml:space="preserve">
+    <value>labScanned</value>
+  </data>
+  <data name="&gt;&gt;labScanned.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labScanned.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;labScanned.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnSelectFolder.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSelectFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 18</value>
+  </data>
+  <data name="btnSelectFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 22</value>
+  </data>
+  <data name="btnSelectFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnSelectFolder.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFolder.Name" xml:space="preserve">
+    <value>btnSelectFolder</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFolder.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFolder.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="groupFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="groupFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>557, 396</value>
+  </data>
+  <data name="groupFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupFolder.Text" xml:space="preserve">
+    <value>Scan a Folder/Drive</value>
+  </data>
+  <data name="&gt;&gt;groupFolder.Name" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;groupFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupFolder.Parent" xml:space="preserve">
+    <value>tabAdvanced</value>
+  </data>
+  <data name="&gt;&gt;groupFolder.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabAdvanced.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 4</value>
+  </data>
+  <data name="tabAdvanced.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabAdvanced.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 487</value>
+  </data>
+  <data name="tabAdvanced.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabAdvanced.Text" xml:space="preserve">
+    <value>Advanced Scan</value>
+  </data>
+  <data name="&gt;&gt;tabAdvanced.Name" xml:space="preserve">
+    <value>tabAdvanced</value>
+  </data>
+  <data name="&gt;&gt;tabAdvanced.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabAdvanced.Parent" xml:space="preserve">
+    <value>tabScans</value>
+  </data>
+  <data name="&gt;&gt;tabAdvanced.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnClearVirusesLog.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnClearVirusesLog.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClearVirusesLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 459</value>
+  </data>
+  <data name="btnClearVirusesLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="btnClearVirusesLog.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnClearVirusesLog.Text" xml:space="preserve">
+    <value>Clear the log</value>
+  </data>
+  <data name="&gt;&gt;btnClearVirusesLog.Name" xml:space="preserve">
+    <value>btnClearVirusesLog</value>
+  </data>
+  <data name="&gt;&gt;btnClearVirusesLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClearVirusesLog.Parent" xml:space="preserve">
+    <value>tabViruses</value>
+  </data>
+  <data name="&gt;&gt;btnClearVirusesLog.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labSuspTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labSuspTree.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labSuspTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 237</value>
+  </data>
+  <data name="labSuspTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="labSuspTree.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labSuspTree.Text" xml:space="preserve">
+    <value>Suspicious files:</value>
+  </data>
+  <data name="&gt;&gt;labSuspTree.Name" xml:space="preserve">
+    <value>labSuspTree</value>
+  </data>
+  <data name="&gt;&gt;labSuspTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labSuspTree.Parent" xml:space="preserve">
+    <value>tabViruses</value>
+  </data>
+  <data name="&gt;&gt;labSuspTree.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labVirusesTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labVirusesTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 5</value>
+  </data>
+  <data name="labVirusesTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="labVirusesTree.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labVirusesTree.Text" xml:space="preserve">
+    <value>Viruses:</value>
+  </data>
+  <data name="&gt;&gt;labVirusesTree.Name" xml:space="preserve">
+    <value>labVirusesTree</value>
+  </data>
+  <data name="&gt;&gt;labVirusesTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labVirusesTree.Parent" xml:space="preserve">
+    <value>tabViruses</value>
+  </data>
+  <data name="&gt;&gt;labVirusesTree.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="treeHistorySusp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 252</value>
+  </data>
+  <data name="treeHistorySusp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 208</value>
+  </data>
+  <data name="treeHistorySusp.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;treeHistorySusp.Name" xml:space="preserve">
+    <value>treeHistorySusp</value>
+  </data>
+  <data name="&gt;&gt;treeHistorySusp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeHistorySusp.Parent" xml:space="preserve">
+    <value>tabViruses</value>
+  </data>
+  <data name="&gt;&gt;treeHistorySusp.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnDeleteThisVirus.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnDeleteThisVirus.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnDeleteThisVirus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 459</value>
+  </data>
+  <data name="btnDeleteThisVirus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 23</value>
+  </data>
+  <data name="btnDeleteThisVirus.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnDeleteThisVirus.Text" xml:space="preserve">
+    <value>Delete this file</value>
+  </data>
+  <data name="btnDeleteThisVirus.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteThisVirus.Name" xml:space="preserve">
+    <value>btnDeleteThisVirus</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteThisVirus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteThisVirus.Parent" xml:space="preserve">
+    <value>tabViruses</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteThisVirus.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="richTextVirusesHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 5</value>
+  </data>
+  <data name="richTextVirusesHistory.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="richTextVirusesHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 478</value>
+  </data>
+  <data name="richTextVirusesHistory.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="richTextVirusesHistory.Text" xml:space="preserve">
+    <value>Select the virus in the tree to see the detailed information about it</value>
+  </data>
+  <data name="&gt;&gt;richTextVirusesHistory.Name" xml:space="preserve">
+    <value>richTextVirusesHistory</value>
+  </data>
+  <data name="&gt;&gt;richTextVirusesHistory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextVirusesHistory.Parent" xml:space="preserve">
+    <value>tabViruses</value>
+  </data>
+  <data name="&gt;&gt;richTextVirusesHistory.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="treeHistoryViruses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 20</value>
+  </data>
+  <data name="treeHistoryViruses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 208</value>
+  </data>
+  <data name="treeHistoryViruses.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;treeHistoryViruses.Name" xml:space="preserve">
+    <value>treeHistoryViruses</value>
+  </data>
+  <data name="&gt;&gt;treeHistoryViruses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeHistoryViruses.Parent" xml:space="preserve">
+    <value>tabViruses</value>
+  </data>
+  <data name="&gt;&gt;treeHistoryViruses.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tabViruses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 4</value>
+  </data>
+  <data name="tabViruses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 487</value>
+  </data>
+  <data name="tabViruses.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabViruses.Text" xml:space="preserve">
+    <value>Viruses</value>
+  </data>
+  <data name="&gt;&gt;tabViruses.Name" xml:space="preserve">
+    <value>tabViruses</value>
+  </data>
+  <data name="&gt;&gt;tabViruses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabViruses.Parent" xml:space="preserve">
+    <value>tabScans</value>
+  </data>
+  <data name="&gt;&gt;tabViruses.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnClearScansLog.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnClearScansLog.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClearScansLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 459</value>
+  </data>
+  <data name="btnClearScansLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="btnClearScansLog.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnClearScansLog.Text" xml:space="preserve">
+    <value>Clear the log</value>
+  </data>
+  <data name="&gt;&gt;btnClearScansLog.Name" xml:space="preserve">
+    <value>btnClearScansLog</value>
+  </data>
+  <data name="&gt;&gt;btnClearScansLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClearScansLog.Parent" xml:space="preserve">
+    <value>tabLogs</value>
+  </data>
+  <data name="&gt;&gt;btnClearScansLog.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="richTextScansHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 5</value>
+  </data>
+  <data name="richTextScansHistory.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="richTextScansHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 478</value>
+  </data>
+  <data name="richTextScansHistory.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="richTextScansHistory.Text" xml:space="preserve">
+    <value>Select the scan in the tree to see the detailed information about it</value>
+  </data>
+  <data name="&gt;&gt;richTextScansHistory.Name" xml:space="preserve">
+    <value>richTextScansHistory</value>
+  </data>
+  <data name="&gt;&gt;richTextScansHistory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextScansHistory.Parent" xml:space="preserve">
+    <value>tabLogs</value>
+  </data>
+  <data name="&gt;&gt;richTextScansHistory.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="treeHistoryScans.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="treeHistoryScans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 455</value>
+  </data>
+  <data name="treeHistoryScans.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;treeHistoryScans.Name" xml:space="preserve">
+    <value>treeHistoryScans</value>
+  </data>
+  <data name="&gt;&gt;treeHistoryScans.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeHistoryScans.Parent" xml:space="preserve">
+    <value>tabLogs</value>
+  </data>
+  <data name="&gt;&gt;treeHistoryScans.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabLogs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 4</value>
+  </data>
+  <data name="tabLogs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 487</value>
+  </data>
+  <data name="tabLogs.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabLogs.Text" xml:space="preserve">
+    <value>Scans History</value>
+  </data>
+  <data name="&gt;&gt;tabLogs.Name" xml:space="preserve">
+    <value>tabLogs</value>
+  </data>
+  <data name="&gt;&gt;tabLogs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabLogs.Parent" xml:space="preserve">
+    <value>tabScans</value>
+  </data>
+  <data name="&gt;&gt;tabLogs.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabScans.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="tabScans.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>30, 180</value>
+  </data>
+  <data name="tabScans.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 0</value>
+  </data>
+  <data name="tabScans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>756, 495</value>
+  </data>
+  <data name="tabScans.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabScans.Name" xml:space="preserve">
+    <value>tabScans</value>
+  </data>
+  <data name="&gt;&gt;tabScans.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabScans.Parent" xml:space="preserve">
+    <value>tabScan</value>
+  </data>
+  <data name="&gt;&gt;tabScans.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="tabScan.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>754, 493</value>
+  </data>
+  <data name="tabScan.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabScan.Text" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="&gt;&gt;tabScan.Name" xml:space="preserve">
+    <value>tabScan</value>
+  </data>
+  <data name="&gt;&gt;tabScan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabScan.Parent" xml:space="preserve">
+    <value>tabMainMenu</value>
+  </data>
+  <data name="&gt;&gt;tabScan.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelYoVersionLab.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelYoVersionLab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>242, 8</value>
+  </data>
+  <data name="labelYoVersionLab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="labelYoVersionLab.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelYoVersionLab.Text" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="&gt;&gt;labelYoVersionLab.Name" xml:space="preserve">
+    <value>labelYoVersionLab</value>
+  </data>
+  <data name="&gt;&gt;labelYoVersionLab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelYoVersionLab.Parent" xml:space="preserve">
+    <value>tabChangelog</value>
+  </data>
+  <data name="&gt;&gt;labelYoVersionLab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelYoVersion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelYoVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 8</value>
+  </data>
+  <data name="labelYoVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
+  <data name="labelYoVersion.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelYoVersion.Text" xml:space="preserve">
+    <value>Your version is:</value>
+  </data>
+  <data name="&gt;&gt;labelYoVersion.Name" xml:space="preserve">
+    <value>labelYoVersion</value>
+  </data>
+  <data name="&gt;&gt;labelYoVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelYoVersion.Parent" xml:space="preserve">
+    <value>tabChangelog</value>
+  </data>
+  <data name="&gt;&gt;labelYoVersion.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkLogOnlyImportant.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkLogOnlyImportant.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 7</value>
+  </data>
+  <data name="checkLogOnlyImportant.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 17</value>
+  </data>
+  <data name="checkLogOnlyImportant.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkLogOnlyImportant.Text" xml:space="preserve">
+    <value>Only important changes</value>
+  </data>
+  <data name="&gt;&gt;checkLogOnlyImportant.Name" xml:space="preserve">
+    <value>checkLogOnlyImportant</value>
+  </data>
+  <data name="&gt;&gt;checkLogOnlyImportant.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkLogOnlyImportant.Parent" xml:space="preserve">
+    <value>tabChangelog</value>
+  </data>
+  <data name="&gt;&gt;checkLogOnlyImportant.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textChangelog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="textChangelog.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="textChangelog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>742, 459</value>
+  </data>
+  <data name="textChangelog.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="textChangelog.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;textChangelog.Name" xml:space="preserve">
+    <value>textChangelog</value>
+  </data>
+  <data name="&gt;&gt;textChangelog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textChangelog.Parent" xml:space="preserve">
+    <value>tabChangelog</value>
+  </data>
+  <data name="&gt;&gt;textChangelog.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabChangelog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="tabChangelog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabChangelog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>754, 493</value>
+  </data>
+  <data name="tabChangelog.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabChangelog.Text" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="&gt;&gt;tabChangelog.Name" xml:space="preserve">
+    <value>tabChangelog</value>
+  </data>
+  <data name="&gt;&gt;tabChangelog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabChangelog.Parent" xml:space="preserve">
+    <value>tabMainMenu</value>
+  </data>
+  <data name="&gt;&gt;tabChangelog.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabMainMenu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="tabMainMenu.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>253, 40</value>
+  </data>
+  <data name="tabMainMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 52</value>
+  </data>
+  <data name="tabMainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>762, 541</value>
+  </data>
+  <data name="tabMainMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabMainMenu.Name" xml:space="preserve">
+    <value>tabMainMenu</value>
+  </data>
+  <data name="&gt;&gt;tabMainMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabMainMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabMainMenu.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnRetryInternet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnRetryInternet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 592</value>
+  </data>
+  <data name="btnRetryInternet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 20</value>
+  </data>
+  <data name="btnRetryInternet.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnRetryInternet.Text" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="&gt;&gt;btnRetryInternet.Name" xml:space="preserve">
+    <value>btnRetryInternet</value>
+  </data>
+  <data name="&gt;&gt;btnRetryInternet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRetryInternet.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;btnRetryInternet.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labNotConnected.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labNotConnected.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 596</value>
+  </data>
+  <data name="labNotConnected.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 13</value>
+  </data>
+  <data name="labNotConnected.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labNotConnected.Text" xml:space="preserve">
+    <value>You are not connected to the Internet</value>
+  </data>
+  <data name="labNotConnected.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labNotConnected.Name" xml:space="preserve">
+    <value>labNotConnected</value>
+  </data>
+  <data name="&gt;&gt;labNotConnected.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labNotConnected.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labNotConnected.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, -3</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 65</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>PanelLogo</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnMin.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>691, -1</value>
+  </data>
+  <data name="btnMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 29</value>
+  </data>
+  <data name="btnMin.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnMin.Name" xml:space="preserve">
+    <value>btnMin</value>
+  </data>
+  <data name="&gt;&gt;btnMin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMin.Parent" xml:space="preserve">
+    <value>PanelLogo</value>
+  </data>
+  <data name="&gt;&gt;btnMin.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnQst.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnQst.Location" type="System.Drawing.Point, System.Drawing">
+    <value>658, -1</value>
+  </data>
+  <data name="btnQst.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 29</value>
+  </data>
+  <data name="btnQst.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnQst.Name" xml:space="preserve">
+    <value>btnQst</value>
+  </data>
+  <data name="&gt;&gt;btnQst.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnQst.Parent" xml:space="preserve">
+    <value>PanelLogo</value>
+  </data>
+  <data name="&gt;&gt;btnQst.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnCls.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnCls.Location" type="System.Drawing.Point, System.Drawing">
+    <value>720, -1</value>
+  </data>
+  <data name="btnCls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 29</value>
+  </data>
+  <data name="btnCls.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnCls.Name" xml:space="preserve">
+    <value>btnCls</value>
+  </data>
+  <data name="&gt;&gt;btnCls.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCls.Parent" xml:space="preserve">
+    <value>PanelLogo</value>
+  </data>
+  <data name="&gt;&gt;btnCls.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20.25pt</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 9</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>762, 31</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>InfANT</value>
+  </data>
+  <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>PanelLogo</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="PanelLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 0</value>
+  </data>
+  <data name="PanelLogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>762, 50</value>
+  </data>
+  <data name="PanelLogo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PanelLogo.Name" xml:space="preserve">
+    <value>PanelLogo</value>
+  </data>
+  <data name="&gt;&gt;PanelLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelLogo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelLogo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 614</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 614</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAMAEBAAAAAAIABoBAAANgAAACAgAAAAACAAqBAAAJ4EAAAwMAAAAAAgAKglAABGFQAAKAAAABAA
@@ -376,5 +2616,17 @@
         AAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA
         //8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8=
 </value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>InfANT Antivirus</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

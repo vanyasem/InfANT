@@ -50,11 +50,24 @@
     <Compile Include="databaseeditor.Designer.cs">
       <DependentUpon>databaseeditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="LanguageResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LanguageResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="databaseeditor.resx">
       <DependentUpon>databaseeditor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="databaseeditor.ru.resx">
+      <DependentUpon>databaseeditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LanguageResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageResources.ru.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

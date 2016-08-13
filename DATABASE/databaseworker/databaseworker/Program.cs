@@ -16,7 +16,7 @@ namespace databaseworker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new databaseeditor(false));
+            Application.Run(new Databaseeditor(false));
         }
     }
 }

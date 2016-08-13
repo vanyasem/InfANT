@@ -35,6 +35,15 @@ namespace launcher
                 return;
             }
 
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini"))
+            {
+                CultureInfo currentCulture = Thread.CurrentThread.CurrentUICulture;
+                if (currentCulture.ToString().StartsWith("ru"))
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"ru");
+                else
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"en");
+            }
+
             Thread loadingThread = new Thread(LoadEverything) {IsBackground = true};
             loadingThread.Start();
         }
@@ -87,6 +96,8 @@ namespace launcher
 
             if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\ru\_Launcher.resources.dll"))
                 btnLang.Invoke(new MethodInvoker(delegate { btnLang.Enabled = true; }));
+
+            
 
             if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt"))
             {
@@ -353,7 +364,7 @@ namespace launcher
 
         private void btnDatabaseEditor_Click(object sender, EventArgs e)
         {
-            databaseeditor database = new databaseeditor(true);
+            Databaseeditor database = new Databaseeditor(true);
             database.Show();
             Controls.Clear();
             Hide();
@@ -368,14 +379,20 @@ namespace launcher
                     http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/_Launcher.resources.dll", @"ru\_Launcher.resources.dll"); //tries to download it
             }
 
-            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini"))
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"ru\databaseeditor.resources.dll"))
             {
-                
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"ru");
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("ru");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"\ru");
+                using (WebClient http = new WebClient())
+                    http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/databaseeditor.resources.dll", @"ru\databaseeditor.resources.dll"); //tries to download it
             }
-            else
+
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"ru\InfANT.resources.dll"))
+            {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"\ru");
+                using (WebClient http = new WebClient())
+                    http.DownloadFile("http://bitva-pod-moskvoy.ru/_kaspersky/InfANT.resources.dll", @"ru\InfANT.resources.dll"); //tries to download it
+            }
+
             {
                 try
                 {

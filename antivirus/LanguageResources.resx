@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="about_infant" xml:space="preserve">
+    <value>About InfANT:</value>
+  </data>
+  <data name="amount_of_files_scanned" xml:space="preserve">
+    <value>Amount of files scanned (n of N): </value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="cant_scan_no_access" xml:space="preserve">
+    <value>Can't scan the file. It may be corrupted, missing or protected.</value>
+  </data>
+  <data name="clear" xml:space="preserve">
+    <value>clear</value>
+  </data>
+  <data name="Computer_is_INFECTED" xml:space="preserve">
+    <value>Your computer is INFECTED</value>
+  </data>
+  <data name="Computer_is_partially_safe" xml:space="preserve">
+    <value>Your computer is partially safe</value>
+  </data>
+  <data name="Computer_is_safe" xml:space="preserve">
+    <value>Your computer is safe</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>error</value>
+  </data>
+  <data name="IFBTN_SCAN" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="infant_antivirus_scanner" xml:space="preserve">
+    <value>InfANT* Antivirus Scanner
+</value>
+  </data>
+  <data name="infant_was_released" xml:space="preserve">
+    <value>
+InfANT was released in early 2016</value>
+  </data>
+  <data name="infected" xml:space="preserve">
+    <value>INFECTED</value>
+  </data>
+  <data name="intfant_explanation" xml:space="preserve">
+    <value>*Inf = INFinity; ANT = A hard working (ant-like) ANTivirus</value>
+  </data>
+  <data name="it_was_developed_by_students" xml:space="preserve">
+    <value>It was developed by a group of Russian students</value>
+  </data>
+  <data name="no_scans_performed" xml:space="preserve">
+    <value>No scans were performed!</value>
+  </data>
+  <data name="no_viruses_found" xml:space="preserve">
+    <value>No viruses found! Hooray!</value>
+  </data>
+  <data name="oops" xml:space="preserve">
+    <value>Oops!</value>
+  </data>
+  <data name="path" xml:space="preserve">
+    <value>Path: </value>
+  </data>
+  <data name="r_u_sure" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="selected_path" xml:space="preserve">
+    <value>Selected path: </value>
+  </data>
+  <data name="select_scan_to_see_detailed_info" xml:space="preserve">
+    <value>Select the scan in the tree to see the detailed information about it</value>
+  </data>
+  <data name="select_virus_to_see_detailed_info" xml:space="preserve">
+    <value>Select the virus in the tree to see the detailed information about it</value>
+  </data>
+  <data name="susp" xml:space="preserve">
+    <value>suspicious</value>
+  </data>
+  <data name="this_file_is" xml:space="preserve">
+    <value>This file is: </value>
+  </data>
+  <data name="this_file_is_infected" xml:space="preserve">
+    <value>This file is INFECTED</value>
+  </data>
+  <data name="this_file_looks_susp" xml:space="preserve">
+    <value>This file looks suspicious</value>
+  </data>
+  <data name="unscanned" xml:space="preserve">
+    <value>unscanned</value>
+  </data>
+  <data name="unselected" xml:space="preserve">
+    <value>unselected</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Version: </value>
+  </data>
+  <data name="will_delete_the_file_PERMANENTLY_This_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>This action will delete the file PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
+  </data>
+  <data name="will_delete_your_SCANS_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>This will delete your SCANS log PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
+  </data>
+  <data name="will_delete_your_VIRUSES_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>This will delete your VIRUSES log PERMANENTLY. This cannot be undone. Are you sure you want to proceed?</value>
+  </data>
+  <data name="IFBTN_scansmall" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="is_" xml:space="preserve">
+    <value> is </value>
+  </data>
+  <data name="looks" xml:space="preserve">
+    <value> looks </value>
+  </data>
+  <data name="protect" xml:space="preserve">
+    <value>1. Don't download unofficial and/or pirated software.
+2. Don't open binaries or Microsoft Office macros from emails. 
+3. Backup important files on dedicated / cloud storages.
+4. Disable autorun from external drives.
+5. Don't use public networks without VPN connection, don't set them as trusted.
+6. Disable Remote Desktop Connection and deny other PCs from writing to your shared folders.</value>
+  </data>
+  <data name="Logs_werent_found_do_in_launcher_restart" xml:space="preserve">
+    <value>Logs weren't found! 
+Please, don't delete them by yourself, to do it press "Fix" in launcher.
+Relaunch the application!</value>
+  </data>
+  <data name="fatal_error" xml:space="preserve">
+    <value>Fatal Error!</value>
+  </data>
+  <data name="cant_save_logs_no_permissions" xml:space="preserve">
+    <value>Can't save logs to disk!
+They are probably in use or InfANT has no premissions to save there.</value>
+  </data>
+  <data name="cant_save_database_no_permission" xml:space="preserve">
+    <value>Couldn't write the database to disk! 
+It looks like you have no access to the folder or the file is in use.</value>
+  </data>
+  <data name="no_internet_cant_update_database_changelog" xml:space="preserve">
+    <value>Looks like you have no internet, databases and changelog weren't updated</value>
+  </data>
+  <data name="cant_connect_to_internet" xml:space="preserve">
+    <value>Can't connect to the Internet!</value>
+  </data>
+  <data name="no_Databases_found" xml:space="preserve">
+    <value>No databases found!</value>
+  </data>
+  <data name="open_launcher_instead" xml:space="preserve">
+    <value>Open "_Launcher.exe" instead!</value>
+  </data>
+  <data name="no_internet_no_cahced_database_useless" xml:space="preserve">
+    <value>Looks like you have no internet connection and no cached databases on your PC.
+Without them antivirus is completely useless!</value>
+  </data>
+  <data name="menu_exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="menu_fast" xml:space="preserve">
+    <value>Fast-Scan</value>
+  </data>
+  <data name="menu_open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="cant_delete_no_rights_or_deleted_want_remove_log_entry" xml:space="preserve">
+    <value>Can't delete the file. InfANT has no rights to access it or it's already deleted. 
+ Do you want to remove it from the log?</value>
+  </data>
+  <data name="LOGS_cant_connect_internet" xml:space="preserve">
+    <value>Can't establish an internet connection</value>
+  </data>
+  <data name="LOGS_cant_load_main_datas" xml:space="preserve">
+    <value>Can't load MAIN databases</value>
+  </data>
+  <data name="LOGS_cant_load_susp_datas" xml:space="preserve">
+    <value>Can't load suspicious databases</value>
+  </data>
+  <data name="LOGS_cant_save_database" xml:space="preserve">
+    <value>Can't save database</value>
+  </data>
+  <data name="LOGS_drive_scan_aborted" xml:space="preserve">
+    <value>Drive scan was ABORTED</value>
+  </data>
+  <data name="LOGS_drive_scan_finished" xml:space="preserve">
+    <value>Drive scan was finished</value>
+  </data>
+  <data name="LOGS_drive_scan_performed" xml:space="preserve">
+    <value>Drive scan was performed</value>
+  </data>
+  <data name="LOGS_drive_scan_started" xml:space="preserve">
+    <value>Drive scan started!</value>
+  </data>
+  <data name="LOGS_fast_scan_aborted" xml:space="preserve">
+    <value>Fast scan was ABORTED</value>
+  </data>
+  <data name="LOGS_fast_scan_finished" xml:space="preserve">
+    <value>Fast scan was finished</value>
+  </data>
+  <data name="LOGS_fast_scan_performed" xml:space="preserve">
+    <value>Fast scan was performed</value>
+  </data>
+  <data name="LOGS_fast_scan_started" xml:space="preserve">
+    <value>Fast scan started!</value>
+  </data>
+  <data name="LOGS_files" xml:space="preserve">
+    <value>files</value>
+  </data>
+  <data name="LOGS_file_scan_performed" xml:space="preserve">
+    <value>Advanced file scan was performed</value>
+  </data>
+  <data name="LOGS_folder_scan_aborted" xml:space="preserve">
+    <value>Advanced folder scan was ABORTED</value>
+  </data>
+  <data name="LOGS_folder_scan_performed" xml:space="preserve">
+    <value>Advanced folder scan was performed</value>
+  </data>
+  <data name="LOGS_folder_scan_started" xml:space="preserve">
+    <value>Advanced folder scan started!</value>
+  </data>
+  <data name="LOGS_is_clear" xml:space="preserve">
+    <value> is clear</value>
+  </data>
+  <data name="LOGS_of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="LOGS_scan_was_finished_scanned" xml:space="preserve">
+    <value>The scan was finished. Scanned</value>
+  </data>
+  <data name="LOGS_scan_was_interrupted" xml:space="preserve">
+    <value>Scan was rudely interrupted, was not finished correctly)|unknown|</value>
+  </data>
+  <data name="the_scan_finished" xml:space="preserve">
+    <value>The scan is finished</value>
+  </data>
+  <data name="LOGS_folder_scan_finished" xml:space="preserve">
+    <value>Advanced folder scan was finished</value>
+  </data>
+</root>

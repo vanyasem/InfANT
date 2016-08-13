@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnScanFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 43</value>
+  </data>
+  <data name="btnScanFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 22</value>
+  </data>
+  <data name="btnScanFolder.Text" xml:space="preserve">
+    <value>Сканировать</value>
+  </data>
+  <data name="textFolderPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 20</value>
+  </data>
+  <data name="textFolderPath.Text" xml:space="preserve">
+    <value>Выберите папку/диск
+   ---&gt;</value>
+  </data>
+  <data name="tabHello.Text" xml:space="preserve">
+    <value>Здравствуйте!</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Быстрый старт:</value>
+  </data>
+  <data name="btnQuickLast.Text" xml:space="preserve">
+    <value>Результаты последнего сканирования</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Советы по защите компьютера
+</value>
+  </data>
+  <data name="btnQuickFull.Text" xml:space="preserve">
+    <value>Полное Сканирование</value>
+  </data>
+  <data name="btnQuickFast.Text" xml:space="preserve">
+    <value>Быстрое Сканирование</value>
+  </data>
+  <data name="labelSafeUnsafeWelcome.Text" xml:space="preserve">
+    <value>Компьютер в безопасности</value>
+  </data>
+  <data name="tabScan.Text" xml:space="preserve">
+    <value>Сканировать</value>
+  </data>
+  <data name="tabSimple.Text" xml:space="preserve">
+    <value>Быстрое сканирование</value>
+  </data>
+  <data name="labScannedFastNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 90</value>
+  </data>
+  <data name="labScannedFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 13</value>
+  </data>
+  <data name="labScannedFast.Text" xml:space="preserve">
+    <value>Файлов отсканировано:</value>
+  </data>
+  <data name="labelFastScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 10</value>
+  </data>
+  <data name="labelFastScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 57</value>
+  </data>
+  <data name="labelFastScan.Text" xml:space="preserve">
+    <value>Этот режим полезен при ограниченном времени.
+Он просканирует только главные директории на компьютере.</value>
+  </data>
+  <data name="groupLogFastSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 2</value>
+  </data>
+  <data name="groupLogFastSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 105</value>
+  </data>
+  <data name="groupLogFastSettings.Text" xml:space="preserve">
+    <value>Настройки лога</value>
+  </data>
+  <data name="checkShowWarningsFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 82</value>
+  </data>
+  <data name="checkShowWarningsFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="checkShowWarningsFast.Text" xml:space="preserve">
+    <value>Показывать ошибки</value>
+  </data>
+  <data name="checkShowVirusesFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="checkShowVirusesFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 17</value>
+  </data>
+  <data name="checkShowVirusesFast.Text" xml:space="preserve">
+    <value>Показывать вирусы</value>
+  </data>
+  <data name="checkShowSuspiciousFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 38</value>
+  </data>
+  <data name="checkShowSuspiciousFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="checkShowSuspiciousFast.Text" xml:space="preserve">
+    <value>Показывать подозрительн.</value>
+  </data>
+  <data name="checkShowOKFast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 60</value>
+  </data>
+  <data name="checkShowOKFast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 17</value>
+  </data>
+  <data name="checkShowOKFast.Text" xml:space="preserve">
+    <value>Показывать безопасные</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnFastScan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnFastScan.Text" xml:space="preserve">
+    <value>Начать сканирование</value>
+  </data>
+  <data name="tabDrivescan.Text" xml:space="preserve">
+    <value>Полное сканирование</value>
+  </data>
+  <data name="labSelectTheDrive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 13</value>
+  </data>
+  <data name="labSelectTheDrive.Text" xml:space="preserve">
+    <value>&lt;--- Выберите том</value>
+  </data>
+  <data name="labScannedFullNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 90</value>
+  </data>
+  <data name="labScannedFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 13</value>
+  </data>
+  <data name="labScannedFull.Text" xml:space="preserve">
+    <value>Файлов отсканировано:</value>
+  </data>
+  <data name="labelFullScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 39</value>
+  </data>
+  <data name="labelFullScan.Text" xml:space="preserve">
+    <value>Этот режим проверяет все файлы на одном томе и занимает большое количество времени.
+</value>
+  </data>
+  <data name="groupLogFullSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 2</value>
+  </data>
+  <data name="groupLogFullSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 105</value>
+  </data>
+  <data name="groupLogFullSettings.Text" xml:space="preserve">
+    <value>Настройки лога</value>
+  </data>
+  <data name="checkShowWarningsFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 82</value>
+  </data>
+  <data name="checkShowWarningsFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="checkShowWarningsFull.Text" xml:space="preserve">
+    <value>Показывать ошибки</value>
+  </data>
+  <data name="checkShowVirusesFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="checkShowVirusesFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 17</value>
+  </data>
+  <data name="checkShowVirusesFull.Text" xml:space="preserve">
+    <value>Показывать вирусы</value>
+  </data>
+  <data name="checkShowSuspiciousFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 38</value>
+  </data>
+  <data name="checkShowSuspiciousFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="checkShowSuspiciousFull.Text" xml:space="preserve">
+    <value>Показывать подозрительн.</value>
+  </data>
+  <data name="checkShowOKFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 60</value>
+  </data>
+  <data name="checkShowOKFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 17</value>
+  </data>
+  <data name="checkShowOKFull.Text" xml:space="preserve">
+    <value>Показывать безопасные</value>
+  </data>
+  <data name="btnFullScan.Text" xml:space="preserve">
+    <value>Начать сканирование</value>
+  </data>
+  <data name="tabAdvanced.Text" xml:space="preserve">
+    <value>Расширенное сканирование</value>
+  </data>
+  <data name="groupFile.Text" xml:space="preserve">
+    <value>Сканировать файл</value>
+  </data>
+  <data name="progressScanFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 20</value>
+  </data>
+  <data name="labThisFileStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>366, 45</value>
+  </data>
+  <data name="labThisFileStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="labThisFileStatus.Text" xml:space="preserve">
+    <value>не выбран</value>
+  </data>
+  <data name="labThisFileIs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 45</value>
+  </data>
+  <data name="labThisFileIs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
+  <data name="labThisFileIs.Text" xml:space="preserve">
+    <value>Этот файл:</value>
+  </data>
+  <data name="textFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>442, 20</value>
+  </data>
+  <data name="textFilePath.Text" xml:space="preserve">
+    <value>Выберите файл   ---&gt;</value>
+  </data>
+  <data name="btnScanFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>460, 42</value>
+  </data>
+  <data name="btnScanFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 22</value>
+  </data>
+  <data name="btnScanFile.Text" xml:space="preserve">
+    <value>Сканировать</value>
+  </data>
+  <data name="btnSelectFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>460, 16</value>
+  </data>
+  <data name="btnSelectFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 22</value>
+  </data>
+  <data name="btnSelectFile.Text" xml:space="preserve">
+    <value>Выбрать</value>
+  </data>
+  <data name="groupFolder.Text" xml:space="preserve">
+    <value>Сканировать папку/диск</value>
+  </data>
+  <data name="progressScanFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 20</value>
+  </data>
+  <data name="groupLogFolderSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 8</value>
+  </data>
+  <data name="groupLogFolderSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 104</value>
+  </data>
+  <data name="groupLogFolderSettings.Text" xml:space="preserve">
+    <value>Настройки лога</value>
+  </data>
+  <data name="checkShowWarnings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 79</value>
+  </data>
+  <data name="checkShowWarnings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="checkShowWarnings.Text" xml:space="preserve">
+    <value>Показывать ошибки
+</value>
+  </data>
+  <data name="checkShowViruses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 18</value>
+  </data>
+  <data name="checkShowViruses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 17</value>
+  </data>
+  <data name="checkShowViruses.Text" xml:space="preserve">
+    <value>Показывать вирусы</value>
+  </data>
+  <data name="checkShowSuspicious.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 39</value>
+  </data>
+  <data name="checkShowSuspicious.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="checkShowSuspicious.Text" xml:space="preserve">
+    <value>Показывать подозрительн.</value>
+  </data>
+  <data name="checkShowOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 59</value>
+  </data>
+  <data name="checkShowOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 17</value>
+  </data>
+  <data name="checkShowOK.Text" xml:space="preserve">
+    <value>Показывать безопасные</value>
+  </data>
+  <data name="labScannedNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 69</value>
+  </data>
+  <data name="labScanned.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 13</value>
+  </data>
+  <data name="labScanned.Text" xml:space="preserve">
+    <value>Файлов отсканировано:</value>
+  </data>
+  <data name="btnSelectFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 18</value>
+  </data>
+  <data name="btnSelectFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 22</value>
+  </data>
+  <data name="btnSelectFolder.Text" xml:space="preserve">
+    <value>Выбрать</value>
+  </data>
+  <data name="tabViruses.Text" xml:space="preserve">
+    <value>Найденные угрозы</value>
+  </data>
+  <data name="btnClearVirusesLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <data name="btnClearVirusesLog.Text" xml:space="preserve">
+    <value>Очистить историю</value>
+  </data>
+  <data name="labSuspTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
+  </data>
+  <data name="labSuspTree.Text" xml:space="preserve">
+    <value>Подозрительные файлы:</value>
+  </data>
+  <data name="labVirusesTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="labVirusesTree.Text" xml:space="preserve">
+    <value>Вирусы:</value>
+  </data>
+  <data name="treeHistorySusp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 208</value>
+  </data>
+  <data name="btnDeleteThisVirus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 459</value>
+  </data>
+  <data name="btnDeleteThisVirus.Text" xml:space="preserve">
+    <value>Удалить файл</value>
+  </data>
+  <data name="richTextVirusesHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 5</value>
+  </data>
+  <data name="richTextVirusesHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 478</value>
+  </data>
+  <data name="richTextVirusesHistory.Text" xml:space="preserve">
+    <value>Выберите вирус в дереве, чтобы просмотреть подробную информацию о нём.</value>
+  </data>
+  <data name="treeHistoryViruses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 208</value>
+  </data>
+  <data name="tabLogs.Text" xml:space="preserve">
+    <value>История сканирований</value>
+  </data>
+  <data name="btnClearScansLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <data name="btnClearScansLog.Text" xml:space="preserve">
+    <value>Очистить историю</value>
+  </data>
+  <data name="richTextScansHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 5</value>
+  </data>
+  <data name="richTextScansHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 478</value>
+  </data>
+  <data name="richTextScansHistory.Text" xml:space="preserve">
+    <value>Выберите сканирование в дереве, чтобы просмотреть подробную информацию о нём.
+</value>
+  </data>
+  <data name="treeHistoryScans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 455</value>
+  </data>
+  <data name="tabChangelog.Text" xml:space="preserve">
+    <value>История обновлений</value>
+  </data>
+  <data name="labelYoVersionLab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>645, 8</value>
+  </data>
+  <data name="labelYoVersionLab.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="labelYoVersionLab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 13</value>
+  </data>
+  <data name="labelYoVersionLab.Text" xml:space="preserve">
+    <value>неизвестна</value>
+  </data>
+  <data name="labelYoVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>573, 8</value>
+  </data>
+  <data name="labelYoVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="labelYoVersion.Text" xml:space="preserve">
+    <value>Ваша версия:</value>
+  </data>
+  <data name="checkLogOnlyImportant.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 7</value>
+  </data>
+  <data name="checkLogOnlyImportant.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 17</value>
+  </data>
+  <data name="checkLogOnlyImportant.Text" xml:space="preserve">
+    <value>Показывать только весомые изменения</value>
+  </data>
+  <data name="btnRetryInternet.Text" xml:space="preserve">
+    <value>Повторить</value>
+  </data>
+  <data name="labNotConnected.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 13</value>
+  </data>
+  <data name="labNotConnected.Text" xml:space="preserve">
+    <value>Проблемы с доступом к Интернету
+</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAEBAAAAAAIABoBAAANgAAACAgAAAAACAAqBAAAJ4EAAAwMAAAAAAgAKglAABGFQAAKAAAABAA
+        AAAgAAAAAQAgAAAAAABABAAAAAAAAAAAAAAAAAAAAAAAAP///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAA
+        AEkcEQ2HFQ0KlQAAAGkAAAAX////Af///wEAAAAPEwwJcz0nHaU9Jx2lEwsJdQAAAAv///8B////AScY
+        E6mCUT7/PicexwAAAFcAAABFAAAAbQAAAG0AAAAfSS4j3ahqUf+PWkX/Si4jyyEVEJcAAAClAAAABwAA
+        AEOMV0P/SS0j0QAAAAf///8B////Af///wEAAABNNyIa57JwVv+OWUT/EAoHd////wH///8BAAAAHQAA
+        AGEWDgt/tHFX/zUhGZ3///8B////Af///wEAAAAJLx0Wr6dpUf+qalL/IhUQnf///wH///8B////AQAA
+        ADUAAACPIhUQi7RxV/9bOSzpAAAAF////wEAAAAZNCAZxadpUf+0cVf/Qyog+QAAACn///8B////AQAA
+        AB0cEQ3VAwIBVwAAAE+WXkj/sG5V/187LulPMSbBaEEy9bBuVf+0cVf/aUIz9QAAADcAAABzAAAAmQAA
+        ALcbEQ3zGA8LjwAAAAMAAAADNSEZxaxsU/+0cVf/tHFX/7RxV/+0cVf/e007/QoGBVn///8B////Af//
+        /wEAAAAVAAAAC////wH///8B////AQAAAA8mFxKfb0Y1+4dUQf+CUT7/UzQo4QQCAU////8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////AQAAABcAAAArAAAAJwAAAAP///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wEAAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//KAAAACAAAABAAAAAAQAgAAAA
+        AACAEAAAAAAAAAAAAAAAAAAAAAAAAP///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAAAAsAAAApAAAAOwAA
+        AEEAAABBAAAAJQAAAAn///8B////Af///wH///8B////Af///wH///8B////AQAAAA8AAAAzAAAASwAA
+        AFUAAABVAAAASwAAADUAAAAR////Af///wH///8B////Af///wH///8B////Af///wEAAABrAAAArRIL
+        CNMyHxjlLhwW6QgFA+kAAADNAAAAqwAAAFEAAAAL////Af///wH///8B////Af///wEAAAA5AwIBsSUX
+        EttJLiP1Wjgr/1o4K/9JLiP1JRcS3QMCAbMAAAAr////Af///wH///8B////Af///wEAAAAxCgYEu00w
+        Jf+OWUX/fU48/zokHPEAAAC9AAAAjQAAAH8AAACVAAAAswAAAMEAAABbAAAADf///wEAAAALBwQDhyob
+        FPWJVkL/sW9V/7RxV/+qalL/glE+/1w6LP8+Jx7pGA8L7QAAAOcAAABd////Af///wH///8B////AQoG
+        BLtaOCv9r21U/3xOPP8SCwjRAAAAWQAAABP///8B////Af///wEAAAAJAAAANQAAAMUAAACFAAAABQAA
+        AGs5Ixv7mWBK/7RxV/+0cVf/nWJM/0MqIP8QCgi/AAAAawAAAEEAAABDAAAAfwAAANEAAAAX////Af//
+        /wEAAABZQyog/6xsU/+EU0D/FAwJ2QAAABf///8B////Af///wH///8B////Af///wH///8BAAAAJQAA
+        ALkAAACrJxgT8a9tVP+0cVf/tHFX/6BkTf8gFA/tAAAAdf///wH///8B////Af///wH///8BAAAAYwAA
+        AJMAAAAHAAAACQAAAKeMV0P/tHFX/1o4K/8AAABv////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8BAAAAVRkPDP+JVkL/tHFX/7RxV/+lZ0//QSkf/wAAAG8AAAAL////Af///wH///8B////Af//
+        /wEAAAAPAAAAyQAAAB8AAAAlEgsIzbRxV/+0cVf/QCgf7QAAAEP///8B////Af///wH///8B////Af//
+        /wH///8B////AQAAADETCwnJglE//7RxV/+0cVf/tHFX/0wwJPkEAgGX////Af///wH///8B////Af//
+        /wH///8B////AQAAACcAAADnAAAAPQAAAC8jFhHZtHFX/7RxV/9JLiP1AAAAS////wH///8B////Af//
+        /wH///8B////Af///wEAAAAdDwkHyWdAMv20cVf/tHFX/7RxV/+MWEP/CQYEwQAAAB////8B////Af//
+        /wH///8B////Af///wEAAAALAAAAnQAAAOMAAAA5AAAAPTciG+e0cVf/tHFX/3VJOP8KBgWxAAAABf//
+        /wH///8B////Af///wH///8BAAAAUxEKCNuCUT//tHFX/7RxV/+0cVf/mWBK/yQXEfsAAAA3////Af//
+        /wH///8B////Af///wH///8B////AQIBAXUlFxL1BgQCxQAAABsAAAAvHRIO2bRxV/+0cVf/omZO/zAe
+        F/cAAABPAAAABf///wH///8BAAAACQAAAF0bEQ3neEs6/7RxV/+0cVf/tHFX/7RxV/9ILSP7BAIB8QAA
+        AGcAAAAJ////Af///wH///8B////AQAAAA8AAABjFw4L6SQWEf8AAAB7AAAAAwAAABMAAAC5m2FL/7Rx
+        V/+0cVf/pGdP/zAeF/cOCAaxAAAAgQAAAIcYDwvVQyog/6RnT/+0cVf/tHFX/7RxV/+tbVT/XTst/wAA
+        AJkAAAApAAAAsQAAAL8AAABrAAAAVQAAAF0AAACBFQ0K4ysbFf81IRn5AwIBrwAAAAn///8B////AQAA
+        AG9XNyr/sW9V/7RxV/+0cVf/omZO/4JRPv94Szr/eEs6/4xXQ/+sbFP/tHFX/7RxV/+0cVf/tHFX/3lM
+        Ov8TDAnVAAAAF////wEAAAATAAAASwAAALEAAADxAAAA/wAAAP8SCwn/GhAM6QAAAHsAAAAb////Af//
+        /wH///8BAAAACRUNCtV6TDv/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7Jw
+        Vv+NWET/EQsI2QAAADn///8B////Af///wH///8B////Af///wEAAAAlAAAAKwAAACUAAAAJ////Af//
+        /wH///8B////Af///wH///8BAAAAVRsRDemWXkj/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7Rx
+        V/+0cVf/iFVB/yIVEPcAAABPAAAABf///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8BAAAAOQwHBdFTNCj7nWNM/7FvVf+0cVf/tHFX/7Rx
+        V/+0cVf/mF9J/2lCMv8GAwLJAAAARf///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BAAAAJwQCAosnGRPxQyog/1o4
+        K/9aOCv/Wjgr/0YrIf8jFRDtCAUEmQAAACkAAAAD////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAA
+        AA8AAABJAAAAVwAAAFcAAABXAAAAQQAAAAn///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAwAAAAYAAAAAEA
+        IAAAAAAAgCUAAAAAAAAAAAAAAAAAAAAAAAD///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////AQAAADEAAABxAAAAjwAAAL8AAAC/AAAAvwAA
+        AL8AAACBAAAAQf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wEAAAARAAAAYQAAAK8AAADPAAAA/wAAAP8AAAD/AAAA/wAAAM8AAACvAAAAcQAAABH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wEAAACBAAAA3wAAAP8LBwX/LRwW/08x
+        Jv9PMSb/IhUQ/wAAAP8AAAD/AAAA/wAAAO8AAACfAAAAMf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////AQAAAIEAAADvCwcF/0QqIf9aOSz/h1VB/4dVQf+HVUH/h1VB/1o5LP9EKiH/CwcF/wAA
+        AO8AAABh////Af///wH///8B////Af///wH///8B////Af///wH///8BAAAAMQAAAM8LBwX/TzEm/5Jc
+        R/+0cVf/h1VB/zgjG/8AAAD/AAAA/wAAAL8AAAC/AAAAvwAAAO8AAAD/AAAA/wAAAL8AAAAx////Af//
+        /wH///8B////Af///wEAAAARAAAAzwsHBf9aOSz/qWpS/7RxV/+0cVf/tHFX/7RxV/+0cVf/qWpS/3xO
+        PP9aOSz/TzEm/wsHBf8AAAD/AAAAj////wH///8B////Af///wH///8B////Af///wEAAAAxAAAA7yIV
+        EP+eY0z/tHFX/7RxV/9EKiH/AAAA/wAAAL8AAABR////Af///wH///8B////Af///wH///8BAAAAUQAA
+        AL8AAAD/AAAAcf///wH///8B////AQAAADEAAADvIhUQ/5JcR/+0cVf/tHFX/7RxV/+0cVf/tHFX/4dV
+        Qf84Ixv/AAAA/wAAAP8AAAC/AAAAvwAAAM8AAAD/AAAA/wAAAI////8B////Af///wH///8B////Af//
+        /wEAAADPIhUQ/6lqUv+0cVf/tHFX/zgjG/8AAADvAAAAUf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wEAAACfAAAA/wAAAI////8BAAAAEQAAAM8iFRD/qWpS/7RxV/+0cVf/tHFX/7Rx
+        V/+0cVf/TzEm/wAAAP8AAAC/AAAAYf///wH///8B////Af///wEAAAARAAAAnwAAAP8AAAAx////Af//
+        /wH///8B////AQAAAGEAAAD/klxH/7RxV/+0cVf/TzEm/wAAAO8AAAAx////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8BAAAAnwAAAP8AAABhAAAAvwsHBf+palL/tHFX/7Rx
+        V/+0cVf/tHFX/7RxV/9EKiH/AAAA/wAAAHH///8B////Af///wH///8B////Af///wH///8B////AQAA
+        AL8AAAC/////Af///wH///8B////AQAAAM9EKiH/tHFX/7RxV/+eY0z/AAAA/wAAAHH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAAAJ8AAAD/AAAA/5Jc
+        R/+0cVf/tHFX/7RxV/+0cVf/tHFX/1o5LP8AAAD/AAAAYf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////AQAAAEEAAAD/AAAAMf///wH///8BAAAAIQAAAP+SXEf/tHFX/7RxV/98Tjz/AAAA////
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAA
+        AHEAAAD/cUc2/7RxV/+0cVf/tHFX/7RxV/+0cVf/cUc2/wAAAP8AAABh////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wEAAAD/AAAAcf///wH///8BAAAAYQsHBf+0cVf/tHFX/7Rx
+        V/9aOSz/AAAAz////wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8BAAAAMQAAAO9EKiH/tHFX/7RxV/+0cVf/tHFX/7RxV/+SXEf/CwcF/wAAAJ////8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////AQAAABEAAAD/AAAAr////wH///8BAAAAgS0c
+        Fv+0cVf/tHFX/7RxV/9aOSz/AAAAv////wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wEAAAAxAAAA70QqIf+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/8iFRD/AAAAz///
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAAAI8AAAD/AAAAv///
+        /wH///8BAAAAjy0cFv+0cVf/tHFX/7RxV/9xRzb/AAAA7////wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////AQAAAEEAAADvOCMb/6lqUv+0cVf/tHFX/7RxV/+0cVf/tHFX/1o5
+        LP8AAADvAAAAIf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BAAAAMQAA
+        AP8AAAD/AAAAn////wH///8BAAAAv1o5LP+0cVf/tHFX/7RxV/+eY0z/AAAA/wAAAGH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8BAAAAYQAAAP9EKiH/tHFX/7RxV/+0cVf/tHFX/7Rx
+        V/+0cVf/klxH/wAAAP8AAABx////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wEAAAARAAAAzy0cFv8LBwX/AAAAcf///wH///8BAAAAny0cFv+0cVf/tHFX/7RxV/+0cVf/RCoh/wAA
+        AN8AAAAR////Af///wH///8B////Af///wH///8B////Af///wEAAACPAAAA/0QqIf+0cVf/tHFX/7Rx
+        V/+0cVf/tHFX/7RxV/+palL/IhUQ/wAAAO8AAAAR////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wEAAACfCwcF/0QqIf8AAAD/AAAAEf///wH///8BAAAAgSIVEP+0cVf/tHFX/7Rx
+        V/+0cVf/nmNM/wsHBf8AAACfAAAAEf///wH///8B////Af///wH///8BAAAAIQAAAL8AAAD/cUc2/7Rx
+        V/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/9EKiH/AAAA7wAAAO8AAADPAAAAIf///wH///8B////Af//
+        /wH///8B////Af///wH///8BAAAAQQAAAL8AAAD/Wjks/wAAAP8AAACP////Af///wH///8BAAAAUQAA
+        AP+palL/tHFX/7RxV/+0cVf/tHFX/5JcR/8LBwX/AAAA3wAAAGEAAABBAAAAQQAAAFEAAACfAAAA/yIV
+        EP+SXEf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/1o5LP8AAAD/AAAAUQAAADEAAADvAAAA7wAA
+        AJ8AAAAx////Af///wH///8BAAAAIQAAAFEAAAC/AAAA/y0cFv9xRzb/CwcF/wAAAM8AAAAR////Af//
+        /wH///8B////AQAAAO9aOSz/tHFX/7RxV/+0cVf/tHFX/7RxV/+eY0z/RCoh/wsHBf8AAAD/AAAA/wAA
+        AP8iFRD/cUc2/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/fE48/wAAAP8AAABh////Af//
+        /wEAAAARAAAAgQAAAO8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8tHBb/TzEm/0QqIf8AAAD/AAAAzwAA
+        ABH///8B////Af///wH///8B////AQAAAIEXDgv/qWpS/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7Rx
+        V/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+SXEf/CwcF/wAA
+        AJ////8B////Af///wH///8B////AQAAABEAAABxAAAAvwAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AM8AAABh////Af///wH///8B////Af///wH///8B////AQAAABEAAADvTzEm/7RxV/+0cVf/tHFX/7Rx
+        V/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/6lq
+        Uv8iFRD/AAAAzwAAABH///8B////Af///wH///8B////Af///wH///8B////Af///wEAAAAxAAAAQQAA
+        AEEAAABBAAAAIf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wEAAABhAAAA/3FH
+        Nv+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7Rx
+        V/+0cVf/qWpS/yIVEP8AAADvAAAAIf///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8BAAAAnwAAAP9xRzb/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/+0cVf/tHFX/7Rx
+        V/+0cVf/tHFX/7RxV/+eY0z/IhUQ/wAAAO8AAAAx////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////AQAAAIEAAAD/LRwW/55jTP+0cVf/tHFX/7RxV/+0cVf/tHFX/7Rx
+        V/+0cVf/tHFX/7RxV/+0cVf/tHFX/4dVQf8LBwX/AAAAzwAAADH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wEAAABBAAAA3wsHBf9aOSz/nmNM/7Rx
+        V/+0cVf/tHFX/7RxV/+0cVf/tHFX/7RxV/98Tjz/LRwW/wAAAP8AAACvAAAAEf///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAA
+        AIEAAADfAAAA/xcOC/8tHBb/LRwW/y0cFv8tHBb/LRwW/wAAAP8AAAD/AAAArwAAAEH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8BAAAAQQAAAIEAAACBAAAAgQAAAIEAAACBAAAAgQAAAFEAAAAR////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wEAAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAA
+        AAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA
+        //8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAA
+        AAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA
+        //8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAA
+        AAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8AAAAAAAD//wAAAAAAAP//AAAAAAAA
+        //8AAAAAAAD//wAAAAAAAP//AAAAAAAA//8=
+</value>
+  </data>
+</root>

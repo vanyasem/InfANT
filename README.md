@@ -4,9 +4,14 @@ Full changelog can be found [HERE](http://bitva-pod-moskvoy.ru/_kaspersky/change
 
 It's **not a final version**, this project is in active development. It has both STABLE (master) and UNSTABLE branches.
 
+UNSTABLE FORK IS **NOT TESTED** AT ALL OR TESTED PARTIALLY.
+USE IT AT **YOUR OWN RISK**.
+
+Unstable builds are not published and are not included in the changelog. Version number matches the last stable ones.
+
 ###Summary
 **InfANT*** is an open-source antivirus project written in C#.
-It was created by 2 Russian students in a few months.
+It was created by 2 Russian students in a few months and is distributed under the MIT license.
 
 Currently, it has 2 languages: English (main) and Russian. If you want to - you can translate LanguageResources.resx and pull it to my fork. 
 

@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="about_infant" xml:space="preserve">
+    <value>О InfANT:</value>
+  </data>
+  <data name="amount_of_files_scanned" xml:space="preserve">
+    <value>Кол-во проверенных файлов (n из N): </value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="cant_scan_no_access" xml:space="preserve">
+    <value>Проблема при сканировании этого файла. Он может быть поврежден, перемещен или защищен.</value>
+  </data>
+  <data name="clear" xml:space="preserve">
+    <value>безопасен</value>
+  </data>
+  <data name="Computer_is_INFECTED" xml:space="preserve">
+    <value>Компьютер ЗАРАЖЁН!</value>
+  </data>
+  <data name="Computer_is_partially_safe" xml:space="preserve">
+    <value>Компьютер может быть под угрозой</value>
+  </data>
+  <data name="Computer_is_safe" xml:space="preserve">
+    <value>Компьютер в безопасности</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>ошибка</value>
+  </data>
+  <data name="IFBTN_SCAN" xml:space="preserve">
+    <value>Начать сканирование</value>
+  </data>
+  <data name="infant_antivirus_scanner" xml:space="preserve">
+    <value>Антивирусный сканер InfANT*</value>
+  </data>
+  <data name="infant_was_released" xml:space="preserve">
+    <value>
+InfANT был выпущен в начале 2016го</value>
+  </data>
+  <data name="infected" xml:space="preserve">
+    <value>ЗАРАЖЁН!</value>
+  </data>
+  <data name="intfant_explanation" xml:space="preserve">
+    <value>*Inf = INFinity (бесконечность); ANT (муравей) = трудолюбивый (как муравей) ANTivirus</value>
+  </data>
+  <data name="it_was_developed_by_students" xml:space="preserve">
+    <value>Он был разработан группой русских школьников.</value>
+  </data>
+  <data name="no_scans_performed" xml:space="preserve">
+    <value>Сканирований не выполнялось.</value>
+  </data>
+  <data name="no_viruses_found" xml:space="preserve">
+    <value>Вирусов не обнаружено! Ура!</value>
+  </data>
+  <data name="oops" xml:space="preserve">
+    <value>Упс!</value>
+  </data>
+  <data name="path" xml:space="preserve">
+    <value>Путь: </value>
+  </data>
+  <data name="r_u_sure" xml:space="preserve">
+    <value>Вы уверены?</value>
+  </data>
+  <data name="selected_path" xml:space="preserve">
+    <value>Выбранный путь: </value>
+  </data>
+  <data name="select_scan_to_see_detailed_info" xml:space="preserve">
+    <value>Выберите сканирование в дереве, чтобы просмотреть подробную информацию о нём.</value>
+  </data>
+  <data name="select_virus_to_see_detailed_info" xml:space="preserve">
+    <value>Выберите вирус в дереве, чтобы просмотреть подробную информацию о нём.</value>
+  </data>
+  <data name="susp" xml:space="preserve">
+    <value>подозрительно</value>
+  </data>
+  <data name="this_file_is" xml:space="preserve">
+    <value>Этот файл: </value>
+  </data>
+  <data name="this_file_is_infected" xml:space="preserve">
+    <value>Этот файл ЗАРАЖЁН!</value>
+  </data>
+  <data name="this_file_looks_susp" xml:space="preserve">
+    <value>Этот файл может быть использован для нанесения вреда компьютеру.</value>
+  </data>
+  <data name="unscanned" xml:space="preserve">
+    <value>не проверен</value>
+  </data>
+  <data name="unselected" xml:space="preserve">
+    <value>не выбран</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Версия: </value>
+  </data>
+  <data name="will_delete_the_file_PERMANENTLY_This_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>Это действие удалит ЗАРАЖЁННЫЙ ФАЙЛ. Эту операцию невозможно отменить. Вы уверены?</value>
+  </data>
+  <data name="will_delete_your_SCANS_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>Это действие удалит историю сканирований. Эту операцию невозможно отменить. Вы уверены?</value>
+  </data>
+  <data name="will_delete_your_VIRUSES_log_cannot_be_undone_Are_you_sure" xml:space="preserve">
+    <value>Это действие удалит историю найденных вирусов. Эту операцию невозможно отменить. Вы уверены?</value>
+  </data>
+  <data name="IFBTN_scansmall" xml:space="preserve">
+    <value>Сканировать</value>
+  </data>
+  <data name="is_" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="looks" xml:space="preserve">
+    <value> выглядит </value>
+  </data>
+  <data name="protect" xml:space="preserve">
+    <value>1. Не устанавливайте неофициальное и/или пиратское программное обеспечение.
+2. Не запускайте исполняемые файлы и документы Microsoft Office из Email. 
+3. Делайте резервные копии важных файлов на удалённых / облачных дисках.
+4. Отключите автозапуск с переносных устройств.
+5. Не используйте публичные сети без VPN и не помечайте их как "Домашние".
+6. Отключите "Удалённый Доступ к Компьютеру" и отключите локальным машинам доступ к файлам на компьютере.</value>
+  </data>
+  <data name="cant_connect_to_internet" xml:space="preserve">
+    <value>Не получается подключиться к интернету!</value>
+  </data>
+  <data name="cant_save_database_no_permission" xml:space="preserve">
+    <value>Ошибка при сохранении датабазы на диск!
+Возможно, она используются или у InfANT нет доступа к папке.</value>
+  </data>
+  <data name="cant_save_logs_no_permissions" xml:space="preserve">
+    <value>Ошибка при сохранении истории на диск!
+Возможно, они используются или у InfANT нет доступа к папке.</value>
+  </data>
+  <data name="Logs_werent_found_do_in_launcher_restart" xml:space="preserve">
+    <value>История не была найдена! 
+Пожалуйтса, не удаляйте её вручную, делайте это с помощью кнопки "починить" в лаунчере.
+Перезапустите InfANT!</value>
+  </data>
+  <data name="no_Databases_found" xml:space="preserve">
+    <value>Датабазы не были найдены!</value>
+  </data>
+  <data name="no_internet_cant_update_database_changelog" xml:space="preserve">
+    <value>Из-за проблем с подключением к интернету не удалось обновить датабазы и список изменений.</value>
+  </data>
+  <data name="no_internet_no_cahced_database_useless" xml:space="preserve">
+    <value>Не удаётся подключиться к серверу, а локальная копия датабаз отсутствует.
+Без датабаз антивирус полностью бесполезен!</value>
+  </data>
+  <data name="open_launcher_instead" xml:space="preserve">
+    <value>Запускайте "_Launcher.exe"!</value>
+  </data>
+  <data name="cant_delete_no_rights_or_deleted_want_remove_log_entry" xml:space="preserve">
+    <value>Ошибка при удалении файла. У InfANT недостаточно полномочий для удаления или файл уже был удалён. 
+Хотите ли вы убрать его из списка угроз?</value>
+  </data>
+  <data name="menu_exit" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="menu_fast" xml:space="preserve">
+    <value>Быстрая проверка</value>
+  </data>
+  <data name="menu_open" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="LOGS_cant_connect_internet" xml:space="preserve">
+    <value>Can't establish an internet connection</value>
+  </data>
+  <data name="LOGS_cant_load_main_datas" xml:space="preserve">
+    <value>Can't load MAIN databases</value>
+  </data>
+  <data name="LOGS_cant_load_susp_datas" xml:space="preserve">
+    <value>Can't load suspicious databases</value>
+  </data>
+  <data name="LOGS_cant_save_database" xml:space="preserve">
+    <value>Can't save database</value>
+  </data>
+  <data name="LOGS_drive_scan_aborted" xml:space="preserve">
+    <value>Сканирование диска завершено было ПРЕРВАНО</value>
+  </data>
+  <data name="LOGS_drive_scan_finished" xml:space="preserve">
+    <value>Сканирование диска завершено</value>
+  </data>
+  <data name="LOGS_drive_scan_performed" xml:space="preserve">
+    <value>Было выполнено сканирование диска</value>
+  </data>
+  <data name="LOGS_drive_scan_started" xml:space="preserve">
+    <value>Сканирование диска запущено!</value>
+  </data>
+  <data name="LOGS_fast_scan_aborted" xml:space="preserve">
+    <value>Быстрое сканирование было ПРЕРВАНО</value>
+  </data>
+  <data name="LOGS_fast_scan_finished" xml:space="preserve">
+    <value>Быстрое сканирование завершено</value>
+  </data>
+  <data name="LOGS_fast_scan_performed" xml:space="preserve">
+    <value>Было выполнено быстрое сканирование</value>
+  </data>
+  <data name="LOGS_fast_scan_started" xml:space="preserve">
+    <value>Быстрое сканирование запущено!</value>
+  </data>
+  <data name="LOGS_files" xml:space="preserve">
+    <value>файлов</value>
+  </data>
+  <data name="LOGS_file_scan_performed" xml:space="preserve">
+    <value>Было выполнено пользовательское сканирование файла</value>
+  </data>
+  <data name="LOGS_folder_scan_aborted" xml:space="preserve">
+    <value>Пользовательское сканирование директории было ПРЕРВАНО</value>
+  </data>
+  <data name="LOGS_folder_scan_finished" xml:space="preserve">
+    <value>Пользовательское сканирование директории завершено</value>
+  </data>
+  <data name="LOGS_folder_scan_performed" xml:space="preserve">
+    <value>Было выполнено пользовательское сканирование директории</value>
+  </data>
+  <data name="LOGS_folder_scan_started" xml:space="preserve">
+    <value>Пользовательское сканирование директории запущено!</value>
+  </data>
+  <data name="LOGS_is_clear" xml:space="preserve">
+    <value> нормальный</value>
+  </data>
+  <data name="LOGS_of" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="LOGS_scan_was_finished_scanned" xml:space="preserve">
+    <value>Сканирование было завершено. Проверено</value>
+  </data>
+  <data name="LOGS_scan_was_interrupted" xml:space="preserve">
+    <value>Сканирование было принудительно остановлено и не завершилось корректно)|неизвестно|</value>
+  </data>
+  <data name="the_scan_finished" xml:space="preserve">
+    <value>Сканирование завершено!</value>
+  </data>
+</root>
