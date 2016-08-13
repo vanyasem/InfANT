@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnScanFolder = new System.Windows.Forms.Button();
             this.textFolderPath = new System.Windows.Forms.TextBox();
@@ -114,7 +113,6 @@
             this.btnCls = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabMainMenu.SuspendLayout();
             this.tabHello.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -882,12 +880,6 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
-            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -1021,6 +1013,5 @@
         private System.Windows.Forms.Label labSuspTree;
         private System.Windows.Forms.Label labVirusesTree;
         private System.Windows.Forms.Panel panelWhiteTabs;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

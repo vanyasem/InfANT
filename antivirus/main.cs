@@ -1473,18 +1473,21 @@ namespace InfANT
         {
             tabMainMenu.SelectTab(1);
             tabScans.SelectTab(4);
-            TreeNode node = treeHistoryScans.Nodes[treeHistoryScans.Nodes.Count - 1];
-            treeHistoryScans.SelectedNode = node.Nodes[node.Nodes.Count - 1];
+            try
+            {
+                TreeNode node = treeHistoryScans.Nodes[treeHistoryScans.Nodes.Count - 1];
+                treeHistoryScans.SelectedNode = node.Nodes[node.Nodes.Count - 1];
+            }
+            catch
+            {
+                //
+            }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             MessageBox.Show(LanguageResources.protect);
-        }
-
-        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
         }
 
         //---------------------------------------------
