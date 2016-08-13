@@ -252,51 +252,85 @@ namespace launcher
 
         private void btnUninstall_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show(LanguageResources.action_will_uninstall_launcher_wont_be_deleted, LanguageResources.are_u_sure, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                if (MessageBox.Show(LanguageResources.action_will_uninstall_launcher_wont_be_deleted, LanguageResources.are_u_sure, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                _isBusy = true;
+                btnLaunch.Enabled = false;
+                btnFix.Enabled = false;
+                btnUninstall.Enabled = false;
+                btnDatabaseEditor.Enabled = false;
+                progressBar.Value = 0;
+                try
                 {
-                    _isBusy = true;
-                    btnLaunch.Enabled = false;
-                    btnFix.Enabled = false;
-                    btnUninstall.Enabled = false;
-                    btnDatabaseEditor.Enabled = false;
-                    progressBar.Value = 0;     
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\changelog.txt");
-                    progressBar.Value = 10;
+                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini");
+                }
+                catch { /* */ }
+                progressBar.Value = 10;
+                try
+                {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\databaseeditor.exe");
-                    progressBar.Value = 20;
+                }
+                catch { /* */ }
+                progressBar.Value = 20;
+                try
+                {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\database.txt");
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\databasesusp.txt");
-                    progressBar.Value = 30;
+                }
+                catch { /* */ }       
+                progressBar.Value = 30;
+                try
+                {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\localdatabase.txt");
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\localdatabasesusp.txt");
-                    progressBar.Value = 40;
+                }
+                catch { /* */ }
+                progressBar.Value = 40;
+                try
+                {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\prgbar.dll");
-                    progressBar.Value = 50;
+                }
+                catch { /* */ }
+                progressBar.Value = 50;
+                try
+                {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\InfANT.exe");
-                    progressBar.Value = 60;
+                }
+                catch { /* */ }
+                progressBar.Value = 60;
+                try
+                {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt");
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\lastpath.txt");
-                    progressBar.Value = 70;
+                }
+                catch { /* */ }
+                progressBar.Value = 70;
+                try
+                {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt");
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt");
-                    progressBar.Value = 80;
+                }
+                catch { /* */ }
+                progressBar.Value = 80;
+                try
+                {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsSuspicious.txt");
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt");
-                    progressBar.Value = 90;
-                    progressBar.Value = 100;
-                    MessageBox.Show(LanguageResources.hope_u_had_good_experience_will_close_now, LanguageResources.uninstall_finished_successfully);
-                    _isBusy = false;
-                    Application.Exit();
                 }
-            }
-            catch
-            {
-                MessageBox.Show(LanguageResources.error_uninstalling, LanguageResources.error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch { /* */ }
+                progressBar.Value = 90;
+                try
+                {
+                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"ru\databaseeditor.resources.dll");
+                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"ru\InfANT.resources.dll");
+                }
+                catch { /* */ }
+                progressBar.Value = 100;
+                MessageBox.Show(LanguageResources.hope_u_had_good_experience_will_close_now, LanguageResources.uninstall_finished_successfully);
                 _isBusy = false;
+                Application.Exit();
             }
-            
         }
 
         private void btnChangelog_Click(object sender, EventArgs e)
@@ -342,6 +376,9 @@ namespace launcher
                         File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsViruses.txt");
                         File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt");
                         File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", @"firstlaunch");
+                        File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lang.ini", @"en");
+                        File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"ru\databaseeditor.resources.dll");
+                        File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"ru\InfANT.resources.dll");
                         _lastVersion = http.DownloadString("http://bitva-pod-moskvoy.ru/_kaspersky/lastversion.txt"); //tries to download it
                         File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\lastversion.txt", _lastVersion, Encoding.UTF8);
                     }
@@ -354,11 +391,13 @@ namespace launcher
                     btnUpdate.Enabled = false;
                     _isBusy = false;
                     MessageBox.Show(LanguageResources.was_fixed_successfully, LanguageResources.done, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Application.Restart();
                 }
             }
             catch
             {
                 MessageBox.Show(LanguageResources.something_wrong_but_nothing_bad, LanguageResources.oops);
+                Application.Restart();
             }
         }
 
