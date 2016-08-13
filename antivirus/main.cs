@@ -4,7 +4,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Threading;
@@ -85,7 +84,7 @@ namespace InfANT
         public List<string> SuspHashes = new List<string>(); //a list of suspicious hashes
 
         public string Ver; //this string indicates the current version of the app
-        public const string Build = "UNSTABLE";
+        public const string Build = "STABLE";
 
         private Thread _foldScanning; //This thread is used for scanning files in a folder
         private Thread _fileCounting; //This thread is used for counting files in a folder
@@ -107,10 +106,12 @@ namespace InfANT
             InitializeComponent();
             _loadings = loadingscr; //makes it avaliable to use within the whole form
         }
+        private SynchronizationContext _synchronizationContext;
         private void main_Load(object sender, EventArgs e) //scrolls the text to end at form start 
         {                                                  //(have to do this because if the form is not shown "TextChanged" event won't fire
             textChangelog.SelectionStart = textChangelog.TextLength;
             textChangelog.ScrollToCaret();
+            _synchronizationContext = SynchronizationContext.Current;
 
             if (_loadings.Suspiciouslogs.Count > 0)
                 Infected = null;
@@ -176,6 +177,7 @@ namespace InfANT
 
         private void main_FormClosing(object sender, FormClosingEventArgs e)
         {
+            _loadings.timerSaveLogs_Tick(sender, e);
             if (_isExited) return;
             e.Cancel = true;
             Hide();
@@ -409,6 +411,7 @@ namespace InfANT
                 _loadings.Suspiciouslogs.Clear();
                 richTextVirusesHistory.Text = LanguageResources.no_viruses_found;
                 tabScans_SelectedIndexChanged(sender, e);
+                _loadings.timerSaveLogs_Tick(sender, e);
             }
         }
 
@@ -420,7 +423,7 @@ namespace InfANT
                 _loadings.OkLogs.Add("[I][G][NORE]");
                 richTextScansHistory.Text = LanguageResources.no_scans_performed;
                 tabScans_SelectedIndexChanged(sender, e);
-                
+                _loadings.timerSaveLogs_Tick(sender, e);
             }
         }
 
@@ -468,7 +471,7 @@ namespace InfANT
                 {
                     _filesCountFull++; //increase the temp filescount with every file
                     _overallfull = _filesCountFull; //as we just changed the temp overall files count, we have to set it to the global files count
-                    labScannedFullNum.Invoke(new MethodInvoker(delegate { labScannedFullNum.Text = ScannedFull + "/" + _overallfull; })); //change the count label
+                    labScannedFullNum.Invoke(new MethodInvoker(delegate { labScannedFullNum.Text = ScannedFull + @"/" + _overallfull; })); //change the count label
                     progressFull.Invoke(new MethodInvoker(delegate { progressFull.Maximum = _overallfull; })); //set the maximum progressbar value to max files
                     progressFull.Invoke(new MethodInvoker(delegate { progressFull.Value = ScannedFull; })); //if the scan is running at the same this will prevent blinking of a prbar
                     progressFull.Invalidate();
@@ -525,7 +528,7 @@ namespace InfANT
                         }
                         else
                         {
-                            LogIt(4, file, " is clear", wheretopass);
+                            LogIt(4, file, LanguageResources.LOGS_is_clear, wheretopass);
                             ScannedFull++; //increases the OVERALL advanced folder scanned count
                             progressFull.Invoke(new MethodInvoker(delegate { progressFull.PerformStep(); }));
                         }
@@ -576,10 +579,14 @@ namespace InfANT
                 _timerScanFullChecker.Stop();
                 EnableEverything();
                 btnFullScan.Invoke(new MethodInvoker(delegate { btnFullScan.Text = LanguageResources.IFBTN_SCAN; }));
-                _loadings.CreateLogEntry(4, $"(EThe drive scan finished!)|{ScannedFull}-{_overallfull}|");
-                LogIt(0, "The scan finished!", 1);
+                _synchronizationContext.Send(s =>{
+                    _loadings.CreateLogEntry(4,
+                        $"(E{LanguageResources.LOGS_drive_scan_finished}!)|{ScannedFull}-{_overallfull}|");
+                    LogIt(0, LanguageResources.the_scan_finished, 1);
+                }, null);
                 _isScanning = false;
-                _loadings.NotifyIcon1.ShowBalloonTip(500, "The scan finished", $"The drive scan was finished. Scanned {ScannedFull} of {_overallfull} files.", ToolTipIcon.Info);
+                _loadings.NotifyIcon1.ShowBalloonTip(500, LanguageResources.the_scan_finished, $"{LanguageResources.LOGS_scan_was_finished_scanned} {ScannedFull} {LanguageResources.LOGS_of} {_overallfull} {LanguageResources.LOGS_files}.", ToolTipIcon.Info);
+                _loadings.timerSaveLogs_Tick(sender, e);
             }
         }
         private string _fullDrive;
@@ -590,7 +597,7 @@ namespace InfANT
                 textFullLog.Clear();
                 btnFullScan.Text = LanguageResources.cancel;
                 _fullDrive = comboDriveSelect.Text;
-                _loadings.CreateLogEntry(4, $"(SDrive scan was performed)|{_fullDrive}|"); 
+                _loadings.CreateLogEntry(4, $"(S{LanguageResources.LOGS_drive_scan_performed})|{_fullDrive}|"); 
                 _isScanning = true;
 
                 ScannedFull = 0;  //sets the amount of scanned files by the fast scanner to zero
@@ -599,7 +606,7 @@ namespace InfANT
                 progressFull.Maximum = _overallfull; //overall amount of files
                 progressFull.Value = 0;
                 textFastLog.Clear(); //clears the log
-                LogIt(0, "Drive scan started!", 1);
+                LogIt(0, LanguageResources.LOGS_drive_scan_started, 1);
 
                 DisableEverything();
                 btnFullScan.Enabled = true;
@@ -616,12 +623,13 @@ namespace InfANT
             {
                 _timerScanFullChecker.Enabled = false;
                 _timerScanFullChecker.Stop();
-                _loadings.CreateLogEntry(4, $"(EThe drive scan was ABORTED)|{ScannedFull}-{_overallfull}|");
-                LogIt(0, "The drive scan was ABORTED", 1);
+                _loadings.CreateLogEntry(4, $"(E{LanguageResources.LOGS_drive_scan_aborted})|{ScannedFull}-{_overallfull}|");
+                LogIt(0, LanguageResources.LOGS_drive_scan_aborted, 1);
                 _isScanning = false;
                 btnFullScan.Text = LanguageResources.IFBTN_SCAN;
                 _fullScanThread.Abort();
                 _filesCountingFull.Abort();
+                _loadings.timerSaveLogs_Tick(sender, e);
                 EnableEverything();
             }
         }
@@ -732,7 +740,7 @@ namespace InfANT
                         }
                         else
                         {
-                            LogIt(4, file, " is clear", wheretopass);
+                            LogIt(4, file, LanguageResources.LOGS_is_clear, wheretopass);
                             ScannedFast++; //increases the OVERALL advanced folder scanned count
                             progressFast.Invoke(new MethodInvoker(delegate { progressFast.PerformStep(); }));
                         }
@@ -776,7 +784,7 @@ namespace InfANT
             {
                 textFastLog.Clear(); //clears the log
                 btnFastScan.Text = LanguageResources.cancel;
-                _loadings.CreateLogEntry(4, "(SFast scan was performed)|Desktop, Appdata, Documents, Internet Cache|");
+                _loadings.CreateLogEntry(4, $"(S{LanguageResources.LOGS_fast_scan_performed})|Desktop, Appdata, Documents, Internet Cache|");
                 _isScanning = true;
 
                 _scanFastTurn = 0;
@@ -785,7 +793,7 @@ namespace InfANT
                 _overallfast = 0;
                 progressFast.Maximum = _overallfast; //overall amount of files
                 progressFast.Value = 0;
-                LogIt(0, "Fast scan started!", 0);
+                LogIt(0, LanguageResources.LOGS_fast_scan_started, 0);
 
                 DisableEverything();
                 btnFastScan.Enabled = true;
@@ -800,15 +808,15 @@ namespace InfANT
             }
             else
             {
-                _loadings.CreateLogEntry(4, $"(EThe fast scan was ABORTED)|{ScannedFast}-{_overallfast}|");
-                LogIt(0, "Fast scan was ABORTED", 0);
+                _loadings.CreateLogEntry(4, $"(E{LanguageResources.LOGS_fast_scan_aborted})|{ScannedFast}-{_overallfast}|");
+                LogIt(0, LanguageResources.LOGS_fast_scan_aborted, 0);
                 _isScanning = false;
                 _timerScanFastChecker.Enabled = false;
                 _timerScanFastChecker.Stop();
                 btnFastScan.Text = LanguageResources.IFBTN_SCAN;
                 _fastScanThread.Abort();
                 _filesCountingFast.Abort();
-
+                _loadings.timerSaveLogs_Tick(sender, e);
                 EnableEverything();
             }
         }
@@ -861,9 +869,13 @@ namespace InfANT
             _timerScanFastChecker.Stop();
             EnableEverything();
             btnFastScan.Invoke(new MethodInvoker(delegate { btnFastScan.Text = LanguageResources.IFBTN_SCAN; }));
-            _loadings.CreateLogEntry(4, $"(EThe fast scan was finished!)|{ScannedFast}-{_overallfast}|");
-            LogIt(0, "The scan finished!", 0);
-            _loadings.NotifyIcon1.ShowBalloonTip(500, "The scan finished",$"The fast scan was finished. Scanned {ScannedFast} of {_overallfast} files.", ToolTipIcon.Info);
+            _synchronizationContext.Send(s => {
+                _loadings.CreateLogEntry(4,
+                    $"(E{LanguageResources.LOGS_fast_scan_finished})|{ScannedFast}-{_overallfast}|");
+                LogIt(0, LanguageResources.LOGS_drive_scan_finished, 0);
+            }, null);
+            _loadings.NotifyIcon1.ShowBalloonTip(500, LanguageResources.the_scan_finished, $"{LanguageResources.LOGS_scan_was_finished_scanned} {ScannedFast} {LanguageResources.LOGS_of} {_overallfast} {LanguageResources.LOGS_files}.", ToolTipIcon.Info);
+            _loadings.timerSaveLogs_Tick(sender, e);
             ////Fastscanthread = StartTheScanFast(text_FolderPath.Text, 0);
         }
 
@@ -950,7 +962,7 @@ namespace InfANT
             textFilePath.Enabled = false;
             string file = textFilePath.Text;
             progressScanFile.Value = 0;
-            string temphash;;
+            string temphash;
             try
             {
                 temphash = GetSHA1(textFilePath.Text); //gets the hash 
@@ -989,10 +1001,11 @@ namespace InfANT
                     progressScanFile.PerformStep();
                 }
             }
-            _loadings.CreateLogEntry(4,$"(FAdvanced file scan was performed)|{textFilePath.Text}|({labThisFileStatus.Text})");
+            _loadings.CreateLogEntry(4,$"(F{LanguageResources.LOGS_file_scan_performed})|{textFilePath.Text}|({labThisFileStatus.Text})");
             _loadings.ReadLogs(0);
             btnScanFile.Enabled = false;
             textFilePath.Enabled = true;
+            _loadings.timerSaveLogs_Tick(sender, e);
         }
         //END SCAN ADVANCED FILE
 
@@ -1017,8 +1030,8 @@ namespace InfANT
                 _timerScanChecker.Start();
                 _foldScanning = StartTheScanFolder(textFolderPath.Text, 2);
 
-                _loadings.CreateLogEntry(4, $"(SAdvanced folder scan was performed)|{textFolderPath.Text}|");
-                LogIt(0, "The scan started!", 2);
+                _loadings.CreateLogEntry(4, $"(S{LanguageResources.LOGS_folder_scan_performed})|{textFolderPath.Text}|");
+                LogIt(0, LanguageResources.LOGS_folder_scan_started, 2);
                 btnScanFolder.Text = LanguageResources.cancel; //sets the label of the button to "cancel"
             }
             else
@@ -1028,12 +1041,13 @@ namespace InfANT
                 _fileCounting.Abort(); //aborts all threads
                 EnableEverything();
 
-                _loadings.CreateLogEntry(4, $"(EThe advanced folder scan was ABORTED)|{Scanned}-{_overall}|");
-                LogIt(0, "The scan was ABORTED",2);
+                _loadings.CreateLogEntry(4, $"(E{LanguageResources.LOGS_folder_scan_aborted})|{Scanned}-{_overall}|");
+                LogIt(0, LanguageResources.LOGS_folder_scan_aborted, 2);
                 Scanned = 0; //we want to reset everything
                 progressScanFolder.Value = 0;
                 progressScanFolder.Invalidate();
-                btnScanFolder.Text = LanguageResources.IFBTN_SCAN;  //sets the label of the button to "scan"
+                btnScanFolder.Text = LanguageResources.IFBTN_scansmall;  //sets the label of the button to "scan"
+                _loadings.timerSaveLogs_Tick(sender, e);
                 _loadings.ReadLogs(0);
                 _timerScanChecker.Enabled = false; //disables the timer
                 _timerScanChecker.Stop();
@@ -1048,12 +1062,15 @@ namespace InfANT
                 _timerScanChecker.Stop();
                 _isScanning = false;
                 EnableEverything();
-                btnScanFolder.Invoke(new MethodInvoker(delegate { btnScanFolder.Text = LanguageResources.IFBTN_SCAN; })); //sets the label of the button to "scan"
+                btnScanFolder.Invoke(new MethodInvoker(delegate { btnScanFolder.Text = LanguageResources.IFBTN_scansmall; })); //sets the label of the button to "scan"
                 btnScanFolder.Invoke(new MethodInvoker(delegate { btnScanFolder.Enabled = false; }));
-                _loadings.CreateLogEntry(4, $"(EThe advanced folder scan was finished)|{Scanned}-{_overall}|");
+                _synchronizationContext.Send(s => {
+                    _loadings.CreateLogEntry(4, $"(E{LanguageResources.LOGS_folder_scan_finished})|{Scanned}-{_overall}|");
+                    LogIt(0, LanguageResources.LOGS_folder_scan_finished, 2);
+                }, null);
                 
-                LogIt(0, "The scan finished!", 2);
-                _loadings.NotifyIcon1.ShowBalloonTip(500, "The scan finished", $"The advanced folder scan was finished. Scanned {Scanned} of {_overall} files.", ToolTipIcon.Info);    
+                _loadings.NotifyIcon1.ShowBalloonTip(500, LanguageResources.the_scan_finished, $"{LanguageResources.LOGS_scan_was_finished_scanned} {Scanned} {LanguageResources.LOGS_of} {_overall} {LanguageResources.LOGS_files}.", ToolTipIcon.Info);
+                _loadings.timerSaveLogs_Tick(sender, e);
             }
         }
 
@@ -1296,7 +1313,7 @@ namespace InfANT
                         }
                         else
                         {
-                            LogIt(4, file, " is clear", wheretopass);
+                            LogIt(4, file, LanguageResources.LOGS_is_clear, wheretopass);
                             Scanned++; //increases the OVERALL advanced folder scanned count
                             progressScanFolder.Invoke(new MethodInvoker(delegate { progressScanFolder.PerformStep(); }));
                         }                 
@@ -1333,7 +1350,7 @@ namespace InfANT
                 {
                     _filescount++; //increase the temp filescount with every file
                     _overall = _filescount; //as we just changed the temp overall files count, we have to set it to the global files count
-                    labScannedNum.Invoke     (new MethodInvoker(delegate { labScannedNum.Text         = Scanned + "/" + _overall; })); //change the count label
+                    labScannedNum.Invoke     (new MethodInvoker(delegate { labScannedNum.Text         = Scanned + @"/" + _overall; })); //change the count label
                     progressScanFolder.Invoke(new MethodInvoker(delegate { progressScanFolder.Maximum = _overall; })); //set the maximum progressbar value to max files
                     progressScanFolder.Invoke(new MethodInvoker(delegate { progressScanFolder.Value   = Scanned; })); //if the scan is running at the same this will prevent blinking of a prbar
                     progressScanFolder.Invalidate();
@@ -1362,12 +1379,15 @@ namespace InfANT
         //-----------------------------
         [DllImport("user32.dll", SetLastError = true)]
         private static extern int SendMessage(IntPtr hWnd, //no idea how this works
-                         int Msg, int wParam, int lParam);
+                         int msg, int wParam, int lParam);
 
         [DllImport("user32.dll", SetLastError = true)]
         private static extern bool ReleaseCapture();
 
+        // ReSharper disable once InconsistentNaming
+        // ReSharper disable once IdentifierTypo
         private const int WM_NCLBUTTONDOWN = 0xA1;
+        // ReSharper disable once InconsistentNaming
         private const int HT_CAPTION = 0x2; //no clues how this works
         private void PanelLogo_MouseDown(object sender, MouseEventArgs e)
         {
@@ -1414,6 +1434,7 @@ namespace InfANT
         private bool _isExited;
         public void MenuExit(object sender, EventArgs e)
         {
+            _loadings.timerSaveLogs_Tick(sender, e);
             _isExited = true;
             Application.Exit();
         }
@@ -1452,6 +1473,8 @@ namespace InfANT
         {
             tabMainMenu.SelectTab(1);
             tabScans.SelectTab(4);
+            TreeNode node = treeHistoryScans.Nodes[treeHistoryScans.Nodes.Count - 1];
+            treeHistoryScans.SelectedNode = node.Nodes[node.Nodes.Count - 1];
         }
 
         private void button4_Click(object sender, EventArgs e)

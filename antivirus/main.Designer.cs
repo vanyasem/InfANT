@@ -138,8 +138,8 @@
             // 
             // btnScanFolder
             // 
-            resources.ApplyResources(this.btnScanFolder, "btnScanFolder");
             this.btnScanFolder.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.btnScanFolder, "btnScanFolder");
             this.btnScanFolder.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnScanFolder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
             this.btnScanFolder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
@@ -154,20 +154,20 @@
             // 
             // textLog
             // 
-            resources.ApplyResources(this.textLog, "textLog");
             this.textLog.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.textLog, "textLog");
             this.textLog.Name = "textLog";
             this.textLog.ReadOnly = true;
             this.textLog.TextChanged += new System.EventHandler(this.textLog_TextChanged);
             // 
             // tabMainMenu
             // 
-            resources.ApplyResources(this.tabMainMenu, "tabMainMenu");
             this.tabMainMenu.Controls.Add(this.tabHello);
             this.tabMainMenu.Controls.Add(this.tabScan);
             this.tabMainMenu.Controls.Add(this.tabChangelog);
             this.tabMainMenu.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabMainMenu.HotTrack = true;
+            resources.ApplyResources(this.tabMainMenu, "tabMainMenu");
             this.tabMainMenu.Name = "tabMainMenu";
             this.tabMainMenu.SelectedIndex = 0;
             this.tabMainMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -175,32 +175,32 @@
             // 
             // tabHello
             // 
-            resources.ApplyResources(this.tabHello, "tabHello");
             this.tabHello.BackColor = System.Drawing.Color.White;
             this.tabHello.BackgroundImage = global::InfANT.Properties.Resources.wave;
+            resources.ApplyResources(this.tabHello, "tabHello");
             this.tabHello.Controls.Add(this.groupBox3);
             this.tabHello.Controls.Add(this.labelSafeUnsafeWelcome);
             this.tabHello.Name = "tabHello";
             // 
             // groupBox3
             // 
-            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.btnQuickLast);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.btnQuickFull);
             this.groupBox3.Controls.Add(this.btnQuickFast);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
             // btnQuickLast
             // 
-            resources.ApplyResources(this.btnQuickLast, "btnQuickLast");
             this.btnQuickLast.BackColor = System.Drawing.Color.White;
             this.btnQuickLast.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnQuickLast.FlatAppearance.BorderSize = 2;
             this.btnQuickLast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.btnQuickLast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.btnQuickLast, "btnQuickLast");
             this.btnQuickLast.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(105)))), ((int)(((byte)(177)))));
             this.btnQuickLast.Name = "btnQuickLast";
             this.btnQuickLast.UseVisualStyleBackColor = false;
@@ -208,12 +208,12 @@
             // 
             // button4
             // 
-            resources.ApplyResources(this.button4, "button4");
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.button4.FlatAppearance.BorderSize = 2;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.button4, "button4");
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(105)))), ((int)(((byte)(177)))));
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
@@ -221,12 +221,12 @@
             // 
             // btnQuickFull
             // 
-            resources.ApplyResources(this.btnQuickFull, "btnQuickFull");
             this.btnQuickFull.BackColor = System.Drawing.Color.White;
             this.btnQuickFull.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnQuickFull.FlatAppearance.BorderSize = 2;
             this.btnQuickFull.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.btnQuickFull.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.btnQuickFull, "btnQuickFull");
             this.btnQuickFull.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(105)))), ((int)(((byte)(177)))));
             this.btnQuickFull.Name = "btnQuickFull";
             this.btnQuickFull.UseVisualStyleBackColor = false;
@@ -234,12 +234,12 @@
             // 
             // btnQuickFast
             // 
-            resources.ApplyResources(this.btnQuickFast, "btnQuickFast");
             this.btnQuickFast.BackColor = System.Drawing.Color.White;
             this.btnQuickFast.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnQuickFast.FlatAppearance.BorderSize = 2;
             this.btnQuickFast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.btnQuickFast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.btnQuickFast, "btnQuickFast");
             this.btnQuickFast.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(105)))), ((int)(((byte)(177)))));
             this.btnQuickFast.Name = "btnQuickFast";
             this.btnQuickFast.UseVisualStyleBackColor = false;
@@ -253,10 +253,10 @@
             // 
             // tabScan
             // 
-            resources.ApplyResources(this.tabScan, "tabScan");
             this.tabScan.BackColor = System.Drawing.Color.White;
             this.tabScan.Controls.Add(this.panelWhiteTabs);
             this.tabScan.Controls.Add(this.tabScans);
+            resources.ApplyResources(this.tabScan, "tabScan");
             this.tabScan.Name = "tabScan";
             // 
             // panelWhiteTabs
@@ -283,7 +283,6 @@
             // 
             // tabSimple
             // 
-            resources.ApplyResources(this.tabSimple, "tabSimple");
             this.tabSimple.BackColor = System.Drawing.Color.White;
             this.tabSimple.Controls.Add(this.progressFast);
             this.tabSimple.Controls.Add(this.labScannedFastNum);
@@ -292,12 +291,13 @@
             this.tabSimple.Controls.Add(this.groupLogFastSettings);
             this.tabSimple.Controls.Add(this.textFastLog);
             this.tabSimple.Controls.Add(this.btnFastScan);
+            resources.ApplyResources(this.tabSimple, "tabSimple");
             this.tabSimple.Name = "tabSimple";
             // 
             // progressFast
             // 
-            resources.ApplyResources(this.progressFast, "progressFast");
             this.progressFast.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.progressFast, "progressFast");
             this.progressFast.Maximum = 100;
             this.progressFast.Minimum = 0;
             this.progressFast.Name = "progressFast";
@@ -322,11 +322,11 @@
             // 
             // groupLogFastSettings
             // 
-            resources.ApplyResources(this.groupLogFastSettings, "groupLogFastSettings");
             this.groupLogFastSettings.Controls.Add(this.checkShowWarningsFast);
             this.groupLogFastSettings.Controls.Add(this.checkShowVirusesFast);
             this.groupLogFastSettings.Controls.Add(this.checkShowSuspiciousFast);
             this.groupLogFastSettings.Controls.Add(this.checkShowOKFast);
+            resources.ApplyResources(this.groupLogFastSettings, "groupLogFastSettings");
             this.groupLogFastSettings.Name = "groupLogFastSettings";
             this.groupLogFastSettings.TabStop = false;
             // 
@@ -366,26 +366,25 @@
             // 
             // textFastLog
             // 
-            resources.ApplyResources(this.textFastLog, "textFastLog");
             this.textFastLog.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.textFastLog, "textFastLog");
             this.textFastLog.Name = "textFastLog";
             this.textFastLog.ReadOnly = true;
             this.textFastLog.TextChanged += new System.EventHandler(this.textFastLog_TextChanged);
             // 
             // btnFastScan
             // 
-            resources.ApplyResources(this.btnFastScan, "btnFastScan");
             this.btnFastScan.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnFastScan.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnFastScan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
             this.btnFastScan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            resources.ApplyResources(this.btnFastScan, "btnFastScan");
             this.btnFastScan.Name = "btnFastScan";
             this.btnFastScan.UseVisualStyleBackColor = false;
             this.btnFastScan.Click += new System.EventHandler(this.btnFastScan_Click);
             // 
             // tabDrivescan
             // 
-            resources.ApplyResources(this.tabDrivescan, "tabDrivescan");
             this.tabDrivescan.BackColor = System.Drawing.Color.White;
             this.tabDrivescan.Controls.Add(this.labSelectTheDrive);
             this.tabDrivescan.Controls.Add(this.comboDriveSelect);
@@ -396,6 +395,7 @@
             this.tabDrivescan.Controls.Add(this.groupLogFullSettings);
             this.tabDrivescan.Controls.Add(this.textFullLog);
             this.tabDrivescan.Controls.Add(this.btnFullScan);
+            resources.ApplyResources(this.tabDrivescan, "tabDrivescan");
             this.tabDrivescan.Name = "tabDrivescan";
             // 
             // labSelectTheDrive
@@ -405,17 +405,17 @@
             // 
             // comboDriveSelect
             // 
-            resources.ApplyResources(this.comboDriveSelect, "comboDriveSelect");
             this.comboDriveSelect.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboDriveSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboDriveSelect, "comboDriveSelect");
             this.comboDriveSelect.FormattingEnabled = true;
             this.comboDriveSelect.Name = "comboDriveSelect";
             this.comboDriveSelect.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // progressFull
             // 
-            resources.ApplyResources(this.progressFull, "progressFull");
             this.progressFull.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.progressFull, "progressFull");
             this.progressFull.Maximum = 100;
             this.progressFull.Minimum = 0;
             this.progressFull.Name = "progressFull";
@@ -440,11 +440,11 @@
             // 
             // groupLogFullSettings
             // 
-            resources.ApplyResources(this.groupLogFullSettings, "groupLogFullSettings");
             this.groupLogFullSettings.Controls.Add(this.checkShowWarningsFull);
             this.groupLogFullSettings.Controls.Add(this.checkShowVirusesFull);
             this.groupLogFullSettings.Controls.Add(this.checkShowSuspiciousFull);
             this.groupLogFullSettings.Controls.Add(this.checkShowOKFull);
+            resources.ApplyResources(this.groupLogFullSettings, "groupLogFullSettings");
             this.groupLogFullSettings.Name = "groupLogFullSettings";
             this.groupLogFullSettings.TabStop = false;
             // 
@@ -484,16 +484,16 @@
             // 
             // textFullLog
             // 
-            resources.ApplyResources(this.textFullLog, "textFullLog");
             this.textFullLog.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.textFullLog, "textFullLog");
             this.textFullLog.Name = "textFullLog";
             this.textFullLog.ReadOnly = true;
             this.textFullLog.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnFullScan
             // 
-            resources.ApplyResources(this.btnFullScan, "btnFullScan");
             this.btnFullScan.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.btnFullScan, "btnFullScan");
             this.btnFullScan.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnFullScan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
             this.btnFullScan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
@@ -503,28 +503,28 @@
             // 
             // tabAdvanced
             // 
-            resources.ApplyResources(this.tabAdvanced, "tabAdvanced");
             this.tabAdvanced.BackColor = System.Drawing.Color.White;
             this.tabAdvanced.Controls.Add(this.groupFile);
             this.tabAdvanced.Controls.Add(this.groupFolder);
+            resources.ApplyResources(this.tabAdvanced, "tabAdvanced");
             this.tabAdvanced.Name = "tabAdvanced";
             // 
             // groupFile
             // 
-            resources.ApplyResources(this.groupFile, "groupFile");
             this.groupFile.Controls.Add(this.progressScanFile);
             this.groupFile.Controls.Add(this.labThisFileStatus);
             this.groupFile.Controls.Add(this.labThisFileIs);
             this.groupFile.Controls.Add(this.textFilePath);
             this.groupFile.Controls.Add(this.btnScanFile);
             this.groupFile.Controls.Add(this.btnSelectFile);
+            resources.ApplyResources(this.groupFile, "groupFile");
             this.groupFile.Name = "groupFile";
             this.groupFile.TabStop = false;
             // 
             // progressScanFile
             // 
-            resources.ApplyResources(this.progressScanFile, "progressScanFile");
             this.progressScanFile.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.progressScanFile, "progressScanFile");
             this.progressScanFile.Maximum = 1;
             this.progressScanFile.Minimum = 0;
             this.progressScanFile.Name = "progressScanFile";
@@ -550,8 +550,8 @@
             // 
             // btnScanFile
             // 
-            resources.ApplyResources(this.btnScanFile, "btnScanFile");
             this.btnScanFile.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.btnScanFile, "btnScanFile");
             this.btnScanFile.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnScanFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
             this.btnScanFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
@@ -561,18 +561,17 @@
             // 
             // btnSelectFile
             // 
-            resources.ApplyResources(this.btnSelectFile, "btnSelectFile");
             this.btnSelectFile.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnSelectFile.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSelectFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
             this.btnSelectFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            resources.ApplyResources(this.btnSelectFile, "btnSelectFile");
             this.btnSelectFile.Name = "btnSelectFile";
             this.btnSelectFile.UseVisualStyleBackColor = false;
             this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click_1);
             // 
             // groupFolder
             // 
-            resources.ApplyResources(this.groupFolder, "groupFolder");
             this.groupFolder.Controls.Add(this.progressScanFolder);
             this.groupFolder.Controls.Add(this.groupLogFolderSettings);
             this.groupFolder.Controls.Add(this.labScannedNum);
@@ -581,13 +580,14 @@
             this.groupFolder.Controls.Add(this.textLog);
             this.groupFolder.Controls.Add(this.btnScanFolder);
             this.groupFolder.Controls.Add(this.btnSelectFolder);
+            resources.ApplyResources(this.groupFolder, "groupFolder");
             this.groupFolder.Name = "groupFolder";
             this.groupFolder.TabStop = false;
             // 
             // progressScanFolder
             // 
-            resources.ApplyResources(this.progressScanFolder, "progressScanFolder");
             this.progressScanFolder.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.progressScanFolder, "progressScanFolder");
             this.progressScanFolder.Maximum = 100;
             this.progressScanFolder.Minimum = 0;
             this.progressScanFolder.Name = "progressScanFolder";
@@ -597,11 +597,11 @@
             // 
             // groupLogFolderSettings
             // 
-            resources.ApplyResources(this.groupLogFolderSettings, "groupLogFolderSettings");
             this.groupLogFolderSettings.Controls.Add(this.checkShowWarnings);
             this.groupLogFolderSettings.Controls.Add(this.checkShowViruses);
             this.groupLogFolderSettings.Controls.Add(this.checkShowSuspicious);
             this.groupLogFolderSettings.Controls.Add(this.checkShowOK);
+            resources.ApplyResources(this.groupLogFolderSettings, "groupLogFolderSettings");
             this.groupLogFolderSettings.Name = "groupLogFolderSettings";
             this.groupLogFolderSettings.TabStop = false;
             // 
@@ -651,18 +651,17 @@
             // 
             // btnSelectFolder
             // 
-            resources.ApplyResources(this.btnSelectFolder, "btnSelectFolder");
             this.btnSelectFolder.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnSelectFolder.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSelectFolder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
             this.btnSelectFolder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            resources.ApplyResources(this.btnSelectFolder, "btnSelectFolder");
             this.btnSelectFolder.Name = "btnSelectFolder";
             this.btnSelectFolder.UseVisualStyleBackColor = false;
             this.btnSelectFolder.Click += new System.EventHandler(this.btnSelectFolder_Click);
             // 
             // tabViruses
             // 
-            resources.ApplyResources(this.tabViruses, "tabViruses");
             this.tabViruses.BackColor = System.Drawing.Color.White;
             this.tabViruses.Controls.Add(this.btnClearVirusesLog);
             this.tabViruses.Controls.Add(this.labSuspTree);
@@ -671,12 +670,13 @@
             this.tabViruses.Controls.Add(this.btnDeleteThisVirus);
             this.tabViruses.Controls.Add(this.richTextVirusesHistory);
             this.tabViruses.Controls.Add(this.treeHistoryViruses);
+            resources.ApplyResources(this.tabViruses, "tabViruses");
             this.tabViruses.Name = "tabViruses";
             // 
             // btnClearVirusesLog
             // 
-            resources.ApplyResources(this.btnClearVirusesLog, "btnClearVirusesLog");
             this.btnClearVirusesLog.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btnClearVirusesLog, "btnClearVirusesLog");
             this.btnClearVirusesLog.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClearVirusesLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
             this.btnClearVirusesLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
@@ -696,49 +696,49 @@
             // 
             // treeHistorySusp
             // 
-            resources.ApplyResources(this.treeHistorySusp, "treeHistorySusp");
             this.treeHistorySusp.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.treeHistorySusp, "treeHistorySusp");
             this.treeHistorySusp.Name = "treeHistorySusp";
             this.treeHistorySusp.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeHistorySusp_NodeMouseClick);
             // 
             // btnDeleteThisVirus
             // 
-            resources.ApplyResources(this.btnDeleteThisVirus, "btnDeleteThisVirus");
             this.btnDeleteThisVirus.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnDeleteThisVirus.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDeleteThisVirus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
             this.btnDeleteThisVirus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            resources.ApplyResources(this.btnDeleteThisVirus, "btnDeleteThisVirus");
             this.btnDeleteThisVirus.Name = "btnDeleteThisVirus";
             this.btnDeleteThisVirus.UseVisualStyleBackColor = false;
             this.btnDeleteThisVirus.Click += new System.EventHandler(this.btnDeleteThisVirus_Click);
             // 
             // richTextVirusesHistory
             // 
-            resources.ApplyResources(this.richTextVirusesHistory, "richTextVirusesHistory");
             this.richTextVirusesHistory.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.richTextVirusesHistory, "richTextVirusesHistory");
             this.richTextVirusesHistory.Name = "richTextVirusesHistory";
             this.richTextVirusesHistory.ReadOnly = true;
             // 
             // treeHistoryViruses
             // 
-            resources.ApplyResources(this.treeHistoryViruses, "treeHistoryViruses");
             this.treeHistoryViruses.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.treeHistoryViruses, "treeHistoryViruses");
             this.treeHistoryViruses.Name = "treeHistoryViruses";
             this.treeHistoryViruses.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeHistoryViruses_NodeMouseClick);
             // 
             // tabLogs
             // 
-            resources.ApplyResources(this.tabLogs, "tabLogs");
             this.tabLogs.BackColor = System.Drawing.Color.White;
             this.tabLogs.Controls.Add(this.btnClearScansLog);
             this.tabLogs.Controls.Add(this.richTextScansHistory);
             this.tabLogs.Controls.Add(this.treeHistoryScans);
+            resources.ApplyResources(this.tabLogs, "tabLogs");
             this.tabLogs.Name = "tabLogs";
             // 
             // btnClearScansLog
             // 
-            resources.ApplyResources(this.btnClearScansLog, "btnClearScansLog");
             this.btnClearScansLog.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btnClearScansLog, "btnClearScansLog");
             this.btnClearScansLog.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClearScansLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
             this.btnClearScansLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
@@ -748,26 +748,26 @@
             // 
             // richTextScansHistory
             // 
-            resources.ApplyResources(this.richTextScansHistory, "richTextScansHistory");
             this.richTextScansHistory.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.richTextScansHistory, "richTextScansHistory");
             this.richTextScansHistory.Name = "richTextScansHistory";
             this.richTextScansHistory.ReadOnly = true;
             // 
             // treeHistoryScans
             // 
-            resources.ApplyResources(this.treeHistoryScans, "treeHistoryScans");
             this.treeHistoryScans.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.treeHistoryScans, "treeHistoryScans");
             this.treeHistoryScans.Name = "treeHistoryScans";
             this.treeHistoryScans.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeHistoryScans_AfterSelect);
             // 
             // tabChangelog
             // 
-            resources.ApplyResources(this.tabChangelog, "tabChangelog");
             this.tabChangelog.BackColor = System.Drawing.Color.White;
             this.tabChangelog.Controls.Add(this.labelYoVersionLab);
             this.tabChangelog.Controls.Add(this.labelYoVersion);
             this.tabChangelog.Controls.Add(this.checkLogOnlyImportant);
             this.tabChangelog.Controls.Add(this.textChangelog);
+            resources.ApplyResources(this.tabChangelog, "tabChangelog");
             this.tabChangelog.Name = "tabChangelog";
             // 
             // labelYoVersionLab
@@ -791,19 +791,19 @@
             // 
             // textChangelog
             // 
-            resources.ApplyResources(this.textChangelog, "textChangelog");
             this.textChangelog.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.textChangelog, "textChangelog");
             this.textChangelog.Name = "textChangelog";
             this.textChangelog.ReadOnly = true;
             this.textChangelog.TextChanged += new System.EventHandler(this.textChangelog_TextChanged);
             // 
             // btnRetryInternet
             // 
-            resources.ApplyResources(this.btnRetryInternet, "btnRetryInternet");
             this.btnRetryInternet.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnRetryInternet.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.btnRetryInternet.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRetryInternet.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.btnRetryInternet, "btnRetryInternet");
             this.btnRetryInternet.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRetryInternet.Name = "btnRetryInternet";
             this.btnRetryInternet.UseVisualStyleBackColor = false;
@@ -816,7 +816,6 @@
             // 
             // PanelLogo
             // 
-            resources.ApplyResources(this.PanelLogo, "PanelLogo");
             this.PanelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(105)))), ((int)(((byte)(177)))));
             this.PanelLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelLogo.Controls.Add(this.pictureBox1);
@@ -824,23 +823,24 @@
             this.PanelLogo.Controls.Add(this.btnQst);
             this.PanelLogo.Controls.Add(this.btnCls);
             this.PanelLogo.Controls.Add(this.label5);
+            resources.ApplyResources(this.PanelLogo, "PanelLogo");
             this.PanelLogo.Name = "PanelLogo";
             this.PanelLogo.TabStop = true;
             this.PanelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelLogo_MouseDown);
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::InfANT.Properties.Resources.logo;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelLogo_MouseDown);
             // 
             // btnMin
             // 
-            resources.ApplyResources(this.btnMin, "btnMin");
             this.btnMin.FlatAppearance.BorderSize = 0;
             this.btnMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(100)))), ((int)(((byte)(161)))));
+            resources.ApplyResources(this.btnMin, "btnMin");
             this.btnMin.Image = global::InfANT.Properties.Resources.min;
             this.btnMin.Name = "btnMin";
             this.btnMin.UseVisualStyleBackColor = true;
@@ -848,9 +848,9 @@
             // 
             // btnQst
             // 
-            resources.ApplyResources(this.btnQst, "btnQst");
             this.btnQst.FlatAppearance.BorderSize = 0;
             this.btnQst.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(100)))), ((int)(((byte)(161)))));
+            resources.ApplyResources(this.btnQst, "btnQst");
             this.btnQst.Image = global::InfANT.Properties.Resources.qst;
             this.btnQst.Name = "btnQst";
             this.btnQst.UseVisualStyleBackColor = true;
@@ -858,9 +858,9 @@
             // 
             // btnCls
             // 
-            resources.ApplyResources(this.btnCls, "btnCls");
             this.btnCls.FlatAppearance.BorderSize = 0;
             this.btnCls.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(59)))), ((int)(((byte)(54)))));
+            resources.ApplyResources(this.btnCls, "btnCls");
             this.btnCls.Image = global::InfANT.Properties.Resources.cls;
             this.btnCls.Name = "btnCls";
             this.btnCls.UseVisualStyleBackColor = true;
@@ -868,24 +868,24 @@
             // 
             // label5
             // 
-            resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label5, "label5");
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Name = "label5";
             this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelLogo_MouseDown);
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnRetryInternet);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // contextMenuStrip1
             // 
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // Main

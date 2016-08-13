@@ -127,7 +127,7 @@ namespace InfANT {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Can&apos;t scan the file. It may be corrupded, missing or protected..
+        ///   Looks up a localized string similar to Can&apos;t scan the file. It may be corrupted, missing or protected..
         /// </summary>
         internal static string cant_scan_no_access {
             get {
@@ -260,6 +260,204 @@ namespace InfANT {
         internal static string it_was_developed_by_students {
             get {
                 return ResourceManager.GetString("it_was_developed_by_students", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t establish an internet connection.
+        /// </summary>
+        internal static string LOGS_cant_connect_internet {
+            get {
+                return ResourceManager.GetString("LOGS_cant_connect_internet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t load MAIN databases.
+        /// </summary>
+        internal static string LOGS_cant_load_main_datas {
+            get {
+                return ResourceManager.GetString("LOGS_cant_load_main_datas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t load suspicious databases.
+        /// </summary>
+        internal static string LOGS_cant_load_susp_datas {
+            get {
+                return ResourceManager.GetString("LOGS_cant_load_susp_datas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t save database.
+        /// </summary>
+        internal static string LOGS_cant_save_database {
+            get {
+                return ResourceManager.GetString("LOGS_cant_save_database", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drive scan was ABORTED.
+        /// </summary>
+        internal static string LOGS_drive_scan_aborted {
+            get {
+                return ResourceManager.GetString("LOGS_drive_scan_aborted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drive scan was finished.
+        /// </summary>
+        internal static string LOGS_drive_scan_finished {
+            get {
+                return ResourceManager.GetString("LOGS_drive_scan_finished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drive scan was performed.
+        /// </summary>
+        internal static string LOGS_drive_scan_performed {
+            get {
+                return ResourceManager.GetString("LOGS_drive_scan_performed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drive scan started!.
+        /// </summary>
+        internal static string LOGS_drive_scan_started {
+            get {
+                return ResourceManager.GetString("LOGS_drive_scan_started", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fast scan was ABORTED.
+        /// </summary>
+        internal static string LOGS_fast_scan_aborted {
+            get {
+                return ResourceManager.GetString("LOGS_fast_scan_aborted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fast scan was finished.
+        /// </summary>
+        internal static string LOGS_fast_scan_finished {
+            get {
+                return ResourceManager.GetString("LOGS_fast_scan_finished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fast scan was performed.
+        /// </summary>
+        internal static string LOGS_fast_scan_performed {
+            get {
+                return ResourceManager.GetString("LOGS_fast_scan_performed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fast scan started!.
+        /// </summary>
+        internal static string LOGS_fast_scan_started {
+            get {
+                return ResourceManager.GetString("LOGS_fast_scan_started", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced file scan was performed.
+        /// </summary>
+        internal static string LOGS_file_scan_performed {
+            get {
+                return ResourceManager.GetString("LOGS_file_scan_performed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to files.
+        /// </summary>
+        internal static string LOGS_files {
+            get {
+                return ResourceManager.GetString("LOGS_files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced folder scan was ABORTED.
+        /// </summary>
+        internal static string LOGS_folder_scan_aborted {
+            get {
+                return ResourceManager.GetString("LOGS_folder_scan_aborted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced folder scan was finished.
+        /// </summary>
+        internal static string LOGS_folder_scan_finished {
+            get {
+                return ResourceManager.GetString("LOGS_folder_scan_finished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced folder scan was performed.
+        /// </summary>
+        internal static string LOGS_folder_scan_performed {
+            get {
+                return ResourceManager.GetString("LOGS_folder_scan_performed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced folder scan started!.
+        /// </summary>
+        internal static string LOGS_folder_scan_started {
+            get {
+                return ResourceManager.GetString("LOGS_folder_scan_started", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  is clear.
+        /// </summary>
+        internal static string LOGS_is_clear {
+            get {
+                return ResourceManager.GetString("LOGS_is_clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to of.
+        /// </summary>
+        internal static string LOGS_of {
+            get {
+                return ResourceManager.GetString("LOGS_of", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The scan was finished. Scanned.
+        /// </summary>
+        internal static string LOGS_scan_was_finished_scanned {
+            get {
+                return ResourceManager.GetString("LOGS_scan_was_finished_scanned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scan was rudely interrupted, was not finished correctly)|unknown|.
+        /// </summary>
+        internal static string LOGS_scan_was_interrupted {
+            get {
+                return ResourceManager.GetString("LOGS_scan_was_interrupted", resourceCulture);
             }
         }
         
@@ -439,6 +637,15 @@ namespace InfANT {
         internal static string susp {
             get {
                 return ResourceManager.GetString("susp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The scan is finished.
+        /// </summary>
+        internal static string the_scan_finished {
+            get {
+                return ResourceManager.GetString("the_scan_finished", resourceCulture);
             }
         }
         

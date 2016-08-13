@@ -25,9 +25,11 @@ namespace InfANT
             _usedLauncher = usedLauncherBool;
         }
 
+        private SynchronizationContext _synchronizationContext;
         private System.Windows.Forms.Timer _myTimer;
         private void loadingscreen_Shown(object sender, EventArgs e) //happens right after it's shown BUT NOT FULLY DRAWN! Load happened BEFORE, so it makes a blank gap.
         {
+            _synchronizationContext = SynchronizationContext.Current;
             _myTimer = new System.Windows.Forms.Timer {Interval = 200};
             _myTimer.Tick += Kostil;
             _myTimer.Start(); //as it's not fully drawn but we WANT it to we set a small timer. The timer works in an another thread so the UI thread will be able to finish drawing.
@@ -67,7 +69,7 @@ namespace InfANT
         {
             if (GetSquareBrackets(OkLogs[OkLogs.Count - 1],5).StartsWith("(S")) //If there's a start entry, but no end entry, do this:
             {   
-                CreateLogEntry(4, "(EScan was rudely interrupted, was not finished correctly)|unknown|");
+                CreateLogEntry(4, $"(E{LanguageResources.LOGS_scan_was_interrupted}");
             }
         }
         //---------------------------------
@@ -345,7 +347,7 @@ namespace InfANT
             }
         }
 
-        private void timerSaveLogs_Tick(object sender, EventArgs e) //continuously  saves logs to files. 
+        public void timerSaveLogs_Tick(object sender, EventArgs e) //continuously  saves logs to files. 
         {
             try
             {
@@ -354,10 +356,14 @@ namespace InfANT
                 File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsSuspicious.txt", Suspiciouslogs);
                 File.WriteAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsErrors.txt", _errorslogs);
             }
-            catch
+            catch(Exception ex)
             {
+                _timerLogSaver.Stop();
                 _timerLogSaver.Enabled = false;
-                MessageBox.Show(LanguageResources.cant_save_logs_no_permissions, LanguageResources.oops,MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _synchronizationContext.Send(s => {
+                    MessageBox.Show(LanguageResources.cant_save_logs_no_permissions, LanguageResources.oops,MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }, null);
+                CreateLogEntry(3, ex.ToString());
                 _timerLogSaver.Enabled = true;
                 _timerLogSaver.Start();
             }
@@ -372,7 +378,7 @@ namespace InfANT
         private System.Timers.Timer _timerLogSaver;
         private void EnableTimer()
         {
-            _timerLogSaver = new System.Timers.Timer(1000) {Enabled = true};
+            _timerLogSaver = new System.Timers.Timer(600000) {Enabled = true};
             _timerLogSaver.Elapsed += timerSaveLogs_Tick;
             _timerLogSaver.Start();
         }
@@ -400,7 +406,7 @@ namespace InfANT
                     }
                     catch
                     {
-                        CreateLogEntry(3, "Can't save database");
+                        CreateLogEntry(3, LanguageResources.LOGS_cant_save_database);
                         MessageBox.Show(LanguageResources.cant_save_database_no_permission, LanguageResources.oops, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     _mainForm.IsInternetConnected = true; // if everything's cool - sets the internet connectivity to true
@@ -410,7 +416,7 @@ namespace InfANT
             {
                 if (_mainForm.IsInternetConnected)
                 {
-                    CreateLogEntry(3, "Can't establish an internet connection");
+                    CreateLogEntry(3, LanguageResources.LOGS_cant_connect_internet);
                     _mainForm.IsInternetConnected = false; //sets the internet connectivity to false
                     if (MessageBox.Show(LanguageResources.no_internet_cant_update_database_changelog, LanguageResources.cant_connect_to_internet, MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
                     {
@@ -436,7 +442,7 @@ namespace InfANT
                     }
                     catch
                     {
-                        CreateLogEntry(3, "Can't save database");
+                        CreateLogEntry(3, LanguageResources.LOGS_cant_save_database);
                         MessageBox.Show(LanguageResources.cant_save_database_no_permission, LanguageResources.oops, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     _mainForm.IsInternetConnected = true; // if everything's cool - sets the internet connectivity to true
@@ -446,7 +452,7 @@ namespace InfANT
             {
                 if (_mainForm.IsInternetConnected)
                 {
-                    CreateLogEntry(3, "Can't establish an internet connection");
+                    CreateLogEntry(3, LanguageResources.LOGS_cant_connect_internet);
                     _mainForm.IsInternetConnected = false; //sets the internet connectivity to false
                     if (MessageBox.Show(LanguageResources.no_internet_cant_update_database_changelog, LanguageResources.cant_connect_to_internet, MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) == DialogResult.Retry)
                     {
@@ -466,7 +472,7 @@ namespace InfANT
             }
             catch
             { // if no luck - closes. Why do I need an antivirus without databases?
-                CreateLogEntry(3, "Can't load MAIN databases");
+                CreateLogEntry(3, LanguageResources.LOGS_cant_load_main_datas);
                 MessageBox.Show(LanguageResources.no_internet_no_cahced_database_useless, LanguageResources.no_Databases_found, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
@@ -479,7 +485,7 @@ namespace InfANT
             }
             catch
             { // if a user has main databases, but has no susp databases I don't need to force-close the app, as it still works
-                CreateLogEntry(3, "Can't load suspicious databases");
+                CreateLogEntry(3, LanguageResources.LOGS_cant_load_susp_datas);
             }
         }
         private void LoadLocalDatabase() //this loads your own database (added through database editor)
@@ -518,7 +524,7 @@ namespace InfANT
             catch
             {
                 _changelog = "iNo internet connection and no local cached copy of the changelog were found.";
-                CreateLogEntry(3, "Can't establish an internet connection");
+                CreateLogEntry(3, LanguageResources.LOGS_cant_connect_internet);
                 FormatChangelog();
             }
         }
@@ -562,6 +568,5 @@ namespace InfANT
             MessageBox.Show(LanguageResources.open_launcher_instead);
             Application.Exit();
         }
-
     }
 }

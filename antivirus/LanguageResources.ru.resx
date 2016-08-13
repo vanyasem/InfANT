@@ -276,4 +276,73 @@ InfANT был выпущен в начале 2016го</value>
   <data name="menu_open" xml:space="preserve">
     <value>Открыть</value>
   </data>
+  <data name="LOGS_cant_connect_internet" xml:space="preserve">
+    <value>Can't establish an internet connection</value>
+  </data>
+  <data name="LOGS_cant_load_main_datas" xml:space="preserve">
+    <value>Can't load MAIN databases</value>
+  </data>
+  <data name="LOGS_cant_load_susp_datas" xml:space="preserve">
+    <value>Can't load suspicious databases</value>
+  </data>
+  <data name="LOGS_cant_save_database" xml:space="preserve">
+    <value>Can't save database</value>
+  </data>
+  <data name="LOGS_drive_scan_aborted" xml:space="preserve">
+    <value>Сканирование диска завершено было ПРЕРВАНО</value>
+  </data>
+  <data name="LOGS_drive_scan_finished" xml:space="preserve">
+    <value>Сканирование диска завершено</value>
+  </data>
+  <data name="LOGS_drive_scan_performed" xml:space="preserve">
+    <value>Было выполнено сканирование диска</value>
+  </data>
+  <data name="LOGS_drive_scan_started" xml:space="preserve">
+    <value>Сканирование диска запущено!</value>
+  </data>
+  <data name="LOGS_fast_scan_aborted" xml:space="preserve">
+    <value>Быстрое сканирование было ПРЕРВАНО</value>
+  </data>
+  <data name="LOGS_fast_scan_finished" xml:space="preserve">
+    <value>Быстрое сканирование завершено</value>
+  </data>
+  <data name="LOGS_fast_scan_performed" xml:space="preserve">
+    <value>Было выполнено быстрое сканирование</value>
+  </data>
+  <data name="LOGS_fast_scan_started" xml:space="preserve">
+    <value>Быстрое сканирование запущено!</value>
+  </data>
+  <data name="LOGS_files" xml:space="preserve">
+    <value>файлов</value>
+  </data>
+  <data name="LOGS_file_scan_performed" xml:space="preserve">
+    <value>Было выполнено пользовательское сканирование файла</value>
+  </data>
+  <data name="LOGS_folder_scan_aborted" xml:space="preserve">
+    <value>Пользовательское сканирование директории было ПРЕРВАНО</value>
+  </data>
+  <data name="LOGS_folder_scan_finished" xml:space="preserve">
+    <value>Пользовательское сканирование директории завершено</value>
+  </data>
+  <data name="LOGS_folder_scan_performed" xml:space="preserve">
+    <value>Было выполнено пользовательское сканирование директории</value>
+  </data>
+  <data name="LOGS_folder_scan_started" xml:space="preserve">
+    <value>Пользовательское сканирование директории запущено!</value>
+  </data>
+  <data name="LOGS_is_clear" xml:space="preserve">
+    <value> нормальный</value>
+  </data>
+  <data name="LOGS_of" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="LOGS_scan_was_finished_scanned" xml:space="preserve">
+    <value>Сканирование было завершено. Проверено</value>
+  </data>
+  <data name="LOGS_scan_was_interrupted" xml:space="preserve">
+    <value>Сканирование было принудительно остановлено и не завершилось корректно)|неизвестно|</value>
+  </data>
+  <data name="the_scan_finished" xml:space="preserve">
+    <value>Сканирование завершено!</value>
+  </data>
 </root>

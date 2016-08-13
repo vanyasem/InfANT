@@ -127,7 +127,7 @@
     <value>Cancel</value>
   </data>
   <data name="cant_scan_no_access" xml:space="preserve">
-    <value>Can't scan the file. It may be corrupded, missing or protected.</value>
+    <value>Can't scan the file. It may be corrupted, missing or protected.</value>
   </data>
   <data name="clear" xml:space="preserve">
     <value>clear</value>
@@ -279,5 +279,74 @@ Without them antivirus is completely useless!</value>
   <data name="cant_delete_no_rights_or_deleted_want_remove_log_entry" xml:space="preserve">
     <value>Can't delete the file. InfANT has no rights to access it or it's already deleted. 
  Do you want to remove it from the log?</value>
+  </data>
+  <data name="LOGS_cant_connect_internet" xml:space="preserve">
+    <value>Can't establish an internet connection</value>
+  </data>
+  <data name="LOGS_cant_load_main_datas" xml:space="preserve">
+    <value>Can't load MAIN databases</value>
+  </data>
+  <data name="LOGS_cant_load_susp_datas" xml:space="preserve">
+    <value>Can't load suspicious databases</value>
+  </data>
+  <data name="LOGS_cant_save_database" xml:space="preserve">
+    <value>Can't save database</value>
+  </data>
+  <data name="LOGS_drive_scan_aborted" xml:space="preserve">
+    <value>Drive scan was ABORTED</value>
+  </data>
+  <data name="LOGS_drive_scan_finished" xml:space="preserve">
+    <value>Drive scan was finished</value>
+  </data>
+  <data name="LOGS_drive_scan_performed" xml:space="preserve">
+    <value>Drive scan was performed</value>
+  </data>
+  <data name="LOGS_drive_scan_started" xml:space="preserve">
+    <value>Drive scan started!</value>
+  </data>
+  <data name="LOGS_fast_scan_aborted" xml:space="preserve">
+    <value>Fast scan was ABORTED</value>
+  </data>
+  <data name="LOGS_fast_scan_finished" xml:space="preserve">
+    <value>Fast scan was finished</value>
+  </data>
+  <data name="LOGS_fast_scan_performed" xml:space="preserve">
+    <value>Fast scan was performed</value>
+  </data>
+  <data name="LOGS_fast_scan_started" xml:space="preserve">
+    <value>Fast scan started!</value>
+  </data>
+  <data name="LOGS_files" xml:space="preserve">
+    <value>files</value>
+  </data>
+  <data name="LOGS_file_scan_performed" xml:space="preserve">
+    <value>Advanced file scan was performed</value>
+  </data>
+  <data name="LOGS_folder_scan_aborted" xml:space="preserve">
+    <value>Advanced folder scan was ABORTED</value>
+  </data>
+  <data name="LOGS_folder_scan_performed" xml:space="preserve">
+    <value>Advanced folder scan was performed</value>
+  </data>
+  <data name="LOGS_folder_scan_started" xml:space="preserve">
+    <value>Advanced folder scan started!</value>
+  </data>
+  <data name="LOGS_is_clear" xml:space="preserve">
+    <value> is clear</value>
+  </data>
+  <data name="LOGS_of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="LOGS_scan_was_finished_scanned" xml:space="preserve">
+    <value>The scan was finished. Scanned</value>
+  </data>
+  <data name="LOGS_scan_was_interrupted" xml:space="preserve">
+    <value>Scan was rudely interrupted, was not finished correctly)|unknown|</value>
+  </data>
+  <data name="the_scan_finished" xml:space="preserve">
+    <value>The scan is finished</value>
+  </data>
+  <data name="LOGS_folder_scan_finished" xml:space="preserve">
+    <value>Advanced folder scan was finished</value>
   </data>
 </root>
