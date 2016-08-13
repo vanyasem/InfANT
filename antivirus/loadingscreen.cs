@@ -57,7 +57,6 @@ namespace InfANT
             LoadLocalDatabase();
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 100; }));
             LoadChangelog();
-
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
             Invoke(new MethodInvoker(delegate { CreateIconMenuStructure(); _mainForm.Ver = fvi.FileVersion; _mainForm.labelYoVersionLab.Text = _mainForm.Ver + @" " + Main.Build;
@@ -111,7 +110,7 @@ namespace InfANT
         {
             try
             {
-                OkLogs         = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", Encoding.UTF8).ToList();
+                OkLogs = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + @"\logsOKs.txt", Encoding.UTF8).ToList();
 
                 if (OkLogs[0] == "firstlaunch")
                 {

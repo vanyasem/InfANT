@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnScanFolder = new System.Windows.Forms.Button();
             this.textFolderPath = new System.Windows.Forms.TextBox();
@@ -41,6 +42,7 @@
             this.btnQuickFast = new System.Windows.Forms.Button();
             this.labelSafeUnsafeWelcome = new System.Windows.Forms.Label();
             this.tabScan = new System.Windows.Forms.TabPage();
+            this.panelWhiteTabs = new System.Windows.Forms.Panel();
             this.tabScans = new System.Windows.Forms.TabControl();
             this.tabSimple = new System.Windows.Forms.TabPage();
             this.progressFast = new prgbar.BlueProgressBar();
@@ -87,9 +89,11 @@
             this.labScanned = new System.Windows.Forms.Label();
             this.btnSelectFolder = new System.Windows.Forms.Button();
             this.tabViruses = new System.Windows.Forms.TabPage();
+            this.btnClearVirusesLog = new System.Windows.Forms.Button();
+            this.labSuspTree = new System.Windows.Forms.Label();
+            this.labVirusesTree = new System.Windows.Forms.Label();
             this.treeHistorySusp = new System.Windows.Forms.TreeView();
             this.btnDeleteThisVirus = new System.Windows.Forms.Button();
-            this.btnClearVirusesLog = new System.Windows.Forms.Button();
             this.richTextVirusesHistory = new System.Windows.Forms.RichTextBox();
             this.treeHistoryViruses = new System.Windows.Forms.TreeView();
             this.tabLogs = new System.Windows.Forms.TabPage();
@@ -110,6 +114,7 @@
             this.btnCls = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabMainMenu.SuspendLayout();
             this.tabHello.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -134,10 +139,10 @@
             // btnScanFolder
             // 
             resources.ApplyResources(this.btnScanFolder, "btnScanFolder");
-            this.btnScanFolder.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnScanFolder.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnScanFolder.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnScanFolder.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnScanFolder.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnScanFolder.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnScanFolder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.btnScanFolder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.btnScanFolder.Name = "btnScanFolder";
             this.btnScanFolder.UseVisualStyleBackColor = false;
             this.btnScanFolder.Click += new System.EventHandler(this.btn_Scan_Click);
@@ -250,8 +255,14 @@
             // 
             resources.ApplyResources(this.tabScan, "tabScan");
             this.tabScan.BackColor = System.Drawing.Color.White;
+            this.tabScan.Controls.Add(this.panelWhiteTabs);
             this.tabScan.Controls.Add(this.tabScans);
             this.tabScan.Name = "tabScan";
+            // 
+            // panelWhiteTabs
+            // 
+            resources.ApplyResources(this.panelWhiteTabs, "panelWhiteTabs");
+            this.panelWhiteTabs.Name = "panelWhiteTabs";
             // 
             // tabScans
             // 
@@ -273,6 +284,7 @@
             // tabSimple
             // 
             resources.ApplyResources(this.tabSimple, "tabSimple");
+            this.tabSimple.BackColor = System.Drawing.Color.White;
             this.tabSimple.Controls.Add(this.progressFast);
             this.tabSimple.Controls.Add(this.labScannedFastNum);
             this.tabSimple.Controls.Add(this.labScannedFast);
@@ -281,12 +293,11 @@
             this.tabSimple.Controls.Add(this.textFastLog);
             this.tabSimple.Controls.Add(this.btnFastScan);
             this.tabSimple.Name = "tabSimple";
-            this.tabSimple.UseVisualStyleBackColor = true;
             // 
             // progressFast
             // 
             resources.ApplyResources(this.progressFast, "progressFast");
-            this.progressFast.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.progressFast.BackColor = System.Drawing.Color.WhiteSmoke;
             this.progressFast.Maximum = 100;
             this.progressFast.Minimum = 0;
             this.progressFast.Name = "progressFast";
@@ -364,10 +375,10 @@
             // btnFastScan
             // 
             resources.ApplyResources(this.btnFastScan, "btnFastScan");
-            this.btnFastScan.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnFastScan.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnFastScan.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFastScan.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFastScan.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFastScan.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFastScan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFastScan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.btnFastScan.Name = "btnFastScan";
             this.btnFastScan.UseVisualStyleBackColor = false;
             this.btnFastScan.Click += new System.EventHandler(this.btnFastScan_Click);
@@ -375,6 +386,7 @@
             // tabDrivescan
             // 
             resources.ApplyResources(this.tabDrivescan, "tabDrivescan");
+            this.tabDrivescan.BackColor = System.Drawing.Color.White;
             this.tabDrivescan.Controls.Add(this.labSelectTheDrive);
             this.tabDrivescan.Controls.Add(this.comboDriveSelect);
             this.tabDrivescan.Controls.Add(this.progressFull);
@@ -385,7 +397,6 @@
             this.tabDrivescan.Controls.Add(this.textFullLog);
             this.tabDrivescan.Controls.Add(this.btnFullScan);
             this.tabDrivescan.Name = "tabDrivescan";
-            this.tabDrivescan.UseVisualStyleBackColor = true;
             // 
             // labSelectTheDrive
             // 
@@ -395,6 +406,7 @@
             // comboDriveSelect
             // 
             resources.ApplyResources(this.comboDriveSelect, "comboDriveSelect");
+            this.comboDriveSelect.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboDriveSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDriveSelect.FormattingEnabled = true;
             this.comboDriveSelect.Name = "comboDriveSelect";
@@ -403,7 +415,7 @@
             // progressFull
             // 
             resources.ApplyResources(this.progressFull, "progressFull");
-            this.progressFull.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.progressFull.BackColor = System.Drawing.Color.WhiteSmoke;
             this.progressFull.Maximum = 100;
             this.progressFull.Minimum = 0;
             this.progressFull.Name = "progressFull";
@@ -481,10 +493,10 @@
             // btnFullScan
             // 
             resources.ApplyResources(this.btnFullScan, "btnFullScan");
-            this.btnFullScan.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnFullScan.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnFullScan.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFullScan.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFullScan.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFullScan.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFullScan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFullScan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.btnFullScan.Name = "btnFullScan";
             this.btnFullScan.UseVisualStyleBackColor = false;
             this.btnFullScan.Click += new System.EventHandler(this.btnFullScan_Click);
@@ -492,10 +504,10 @@
             // tabAdvanced
             // 
             resources.ApplyResources(this.tabAdvanced, "tabAdvanced");
+            this.tabAdvanced.BackColor = System.Drawing.Color.White;
             this.tabAdvanced.Controls.Add(this.groupFile);
             this.tabAdvanced.Controls.Add(this.groupFolder);
             this.tabAdvanced.Name = "tabAdvanced";
-            this.tabAdvanced.UseVisualStyleBackColor = true;
             // 
             // groupFile
             // 
@@ -512,7 +524,7 @@
             // progressScanFile
             // 
             resources.ApplyResources(this.progressScanFile, "progressScanFile");
-            this.progressScanFile.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.progressScanFile.BackColor = System.Drawing.Color.WhiteSmoke;
             this.progressScanFile.Maximum = 1;
             this.progressScanFile.Minimum = 0;
             this.progressScanFile.Name = "progressScanFile";
@@ -539,10 +551,10 @@
             // btnScanFile
             // 
             resources.ApplyResources(this.btnScanFile, "btnScanFile");
-            this.btnScanFile.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnScanFile.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnScanFile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnScanFile.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnScanFile.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnScanFile.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnScanFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.btnScanFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.btnScanFile.Name = "btnScanFile";
             this.btnScanFile.UseVisualStyleBackColor = false;
             this.btnScanFile.Click += new System.EventHandler(this.btn_ScanFile_Click);
@@ -550,10 +562,10 @@
             // btnSelectFile
             // 
             resources.ApplyResources(this.btnSelectFile, "btnSelectFile");
-            this.btnSelectFile.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSelectFile.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnSelectFile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSelectFile.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSelectFile.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSelectFile.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.btnSelectFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.btnSelectFile.Name = "btnSelectFile";
             this.btnSelectFile.UseVisualStyleBackColor = false;
             this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click_1);
@@ -575,7 +587,7 @@
             // progressScanFolder
             // 
             resources.ApplyResources(this.progressScanFolder, "progressScanFolder");
-            this.progressScanFolder.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.progressScanFolder.BackColor = System.Drawing.Color.WhiteSmoke;
             this.progressScanFolder.Maximum = 100;
             this.progressScanFolder.Minimum = 0;
             this.progressScanFolder.Name = "progressScanFolder";
@@ -640,10 +652,10 @@
             // btnSelectFolder
             // 
             resources.ApplyResources(this.btnSelectFolder, "btnSelectFolder");
-            this.btnSelectFolder.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSelectFolder.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnSelectFolder.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSelectFolder.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSelectFolder.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSelectFolder.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectFolder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.btnSelectFolder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.btnSelectFolder.Name = "btnSelectFolder";
             this.btnSelectFolder.UseVisualStyleBackColor = false;
             this.btnSelectFolder.Click += new System.EventHandler(this.btnSelectFolder_Click);
@@ -651,70 +663,85 @@
             // tabViruses
             // 
             resources.ApplyResources(this.tabViruses, "tabViruses");
+            this.tabViruses.BackColor = System.Drawing.Color.White;
+            this.tabViruses.Controls.Add(this.btnClearVirusesLog);
+            this.tabViruses.Controls.Add(this.labSuspTree);
+            this.tabViruses.Controls.Add(this.labVirusesTree);
             this.tabViruses.Controls.Add(this.treeHistorySusp);
             this.tabViruses.Controls.Add(this.btnDeleteThisVirus);
-            this.tabViruses.Controls.Add(this.btnClearVirusesLog);
             this.tabViruses.Controls.Add(this.richTextVirusesHistory);
             this.tabViruses.Controls.Add(this.treeHistoryViruses);
             this.tabViruses.Name = "tabViruses";
-            this.tabViruses.UseVisualStyleBackColor = true;
+            // 
+            // btnClearVirusesLog
+            // 
+            resources.ApplyResources(this.btnClearVirusesLog, "btnClearVirusesLog");
+            this.btnClearVirusesLog.BackColor = System.Drawing.Color.White;
+            this.btnClearVirusesLog.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClearVirusesLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.btnClearVirusesLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.btnClearVirusesLog.Name = "btnClearVirusesLog";
+            this.btnClearVirusesLog.UseVisualStyleBackColor = false;
+            this.btnClearVirusesLog.Click += new System.EventHandler(this.btnClearVirusesLog_Click);
+            // 
+            // labSuspTree
+            // 
+            resources.ApplyResources(this.labSuspTree, "labSuspTree");
+            this.labSuspTree.Name = "labSuspTree";
+            // 
+            // labVirusesTree
+            // 
+            resources.ApplyResources(this.labVirusesTree, "labVirusesTree");
+            this.labVirusesTree.Name = "labVirusesTree";
             // 
             // treeHistorySusp
             // 
             resources.ApplyResources(this.treeHistorySusp, "treeHistorySusp");
+            this.treeHistorySusp.BackColor = System.Drawing.Color.White;
             this.treeHistorySusp.Name = "treeHistorySusp";
             this.treeHistorySusp.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeHistorySusp_NodeMouseClick);
             // 
             // btnDeleteThisVirus
             // 
             resources.ApplyResources(this.btnDeleteThisVirus, "btnDeleteThisVirus");
-            this.btnDeleteThisVirus.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDeleteThisVirus.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnDeleteThisVirus.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeleteThisVirus.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDeleteThisVirus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeleteThisVirus.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteThisVirus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.btnDeleteThisVirus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.btnDeleteThisVirus.Name = "btnDeleteThisVirus";
             this.btnDeleteThisVirus.UseVisualStyleBackColor = false;
             this.btnDeleteThisVirus.Click += new System.EventHandler(this.btnDeleteThisVirus_Click);
             // 
-            // btnClearVirusesLog
-            // 
-            resources.ApplyResources(this.btnClearVirusesLog, "btnClearVirusesLog");
-            this.btnClearVirusesLog.BackColor = System.Drawing.Color.White;
-            this.btnClearVirusesLog.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnClearVirusesLog.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClearVirusesLog.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnClearVirusesLog.Name = "btnClearVirusesLog";
-            this.btnClearVirusesLog.UseVisualStyleBackColor = false;
-            this.btnClearVirusesLog.Click += new System.EventHandler(this.btnClearVirusesLog_Click);
-            // 
             // richTextVirusesHistory
             // 
             resources.ApplyResources(this.richTextVirusesHistory, "richTextVirusesHistory");
+            this.richTextVirusesHistory.BackColor = System.Drawing.Color.WhiteSmoke;
             this.richTextVirusesHistory.Name = "richTextVirusesHistory";
             this.richTextVirusesHistory.ReadOnly = true;
             // 
             // treeHistoryViruses
             // 
             resources.ApplyResources(this.treeHistoryViruses, "treeHistoryViruses");
+            this.treeHistoryViruses.BackColor = System.Drawing.Color.White;
             this.treeHistoryViruses.Name = "treeHistoryViruses";
             this.treeHistoryViruses.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeHistoryViruses_NodeMouseClick);
             // 
             // tabLogs
             // 
             resources.ApplyResources(this.tabLogs, "tabLogs");
+            this.tabLogs.BackColor = System.Drawing.Color.White;
             this.tabLogs.Controls.Add(this.btnClearScansLog);
             this.tabLogs.Controls.Add(this.richTextScansHistory);
             this.tabLogs.Controls.Add(this.treeHistoryScans);
             this.tabLogs.Name = "tabLogs";
-            this.tabLogs.UseVisualStyleBackColor = true;
             // 
             // btnClearScansLog
             // 
             resources.ApplyResources(this.btnClearScansLog, "btnClearScansLog");
             this.btnClearScansLog.BackColor = System.Drawing.Color.White;
-            this.btnClearScansLog.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnClearScansLog.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClearScansLog.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnClearScansLog.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClearScansLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.btnClearScansLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.btnClearScansLog.Name = "btnClearScansLog";
             this.btnClearScansLog.UseVisualStyleBackColor = false;
             this.btnClearScansLog.Click += new System.EventHandler(this.btnClearScansLog_Click);
@@ -722,24 +749,26 @@
             // richTextScansHistory
             // 
             resources.ApplyResources(this.richTextScansHistory, "richTextScansHistory");
+            this.richTextScansHistory.BackColor = System.Drawing.Color.WhiteSmoke;
             this.richTextScansHistory.Name = "richTextScansHistory";
             this.richTextScansHistory.ReadOnly = true;
             // 
             // treeHistoryScans
             // 
             resources.ApplyResources(this.treeHistoryScans, "treeHistoryScans");
+            this.treeHistoryScans.BackColor = System.Drawing.Color.White;
             this.treeHistoryScans.Name = "treeHistoryScans";
             this.treeHistoryScans.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeHistoryScans_AfterSelect);
             // 
             // tabChangelog
             // 
             resources.ApplyResources(this.tabChangelog, "tabChangelog");
+            this.tabChangelog.BackColor = System.Drawing.Color.White;
             this.tabChangelog.Controls.Add(this.labelYoVersionLab);
             this.tabChangelog.Controls.Add(this.labelYoVersion);
             this.tabChangelog.Controls.Add(this.checkLogOnlyImportant);
             this.tabChangelog.Controls.Add(this.textChangelog);
             this.tabChangelog.Name = "tabChangelog";
-            this.tabChangelog.UseVisualStyleBackColor = true;
             // 
             // labelYoVersionLab
             // 
@@ -763,6 +792,7 @@
             // textChangelog
             // 
             resources.ApplyResources(this.textChangelog, "textChangelog");
+            this.textChangelog.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textChangelog.Name = "textChangelog";
             this.textChangelog.ReadOnly = true;
             this.textChangelog.TextChanged += new System.EventHandler(this.textChangelog_TextChanged);
@@ -847,10 +877,16 @@
             // panel2
             // 
             resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnRetryInternet);
             this.panel2.Name = "panel2";
+            // 
+            // contextMenuStrip1
+            // 
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // Main
             // 
@@ -887,6 +923,7 @@
             this.groupLogFolderSettings.ResumeLayout(false);
             this.groupLogFolderSettings.PerformLayout();
             this.tabViruses.ResumeLayout(false);
+            this.tabViruses.PerformLayout();
             this.tabLogs.ResumeLayout(false);
             this.tabChangelog.ResumeLayout(false);
             this.tabChangelog.PerformLayout();
@@ -981,5 +1018,9 @@
         private System.Windows.Forms.Button btnQst;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TreeView treeHistorySusp;
+        private System.Windows.Forms.Label labSuspTree;
+        private System.Windows.Forms.Label labVirusesTree;
+        private System.Windows.Forms.Panel panelWhiteTabs;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

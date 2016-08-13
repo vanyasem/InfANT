@@ -209,7 +209,9 @@ namespace InfANT
             else
             {
                 textBrush = new SolidBrush(e.ForeColor);
-                e.DrawBackground();
+                fillbrush = new SolidBrush(Color.White);
+                g.FillRectangle(fillbrush, e.Bounds);
+                //e.DrawBackground();
             }
 
             // Use our own font.
@@ -246,7 +248,9 @@ namespace InfANT
             else
             {
                 textBrush = new SolidBrush(e.ForeColor);
-                e.DrawBackground();
+                fillbrush = new SolidBrush(Color.White);
+                g.FillRectangle(fillbrush, e.Bounds);
+                //e.DrawBackground();
             }
 
             // Use our own font.
@@ -1454,6 +1458,12 @@ namespace InfANT
         {
             MessageBox.Show(LanguageResources.protect);
         }
+
+        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
         //---------------------------------------------
         //END WELCOME MENU
     }
