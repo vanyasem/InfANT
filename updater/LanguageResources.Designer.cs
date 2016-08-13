@@ -146,15 +146,6 @@ namespace launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There was an error uninstalling this software! .
-        /// </summary>
-        internal static string error_uninstalling {
-            get {
-                return ResourceManager.GetString("error_uninstalling", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Fatal Error!.
         /// </summary>
         internal static string fatal_error {

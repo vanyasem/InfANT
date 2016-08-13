@@ -200,9 +200,6 @@ Reboot your PC and relaucnh InfANT with Administrator privileges.</value>
   <data name="no_internet_cant_update_install" xml:space="preserve">
     <value>Looks like you have no internet connection (or our server is down), can't install/update the app!</value>
   </data>
-  <data name="error_uninstalling" xml:space="preserve">
-    <value>There was an error uninstalling this software! </value>
-  </data>
   <data name="this_will_reset_settings_delete_logs_renew_files" xml:space="preserve">
     <value>This action will RESET all of your settings and will CLEAN your logs. Also, it will renew some files.</value>
   </data>

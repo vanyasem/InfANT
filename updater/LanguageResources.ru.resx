@@ -146,9 +146,6 @@
   <data name="error" xml:space="preserve">
     <value>Ошибка!</value>
   </data>
-  <data name="error_uninstalling" xml:space="preserve">
-    <value>Возникла ошибка при удалении InfANT!</value>
-  </data>
   <data name="fatal_error" xml:space="preserve">
     <value>Критическая Ошибка!</value>
   </data>
@@ -202,5 +199,8 @@
   </data>
   <data name="yes_exc" xml:space="preserve">
     <value>да!</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
   </data>
 </root>
