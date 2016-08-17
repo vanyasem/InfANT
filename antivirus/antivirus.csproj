@@ -60,9 +60,6 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="prgbar">
-      <HintPath>..\..\tests\prgbar\prgbar\bin\Debug\prgbar.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -168,6 +165,12 @@
     <Content Include="lastversion.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\progressBar\prgbar\prgBar.csproj">
+      <Project>{d382f98a-55d6-4a02-8553-76a06e792300}</Project>
+      <Name>prgBar</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
