@@ -1,0 +1,3 @@
+It's a seperate component that can be used somewhere else.
+You are free to use it if you want to.
+Just to point: it blinks a little when you change it's value.

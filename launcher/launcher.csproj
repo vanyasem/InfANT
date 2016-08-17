@@ -35,9 +35,6 @@
     <ApplicationIcon>Resources\icoExplr.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="prgbar">
-      <HintPath>..\antivirus\bin\Debug\prgbar.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
@@ -111,9 +108,9 @@
       <Project>{28deb622-909b-4abc-807b-6a14653f5c04}</Project>
       <Name>antivirus</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DATABASE\databaseworker\databaseworker\databaseworker.csproj">
+    <ProjectReference Include="..\databaseWorker\databaseWorker.csproj">
       <Project>{19ae6140-48db-4770-9b67-b93f7cfb278b}</Project>
-      <Name>databaseworker</Name>
+      <Name>databaseWorker</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
