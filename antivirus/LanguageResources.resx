@@ -349,4 +349,7 @@ Without them antivirus is completely useless!</value>
   <data name="LOGS_folder_scan_finished" xml:space="preserve">
     <value>Advanced folder scan was finished</value>
   </data>
+  <data name="canceling" xml:space="preserve">
+    <value>Canceling...</value>
+  </data>
 </root>

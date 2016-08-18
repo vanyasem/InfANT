@@ -57,8 +57,12 @@ namespace InfANT
             EnableTimer();
             UpdateDatabase();
             LoadLocalDatabase();
-            ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 100; }));
+            ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 90; }));
             LoadChangelog();
+            FastScan.Initialize();
+            FastScan.CurrentCultureInfo = CultureInfo.CurrentCulture;
+            FastScan.CurrentCultureInfo = CultureInfo.CurrentUICulture;
+            ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 100; }));
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
             Invoke(new MethodInvoker(delegate { CreateIconMenuStructure(); _mainForm.Ver = fvi.FileVersion; _mainForm.labelYoVersionLab.Text = _mainForm.Ver + @" " + Main.Build;

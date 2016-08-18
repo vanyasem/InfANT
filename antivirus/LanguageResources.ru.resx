@@ -345,4 +345,7 @@ InfANT был выпущен в начале 2016го</value>
   <data name="the_scan_finished" xml:space="preserve">
     <value>Сканирование завершено!</value>
   </data>
+  <data name="canceling" xml:space="preserve">
+    <value>Остановка...</value>
+  </data>
 </root>

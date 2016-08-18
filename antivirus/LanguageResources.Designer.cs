@@ -88,6 +88,15 @@ namespace InfANT {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Canceling....
+        /// </summary>
+        internal static string canceling {
+            get {
+                return ResourceManager.GetString("canceling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Can&apos;t connect to the Internet!.
         /// </summary>
         internal static string cant_connect_to_internet {
