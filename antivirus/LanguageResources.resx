@@ -352,4 +352,10 @@ Without them antivirus is completely useless!</value>
   <data name="canceling" xml:space="preserve">
     <value>Canceling...</value>
   </data>
+  <data name="minimized" xml:space="preserve">
+    <value>Minimized.</value>
+  </data>
+  <data name="was_minimized" xml:space="preserve">
+    <value>InfANT was minimized to tray.</value>
+  </data>
 </root>

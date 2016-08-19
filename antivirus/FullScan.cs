@@ -36,7 +36,10 @@ namespace InfANT
 
         protected override void ScanWork()
         {
+            if (_scanningWorker.CancellationPending) return;
             TreeScan(MainRef.FullDrivePath);
+            if (_scanningWorker.CancellationPending) return;
+            MainRef.Loadings.NotifyIcon1.ShowBalloonTip(500, LanguageResources.the_scan_finished, $"{LanguageResources.LOGS_scan_was_finished_scanned} {ScannedFull} {LanguageResources.LOGS_of} {_overallFull} {LanguageResources.LOGS_files}.", ToolTipIcon.Info);
         }
 
         protected override void CountWork()

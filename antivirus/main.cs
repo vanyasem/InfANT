@@ -451,12 +451,12 @@ namespace InfANT
             if (btnFullScan.Text == LanguageResources.IFBTN_SCAN)
             {
                 textFullLog.Clear(); //clears the log
+                FullDrivePath = comboDriveSelect.Text;
 
                 Loadings.fullScan.Reset();
                 Loadings.fullScan.Start();
 
                 btnFullScan.Text = LanguageResources.cancel;
-                FullDrivePath = comboDriveSelect.Text;
                 Loadings.CreateLogEntry(4, $"(S{LanguageResources.LOGS_drive_scan_performed})|{FullDrivePath}|"); 
 
                 LogIt(0, LanguageResources.LOGS_drive_scan_started, 1);
@@ -1066,6 +1066,7 @@ namespace InfANT
 
         private void Panel_Close_Click(object sender, EventArgs e)
         {
+            Loadings.NotifyIcon1.ShowBalloonTip(500, LanguageResources.minimized, LanguageResources.was_minimized, ToolTipIcon.Info);
             Hide(); //we want the program to work in a background, so just hide it instead of closing
         }
 

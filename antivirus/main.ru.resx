@@ -134,12 +134,6 @@
     <value>Выберите папку/диск
    ---&gt;</value>
   </data>
-  <data name="tabHello.Text" xml:space="preserve">
-    <value>Здравствуйте!</value>
-  </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>Быстрый старт:</value>
-  </data>
   <data name="btnQuickLast.Text" xml:space="preserve">
     <value>Результаты последнего сканирования</value>
   </data>
@@ -153,14 +147,14 @@
   <data name="btnQuickFast.Text" xml:space="preserve">
     <value>Быстрое Сканирование</value>
   </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Быстрый старт:</value>
+  </data>
   <data name="labelSafeUnsafeWelcome.Text" xml:space="preserve">
     <value>Компьютер в безопасности</value>
   </data>
-  <data name="tabScan.Text" xml:space="preserve">
-    <value>Сканировать</value>
-  </data>
-  <data name="tabSimple.Text" xml:space="preserve">
-    <value>Быстрое сканирование</value>
+  <data name="tabHello.Text" xml:space="preserve">
+    <value>Здравствуйте!</value>
   </data>
   <data name="labScannedFastNum.Location" type="System.Drawing.Point, System.Drawing">
     <value>318, 90</value>
@@ -180,15 +174,6 @@
   <data name="labelFastScan.Text" xml:space="preserve">
     <value>Этот режим полезен при ограниченном времени.
 Он просканирует только главные директории на компьютере.</value>
-  </data>
-  <data name="groupLogFastSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>395, 2</value>
-  </data>
-  <data name="groupLogFastSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 105</value>
-  </data>
-  <data name="groupLogFastSettings.Text" xml:space="preserve">
-    <value>Настройки лога</value>
   </data>
   <data name="checkShowWarningsFast.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 82</value>
@@ -226,6 +211,15 @@
   <data name="checkShowOKFast.Text" xml:space="preserve">
     <value>Показывать безопасные</value>
   </data>
+  <data name="groupLogFastSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 2</value>
+  </data>
+  <data name="groupLogFastSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 105</value>
+  </data>
+  <data name="groupLogFastSettings.Text" xml:space="preserve">
+    <value>Настройки лога</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnFastScan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -233,8 +227,8 @@
   <data name="btnFastScan.Text" xml:space="preserve">
     <value>Начать сканирование</value>
   </data>
-  <data name="tabDrivescan.Text" xml:space="preserve">
-    <value>Полное сканирование</value>
+  <data name="tabSimple.Text" xml:space="preserve">
+    <value>Быстрое сканирование</value>
   </data>
   <data name="labSelectTheDrive.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 13</value>
@@ -257,15 +251,6 @@
   <data name="labelFullScan.Text" xml:space="preserve">
     <value>Этот режим проверяет все файлы на одном томе и занимает большое количество времени.
 </value>
-  </data>
-  <data name="groupLogFullSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>395, 2</value>
-  </data>
-  <data name="groupLogFullSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 105</value>
-  </data>
-  <data name="groupLogFullSettings.Text" xml:space="preserve">
-    <value>Настройки лога</value>
   </data>
   <data name="checkShowWarningsFull.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 82</value>
@@ -303,14 +288,20 @@
   <data name="checkShowOKFull.Text" xml:space="preserve">
     <value>Показывать безопасные</value>
   </data>
+  <data name="groupLogFullSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 2</value>
+  </data>
+  <data name="groupLogFullSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 105</value>
+  </data>
+  <data name="groupLogFullSettings.Text" xml:space="preserve">
+    <value>Настройки лога</value>
+  </data>
   <data name="btnFullScan.Text" xml:space="preserve">
     <value>Начать сканирование</value>
   </data>
-  <data name="tabAdvanced.Text" xml:space="preserve">
-    <value>Расширенное сканирование</value>
-  </data>
-  <data name="groupFile.Text" xml:space="preserve">
-    <value>Сканировать файл</value>
+  <data name="tabDrivescan.Text" xml:space="preserve">
+    <value>Полное сканирование</value>
   </data>
   <data name="progressScanFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>291, 20</value>
@@ -357,20 +348,11 @@
   <data name="btnSelectFile.Text" xml:space="preserve">
     <value>Выбрать</value>
   </data>
-  <data name="groupFolder.Text" xml:space="preserve">
-    <value>Сканировать папку/диск</value>
+  <data name="groupFile.Text" xml:space="preserve">
+    <value>Сканировать файл</value>
   </data>
   <data name="progressScanFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>263, 20</value>
-  </data>
-  <data name="groupLogFolderSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 8</value>
-  </data>
-  <data name="groupLogFolderSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 104</value>
-  </data>
-  <data name="groupLogFolderSettings.Text" xml:space="preserve">
-    <value>Настройки лога</value>
   </data>
   <data name="checkShowWarnings.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 79</value>
@@ -409,6 +391,15 @@
   <data name="checkShowOK.Text" xml:space="preserve">
     <value>Показывать безопасные</value>
   </data>
+  <data name="groupLogFolderSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 8</value>
+  </data>
+  <data name="groupLogFolderSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 104</value>
+  </data>
+  <data name="groupLogFolderSettings.Text" xml:space="preserve">
+    <value>Настройки лога</value>
+  </data>
   <data name="labScannedNum.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 69</value>
   </data>
@@ -427,8 +418,11 @@
   <data name="btnSelectFolder.Text" xml:space="preserve">
     <value>Выбрать</value>
   </data>
-  <data name="tabViruses.Text" xml:space="preserve">
-    <value>Найденные угрозы</value>
+  <data name="groupFolder.Text" xml:space="preserve">
+    <value>Сканировать папку/диск</value>
+  </data>
+  <data name="tabAdvanced.Text" xml:space="preserve">
+    <value>Расширенное сканирование</value>
   </data>
   <data name="btnClearVirusesLog.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 23</value>
@@ -469,8 +463,8 @@
   <data name="treeHistoryViruses.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 208</value>
   </data>
-  <data name="tabLogs.Text" xml:space="preserve">
-    <value>История сканирований</value>
+  <data name="tabViruses.Text" xml:space="preserve">
+    <value>Найденные угрозы</value>
   </data>
   <data name="btnClearScansLog.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 23</value>
@@ -491,8 +485,11 @@
   <data name="treeHistoryScans.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 455</value>
   </data>
-  <data name="tabChangelog.Text" xml:space="preserve">
-    <value>История обновлений</value>
+  <data name="tabLogs.Text" xml:space="preserve">
+    <value>История сканирований</value>
+  </data>
+  <data name="tabScan.Text" xml:space="preserve">
+    <value>Сканировать</value>
   </data>
   <data name="labelYoVersionLab.Location" type="System.Drawing.Point, System.Drawing">
     <value>645, 8</value>
@@ -505,9 +502,6 @@
   </data>
   <data name="labelYoVersionLab.Text" xml:space="preserve">
     <value>неизвестна</value>
-  </data>
-  <data name="labelYoVersion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>573, 8</value>
   </data>
   <data name="labelYoVersion.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
@@ -523,6 +517,9 @@
   </data>
   <data name="checkLogOnlyImportant.Text" xml:space="preserve">
     <value>Показывать только весомые изменения</value>
+  </data>
+  <data name="tabChangelog.Text" xml:space="preserve">
+    <value>История обновлений</value>
   </data>
   <data name="btnRetryInternet.Text" xml:space="preserve">
     <value>Повторить</value>

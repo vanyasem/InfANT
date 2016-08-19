@@ -348,4 +348,10 @@ InfANT был выпущен в начале 2016го</value>
   <data name="canceling" xml:space="preserve">
     <value>Остановка...</value>
   </data>
+  <data name="minimized" xml:space="preserve">
+    <value>Свёрнут.</value>
+  </data>
+  <data name="was_minimized" xml:space="preserve">
+    <value>InfANT был свёрнут в трей.</value>
+  </data>
 </root>

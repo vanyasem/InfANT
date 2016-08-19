@@ -36,10 +36,16 @@ namespace InfANT
 
         protected override void ScanWork()
         {
+            if (_scanningWorker.CancellationPending) return;
             TreeScan(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory));
+            if (_scanningWorker.CancellationPending) return;
             TreeScan(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+            if (_scanningWorker.CancellationPending) return;
             TreeScan(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            if (_scanningWorker.CancellationPending) return;
             TreeScan(Environment.GetFolderPath(Environment.SpecialFolder.InternetCache));
+            if (_scanningWorker.CancellationPending) return;
+            MainRef.Loadings.NotifyIcon1.ShowBalloonTip(500, LanguageResources.the_scan_finished, $"{LanguageResources.LOGS_scan_was_finished_scanned} {ScannedFast} {LanguageResources.LOGS_of} {_overallFast} {LanguageResources.LOGS_files}.", ToolTipIcon.Info);
         }
 
         protected override void CountWork()
@@ -47,7 +53,9 @@ namespace InfANT
             CountFiles(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory));
             CountFiles(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             CountFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
-            CountFiles(Environment.GetFolderPath(Environment.SpecialFolder.InternetCache)); //TODO you are supposed to scan autorun.
+            //CountFiles(Environment.GetFolderPath(Environment.SpecialFolder.Startup));
+            //TODO you are supposed to scan autorun.
+            CountFiles(Environment.GetFolderPath(Environment.SpecialFolder.InternetCache)); 
         }
 
         protected override void HandleErrorDetection(Exception e)

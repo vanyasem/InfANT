@@ -518,6 +518,15 @@ namespace InfANT {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Minimized..
+        /// </summary>
+        internal static string minimized {
+            get {
+                return ResourceManager.GetString("minimized", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No databases found!.
         /// </summary>
         internal static string no_Databases_found {
@@ -709,6 +718,15 @@ namespace InfANT {
         internal static string version {
             get {
                 return ResourceManager.GetString("version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to InfANT was minimized to tray..
+        /// </summary>
+        internal static string was_minimized {
+            get {
+                return ResourceManager.GetString("was_minimized", resourceCulture);
             }
         }
         

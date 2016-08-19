@@ -13,7 +13,7 @@ namespace InfANT
         public static CultureInfo CurrentCultureInfo;
 
         private readonly BackgroundWorker _filesCountingWorker = new BackgroundWorker();
-        private readonly BackgroundWorker _scanningWorker = new BackgroundWorker();
+        protected readonly BackgroundWorker _scanningWorker = new BackgroundWorker();
 
         ///<summary>Starts both scanning and counting workers.
         ///CountWork and ScanWork should be overridden with actual actions.
@@ -85,10 +85,8 @@ namespace InfANT
             {
                 foreach (string dir in Directory.GetDirectories(dir2)) //gets all folders from the folder and does the same for all of them
                 {
-                    if (!_filesCountingWorker.CancellationPending)
-                    {
-                        CountFiles(dir);
-                    }
+                    if (_scanningWorker.CancellationPending) return;
+                    CountFiles(dir);
                 }
             }
             catch

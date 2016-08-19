@@ -390,21 +390,6 @@
   <data name="&gt;&gt;tabSimple.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="labSelectTheDrive.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labSelectTheDrive.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 11</value>
-  </data>
-  <data name="labSelectTheDrive.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 13</value>
-  </data>
-  <data name="labSelectTheDrive.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="labSelectTheDrive.Text" xml:space="preserve">
-    <value>&lt;--- Select a drive first</value>
-  </data>
   <data name="&gt;&gt;labSelectTheDrive.Name" xml:space="preserve">
     <value>labSelectTheDrive</value>
   </data>
@@ -415,18 +400,6 @@
     <value>tabDrivescan</value>
   </data>
   <data name="&gt;&gt;labSelectTheDrive.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="comboDriveSelect.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="comboDriveSelect.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 6</value>
-  </data>
-  <data name="comboDriveSelect.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 21</value>
-  </data>
-  <data name="comboDriveSelect.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;comboDriveSelect.Name" xml:space="preserve">
@@ -441,15 +414,6 @@
   <data name="&gt;&gt;comboDriveSelect.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="progressFull.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 84</value>
-  </data>
-  <data name="progressFull.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 23</value>
-  </data>
-  <data name="progressFull.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="&gt;&gt;progressFull.Name" xml:space="preserve">
     <value>progressFull</value>
   </data>
@@ -461,21 +425,6 @@
   </data>
   <data name="&gt;&gt;progressFull.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="labScannedFullNum.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labScannedFullNum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 89</value>
-  </data>
-  <data name="labScannedFullNum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
-  </data>
-  <data name="labScannedFullNum.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="labScannedFullNum.Text" xml:space="preserve">
-    <value>0/0</value>
   </data>
   <data name="&gt;&gt;labScannedFullNum.Name" xml:space="preserve">
     <value>labScannedFullNum</value>
@@ -489,21 +438,6 @@
   <data name="&gt;&gt;labScannedFullNum.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="labScannedFull.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labScannedFull.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 89</value>
-  </data>
-  <data name="labScannedFull.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
-  </data>
-  <data name="labScannedFull.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="labScannedFull.Text" xml:space="preserve">
-    <value>Files Scanned:</value>
-  </data>
   <data name="&gt;&gt;labScannedFull.Name" xml:space="preserve">
     <value>labScannedFull</value>
   </data>
@@ -515,19 +449,6 @@
   </data>
   <data name="&gt;&gt;labScannedFull.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="labelFullScan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 31</value>
-  </data>
-  <data name="labelFullScan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 39</value>
-  </data>
-  <data name="labelFullScan.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="labelFullScan.Text" xml:space="preserve">
-    <value>This scan scans everything on a specific drive and usally takes a lot of time.
-</value>
   </data>
   <data name="&gt;&gt;labelFullScan.Name" xml:space="preserve">
     <value>labelFullScan</value>
@@ -541,66 +462,6 @@
   <data name="&gt;&gt;labelFullScan.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;checkShowWarningsFull.Name" xml:space="preserve">
-    <value>checkShowWarningsFull</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarningsFull.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarningsFull.Parent" xml:space="preserve">
-    <value>groupLogFullSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarningsFull.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;checkShowVirusesFull.Name" xml:space="preserve">
-    <value>checkShowVirusesFull</value>
-  </data>
-  <data name="&gt;&gt;checkShowVirusesFull.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowVirusesFull.Parent" xml:space="preserve">
-    <value>groupLogFullSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowVirusesFull.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspiciousFull.Name" xml:space="preserve">
-    <value>checkShowSuspiciousFull</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspiciousFull.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspiciousFull.Parent" xml:space="preserve">
-    <value>groupLogFullSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspiciousFull.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;checkShowOKFull.Name" xml:space="preserve">
-    <value>checkShowOKFull</value>
-  </data>
-  <data name="&gt;&gt;checkShowOKFull.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowOKFull.Parent" xml:space="preserve">
-    <value>groupLogFullSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowOKFull.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupLogFullSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 2</value>
-  </data>
-  <data name="groupLogFullSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 105</value>
-  </data>
-  <data name="groupLogFullSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupLogFullSettings.Text" xml:space="preserve">
-    <value>Log Settings</value>
-  </data>
   <data name="&gt;&gt;groupLogFullSettings.Name" xml:space="preserve">
     <value>groupLogFullSettings</value>
   </data>
@@ -613,18 +474,6 @@
   <data name="&gt;&gt;groupLogFullSettings.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="textFullLog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 112</value>
-  </data>
-  <data name="textFullLog.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textFullLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>560, 370</value>
-  </data>
-  <data name="textFullLog.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
   <data name="&gt;&gt;textFullLog.Name" xml:space="preserve">
     <value>textFullLog</value>
   </data>
@@ -636,24 +485,6 @@
   </data>
   <data name="&gt;&gt;textFullLog.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="btnFullScan.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="btnFullScan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnFullScan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 27</value>
-  </data>
-  <data name="btnFullScan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 58</value>
-  </data>
-  <data name="btnFullScan.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnFullScan.Text" xml:space="preserve">
-    <value>Scan</value>
   </data>
   <data name="&gt;&gt;btnFullScan.Name" xml:space="preserve">
     <value>btnFullScan</value>
@@ -691,6 +522,90 @@
   <data name="&gt;&gt;tabDrivescan.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;progressScanFile.Name" xml:space="preserve">
+    <value>progressScanFile</value>
+  </data>
+  <data name="&gt;&gt;progressScanFile.Type" xml:space="preserve">
+    <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;progressScanFile.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;progressScanFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labThisFileStatus.Name" xml:space="preserve">
+    <value>labThisFileStatus</value>
+  </data>
+  <data name="&gt;&gt;labThisFileStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labThisFileStatus.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;labThisFileStatus.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labThisFileIs.Name" xml:space="preserve">
+    <value>labThisFileIs</value>
+  </data>
+  <data name="&gt;&gt;labThisFileIs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labThisFileIs.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;labThisFileIs.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textFilePath.Name" xml:space="preserve">
+    <value>textFilePath</value>
+  </data>
+  <data name="&gt;&gt;textFilePath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textFilePath.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;textFilePath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnScanFile.Name" xml:space="preserve">
+    <value>btnScanFile</value>
+  </data>
+  <data name="&gt;&gt;btnScanFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnScanFile.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;btnScanFile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Name" xml:space="preserve">
+    <value>btnSelectFile</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.Parent" xml:space="preserve">
+    <value>groupFile</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFile.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 408</value>
+  </data>
+  <data name="groupFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>557, 73</value>
+  </data>
+  <data name="groupFile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupFile.Text" xml:space="preserve">
+    <value>Scan a File</value>
+  </data>
   <data name="&gt;&gt;groupFile.Name" xml:space="preserve">
     <value>groupFile</value>
   </data>
@@ -702,6 +617,255 @@
   </data>
   <data name="&gt;&gt;groupFile.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="progressScanFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 44</value>
+  </data>
+  <data name="progressScanFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 20</value>
+  </data>
+  <data name="progressScanFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;progressScanFolder.Name" xml:space="preserve">
+    <value>progressScanFolder</value>
+  </data>
+  <data name="&gt;&gt;progressScanFolder.Type" xml:space="preserve">
+    <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;progressScanFolder.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;progressScanFolder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkShowWarnings.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowWarnings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 82</value>
+  </data>
+  <data name="checkShowWarnings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="checkShowWarnings.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="checkShowWarnings.Text" xml:space="preserve">
+    <value>Show Warnings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarnings.Name" xml:space="preserve">
+    <value>checkShowWarnings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarnings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarnings.Parent" xml:space="preserve">
+    <value>groupLogFolderSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarnings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkShowViruses.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowViruses.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="checkShowViruses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 16</value>
+  </data>
+  <data name="checkShowViruses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 17</value>
+  </data>
+  <data name="checkShowViruses.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkShowViruses.Text" xml:space="preserve">
+    <value>Show Viruses</value>
+  </data>
+  <data name="&gt;&gt;checkShowViruses.Name" xml:space="preserve">
+    <value>checkShowViruses</value>
+  </data>
+  <data name="&gt;&gt;checkShowViruses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowViruses.Parent" xml:space="preserve">
+    <value>groupLogFolderSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowViruses.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkShowSuspicious.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowSuspicious.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 38</value>
+  </data>
+  <data name="checkShowSuspicious.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 17</value>
+  </data>
+  <data name="checkShowSuspicious.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="checkShowSuspicious.Text" xml:space="preserve">
+    <value>Show Suspicious Files</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspicious.Name" xml:space="preserve">
+    <value>checkShowSuspicious</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspicious.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspicious.Parent" xml:space="preserve">
+    <value>groupLogFolderSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspicious.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkShowOK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkShowOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 60</value>
+  </data>
+  <data name="checkShowOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 17</value>
+  </data>
+  <data name="checkShowOK.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="checkShowOK.Text" xml:space="preserve">
+    <value>Show OK Files</value>
+  </data>
+  <data name="&gt;&gt;checkShowOK.Name" xml:space="preserve">
+    <value>checkShowOK</value>
+  </data>
+  <data name="&gt;&gt;checkShowOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowOK.Parent" xml:space="preserve">
+    <value>groupLogFolderSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowOK.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupLogFolderSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>408, 8</value>
+  </data>
+  <data name="groupLogFolderSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 104</value>
+  </data>
+  <data name="groupLogFolderSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupLogFolderSettings.Text" xml:space="preserve">
+    <value>Log Settings</value>
+  </data>
+  <data name="&gt;&gt;groupLogFolderSettings.Name" xml:space="preserve">
+    <value>groupLogFolderSettings</value>
+  </data>
+  <data name="&gt;&gt;groupLogFolderSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupLogFolderSettings.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;groupLogFolderSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labScannedNum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labScannedNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 68</value>
+  </data>
+  <data name="labScannedNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 13</value>
+  </data>
+  <data name="labScannedNum.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labScannedNum.Text" xml:space="preserve">
+    <value>0/0</value>
+  </data>
+  <data name="&gt;&gt;labScannedNum.Name" xml:space="preserve">
+    <value>labScannedNum</value>
+  </data>
+  <data name="&gt;&gt;labScannedNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labScannedNum.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;labScannedNum.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labScanned.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labScanned.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 68</value>
+  </data>
+  <data name="labScanned.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="labScanned.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labScanned.Text" xml:space="preserve">
+    <value>Files Scanned:</value>
+  </data>
+  <data name="&gt;&gt;labScanned.Name" xml:space="preserve">
+    <value>labScanned</value>
+  </data>
+  <data name="&gt;&gt;labScanned.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labScanned.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;labScanned.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnSelectFolder.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSelectFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 18</value>
+  </data>
+  <data name="btnSelectFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 22</value>
+  </data>
+  <data name="btnSelectFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnSelectFolder.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFolder.Name" xml:space="preserve">
+    <value>btnSelectFolder</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFolder.Parent" xml:space="preserve">
+    <value>groupFolder</value>
+  </data>
+  <data name="&gt;&gt;btnSelectFolder.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="groupFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="groupFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>557, 396</value>
+  </data>
+  <data name="groupFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupFolder.Text" xml:space="preserve">
+    <value>Scan a Folder/Drive</value>
   </data>
   <data name="&gt;&gt;groupFolder.Name" xml:space="preserve">
     <value>groupFolder</value>
@@ -1623,6 +1787,229 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;btnFastScan.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="labSelectTheDrive.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labSelectTheDrive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 11</value>
+  </data>
+  <data name="labSelectTheDrive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 13</value>
+  </data>
+  <data name="labSelectTheDrive.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labSelectTheDrive.Text" xml:space="preserve">
+    <value>&lt;--- Select a drive first</value>
+  </data>
+  <data name="&gt;&gt;labSelectTheDrive.Name" xml:space="preserve">
+    <value>labSelectTheDrive</value>
+  </data>
+  <data name="&gt;&gt;labSelectTheDrive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labSelectTheDrive.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;labSelectTheDrive.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="comboDriveSelect.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="comboDriveSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 6</value>
+  </data>
+  <data name="comboDriveSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 21</value>
+  </data>
+  <data name="comboDriveSelect.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;comboDriveSelect.Name" xml:space="preserve">
+    <value>comboDriveSelect</value>
+  </data>
+  <data name="&gt;&gt;comboDriveSelect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboDriveSelect.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;comboDriveSelect.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="progressFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 84</value>
+  </data>
+  <data name="progressFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 23</value>
+  </data>
+  <data name="progressFull.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;progressFull.Name" xml:space="preserve">
+    <value>progressFull</value>
+  </data>
+  <data name="&gt;&gt;progressFull.Type" xml:space="preserve">
+    <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;progressFull.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;progressFull.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labScannedFullNum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labScannedFullNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 89</value>
+  </data>
+  <data name="labScannedFullNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 13</value>
+  </data>
+  <data name="labScannedFullNum.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labScannedFullNum.Text" xml:space="preserve">
+    <value>0/0</value>
+  </data>
+  <data name="&gt;&gt;labScannedFullNum.Name" xml:space="preserve">
+    <value>labScannedFullNum</value>
+  </data>
+  <data name="&gt;&gt;labScannedFullNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labScannedFullNum.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;labScannedFullNum.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labScannedFull.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labScannedFull.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 89</value>
+  </data>
+  <data name="labScannedFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="labScannedFull.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labScannedFull.Text" xml:space="preserve">
+    <value>Files Scanned:</value>
+  </data>
+  <data name="&gt;&gt;labScannedFull.Name" xml:space="preserve">
+    <value>labScannedFull</value>
+  </data>
+  <data name="&gt;&gt;labScannedFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labScannedFull.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;labScannedFull.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelFullScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 31</value>
+  </data>
+  <data name="labelFullScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 39</value>
+  </data>
+  <data name="labelFullScan.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelFullScan.Text" xml:space="preserve">
+    <value>This scan scans everything on a specific drive and usally takes a lot of time.
+</value>
+  </data>
+  <data name="&gt;&gt;labelFullScan.Name" xml:space="preserve">
+    <value>labelFullScan</value>
+  </data>
+  <data name="&gt;&gt;labelFullScan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFullScan.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;labelFullScan.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFull.Name" xml:space="preserve">
+    <value>checkShowWarningsFull</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFull.Parent" xml:space="preserve">
+    <value>groupLogFullSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowWarningsFull.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFull.Name" xml:space="preserve">
+    <value>checkShowVirusesFull</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFull.Parent" xml:space="preserve">
+    <value>groupLogFullSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowVirusesFull.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFull.Name" xml:space="preserve">
+    <value>checkShowSuspiciousFull</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFull.Parent" xml:space="preserve">
+    <value>groupLogFullSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowSuspiciousFull.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFull.Name" xml:space="preserve">
+    <value>checkShowOKFull</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFull.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFull.Parent" xml:space="preserve">
+    <value>groupLogFullSettings</value>
+  </data>
+  <data name="&gt;&gt;checkShowOKFull.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupLogFullSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 2</value>
+  </data>
+  <data name="groupLogFullSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 105</value>
+  </data>
+  <data name="groupLogFullSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupLogFullSettings.Text" xml:space="preserve">
+    <value>Log Settings</value>
+  </data>
+  <data name="&gt;&gt;groupLogFullSettings.Name" xml:space="preserve">
+    <value>groupLogFullSettings</value>
+  </data>
+  <data name="&gt;&gt;groupLogFullSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupLogFullSettings.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
+  </data>
+  <data name="&gt;&gt;groupLogFullSettings.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="checkShowWarningsFull.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1734,101 +2121,59 @@ It will scan main folders on your PC for viruses.</value>
   <data name="&gt;&gt;checkShowOKFull.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;progressScanFile.Name" xml:space="preserve">
-    <value>progressScanFile</value>
+  <data name="textFullLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 112</value>
   </data>
-  <data name="&gt;&gt;progressScanFile.Type" xml:space="preserve">
-    <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="textFullLog.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;progressScanFile.Parent" xml:space="preserve">
-    <value>groupFile</value>
+  <data name="textFullLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 370</value>
   </data>
-  <data name="&gt;&gt;progressScanFile.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="textFullLog.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;labThisFileStatus.Name" xml:space="preserve">
-    <value>labThisFileStatus</value>
+  <data name="&gt;&gt;textFullLog.Name" xml:space="preserve">
+    <value>textFullLog</value>
   </data>
-  <data name="&gt;&gt;labThisFileStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labThisFileStatus.Parent" xml:space="preserve">
-    <value>groupFile</value>
-  </data>
-  <data name="&gt;&gt;labThisFileStatus.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labThisFileIs.Name" xml:space="preserve">
-    <value>labThisFileIs</value>
-  </data>
-  <data name="&gt;&gt;labThisFileIs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labThisFileIs.Parent" xml:space="preserve">
-    <value>groupFile</value>
-  </data>
-  <data name="&gt;&gt;labThisFileIs.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textFilePath.Name" xml:space="preserve">
-    <value>textFilePath</value>
-  </data>
-  <data name="&gt;&gt;textFilePath.Type" xml:space="preserve">
+  <data name="&gt;&gt;textFullLog.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textFilePath.Parent" xml:space="preserve">
-    <value>groupFile</value>
+  <data name="&gt;&gt;textFullLog.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
   </data>
-  <data name="&gt;&gt;textFilePath.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;textFullLog.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;btnScanFile.Name" xml:space="preserve">
-    <value>btnScanFile</value>
+  <data name="btnFullScan.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;btnScanFile.Type" xml:space="preserve">
+  <data name="btnFullScan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnFullScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 27</value>
+  </data>
+  <data name="btnFullScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 58</value>
+  </data>
+  <data name="btnFullScan.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnFullScan.Text" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="&gt;&gt;btnFullScan.Name" xml:space="preserve">
+    <value>btnFullScan</value>
+  </data>
+  <data name="&gt;&gt;btnFullScan.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnScanFile.Parent" xml:space="preserve">
-    <value>groupFile</value>
+  <data name="&gt;&gt;btnFullScan.Parent" xml:space="preserve">
+    <value>tabDrivescan</value>
   </data>
-  <data name="&gt;&gt;btnScanFile.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFile.Name" xml:space="preserve">
-    <value>btnSelectFile</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFile.Parent" xml:space="preserve">
-    <value>groupFile</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFile.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="groupFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 408</value>
-  </data>
-  <data name="groupFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>557, 73</value>
-  </data>
-  <data name="groupFile.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupFile.Text" xml:space="preserve">
-    <value>Scan a File</value>
-  </data>
-  <data name="&gt;&gt;groupFile.Name" xml:space="preserve">
-    <value>groupFile</value>
-  </data>
-  <data name="&gt;&gt;groupFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupFile.Parent" xml:space="preserve">
-    <value>tabAdvanced</value>
-  </data>
-  <data name="&gt;&gt;groupFile.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;btnFullScan.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="progressScanFile.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 42</value>
@@ -1988,375 +2333,6 @@ It will scan main folders on your PC for viruses.</value>
   </data>
   <data name="&gt;&gt;btnSelectFile.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="&gt;&gt;progressScanFolder.Name" xml:space="preserve">
-    <value>progressScanFolder</value>
-  </data>
-  <data name="&gt;&gt;progressScanFolder.Type" xml:space="preserve">
-    <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;progressScanFolder.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;progressScanFolder.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupLogFolderSettings.Name" xml:space="preserve">
-    <value>groupLogFolderSettings</value>
-  </data>
-  <data name="&gt;&gt;groupLogFolderSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupLogFolderSettings.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;groupLogFolderSettings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labScannedNum.Name" xml:space="preserve">
-    <value>labScannedNum</value>
-  </data>
-  <data name="&gt;&gt;labScannedNum.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labScannedNum.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;labScannedNum.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;labScanned.Name" xml:space="preserve">
-    <value>labScanned</value>
-  </data>
-  <data name="&gt;&gt;labScanned.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labScanned.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;labScanned.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFolder.Name" xml:space="preserve">
-    <value>btnSelectFolder</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFolder.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFolder.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="groupFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="groupFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>557, 396</value>
-  </data>
-  <data name="groupFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupFolder.Text" xml:space="preserve">
-    <value>Scan a Folder/Drive</value>
-  </data>
-  <data name="&gt;&gt;groupFolder.Name" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;groupFolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupFolder.Parent" xml:space="preserve">
-    <value>tabAdvanced</value>
-  </data>
-  <data name="&gt;&gt;groupFolder.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="progressScanFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 44</value>
-  </data>
-  <data name="progressScanFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 20</value>
-  </data>
-  <data name="progressScanFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;progressScanFolder.Name" xml:space="preserve">
-    <value>progressScanFolder</value>
-  </data>
-  <data name="&gt;&gt;progressScanFolder.Type" xml:space="preserve">
-    <value>prgbar.BlueProgressBar, prgbar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;progressScanFolder.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;progressScanFolder.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarnings.Name" xml:space="preserve">
-    <value>checkShowWarnings</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarnings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarnings.Parent" xml:space="preserve">
-    <value>groupLogFolderSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarnings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;checkShowViruses.Name" xml:space="preserve">
-    <value>checkShowViruses</value>
-  </data>
-  <data name="&gt;&gt;checkShowViruses.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowViruses.Parent" xml:space="preserve">
-    <value>groupLogFolderSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowViruses.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspicious.Name" xml:space="preserve">
-    <value>checkShowSuspicious</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspicious.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspicious.Parent" xml:space="preserve">
-    <value>groupLogFolderSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspicious.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;checkShowOK.Name" xml:space="preserve">
-    <value>checkShowOK</value>
-  </data>
-  <data name="&gt;&gt;checkShowOK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowOK.Parent" xml:space="preserve">
-    <value>groupLogFolderSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowOK.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupLogFolderSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 8</value>
-  </data>
-  <data name="groupLogFolderSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 104</value>
-  </data>
-  <data name="groupLogFolderSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupLogFolderSettings.Text" xml:space="preserve">
-    <value>Log Settings</value>
-  </data>
-  <data name="&gt;&gt;groupLogFolderSettings.Name" xml:space="preserve">
-    <value>groupLogFolderSettings</value>
-  </data>
-  <data name="&gt;&gt;groupLogFolderSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupLogFolderSettings.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;groupLogFolderSettings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="checkShowWarnings.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkShowWarnings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 82</value>
-  </data>
-  <data name="checkShowWarnings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 17</value>
-  </data>
-  <data name="checkShowWarnings.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="checkShowWarnings.Text" xml:space="preserve">
-    <value>Show Warnings</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarnings.Name" xml:space="preserve">
-    <value>checkShowWarnings</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarnings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarnings.Parent" xml:space="preserve">
-    <value>groupLogFolderSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowWarnings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="checkShowViruses.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkShowViruses.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="checkShowViruses.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 16</value>
-  </data>
-  <data name="checkShowViruses.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 17</value>
-  </data>
-  <data name="checkShowViruses.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="checkShowViruses.Text" xml:space="preserve">
-    <value>Show Viruses</value>
-  </data>
-  <data name="&gt;&gt;checkShowViruses.Name" xml:space="preserve">
-    <value>checkShowViruses</value>
-  </data>
-  <data name="&gt;&gt;checkShowViruses.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowViruses.Parent" xml:space="preserve">
-    <value>groupLogFolderSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowViruses.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="checkShowSuspicious.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkShowSuspicious.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 38</value>
-  </data>
-  <data name="checkShowSuspicious.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 17</value>
-  </data>
-  <data name="checkShowSuspicious.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="checkShowSuspicious.Text" xml:space="preserve">
-    <value>Show Suspicious Files</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspicious.Name" xml:space="preserve">
-    <value>checkShowSuspicious</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspicious.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspicious.Parent" xml:space="preserve">
-    <value>groupLogFolderSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowSuspicious.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="checkShowOK.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkShowOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 60</value>
-  </data>
-  <data name="checkShowOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 17</value>
-  </data>
-  <data name="checkShowOK.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="checkShowOK.Text" xml:space="preserve">
-    <value>Show OK Files</value>
-  </data>
-  <data name="&gt;&gt;checkShowOK.Name" xml:space="preserve">
-    <value>checkShowOK</value>
-  </data>
-  <data name="&gt;&gt;checkShowOK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkShowOK.Parent" xml:space="preserve">
-    <value>groupLogFolderSettings</value>
-  </data>
-  <data name="&gt;&gt;checkShowOK.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="labScannedNum.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labScannedNum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 68</value>
-  </data>
-  <data name="labScannedNum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
-  </data>
-  <data name="labScannedNum.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="labScannedNum.Text" xml:space="preserve">
-    <value>0/0</value>
-  </data>
-  <data name="&gt;&gt;labScannedNum.Name" xml:space="preserve">
-    <value>labScannedNum</value>
-  </data>
-  <data name="&gt;&gt;labScannedNum.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labScannedNum.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;labScannedNum.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="labScanned.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labScanned.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 68</value>
-  </data>
-  <data name="labScanned.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
-  </data>
-  <data name="labScanned.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="labScanned.Text" xml:space="preserve">
-    <value>Files Scanned:</value>
-  </data>
-  <data name="&gt;&gt;labScanned.Name" xml:space="preserve">
-    <value>labScanned</value>
-  </data>
-  <data name="&gt;&gt;labScanned.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labScanned.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;labScanned.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnSelectFolder.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnSelectFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 18</value>
-  </data>
-  <data name="btnSelectFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 22</value>
-  </data>
-  <data name="btnSelectFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnSelectFolder.Text" xml:space="preserve">
-    <value>Select</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFolder.Name" xml:space="preserve">
-    <value>btnSelectFolder</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFolder.Parent" xml:space="preserve">
-    <value>groupFolder</value>
-  </data>
-  <data name="&gt;&gt;btnSelectFolder.ZOrder" xml:space="preserve">
-    <value>7</value>
   </data>
   <data name="btnClearVirusesLog.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2629,7 +2605,7 @@ It will scan main folders on your PC for viruses.</value>
     <value>True</value>
   </data>
   <data name="labelYoVersionLab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>242, 8</value>
+    <value>638, 8</value>
   </data>
   <data name="labelYoVersionLab.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 13</value>
@@ -2656,16 +2632,16 @@ It will scan main folders on your PC for viruses.</value>
     <value>True</value>
   </data>
   <data name="labelYoVersion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 8</value>
+    <value>573, 8</value>
   </data>
   <data name="labelYoVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 13</value>
+    <value>69, 13</value>
   </data>
   <data name="labelYoVersion.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="labelYoVersion.Text" xml:space="preserve">
-    <value>Your version is:</value>
+    <value>Your version:</value>
   </data>
   <data name="&gt;&gt;labelYoVersion.Name" xml:space="preserve">
     <value>labelYoVersion</value>
