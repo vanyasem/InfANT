@@ -11,6 +11,7 @@
     <AssemblyName>_Launcher</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\icoExplr.ico</ApplicationIcon>
@@ -104,9 +107,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\antivirus\antivirus.csproj">
+    <ProjectReference Include="..\antivirus\InfANT.csproj">
       <Project>{28deb622-909b-4abc-807b-6a14653f5c04}</Project>
-      <Name>antivirus</Name>
+      <Name>InfANT</Name>
     </ProjectReference>
     <ProjectReference Include="..\databaseWorker\databaseWorker.csproj">
       <Project>{19ae6140-48db-4770-9b67-b93f7cfb278b}</Project>

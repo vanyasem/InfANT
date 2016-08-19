@@ -52,21 +52,8 @@ namespace InfANT
                               } 
                         }
 
-        private int _scanned; //determines how many files were scanned using advanced folder scan, var
-
-        
-
-        private int ScannedFull {
-                         get { return _scannedFull; } //determines how many files were scanned by the fast scanner, function, triggers on change
-                         set { _scannedFull = value;
-                             labScannedFullNum.Invoke((new MethodInvoker(delegate { labScannedFullNum.Text = value + @"/" + _overallfull; })));
-                             }
-                        }
-
-        private int _scannedFull; //determines how many files were scanned by the fast scanner, var
-
+        private int _scanned; //determines how many files were scanned using advanced folder scan, var      
         private int _overall; //determines how many files were SELECTED (i.e. how many files have to be scanned) using advanced folder scan, var
-        private int _overallfull;
 
         public bool LogOnlyImportant     = true; //used for CHANGELOG, switches important/all modes
         private bool _isInternetConnected = true; //determines whether the PC is connected to the internet or not, this one is a var.
@@ -77,7 +64,7 @@ namespace InfANT
         public List<string> SuspHashes = new List<string>(); //a list of suspicious hashes
 
         public string Ver; //this string indicates the current version of the app
-        public const string Build = "STABLE";
+        public const string Build = "UNSTABLE";
 
         private Thread _foldScanning; //This thread is used for scanning files in a folder
         private Thread _fileCounting; //This thread is used for counting files in a folder
@@ -106,7 +93,7 @@ namespace InfANT
             textChangelog.SelectionStart = textChangelog.TextLength;
             textChangelog.ScrollToCaret();
             _synchronizationContext = SynchronizationContext.Current;
-            FastScan.MainRef = this;
+            Scan.MainRef = this;
 
             if (Loadings.Suspiciouslogs.Count > 0)
                 Infected = null;
@@ -387,11 +374,11 @@ namespace InfANT
         }
 
         // ReSharper disable once InconsistentNaming
-        public string GetSHA1(string filename) //gets SHA1 hash from a file.
+        public string GetSHA1(string filePath) //gets SHA1 hash from a file.
         {
             using (var sha1 = SHA1.Create())
             {
-                using (var stream = File.OpenRead(filename)) //do I need to try/catch here? What if the file is inaccessible?
+                using (var stream = File.OpenRead(filePath)) //do I need to try/catch here? What if the file is inaccessible?
                 {
                     return BitConverter.ToString(sha1.ComputeHash(stream)).Replace("-", string.Empty); //Converts bits to string, removes all the dashes and returns it
                 }
@@ -458,177 +445,33 @@ namespace InfANT
 
 
         //SCAN FULL
-        private int _filesCountFull; //temp filescount, used only in CountFiles. "overall" is used in other places. I don't remember why, but, I guess, there's a reason for this
-        private void CountFilesFull(string dir2)
-        {
-            try
-            {
-                foreach (string file in Directory.GetFiles(dir2)) //gets all files from the folder
-                {
-                    _filesCountFull++; //increase the temp filescount with every file
-                    _overallfull = _filesCountFull; //as we just changed the temp overall files count, we have to set it to the global files count
-                    labScannedFullNum.Invoke(new MethodInvoker(delegate { labScannedFullNum.Text = ScannedFull + @"/" + _overallfull; })); //change the count label
-                    progressFull.Invoke(new MethodInvoker(delegate { progressFull.Maximum = _overallfull; })); //set the maximum progressbar value to max files
-                    progressFull.Invoke(new MethodInvoker(delegate { progressFull.Value = ScannedFull; })); //if the scan is running at the same this will prevent blinking of a prbar
-                    progressFull.Invalidate();
-                }
-            }
-            catch
-            { /*return;*/ } //we want to do nothing here, so nothing here. Do I need to log this? Don't think so
-
-            try
-            {
-                foreach (string dir in Directory.GetDirectories(dir2)) //gets all folders from the folder and does the same for all of them
-                {
-                    CountFilesFull(dir);
-                }
-            }
-            catch
-            { /*return;*/ } //we want to do nothing here, so nothing here. Do I need to log this? Don't think so
-        }
-        private Thread StartTheScanFull(string param1, int whereToLongPass) //Starts the ADVANCED FOLDER scan
-        {
-            var t = new Thread(() => TreeScanFull(param1, whereToLongPass)) //this one is needed to start thread with params
-            {
-                CurrentCulture = _currentCulture,
-                CurrentUICulture = _currentCulture
-            };
-            t.Start();
-            t.IsBackground = true; //we want the thread to close when the app is closed, so this does it
-            return t; //http://stackoverflow.com/questions/1195896/threadstart-with-parameters
-        }
-
-        private void TreeScanFull(string folder, int wheretopass) //wheretopass determines where should LogIt(whichlog,text,whichscan) pass it. 
-        {                                                     //Wheretopass determines which scan is used. See more at the LogIt definition.
-            try
-            {
-                foreach (string file in Directory.GetFiles(folder)) //gets all files' filenames from the folder
-                {
-                    string temphash = GetSHA1(file);
-                    if (Hashes.Contains(temphash)) //checks if this hash exists, should be probably replaced, too slow
-                    {
-                        LogIt(1, file, LanguageResources.infected, wheretopass);
-                        Infected = true;
-                        ScannedFull++; //increases the OVERALL advanced folder scanned count
-                        progressFull.Invoke(new MethodInvoker(delegate { progressFull.PerformStep(); }));
-                    }
-                    else
-                    {
-                        if (SuspHashes.Contains(temphash)) //checks if this hash exists, should be probably replaced, too slow
-                        {
-                            LogIt(2, file, LanguageResources.susp, wheretopass);
-                            if (Infected != true)
-                                Infected = null;
-                            ScannedFull++; //increases the OVERALL advanced folder scanned count
-                            progressFull.Invoke(new MethodInvoker(delegate { progressFull.PerformStep(); }));
-                        }
-                        else
-                        {
-                            LogIt(4, file, LanguageResources.LOGS_is_clear, wheretopass);
-                            ScannedFull++; //increases the OVERALL advanced folder scanned count
-                            progressFull.Invoke(new MethodInvoker(delegate { progressFull.PerformStep(); }));
-                        }
-                    }
-                }
-            }
-            catch (ThreadAbortException) //we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that
-            { return; }
-            catch (Exception e)
-            {
-                LogIt(3, e.Message, wheretopass);
-            }
-
-            try
-            {
-                foreach (string dir in Directory.GetDirectories(folder)) //gets all folders from the folder and does the same for all of them
-                {
-                    TreeScanFull(dir, wheretopass);
-                }
-            }
-            catch (ThreadAbortException) { /* we don't want an "thread terminated" exception to log (coz we do it by ourselves) so we check for that */ }
-            catch (Exception e)
-            {
-                LogIt(3, e.Message, wheretopass);
-            }
-        }
-
-        private Thread StartTheFilesCountFull(string param1)
-        {
-            var thr = new Thread(() => CountFilesFull(param1)) //this one is needed to start thread with params
-            {
-                CurrentCulture = _currentCulture,
-                CurrentUICulture = _currentCulture
-            };
-            thr.Start();
-            thr.IsBackground = true; //we want the thread to close when the app is closed, so this does it
-            return thr; //http://stackoverflow.com/questions/1195896/threadstart-with-parameters
-        }
-
-        private Thread _filesCountingFull;
-        private Thread _fullScanThread;
-        private System.Timers.Timer _timerScanFullChecker;
-        private void timerScanFullChecker_Tick(object sender, EventArgs e) //checks whether the fast scan is finished
-        {
-            if (_fullScanThread.ThreadState == ThreadState.Stopped)
-            {
-                _timerScanFullChecker.Enabled = false;
-                _timerScanFullChecker.Stop();
-                EnableEverything();
-                btnFullScan.Invoke(new MethodInvoker(delegate { btnFullScan.Text = LanguageResources.IFBTN_SCAN; }));
-                _synchronizationContext.Send(s =>{
-                    Loadings.CreateLogEntry(4,
-                        $"(E{LanguageResources.LOGS_drive_scan_finished}!)|{ScannedFull}-{_overallfull}|");
-                    LogIt(0, LanguageResources.the_scan_finished, 1);
-                }, null);
-                IsScanning = false;
-                Loadings.NotifyIcon1.ShowBalloonTip(500, LanguageResources.the_scan_finished, $"{LanguageResources.LOGS_scan_was_finished_scanned} {ScannedFull} {LanguageResources.LOGS_of} {_overallfull} {LanguageResources.LOGS_files}.", ToolTipIcon.Info);
-                Loadings.timerSaveLogs_Tick(sender, e);
-            }
-        }
-        private string _fullDrive;
+        public string FullDrivePath;
         private void btnFullScan_Click(object sender, EventArgs e)
         {
             if (btnFullScan.Text == LanguageResources.IFBTN_SCAN)
             {
-                textFullLog.Clear();
-                btnFullScan.Text = LanguageResources.cancel;
-                _fullDrive = comboDriveSelect.Text;
-                Loadings.CreateLogEntry(4, $"(S{LanguageResources.LOGS_drive_scan_performed})|{_fullDrive}|"); 
-                IsScanning = true;
+                textFullLog.Clear(); //clears the log
 
-                ScannedFull = 0;  //sets the amount of scanned files by the fast scanner to zero
-                _filesCountFull = 0;
-                _overallfull = 0;
-                progressFull.Maximum = _overallfull; //overall amount of files
-                progressFull.Value = 0;
-                textFastLog.Clear(); //clears the log
+                Loadings.fullScan.Reset();
+                Loadings.fullScan.Start();
+
+                btnFullScan.Text = LanguageResources.cancel;
+                FullDrivePath = comboDriveSelect.Text;
+                Loadings.CreateLogEntry(4, $"(S{LanguageResources.LOGS_drive_scan_performed})|{FullDrivePath}|"); 
+
                 LogIt(0, LanguageResources.LOGS_drive_scan_started, 1);
 
                 DisableEverything();
                 btnFullScan.Enabled = true;
-
-                _filesCountingFull = StartTheFilesCountFull(_fullDrive);
-
-                _fullScanThread = StartTheScanFull(_fullDrive, 1);
-
-                _timerScanFullChecker = new System.Timers.Timer(500) {Enabled = true};
-                _timerScanFullChecker.Elapsed += timerScanFullChecker_Tick;
-                _timerScanFullChecker.Start(); //starts the checker   
             }
             else
             {
-                _timerScanFullChecker.Enabled = false;
-                _timerScanFullChecker.Stop();
-                Loadings.CreateLogEntry(4, $"(E{LanguageResources.LOGS_drive_scan_aborted})|{ScannedFull}-{_overallfull}|");
-                LogIt(0, LanguageResources.LOGS_drive_scan_aborted, 1);
-                IsScanning = false;
-                btnFullScan.Text = LanguageResources.IFBTN_SCAN;
-                _fullScanThread.Abort();
-                _filesCountingFull.Abort();
-                Loadings.timerSaveLogs_Tick(sender, e);
-                EnableEverything();
+                btnFullScan.Text = LanguageResources.canceling;
+                btnFullScan.Enabled = false;
+                Loadings.fullScan.Abort();
             }
         }
+
         public void EnableEverything()
         {
             btnFastScan.Invoke(new MethodInvoker(delegate { btnFastScan.Enabled = true; }));
@@ -645,7 +488,6 @@ namespace InfANT
         }
         private void DisableEverything()
         {
-            
             if (btnScanFile.Enabled == false)
                 _wasScanFileEnabled = false;
             else
@@ -709,9 +551,9 @@ namespace InfANT
             if (btnFastScan.Text == LanguageResources.IFBTN_SCAN) 
             {
                 textFastLog.Clear(); //clears the log
-            
-                FastScan.Reset();
-                FastScan.Start();
+
+                Loadings.fastScan.Reset();
+                Loadings.fastScan.Start();
 
                 btnFastScan.Text = LanguageResources.cancel;
                 Loadings.CreateLogEntry(4, $"(S{LanguageResources.LOGS_fast_scan_performed})|Desktop, Appdata, Documents, Internet Cache|");
@@ -725,10 +567,7 @@ namespace InfANT
             {
                 btnFastScan.Text = LanguageResources.canceling;
                 btnFastScan.Enabled = false;
-                FastScan.Abort();  
-                LogIt(0, LanguageResources.LOGS_fast_scan_aborted, 0);
-                Loadings.timerSaveLogs_Tick(sender, e);
-                btnFastScan.Text = LanguageResources.IFBTN_SCAN;
+                Loadings.fastScan.Abort();
             }
         }
         
@@ -738,6 +577,9 @@ namespace InfANT
             textFastLog.ScrollToCaret();
         }
 
+        private bool _logOkFast; //0
+        private bool _logSuspiciousFast = true; //1
+        private bool _logErrorsFast = true; //3
         private void CheckShowLogChecksFast(object sender, EventArgs e) //Checks what it should print in the ADVANCED FOLDER scan log (not the log of the app)
         {
             if (checkShowOKFast.Checked)
@@ -754,11 +596,7 @@ namespace InfANT
                 _logErrorsFast = true;
             else
                 _logErrorsFast = false;
-        }
-
-        private bool _logOkFast; //0
-        private bool _logSuspiciousFast = true; //1
-        private bool _logErrorsFast = true; //3
+        } 
         //END SCAN FAST
   
 

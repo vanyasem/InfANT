@@ -45,6 +45,8 @@ namespace InfANT
             th.Start();
             
         }
+        internal readonly FastScan fastScan = new FastScan();
+        internal readonly FullScan fullScan = new FullScan();
         private void Kostil2()
         {
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 40; }));
@@ -59,9 +61,9 @@ namespace InfANT
             LoadLocalDatabase();
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 90; }));
             LoadChangelog();
-            FastScan.Initialize();
-            FastScan.CurrentCultureInfo = CultureInfo.CurrentCulture;
-            FastScan.CurrentCultureInfo = CultureInfo.CurrentUICulture;
+            fastScan.InitializeWorkers();
+            fullScan.InitializeWorkers();
+            Scan.CurrentCultureInfo = CultureInfo.CurrentCulture;
             ProgressLoading.Invoke(new MethodInvoker(delegate { ProgressLoading.Value = 100; }));
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);

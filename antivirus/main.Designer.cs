@@ -969,7 +969,7 @@
         private System.Windows.Forms.CheckBox checkShowOKFast;
         private System.Windows.Forms.TextBox textFastLog;
         private System.Windows.Forms.Label labScannedFast;
-        private System.Windows.Forms.Label labScannedFullNum;
+        internal System.Windows.Forms.Label labScannedFullNum;
         private System.Windows.Forms.Label labScannedFull;
         private System.Windows.Forms.Label labelFullScan;
         private System.Windows.Forms.GroupBox groupLogFullSettings;
@@ -978,7 +978,6 @@
         private System.Windows.Forms.CheckBox checkShowSuspiciousFull;
         private System.Windows.Forms.CheckBox checkShowOKFull;
         private System.Windows.Forms.TextBox textFullLog;
-        private System.Windows.Forms.Button btnFullScan;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnQuickLast;
         private System.Windows.Forms.Button button4;
@@ -995,7 +994,7 @@
         public System.Windows.Forms.TreeView treeHistoryViruses;
         private prgbar.BlueProgressBar progressScanFolder;
         private prgbar.BlueProgressBar progressScanFile;
-        private prgbar.BlueProgressBar progressFull;
+        internal prgbar.BlueProgressBar progressFull;
         private System.Windows.Forms.Button btnDeleteThisVirus;
         private System.Windows.Forms.Button btnClearVirusesLog;
         private System.Windows.Forms.Button btnClearScansLog;
@@ -1012,6 +1011,7 @@
         private System.Windows.Forms.Panel panelWhiteTabs;
         public System.Windows.Forms.Label labScannedFastNum;
         public prgbar.BlueProgressBar progressFast;
-        public System.Windows.Forms.Button btnFastScan;
+        internal System.Windows.Forms.Button btnFastScan;
+        internal System.Windows.Forms.Button btnFullScan;
     }
 }
