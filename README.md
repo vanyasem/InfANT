@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vanyasem/InfANT.svg?branch=master)](https://travis-ci.org/vanyasem/InfANT)
+
 # InfANT
 ###Summary
 **InfANT*** is an open-source antivirus project written in C#.
